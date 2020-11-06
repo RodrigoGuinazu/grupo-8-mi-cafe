@@ -10,3 +10,12 @@ Grupo #8 CN22 Rodrigo Sanchez, Analia Vargas, Rodrigo Guinazu, Francisco Silva
 
 <h2> ¿Cómo ajustaremos nuestra oferta a ese público? </h2>
 <p> Ofreceremos diferentes tipos de café en función del gusto del cliente y el molido deseado para su cafetera. </p>
+
+<h2>Referencias</h2>
+<ul>
+  <li><a href="https://www.mercadolibre.com.ar/">Mercado Libre</a></li>
+  <li><a href="https://www.nespresso.com/ar/es/home">Nespresso</a></li>
+  <li><a href="https://modobarista.com/">Modo Barista</a></li>
+  <li><a href="https://www.cafemartinezonline.com.ar/">Cafe Martinez</a></li>
+  <li><a href="https://www.beercoffee.com.ar/">Beer Coffee</a></li>
+</ul>
