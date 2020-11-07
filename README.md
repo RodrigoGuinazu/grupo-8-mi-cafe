@@ -14,8 +14,13 @@ Grupo #8 CN22 Rodrigo Sanchez, Analia Vargas, Rodrigo Guinazu, Francisco Silva
 <h2>Referencias</h2>
 <ul>
   <li><a href="https://www.mercadolibre.com.ar/">Mercado Libre</a></li>
+  <p> E-commerce por excelencia en América Latina, con 20 años de trayectoria, crecimiento y en expansión continua.</p>
   <li><a href="https://www.nespresso.com/ar/es/home">Nespresso</a></li>
+    <p> Además de ofrecer multiples variedades de café, ofrecen otros tipos de producto como cafeteras, molinillos, etc. , fidelizando al cliente a través de nuevas experiencias. </p>
   <li><a href="https://modobarista.com/">Modo Barista</a></li>
+    <p> Brinda un servicio personalizado.</p>
   <li><a href="https://www.cafemartinezonline.com.ar/">Cafe Martinez</a></li>
-  <li><a href="https://www.beercoffee.com.ar/">Beer Coffee</a></li>
+    <p> Es un referente local que ofrece distintas lineas de café </p>
+  <li><a href="https://www.starbuck.com/">Starbucks</a></li>
+    <p> Es un referente a nivel mundial que introdujo la posibilidad de personalizar el producto en base al gusto del cliente.</p>
 </ul>
