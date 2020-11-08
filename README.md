@@ -11,8 +11,8 @@ Grupo #8 CN22 Rodrigo Sanchez, Analia Vargas, Rodrigo Guinazu, Francisco Silva
 <h2> ¿Cómo ajustaremos nuestra oferta a ese público? </h2>
 <p> Ofreceremos diferentes tipos de café en función del gusto del cliente y el molido deseado para su cafetera. </p>
 
-<h2>Integrantes:</2>
-<p>Francisco Silva:</p>Hola a todos, mi nombre es Francisco, tengo 21 años y vivo en Buenos Aires. 
+<h2>Integrantes:</h2>
+-Francisco Silva: Hola a todos, mi nombre es Francisco, tengo 21 años y vivo en Buenos Aires. 
 Actualmente trabajo de operario en el centro de almacenamiento y distribución de Mercado Libre.  Soy nuevo en esto y creo que aprender a programar es una gran oportunidad profesional a futuro.
 
 <h2>Referencias</h2>
