@@ -35,3 +35,5 @@ Actualmente trabajo de operario en el centro de almacenamiento y distribución d
   <li><a href="https://www.starbuck.com/">Starbucks</a></li>
     <p> Es un referente a nivel mundial que introdujo la posibilidad de personalizar el producto en base al gusto del cliente.</p>
 </ul>
+
+<a href="https://trello.com/b/AMU9cmgw/m%C3%AD-caf%C3%A9">Tablero de Trabajo</a>
