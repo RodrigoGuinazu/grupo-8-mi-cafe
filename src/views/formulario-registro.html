@@ -12,10 +12,31 @@
 
         <header class="navbar">
             <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-            <h3 class="navbar-search"><i class="fas fa-search"></i> Busca tu producto</h3>
             <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
         </header>
+        
+        <h2>Todavia no sos Usuario? <br>
+        Registrate</h2>
 
+        <section align="center" class="formulario">
+            <form action="/">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                <input type="password" name="password" id="password" placeholder="Password"> <br>
+
+                <input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional<br><br>
+                <input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones
+
+                <img src="img/captcha.jpg" alt="captcha">
+
+                <button class="crear-cuenta" type="button">Crea tu Cuenta</button>
+
+                <button class="usuario-existente" type="button">Ya tenes una cuenta? <br> Clickea aqui para ingresar</button>
+
+            </form>
+        </section>
         
     </main>
 </body>

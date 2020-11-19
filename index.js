@@ -8,7 +8,7 @@ app.get('/detalle', function(req, res){
 });
 
 app.get('/borrador', function(req, res){
-    res.sendFile(__dirname + '/src/views/borrador-rodri.html');
+    res.sendFile(__dirname + '/src/views/borrador.html');
 });
 
 app.get('/formulario', function(req, res){

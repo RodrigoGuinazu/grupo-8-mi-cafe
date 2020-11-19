@@ -21,39 +21,100 @@
     margin-bottom: 6px;
 }
 
-.navbar h3 {
-    display: inline-block;
-    color: black;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
 .navbar-burger {
     font-size: 25px;
     margin-left: 6px;
     background-color: green;
 }
 
-.navbar-search {
-    width: 55%;
-    height: 17px;
-    padding: 1px;
-    font-size: 14px;
-    background-color: lightgray;
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    box-sizing: border-box;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-}
-
-.navbar-search i {
-    background-color: lightgray;
-}
-
 .navbar-cart {
+    margin-left: 82%;
     font-size: 25px;
     margin-right: 6px;
     background-color: green;
+}
+
+/* FORMULARIO */
+
+h2 {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formulario {
+    background-color: rgba(221, 221, 221, 0.822);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formulario input[type=text] {
+    width: 75%;
+    height: 35px;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formulario input[type=email] {
+    width: 75%;
+    height: 35px;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formulario input[type=date] {
+    width: 75%;
+    height: 35px;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    background-color: lightgray;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formulario input[type=password] {
+    width: 75%;
+    height: 35px;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formulario img {
+    padding: 12px;
+    width: 85%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.usuario-existente {
+    width: 75%;
+    height: 50px;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background-color: rgb(28, 28, 187);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.crear-cuenta {
+    width: 75%;
+    height: 50px;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background-color: rgb(28, 28, 187);
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
