@@ -4,23 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/detalle-producto.css">
 </head>
 <body>
-    <div>
-        <p class="logo">Logo</p><p class="buscador">Buscador</p><p class="carrito">Carrito</p><br>
-    </div>
-    <div>
-        <p class="img">Imagen 1</p><br>
-        <p class="img">Imagen 2</p><p class="img-principal">Foto Principal</p><p class="info">Precio, Metodos de pago, Puntuacion, Envio</p><br>
-        <p class="img">Imagen 3</p><br>
-    </div>
-    <div>
-        <p class="descripcion">Descripcion del cafe</p><p class="img-principal">Imagen 4</p><br>
-    </div>
-    <div>
-        <h2 align="center">Quienes vieron este prudcto tambien compraron</h2>
-        <p class="img">Producto 1</p><p class="img">Producto 2</p><p class="img">Poducto 3</p><br>
-    </div>
+    <main>
+
+        <header class="navbar">
+            <div><i class="fas fa-bars"></i></div>
+            <div><h3 class="buscador"><i class="fas fa-search"></i> Busca tu producto</h3></div>
+            <div><i class="fas fa-shopping-cart"></i></div>
+        </header>
+
+        <section>
+
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><br>
+
+            <article class="img-principal">
+                    <i class="fas fa-chevron-left"></i><img src="https://s4.eestatic.com/2017/02/13/cocinillas/Cocinillas_193495389_116293001_1706x960.jpg" alt="cafe-1"><i class="fas fa-chevron-right"></i>
+            </article>
+
+            <article class="precio-envio">
+                <i class="fas fa-dollar-sign"></i><br>
+                <i class="fas fa-credit-card"></i><br>
+                <i class="fas fa-truck"></i>
+                <br>
+            </article>
+                
+            <article  class="descripcion">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis hic nemo, aspernatur nulla quos maiores veritatis nam. Soluta obcaecati provident repudiandae vel veritatis voluptates praesentium natus quisquam sunt. Vero temporibus veritatis ullam corrupti praesentium, eos odio id ea mollitia, quia expedita earum quam culpa obcaecati sint provident ipsam ut commodi ipsum nulla! Omnis minus inventore deserunt delectus, dicta iste molestiae, vitae aliquam ut quia magni cum quidem reiciendis distinctio. Nostrum consequatur nesciunt eaque, repellendus id iste accusantium dolor tenetur, distinctio cupiditate minus.</p>
+            </article>
+
+            <section class="recomendacion">
+                <h3 class="quienes">Quienes vieron este prudcto tambien compraron</h3>
+                <i class="fas fa-chevron-left"></i><img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion"> <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion"> <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion"><i class="fas fa-chevron-right"></i>
+            </section>
+
+        <footer>
+            <article class="box-info">
+                <img width="12%" src="https://http2.mlstatic.com/resources/frontend/homes-korriban/assets/images/ecosystem/shipping.svg" alt="icono-envio">
+                <h2 class=color-letra>Envio gratis desde $ 1.999</h2>
+                <p>Solo por estar registrad@ en MiCafe tenés envíos gratis!
+                </p>
+        </footer>
+
+        <div>
+            <p>Copyright © 2020 Mi Cafe S.R.L.</p>
+        </div>
+
+    </main>
 </body>
 </html>
