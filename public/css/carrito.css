@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ebebeb;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+/* HEADER */
+
+.navbar {
+    background-color: lightgrey;
+}
+
+.navbar div {
+    background-color: lightgrey;
+    color: black;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: inline-block
+}
+
+.navbar i {
+    background-color: lightgrey;
+}
+
+.navbar-burger {
+    font-size: 25px;
+    background-color: lightgrey;
+    width: 88%;
+    margin-left: 6px;
+    display: inline-block
+}
+
+.navbar-cart i{
+    font-size: 25px;
+    margin-right: 6px;
+    display: inline-block
+}
+
+.navbar-location i {
+    font-size: 15px;
+    width: 20%;
+    margin-left: 6px;
+    margin-right: 6px;
+    display: inline-block
+}
+
+.navbar-location-x {
+    width: 100%;
+    border-bottom: 1px solid rgb(186, 182, 182);
+    border-top: 1px solid rgb(186, 182, 182)
+}
+
+.direccion {
+    display: inline-block;
+    background-color: lightgrey;
+}
+
+.navbar p {
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.fa-chevron-right {
+    margin-left: 235px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+.title {
+    width: 100%;
+    text-align: center
+}
+.title-products {
+    text-align: center;
+    background-color: lightgrey;
+    padding-bottom: 6px;
+    color: rgb(83, 82, 82)
+}
+
+/* LISTA DE PRODUCTOS */
+
+.carrito-vacio {
+    margin-top: 80px
+}
+
+.llenarlo {
+    margin-top: 35px;
+}
+
+.ir-de-compras {
+    margin-top: 6px
+}
+
+.carrito-vacio a {
+    text-decoration: none;
+}
+
+/* CONTINUAR VIENDO PRODUCTOS */
+
+.continua {
+    margin-top: 300px;
+    text-align: center;
+    background-color: lightgray
+}
+
+.continua-viendo {
+    margin-bottom: 6px;
+    background-color: lightgray;
+    padding-top: 6px
+}
+
+.continua img {
+    width: 50%;
+    margin-bottom: 6px
+}
+
+
+
+

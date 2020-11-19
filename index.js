@@ -17,6 +17,10 @@ app.get('/formulario', function(req, res){
     res.sendFile(__dirname + '/src/views/formulario-registro.html');
 });
 
+app.get('/carrito', function(req, res){
+    res.sendFile(__dirname + '/src/views/carrito.html');
+});
+
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/' + req.url);
   });

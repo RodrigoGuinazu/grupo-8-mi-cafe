@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/borrador-rodri.css">
 </head>
 <body>
     <main>
-        
+        <header class="navbar">
+            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+            <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
+            <div class="navbar-location-x">
+                <div class="navbar-location"><i class="fas fa-map-marker-alt"></i></div><p class="direccion">Enviar a Calle Falsa 123</p><i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="title">
+                <h4 class="title-products">Tus productos</h4>
+            </div>
+        </header>
+
+        <section class="carrito-vacio">
+            <h3 align="center" class="aviso-vacio">Tu carrito está vacío</h3>
+            <p align="center" class="llenarlo">Comenzá a llenarlo con nuestros productos.</p>
+            <p align="center" class="ir-de-compras"><a href="">Ir de compras</a></p>
+        </section>
+
+        <section class="continua">
+            <article class="continua-imagen-producto"></article>
+                <h4 class="continua-viendo" align="center">Seguí comprando productos...</h4>
+                <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="">
+            </article>
+        </section>
+
     </main>
 </body>
