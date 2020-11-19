@@ -11,45 +11,102 @@
     <main>
 
         <header class="navbar">
-            <div><i class="fas fa-bars"></i></div>
-            <div><h3 class="buscador"><i class="fas fa-search"></i> Busca tu producto</h3></div>
-            <div><i class="fas fa-shopping-cart"></i></div>
+            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+            <h3 class="navbar-search"><i class="fas fa-search"></i> Busca tu producto</h3>
+            <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
         </header>
 
-        <section>
+        <section class="articulo">
 
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><br>
+            <h2>Cafe Cabrales dorado 400gr</h2>
+
+            <div class="puntuacion"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
 
             <article class="img-principal">
-                    <i class="fas fa-chevron-left"></i><img src="https://s4.eestatic.com/2017/02/13/cocinillas/Cocinillas_193495389_116293001_1706x960.jpg" alt="cafe-1"><i class="fas fa-chevron-right"></i>
+                    <div><i class="fas fa-chevron-left"></i></div>
+                    <div><img src="https://s4.eestatic.com/2017/02/13/cocinillas/Cocinillas_193495389_116293001_1706x960.jpg" alt="cafe-1"></div>
+                    <div><i class="fas fa-chevron-right"></i></div>
             </article>
+        </section>
 
-            <article class="precio-envio">
-                <i class="fas fa-dollar-sign"></i><br>
-                <i class="fas fa-credit-card"></i><br>
-                <i class="fas fa-truck"></i>
-                <br>
+        <section class="precio-envio">
+           
+            <article >
+                <div class="precio">
+                    <div><i class="fas fa-money-bill"></i></div>
+                    <div><p class="pesos">$400</p></div>
+                    <div><button class="boton-carrito" type="button">Agregar al Carrito</button></div>
+                </div>
+            
+                <div class="pagos">
+                    <div><i class="fas fa-credit-card"></i></div>
+                    <div><p>Paga en 3 Cuotas Sin Interes!</p></div>
+                </div>
+            
+                <div class="envio">
+                    <div><i class="fas fa-truck"></i></div>
+                    <div><p>Calcular Precio de Envio y Demora:</p></div>
+                </div>
+
+                <div class="valor-envio">
+                    <div><label for="">Elegi tu Provincia</label></p></div>
+                    <div>
+                    <select name="provincia" id="">
+                        <option value="BA">Buenos Aires</option>
+                        <option value="CA">Catamarca</option>
+                        <option value="CHA">Chaco</option>
+                        <option value="CHU">Chubut</option>
+                        <option value="CORD">Córdoba</option>
+                        <option value="CORR">Corrientes</option>
+                        <option value="ER">Entre Ríos</option>
+                        <option value="FO">Formosa</option>
+                        <option value="JU">Jujuy</option>
+                        <option value="LP">La Pampa</option>
+                        <option value="LR">La Rioja
+                        </option>
+                        <option value="ME">Mendoza</option>
+                        <option value="MI">Misiones</option>
+                        <option value="NE">Neuquén</option>
+                        <option value="RN">Río Negro</option>
+                        <option value="SA">Salta</option>
+                        <option value="SJ">San Juan</option>
+                        <option value="SC">Santa Cruz
+                        </option>
+                        <option value="SF">Santa Fe
+                        </option>
+                        <option value="SGO">Santiago del Estero
+                        </option>
+                        <option value="TF">Tierra del Fuego
+                        </option>
+                        <option value="TU">Tucumán</option>
+                    </select>
+                    </div>
+                </div>
+            
             </article>
-                
-            <article  class="descripcion">
+        </section>
+
+        <section class="descripcion">
+            
+            <article>
+                <h3 align="center">Descripcion del Cafe:</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis hic nemo, aspernatur nulla quos maiores veritatis nam. Soluta obcaecati provident repudiandae vel veritatis voluptates praesentium natus quisquam sunt. Vero temporibus veritatis ullam corrupti praesentium, eos odio id ea mollitia, quia expedita earum quam culpa obcaecati sint provident ipsam ut commodi ipsum nulla! Omnis minus inventore deserunt delectus, dicta iste molestiae, vitae aliquam ut quia magni cum quidem reiciendis distinctio. Nostrum consequatur nesciunt eaque, repellendus id iste accusantium dolor tenetur, distinctio cupiditate minus.</p>
             </article>
+        </section>
 
-            <section class="recomendacion">
-                <h3 class="quienes">Quienes vieron este prudcto tambien compraron</h3>
-                <i class="fas fa-chevron-left"></i><img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion"> <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion"> <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion"><i class="fas fa-chevron-right"></i>
-            </section>
+        <section class="recomendacion">
 
-        <footer>
-            <article class="box-info">
-                <img width="12%" src="https://http2.mlstatic.com/resources/frontend/homes-korriban/assets/images/ecosystem/shipping.svg" alt="icono-envio">
-                <h2 class=color-letra>Envio gratis desde $ 1.999</h2>
-                <p>Solo por estar registrad@ en MiCafe tenés envíos gratis!
-                </p>
-        </footer>
+                <h3 class="quienes">Quienes vieron este producto tambien compraron</h3>
+                <div><i class="fas fa-chevron-left"></i></div>
+                <div></div><img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion"></div>
+                <div></div><img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion"></div>
+                <div></div><img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion"></div>
+                <div></div><i class="fas fa-chevron-right"></i></div>
+        </section>
 
-        <div>
+        <div class="copyright">
             <p>Copyright © 2020 Mi Cafe S.R.L.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa tempore. Error sed distinctio eligendi natus qui a quasi minima.</p>
         </div>
 
     </main>

@@ -1,77 +1,184 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: lightgray;
+    background-color: #ebebeb;
 }
 
 /* NAVBAR */
+
+.navbar {
+    background-color: green;
+}
+
+.navbar i {
+    background-color: green;
+}
+
 .navbar div {
     display: inline-block;
-    vertical-align: top;
-    margin-left: 10px;
-    margin-right: 10px;
     color: black;
-    background-color: chocolate;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
-.fa-bars {
+.navbar h3 {
+    display: inline-block;
+    color: black;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.navbar-burger {
     font-size: 25px;
+    margin-left: 6px;
+    background-color: green;
 }
 
-.buscador {
+.navbar-search {
     width: 55%;
     height: 17px;
-    padding: 0.5px;
+    padding: 1px;
     font-size: 14px;
-    border: solid 1px black;
-    border-radius: 4px;
-    background-color: white;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 6px;
     box-sizing: border-box;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
-.fa-shopping-cart {
+.navbar-search i {
+    background-color: lightgray;
+}
+
+.navbar-cart {
     font-size: 25px;
+    margin-right: 6px;
+    background-color: green;
 }
 
 /* PRODUCTO */
 
-article img{
-    padding: 10px;
-    width: 90%;
+.articulo h2 {
+    text-align: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.puntuacion {
+    margin-left: 10px;
+    margin-bottom: 6px;
+}
+
+.fa-star {
+    color: goldenrod;
+}
+
+.articulo .img-principal div{
+    margin-left: 12px;
+    margin-left: 12px;
     display: inline-block;
 }
 
-.precio-envio {
+.img-principal div i {
+    font-size: 20px;
+}
 
+.articulo .img-principal img{
+    width: 70%;
+}
+
+/* PRECIO Y ENVIO */
+
+.precio-envio{
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.precio-envio div {
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.precio-envio i {
+    font-size: 25px;
+}
+
+.precio div {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.boton-carrito {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 4px;
+    background-color: rgb(19, 19, 194);
+    border: 1px solid rgb(19, 19, 194);
+    border-radius: 4px;
+}
+
+.pagos div {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.pagos div i {
+    color: rgb(0, 110, 255);
+}
+
+.envio div {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.envio div i {
+    color: green;
+}
+
+.valor-envio div {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* DESCRIPCION DEL PRODUCTO */
+
+.descripcion {
+    margin: 6px;
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 
 .descripcion p {
     text-align: center;
     padding: 10px;
     width: 90%;
+    margin-bottom: 6px;
 }
 
-
-.recomendacion img{
-    width: 28%;
-    margin: 5px;
-}
+/* RECOMENDACIONES */
 
 .recomendacion {
     text-align: center;
 }
 
-/* INFORMACION */
-.box-info img {
-    width: 15%;
+.recomendacion div {
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
-.box-info {
-    width: 375px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 35px;
-    text-align: center;
-    box-sizing: border-box;
-    }
+.recomendacion img{
+    width: 27%;
+    margin: 5px;
+}
+
+/* COPYRIGHT */
+
+.copyright p {
+    background-color: white;
+}

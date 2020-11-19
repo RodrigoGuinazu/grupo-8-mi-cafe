@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ebebeb;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: green;
+}
+
+.navbar i {
+    background-color: green;
+}
+
+.navbar div {
+    display: inline-block;
+    color: black;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.navbar h3 {
+    display: inline-block;
+    color: black;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.navbar-burger {
+    font-size: 25px;
+    margin-left: 6px;
+    background-color: green;
+}
+
+.navbar-search {
+    width: 55%;
+    height: 17px;
+    padding: 1px;
+    font-size: 14px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.navbar-search i {
+    background-color: lightgray;
+}
+
+.navbar-cart {
+    font-size: 25px;
+    margin-right: 6px;
+    background-color: green;
+}
