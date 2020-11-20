@@ -1,38 +1,5 @@
-.precio-envio{
-    border: 2px solid red;
-    padding: 4px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
 
-.precio-envio i {
-    font-size: 25px;
-}
 
-.precio div {
-    border: 2px dashed green;
-    display: inline-block;
-    font-size: 25px;
-}
 
-.boton-carrito {
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding: 4px;
-    background-color: rgb(19, 19, 194);
-    border: 1px solid rgb(19, 19, 194);
-    border-radius: 4px;
-}
 
-.pagos div {
-    border: 2px dashed purple;
-    font-size: 18px;
-    display: inline-block;
-}
 
-.envio div {
-    border: 2px dashed yellow;
-    font-size: 18px;
-    display: inline-block;
-}

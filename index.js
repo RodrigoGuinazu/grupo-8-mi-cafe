@@ -21,6 +21,10 @@ app.get('/carrito', function(req, res){
     res.sendFile(__dirname + '/src/views/carrito.html');
 });
 
+app.get('/carrito-lleno', function(req, res){
+    res.sendFile(__dirname + '/src/views/carrito-lleno.html');
+});
+
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/' + req.url);
   });
