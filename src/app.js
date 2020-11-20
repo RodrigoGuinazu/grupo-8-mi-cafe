@@ -18,11 +18,11 @@ app.get('/formulario', function(req, res){
 });
 
 app.get('/carrito', function(req, res){
-    res.sendFile(__dirname + '/src/views/carrito.html');
+    res.sendFile(__dirname + '/views/carrito.html');
 });
 
 app.get('/carrito-lleno', function(req, res){
-    res.sendFile(__dirname + '/src/views/carrito-lleno.html');
+    res.sendFile(__dirname + '/views/carrito-lleno.html');
 });
 
 app.get('*', (req, res) => {
