@@ -7,31 +7,29 @@
 /* NAVBAR */
 
 .navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
     background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .navbar i {
     background-color: green;
 }
 
-.navbar div {
-    display: inline-block;
-    color: black;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
 .navbar h3 {
     display: inline-block;
     color: black;
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 
 .navbar-burger {
     font-size: 25px;
-    margin-left: 6px;
     background-color: green;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .navbar-search {
@@ -43,9 +41,9 @@
     border: 1px solid lightgray;
     border-radius: 6px;
     box-sizing: border-box;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1%;
 }
 
 .navbar-search i {
@@ -56,14 +54,19 @@
     font-size: 25px;
     margin-right: 6px;
     background-color: green;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /* PRODUCTO */
 
+.articulo {
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
 .articulo h2 {
     text-align: center;
-    margin-bottom: 6px;
-    margin-top: 6px;
 }
 
 .puntuacion {
@@ -75,18 +78,26 @@
     color: goldenrod;
 }
 
-.articulo .img-principal div{
-    margin-left: 12px;
-    margin-left: 12px;
-    display: inline-block;
+.img-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.img-principal div i {
-    font-size: 20px;
+.img-principal img {
+    width: 85%;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.articulo .img-principal img{
-    width: 70%;
+.img-principal i {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 85px;
+}
+
+.articulo .puntuacion {
+    margin-left: 10px;
 }
 
 /* PRECIO Y ENVIO */
@@ -95,11 +106,16 @@
     padding: 10px;
     margin-top: 6px;
     margin-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .precio-envio div {
     margin-bottom: 4px;
     display: inline-block;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .precio-envio i {
@@ -163,18 +179,29 @@
 /* RECOMENDACIONES */
 
 .recomendacion {
+    padding-bottom: 25px;
+}
+
+.recomendacion h3 {
     text-align: center;
+    font-size: 17px;
+    padding: 15px;
 }
 
-.recomendacion div {
-    display: inline-block;
-    margin-top: 6px;
-    margin-bottom: 6px;
+.recomendados {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.recomendacion img{
+.recomendados i {
+    padding-top: 45px;
+}
+
+.recomendados img {
     width: 27%;
-    margin: 5px;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /* COPYRIGHT */
