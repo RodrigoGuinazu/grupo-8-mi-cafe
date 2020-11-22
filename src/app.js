@@ -29,6 +29,10 @@ app.get('/login', function(req, res){
     res.sendFile(__dirname + '/views/login.html');
 });
 
+app.get('/index', function(req, res){
+    res.sendFile(__dirname + '/views/index.html');
+});
+
 app.get('*', (req, res) => {
     res.sendFile(__dirname.replace("\src", "") + '/public/' + req.url);
   });
