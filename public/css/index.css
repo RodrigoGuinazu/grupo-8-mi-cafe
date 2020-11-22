@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header-search{
+    display: inline-block;
+}
+
+.header-search.button{
+    display: flex;
+}
+
+.header-search-box{
+    background-image: url("index-search-box.jpg");
+    background-position: center ;
+    box-sizing: border-box;
+}
+
+.header-log-in{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner{
+    display: none;
+}
