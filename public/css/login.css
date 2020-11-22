@@ -1,0 +1,81 @@
+* {
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    margin: 0 auto;
+    font-weight: bold;
+
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    position: fixed;
+}
+
+.navbar-left {
+    width: 50%;
+    position: relative;
+    flex-grow: 1;
+    align-self: flex-start;
+
+}
+
+.navbar-right {
+    width: 50%;
+    position: relative;
+    flex-grow: 1;
+    align-self: flex-end;
+
+}
+
+.navbar-logo {
+    max-width: 100px;
+}
+
+.login {
+    background-color: purple;
+    color: white;
+    align-content: center;
+    height: 450px;
+    border: purple 1px solid;
+    padding: 70px;
+
+}
+
+.login-credential-user {
+    text-align: center;
+}
+
+.login-credential-password {
+    text-align: center;
+}
+
+.login-submit-button {
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.login-recover-links {
+    color: white;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Mí Café</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="/"><img src="img/coffee-icon.svg" class="navbar-logo">Mí Café</a>
+                
+            </div>
+            <div class="navbar-right">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section align="center" class="login">
+            <form action="/" method="GET">
+                <div class="login-credential-image">
+                    <img src="img/avatar-icon.svg" alt="avatar-login">
+                </div>
+                
+                <div class="login-credential-user">
+                    <p><input type="email" name="email" id="email" placeholder="mi@mail.com"></p>
+                </div>
+
+                <div class="login-credential-password">
+                    <p><input type="password" name="password" id="password" placeholder="Contraseña"></p>
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                
+                <div class="login-submit-button">
+                    <p><button type="submit">Ingresar</button></p>
+                </div>
+
+                <div class="login-recover-links">
+                    <div class="login-recover-user">
+                        <a href="">¿Olvidó su usuario?</a>
+                    </div>
+
+                    <div class="login-recover-password">
+                        <a href="">¿Olvidó su contraseña?</a>
+                    </div>
+                </div>
+                
+                <div class="login-register-button">
+                    <a href="/src/views/formulario-registro.html">Crear cuenta</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-copyright">Copyright Mí Café 2020</p>
+        <p class="footer-terms">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </footer>
+</body>
+</html>
