@@ -1,5 +1,5 @@
 * {
-    font-family: 'Caveat', cursive;
+    font-family: 'Dekko', cursive;
     font-size: 20px;
     margin: 0 auto;
 
@@ -8,14 +8,14 @@
 .navbar {
     background-color: black;
     color: white;
+    border-bottom: dotted purple;
     font-weight: bold;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     position: fixed;
 }
@@ -23,13 +23,21 @@
 .navbar-left {
     width: 25%;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .navbar-right {
     width: 25%;
     box-sizing: border-box;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center
 }
 
 .navbar-logo {
@@ -43,16 +51,34 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
     padding: 70px;
-    align-content: center;
     justify-content: space-around;
     align-content: center;
-    
 
 }
 
 .login-credential-image {
-    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 75px;
+}
+
+.login-credential-alternative {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.login-credential-alternative-gm, .login-credential-alternative-fb, .login-credential-alternative-tw {
+    max-width: 40px;
 }
 
 .login-credential-user {
@@ -84,7 +110,7 @@
     padding: 15px;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -98,20 +124,22 @@ a {
 }
 
 .login-register {
+    color: white;
+    box-sizing: border-box;
     display: flex;
-    padding: 15px;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
 .login-register-button {
-    border-radius: 25px;
+    border-radius: 15px;
+    text-align: center;
     border: solid gray 1px;
     background-color:gray;
     color: white;
-    padding: 5px 10px;
+    padding: 5px;
 }
 
 .footer-text {
@@ -123,7 +151,7 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    padding: 15px;
+    padding: 10px;
 
 }
 

@@ -8,7 +8,7 @@
         crossorigin="anonymous"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/login.css">
     <title>Mí Café</title>
@@ -28,32 +28,41 @@
 
     <main>
         <section align="center" class="login">
-            <form action="/" method="GET">
-                <div class="login-credential-image">
-                    <img src="img/avatar-icon.svg" alt="avatar-login">
-                </div>
-                
+            <div class="login-credential-image">
+                <img src="img/avatar-icon.svg" alt="avatar-login">
+            </div>
+
+            <div class="login-credential-alternative">
+                <img class="login-credential-alternative-gm" src="img/gm-icon.svg" alt="Login Gmail">
+                <img class="login-credential-alternative-fb" src="img/fb-icon.svg" alt="Login Facebook">
+                <img class="login-credential-alternative-tw"  src="img/tw-icon.svg" alt="Login Twitter">
+            </div>
+
+            <form class="login-credential" action="/" method="GET">
                 <div class="login-credential-user">
-                    <p><input type="email" name="email" id="email" placeholder="mi@mail.com" style="text-align:center"></p>
+                    <p>...ó ingresá con tu usuario:</p>
+                    <p><input type="text" name="user" id="user" placeholder="Mi.usuario" style="text-align:center"></p>
                 </div>
 
                 <div class="login-credential-password">
                     <p><input type="password" name="password" id="password" placeholder="Contraseña" style="text-align:center" ></p>
                     <i class="fas fa-eye-slash"></i>
+                    <p><input type="checkbox" name="remindme" value="remindme">Recordarme</p>
                 </div>
                 
                 <div class="login-submit">
                     <p><button class="login-submit-button" type="submit">Ingresar</button></p>
                 </div>
-
-                <div class="login-recover-links">
-                    <a class="login-recover-links-user" href="">¿Olvidó su usuario?</a>
-                    <a class="login-recover-links-password" href="">¿Olvidó su contraseña?</a>
-                </div>
             </form>
 
+            <div class="login-recover-links">
+                <a class="login-recover-links-user" href="">¿Olvidaste tu usuario?</a>
+                <a class="login-recover-links-password" href="">¿Olvidaste tu contraseña?</a>
+            </div>
+
             <div class="login-register">
-                <a class="login-register-button" href="/src/views/formulario-registro.html">Crear cuenta</a>
+                <p>Si aún no estás registrado,</p>
+                <a class="login-register-button" href="/formulario">Creá tu cuenta</a>
             </div>
         </section>
     </main>
