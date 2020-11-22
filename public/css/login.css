@@ -1,14 +1,14 @@
 * {
     font-family: 'Caveat', cursive;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0 auto;
-    font-weight: bold;
 
 }
 
 .navbar {
     background-color: black;
     color: white;
+    font-weight: bold;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -16,24 +16,20 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: center;
     position: fixed;
 }
 
 .navbar-left {
-    width: 50%;
-    position: relative;
-    flex-grow: 1;
-    align-self: flex-start;
-
+    width: 25%;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 .navbar-right {
-    width: 50%;
-    position: relative;
-    flex-grow: 1;
-    align-self: flex-end;
-
+    width: 25%;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 .navbar-logo {
@@ -43,39 +39,100 @@
 .login {
     background-color: purple;
     color: white;
-    align-content: center;
-    height: 450px;
-    border: purple 1px solid;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     padding: 70px;
+    align-content: center;
+    justify-content: space-around;
+    align-content: center;
+    
 
+}
+
+.login-credential-image {
+    align-self: flex-start;
 }
 
 .login-credential-user {
-    text-align: center;
+    padding: 5px;
 }
 
 .login-credential-password {
-    text-align: center;
+    padding: 5px;
+}
+
+.login-submit {
+    padding: 10px;
 }
 
 .login-submit-button {
-    padding: 15px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 15px 20px;
+    width: 150px;
+    border-radius: 20px;
+    border: solid purple 1px;
+    text-align: center;
+    background-color: black;
+    color: white;
     margin: 5px;
 }
 
 .login-recover-links {
     color: white;
     display: flex;
-    width: 100%;
+    padding: 15px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
+.login-recover-links-user, .login-recover-links-password {
+    padding: 5px 20px;
+}
+
 a {
     color: white;
     text-decoration: none;
+}
+
+.login-register {
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-register-button {
+    border-radius: 25px;
+    border: solid gray 1px;
+    background-color:gray;
+    color: white;
+    padding: 5px 10px;
+}
+
+.footer-text {
+    background-color: black;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+
+}
+
+.footer-text-copyright {
+    font-weight: 600;
+    width: 100%;
+}
+
+.footer-text-terms {
+    font-weight: 300;
+    width: 100%;
 }
