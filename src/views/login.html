@@ -14,8 +14,10 @@
     <title>Mí Café</title>
 </head>
 <body>
+    <!--
     <header>
-        <div class="navbar">
+        
+            <div class="navbar">
             <div class="navbar-left">
                 <a href="/"><img src="img/coffee-icon.svg" class="navbar-logo">Mí Café</a>
                 
@@ -25,7 +27,23 @@
             </div>
         </div>
     </header>
+    -->
 
+    <header class="navbar">
+        <div class="navbar-superior">
+            <div class="navbar-logo"><a href="/index"><i class="fas fa-coffee"></i></div></a>
+            <div class="input-icon">
+                <i class="fas fa-search"></i>
+                <input type="search" class="navbar-search" placeholder="        Busca tu producto">
+            </div>
+            <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
+            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="navbar-inferior">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Avenida Siempre Viva 742</h4></div>
+        </div>
+    </header>
+    
     <main>
         <section align="center" class="login">
             <div class="login-credential-image">
@@ -51,7 +69,7 @@
                 </div>
                 
                 <div class="login-submit">
-                    <p><button class="login-submit-button" type="submit">Ingresar</button></p>
+                    <a class="login-submit-button" href="/index">Ingresar</a>
                 </div>
             </form>
 
