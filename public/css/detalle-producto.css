@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #ebebeb;
 }
 
 /* NAVBAR */
@@ -10,72 +9,100 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: green;
+    background-color: #ededed;
+}
+
+.navbar-superior {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: #ededed;
+    padding-top: 6px;
 }
 
 .navbar i {
-    background-color: green;
+    background-color: #ededed;
 }
 
-.navbar h3 {
-    display: inline-block;
+.navbar-logo img {
+    background-color: #ededed;
     color: black;
 }
 
 .navbar-burger {
     font-size: 25px;
-    background-color: green;
+    background-color: #ededed;
+    color: black;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.navbar-search {
-    width: 55%;
-    height: 17px;
+.input-icon .navbar-search {
+    width: 100%;
+    height: 20px;
     padding: 1px;
     font-size: 14px;
-    background-color: lightgray;
-    border: 1px solid lightgray;
+    background-color: white;
+    border: 1px solid white;
     border-radius: 6px;
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 1%;
 }
 
-.navbar-search i {
-    background-color: lightgray;
+.input-icon i {
+    position: absolute;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-top: 1px;
 }
 
 .navbar-cart {
     font-size: 25px;
     margin-right: 6px;
-    background-color: green;
+    background-color: #ededed;
+    color: black;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.navbar-inferior {
+    border-top: 1px solid gray;
+    background-color: #ededed;
+}
+
+.location {
+    background-color: #ededed;
+}
+
+.location i {
+    margin-left: 3px;
+    margin-right: 6px;
+    font-size: 14px;
+    background-color: #ededed;
+    color: black;
+}
+
+.location h4 {
+    display: inline-block;
+    background-color: #ededed;
+    color: black;
+    margin-top: 2%;
+    font-size: 14px;
 }
 
 /* PRODUCTO */
 
 .articulo {
-    padding-top: 35px;
-    padding-bottom: 25px;
+    padding-top: 75px;
+    padding-bottom: 20px;
 }
 
 .articulo h2 {
-    text-align: center;
-}
-
-.puntuacion {
-    margin-left: 10px;
-    margin-bottom: 6px;
-}
-
-.fa-star {
-    color: goldenrod;
+    font-size: 21px;
+    padding-bottom: 4px;
 }
 
 .img-principal {
@@ -96,8 +123,13 @@
     padding-top: 85px;
 }
 
-.articulo .puntuacion {
-    margin-left: 10px;
+.puntuacion {
+    margin-left: 19px;
+    margin-bottom: 6px;
+}
+
+.fa-star {
+    color: goldenrod;
 }
 
 /* PRECIO Y ENVIO */

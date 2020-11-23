@@ -82,12 +82,21 @@
 
 /* CARRITO CON PRODUCTOS*/
 
-.contenido-carrito {
+.contenido-carrito-1 {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-left: 6px;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(231, 231, 231)
+}
+
+.contenido-carrito-2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 6px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding-bottom: 250px
 }
 
 .contenido-carrito-left {
@@ -103,6 +112,7 @@
 
 .contenido-carrito-right-nombre {
     font-size: 14px;
+    display: inline-block
 }
 
 .contenido-carrito-right-presentacion {
@@ -127,6 +137,22 @@
     width: 40px;
     border-radius: 4px;
     margin-right: 140px
+}
+
+.contenido-carrito-right-delete-brasil {
+    display: inline-block
+}
+
+.contenido-carrito-right-delete-colombia {
+    display: inline-block;
+    margin-left: 18px
+}
+
+.fa-times {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 55px;
+    vertical-align: top
 }
 
 /* CONTINUAR VIENDO PRODUCTOS */
