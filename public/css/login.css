@@ -21,23 +21,19 @@
 }
 
 .navbar-left {
-    width: 25%;
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    border-color: red;
 }
 
 .navbar-right {
-    width: 25%;
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center
+    border-color: green;
 }
 
 .navbar-logo {
@@ -145,6 +141,7 @@ a {
 .footer-text {
     background-color: black;
     color: white;
+    border-top: dotted purple;
     width: 100%;
     box-sizing: border-box;
     display: flex;
