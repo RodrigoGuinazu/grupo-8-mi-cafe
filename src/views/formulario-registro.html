@@ -11,23 +11,47 @@
     <main>
 
         <header class="navbar">
-            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-            <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
+            <div class="navbar-superior">
+                <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+                <h3 class="navbar-search"><i class="fas fa-search"></i> Busca tu producto</h3>
+                <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="navbar-inferior">
+                <div class="location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Avenida Siempre Viva 742</h4></div>
+            </div>
         </header>
         
-        <h2>Todavia no sos Usuario? <br>
-        Registrate</h2>
+        <section class="titulo">
+            <h2>Todavia no sos Usuario? <br>
+            Registrate</h2>
+        </section>
 
         <section align="center" class="formulario">
             <form action="/">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="text" name="nombre" id="nombre" placeholder=" Nombre">
+                <input type="text" name="apellido" id="apellido" placeholder=" Apellido">
+                <input type="email" name="email" id="email" placeholder=" E-mail">
                 <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
-                <input type="password" name="password" id="password" placeholder="Password"> <br>
+                <div class="genero">
+                    <label for="">Genero</label>
+                    <select name="genero" id="">
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                    <option value="I">Indistinto</option>
+                    </select>
+                </div>
+                
+                <div class="input-icon">
+                    <i class="fas fa-eye-slash"></i>
+                    <input type="password" name="password" id="password" placeholder=" Password">
+                    <i class="fas fa-eye-slash"></i>
+                    <input type="password" name="confirmar-password" id="confirmar-password" placeholder=" Confirma tu Password">
+                </div>
 
-                <input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional<br><br>
-                <input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones
+                <div class="checkbox">
+                    <p><input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones</p><br>
+                    <p><input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional</p>
+                </div>
 
                 <img src="img/captcha.jpg" alt="captcha">
 
