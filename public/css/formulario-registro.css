@@ -7,38 +7,100 @@
 /* NAVBAR */
 
 .navbar {
-    background-color: green;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: black;
+    padding: 6px;
+}
+
+.navbar-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.navbar-inferior {
+    border-top: 1px solid gray;
+    margin-top: 4px;
+    background-color: black;
+}
+
+.location {
+    background-color: black;
+}
+
+.location i {
+    margin-left: 3px;
+    margin-right: 6px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+}
+
+.location h4 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin-top: 2%;
+    font-size: 14px;
 }
 
 .navbar i {
-    background-color: green;
+    background-color: black;
 }
 
-.navbar div {
+.navbar h3 {
     display: inline-block;
     color: black;
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 
 .navbar-burger {
     font-size: 25px;
-    margin-left: 6px;
-    background-color: green;
+    background-color: black;
+    color: white;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navbar-search {
+    width: 55%;
+    height: 17px;
+    padding: 1px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+
+.navbar-search i {
+    background-color: white;
+    color: black;
 }
 
 .navbar-cart {
-    margin-left: 82%;
     font-size: 25px;
     margin-right: 6px;
-    background-color: green;
+    background-color: black;
+    color: white;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /* FORMULARIO */
 
+.titulo {
+    margin-top: 75px;
+}
+
 h2 {
     text-align: center;
-    margin-top: 12px;
+    margin-top: 16px;
     margin-bottom: 12px;
 }
 
@@ -78,6 +140,23 @@ h2 {
     margin-bottom: 12px;
 }
 
+.genero {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 13%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.genero select {
+    margin-left: 4px;
+}
+
+.input-icon {
+    position: relative;
+}
+
 .formulario input[type=password] {
     width: 75%;
     height: 35px;
@@ -86,6 +165,14 @@ h2 {
     background-color: white;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.fa-eye-slash {
+    position: absolute;
+    color: black;
+    border:solid 1px rgba(221, 221, 221, 0.822);
+    border-radius: 6px;
+    background-color: white;
 }
 
 .formulario img {
@@ -102,7 +189,7 @@ h2 {
     border-radius: 6px;
     color: white;
     text-align: center;
-    background-color: rgb(28, 28, 187);
+    background-color: black;
     margin-top: 12px;
     margin-bottom: 12px;
 }
@@ -114,7 +201,13 @@ h2 {
     border-radius: 6px;
     color: white;
     text-align: center;
-    background-color: rgb(28, 28, 187);
+    background-color: black;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
