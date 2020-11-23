@@ -10,86 +10,95 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: black;
-    padding: 6px;
+    background-color: #ededed;
 }
 
 .navbar-superior {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: black;
+    background-color: #ededed;
+    padding-top: 6px;
+    vertical-align: top;
+}
+
+.navbar i {
+    background-color: #ededed;
+}
+
+.navbar-logo i {
+    background-color: #ededed;
+    color: black;
+    font-size: 25px;
+    margin-top: 4px;
+}
+
+.navbar-burger {
+    font-size: 25px;
+    background-color: #ededed;
+    color: black;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4px;
+}
+
+.input-icon .navbar-search {
+    width: 100%;
+    height: 20px;
+    padding: 1px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 6px;
+}
+
+.input-icon i {
+    position: absolute;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-top: 7px;
+    padding-left: 2px;
+}
+
+.navbar-cart {
+    font-size: 25px;
+    margin-right: 6px;
+    background-color: #ededed;
+    color: black;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4px;
 }
 
 .navbar-inferior {
     border-top: 1px solid gray;
-    margin-top: 4px;
-    background-color: black;
+    background-color: #ededed;
 }
 
 .location {
-    background-color: black;
+    background-color: #ededed;
 }
 
 .location i {
     margin-left: 3px;
     margin-right: 6px;
     font-size: 14px;
-    background-color: black;
-    color: white;
+    background-color: #ededed;
+    color: black;
 }
 
 .location h4 {
     display: inline-block;
-    background-color: black;
-    color: white;
+    background-color: #ededed;
+    color: black;
     margin-top: 2%;
     font-size: 14px;
-}
-
-.navbar i {
-    background-color: black;
-}
-
-.navbar h3 {
-    display: inline-block;
-    color: black;
-}
-
-.navbar-burger {
-    font-size: 25px;
-    background-color: black;
-    color: white;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.navbar-search {
-    width: 55%;
-    height: 17px;
-    padding: 1px;
-    font-size: 14px;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 6px;
-    box-sizing: border-box;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 1%;
-}
-
-.navbar-search i {
-    background-color: white;
-    color: black;
-}
-
-.navbar-cart {
-    font-size: 25px;
-    margin-right: 6px;
-    background-color: black;
-    color: white;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 /* FORMULARIO */
@@ -153,10 +162,6 @@ h2 {
     margin-left: 4px;
 }
 
-.input-icon {
-    position: relative;
-}
-
 .formulario input[type=password] {
     width: 75%;
     height: 35px;
@@ -165,14 +170,6 @@ h2 {
     background-color: white;
     margin-top: 12px;
     margin-bottom: 12px;
-}
-
-.fa-eye-slash {
-    position: absolute;
-    color: black;
-    border:solid 1px rgba(221, 221, 221, 0.822);
-    border-radius: 6px;
-    background-color: white;
 }
 
 .formulario img {
