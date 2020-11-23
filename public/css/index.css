@@ -1,5 +1,5 @@
 * {
-    padding: 0;
+    /*padding: 0;*/
     margin: 0;
     background-color: white;
 }
@@ -9,8 +9,24 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    background-color: white;
+    position: fixed;
+    top: 0px;
 }
+
+.header-search-box{
+max-width: 100%;
+}
+
+.index-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: white;
+    border-color: black; 
+}
+
 
 .header-search{
     display: inline-block;
@@ -21,7 +37,6 @@
 }
 
 .header-search-box{
-    background-image: url("index-search-box.jpg");
     background-position: center ;
     box-sizing: border-box;
 }
@@ -33,7 +48,6 @@
     justify-content: space-between;
     align-items: center;
 }
-
-.banner{
-    display: none;
+.ultimas-visitas{
+    padding:50px;
 }
