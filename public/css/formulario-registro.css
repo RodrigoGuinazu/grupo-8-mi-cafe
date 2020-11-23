@@ -10,32 +10,36 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: #ededed;
+    background-color: #F3E0BE;
 }
 
 .navbar-superior {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #ededed;
+    background-color: #F3E0BE;
     padding-top: 6px;
     vertical-align: top;
 }
 
 .navbar i {
-    background-color: #ededed;
+    background-color: #F3E0BE;
 }
 
 .navbar-logo i {
-    background-color: #ededed;
+    background-color: #F3E0BE;
     color: black;
     font-size: 25px;
     margin-top: 4px;
 }
 
+.navbar-logo {
+    background-color: #F3E0BE;
+}
+
 .navbar-burger {
     font-size: 25px;
-    background-color: #ededed;
+    background-color: #F3E0BE;
     color: black;
     flex-direction: row;
     justify-content: space-around;
@@ -72,7 +76,7 @@
     display: none;
     font-size: 25px;
     margin-right: 6px;
-    background-color: #ededed;
+    background-color: #F3E0BE;
     color: black;
     flex-direction: row;
     justify-content: space-around;
@@ -80,25 +84,25 @@
 }
 
 .navbar-inferior {
-    border-top: 1px solid gray;
-    background-color: #ededed;
+    border-top: 1px solid black;
+    background-color: #F3E0BE;
 }
 
 .location {
-    background-color: #ededed;
+    background-color: #F3E0BE;
 }
 
 .location i {
     margin-left: 3px;
     margin-right: 6px;
     font-size: 14px;
-    background-color: #ededed;
+    background-color: #F3E0BE;
     color: black;
 }
 
 .location h4 {
     display: inline-block;
-    background-color: #ededed;
+    background-color: #F3E0BE;
     color: black;
     margin-top: 2%;
     font-size: 14px;
@@ -173,6 +177,7 @@ h2 {
     background-color: white;
     margin-top: 12px;
     margin-bottom: 12px;
+    margin-left: 15px;
 }
 
 .formulario img {
@@ -210,4 +215,41 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+/* COPYRIGHT */
+
+.redes {
+    background-color: white;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.redes h3 {
+    background-color: white;
+}
+
+.redes i {
+    background-color:white;
+    font-size: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.pie {
+    background-color:white;
+    text-align: center;
+    padding-top: 10px
+}
+
+.pie p {
+    background-color:white;
+    font-size: 8px;
+}
+
+.pie small {
+    background-color:white;
+    font-size: 8px
 }
