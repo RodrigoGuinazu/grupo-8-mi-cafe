@@ -9,29 +9,30 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: black;
+    background-color: #ededed;
 }
 
 .navbar-superior {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: black;
+    background-color: #ededed;
     padding-top: 6px;
 }
 
 .navbar i {
-    background-color: black;
+    background-color: #ededed;
 }
 
 .navbar-logo img {
-    background-color: black;
+    background-color: #ededed;
+    color: black;
 }
 
 .navbar-burger {
     font-size: 25px;
-    background-color: black;
-    color: white;
+    background-color: #ededed;
+    color: black;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -61,33 +62,33 @@
 .navbar-cart {
     font-size: 25px;
     margin-right: 6px;
-    background-color: black;
-    color: white;
+    background-color: #ededed;
+    color: black;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .navbar-inferior {
     border-top: 1px solid gray;
-    background-color: black;
+    background-color: #ededed;
 }
 
 .location {
-    background-color: black;
+    background-color: #ededed;
 }
 
 .location i {
     margin-left: 3px;
     margin-right: 6px;
     font-size: 14px;
-    background-color: black;
-    color: white;
+    background-color: #ededed;
+    color: black;
 }
 
 .location h4 {
     display: inline-block;
-    background-color: black;
-    color: white;
+    background-color: #ededed;
+    color: black;
     margin-top: 2%;
     font-size: 14px;
 }
