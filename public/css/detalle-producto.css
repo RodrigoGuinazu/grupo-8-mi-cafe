@@ -1,6 +1,12 @@
 * {
     padding: 0;
     margin: 0;
+    background-color: #ededed;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* NAVBAR */
@@ -9,24 +15,28 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: #ededed;
+    background-color: white;
+}
+
+.navbar div {
+    background-color: white;
 }
 
 .navbar-superior {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #ededed;
+    background-color: white;
     padding-top: 6px;
     vertical-align: top;
 }
 
 .navbar i {
-    background-color: #ededed;
+    background-color: white;
 }
 
 .navbar-logo i {
-    background-color: #ededed;
+    background-color: white;
     color: black;
     font-size: 25px;
     margin-top: 4px;
@@ -34,7 +44,7 @@
 
 .navbar-burger {
     font-size: 25px;
-    background-color: #ededed;
+    background-color: white;
     color: black;
     flex-direction: row;
     justify-content: space-around;
@@ -62,13 +72,13 @@
     border: 1px solid white;
     border-radius: 6px;
     margin-top: 7px;
-    padding-left: 2px;
+    padding-left: 3px;
 }
 
 .navbar-cart {
     font-size: 25px;
     margin-right: 6px;
-    background-color: #ededed;
+    background-color: white;
     color: black;
     flex-direction: row;
     justify-content: space-around;
@@ -76,25 +86,25 @@
 }
 
 .navbar-inferior {
-    border-top: 1px solid gray;
-    background-color: #ededed;
+    border-top: 1px solid black;
+    background-color: white;
 }
 
 .location {
-    background-color: #ededed;
+    background-color: white;
 }
 
 .location i {
     margin-left: 3px;
     margin-right: 6px;
     font-size: 14px;
-    background-color: #ededed;
+    background-color: white;
     color: black;
 }
 
 .location h4 {
     display: inline-block;
-    background-color: #ededed;
+    background-color: white;
     color: black;
     margin-top: 2%;
     font-size: 14px;
@@ -171,8 +181,8 @@
     text-align: center;
     color: white;
     padding: 4px;
-    background-color: rgb(19, 19, 194);
-    border: 1px solid rgb(19, 19, 194);
+    background-color: black;
+    border: 1px solid black;
     border-radius: 4px;
 }
 
