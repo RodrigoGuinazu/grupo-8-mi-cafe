@@ -130,7 +130,7 @@ a {
 
 /*ULTIMAS VISITAS*/
 .ultimas-visitas-titulo{
-    padding-top:70px;
+    padding-top:60px;
     text-decoration: underline;
 }
 .ultimas-visitas-colombia{
@@ -143,8 +143,11 @@ a {
 /* OFERTAS */
 .ofertas-titulo{
     padding-top:20px;
-    padding-bottom:20px;
     text-decoration: underline;   
+}
+
+.ofertas-precio{
+    padding:5px;
 }
 
 .ofertas h4{
@@ -164,6 +167,33 @@ a {
     background-color: black;
     border: 1px solid black;
     border-radius: 4px;
+}
+
+/* OPINIONES */
+
+.opiniones{
+    width: 50%;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space around;
+    align-items: center;
+    position:relative;
+}
+
+.opinion-cliente{
+    font-style: italic;
+}
+
+.nombre-cliente{
+    font-size: small;
+    padding-bottom: 20px
+}
+
+.opiniones h3{
+    padding-bottom: 10px;
 }
 
 /* COPYRIGHT */
