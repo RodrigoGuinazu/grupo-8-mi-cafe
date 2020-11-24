@@ -120,7 +120,12 @@ a {
 }
 
 .body-completo{
-align-items: center;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    margin-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 /*ULTIMAS VISITAS*/
@@ -152,10 +157,10 @@ align-items: center;
 }
 
 .boton-carrito {
-    width: 10%;
+    width: 17%;
     text-align: center;
     color: white;
-    padding: 4px;
+    padding: 3px;
     background-color: black;
     border: 1px solid black;
     border-radius: 4px;
