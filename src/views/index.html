@@ -5,91 +5,73 @@
         <link rel="stylesheet" href="/css/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
-    <header>
-        <section class="navbar">
-        <img width="150px" height="150px" src="img/logo-index.jpg" alt="Logo Mi Café">
-        
-        <input type="search" class="header-search-box"><button class="header-search-button"><i class="fas fa-search"></i></button>     
-        <ul type="index-links">
-            <a href="http://localhost:3030/login">Logeate</a>   
-            <a href="http://localhost:3030/formulario">Registrate</a>
-            <a href="http://localhost:3030/carrito-lleno">Ver Carrito</a>
-        </ul>    
-    </section>
+    <header class="navbar">
+        <div class="navbar-superior">
+            <div class="navbar-logo"><i class="fas fa-coffee"></i></div>
+            <div class="input-icon">
+                <i class="fas fa-search"></i>
+                <input type="search" class="navbar-search" placeholder="        Busca tu producto">
+            </div>
+            <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
+            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="navbar-inferior">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Avenida Siempre Viva 742</h4></div>
+        </div>
     </header>
    
-    <body>
+    <body class="body-completo">
 
     <main>
 
-        <section class:"ultimas-visitas">
-             <div class: "ultimas-visitas-titulo"
-             <h2>Basado en tus últimas visitas</h2>
-             </div>
+    <div class= "ultimas-visitas-titulo">
+     <h2>Basado en tus últimas visitas</h2>
+    </div>
 
-             <div class:"ultimas-visitas-colombia">
-             <h4>Café de especialidad tostado Colombia</h4>
-             <img width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-colombia-guanes-genuino-14-kg-D_NQ_NP_787555-MLA42564298723_072020-F.webp" alt="Imagen Café Colombia">
-             <p>$1.299,99</p>
-             <p>Aprovecha esta oferta!!!</p>
-             </div>
+    <div class="ultimas-visitas-colombia">
+     <h4>Café de especialidad tostado Colombia</h4>
+     <img width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-colombia-guanes-genuino-14-kg-D_NQ_NP_787555-MLA42564298723_072020-F.webp" alt="Imagen Café Colombia">
+        <p>$1.299,99</p>
+        <p>Aprovecha esta oferta!!!</p><div><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+    </div>
 
-             <div class:"ultimas-visitas-brasil">
-             <h4>Café premium tostado Brasil Catuai</h4>
-             <img width="200px" src="https://http2.mlstatic.com/cafe-premium-tostado-brasil-catuai-1-kg-D_NQ_NP_787296-MLA42540120808_072020-O.webp" alt="Imagen Café Brasil Catuai">
-             <p>$1.000</p>
-             <p>En 3 cuotas sin interés!!!</p>
-             </div>
-
-
-        </section>
-
-    <div class: "ofertas">
+    <div class="ultimas-visitas-brasil">
+     <h4>Café premium tostado Brasil Catuai</h4>
+     <img width="200px" src="https://http2.mlstatic.com/cafe-premium-tostado-brasil-catuai-1-kg-D_NQ_NP_787296-MLA42540120808_072020-O.webp" alt="Imagen Café Brasil Catuai">
+        <p>$1.000</p>
+        <p>En 3 cuotas sin interés!!!</p><div><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+    </div>
     
-    <div class: "ofertas-titulo">
+    <div class= "ofertas">
+        <div class= "ofertas-titulo">
             <h2>Ofertas</h2>
-    </div>
+        </div>
 
-            <h4>Café en oferta1</h4>
-            <img width="200px" src="cafe-oferta1.jpg" alt="Imagen cafe en oferta1">
+            <h4>Café Bourbon</h4>
+            <img width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-brasil-bourbon-14-kg-D_Q_NP_746964-MLA42541880767_072020-F.webp" alt="Imagen cafe en oferta1">
             <p>$500</p>
-            <p>Pocas unidades, apurate!!</p>
+            <p>Pocas unidades, apurate!!</p><div><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
 
-            <h4>Café en oferta2</h4>
-            <img width="200px" src="cafe-oferta2.jpg" alt="Imagen cafe en oferta2">
+            <h4>Café tostado Guatemala</h4>
+            <img width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-grano-tostado-guatemala-barista-14-kg-D_NQ_NP_949151-MLA42617364974_072020-F.webp" alt="Imagen cafe en oferta2">
             <p>$600</p>
-            <p>Ofertaza!!</p>
+            <p class= "ofertaza">Ofertaza!!</p><div><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
 
 
     </div>
 
-    <footer>
-        <div class:"footer-pago">
-         <h5>Pagá con tarjeta o en efectivo</h5>
-         <p></p>
-        </div>
+    <div class="redes">
+        <h3 class="nombre-marca">Mi Café</h3>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-whatsapp"></i>
+    </div>
 
-        <div class:"social-media">
-        
-         <div class:"social-media-title">
-         <h5>Seguinos en Facebook e Instagram</h5>
-         </div>
-
-         <div class:"social-media-logos">
-         <p>Acá van los logos de FB e IG.</p>
-         </div>
-
-        </div>
-
-        <div class"footer-contacto">
-         <h5>Contactanos</h5>
-         <p> Completar dirección, teléfono, email</p>
-        </div>
-
-        <div class:"footer-copyright">
-         <p>Copyright © 2020 Mi Café S.R.L.</p>
-        </div>
-        
+    <footer class="pie">
+        <p>Copyright © 2020 Mi Cafe S.R.L.</p>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et ab sunt voluptatum totam eius
+            nemo. Explicabo eum magnam ut fuga laborum minus, assumenda facere at quod quo debitis omnis est non
+            architecto tenetur neque rerum necessitatibus cum, dolorum totam!.</small>
     </footer>
 
         
