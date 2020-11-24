@@ -29,6 +29,14 @@ app.get('/login', function(req, res){
     res.sendFile(__dirname + '/views/login.html');
 });
 
+app.get('/login-wrong-user', function(req, res){
+    res.sendFile(__dirname + '/views/login-wrong-user.html');
+});
+
+app.get('/login-user-not-found', function(req, res){
+    res.sendFile(__dirname + '/views/login-user-not-found.html');
+});
+
 app.get('/index', function(req, res){
     res.sendFile(__dirname + '/views/index.html');
 });

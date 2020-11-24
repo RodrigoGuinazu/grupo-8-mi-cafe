@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Mí Café</title>
+</head>
+<body>
+    <!--
+    <header>
+        
+            <div class="navbar">
+            <div class="navbar-left">
+                <a href="/"><img src="img/coffee-icon.svg" class="navbar-logo">Mí Café</a>
+                
+            </div>
+            <div class="navbar-right">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    -->
+
+    <header class="navbar">
+        <div class="navbar-superior">
+            <div class="navbar-logo"><a href="/index"><i class="fas fa-coffee"></i></div></a>
+            <div class="input-icon">
+                <i class="fas fa-search"></i>
+                <input type="search" class="navbar-search" placeholder="        Busca tu producto">
+            </div>
+            <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
+            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="navbar-inferior">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Avenida Siempre Viva 742</h4></div>
+        </div>
+    </header>
+    
+    <main>
+        <section align="center" class="login">
+            <div class="login-credential-image">
+                <img src="img/avatar-icon.svg" alt="avatar-login">
+            </div>
+
+            <div class="login-credential-alternative">
+                <img class="login-credential-alternative-gm" src="img/gm-icon.svg" alt="Login Gmail">
+                <img class="login-credential-alternative-fb" src="img/fb-icon.svg" alt="Login Facebook">
+                <img class="login-credential-alternative-tw"  src="img/tw-icon.svg" alt="Login Twitter">
+            </div>
+
+            <form class="login-credential" action="/" method="GET">
+                <div class="login-credential-user">
+                    <p>...ó ingresá con tu usuario:</p>
+                    <p><input type="text" name="user" id="user" placeholder="Mi.usuario" style="text-align:center"></p>
+                </div>
+
+                <div class="login-credential-password">
+                    <p><input type="password" name="password" id="password" placeholder="Contraseña" style="text-align:center" ></p>
+                    <i class="fas fa-eye-slash"></i>
+                    <p><input type="checkbox" name="remindme" value="remindme">Recordarme</p>
+                </div>
+                
+                <div class="login-submit">
+                    <a class="login-submit-button" href="/index">Ingresar</a>
+                </div>
+
+                <div>
+                    <p class="login-submit-message-wrong-user">Usuario/Contraseña inválidos</p>
+                </div>
+
+
+            </form>
+
+            <div class="login-recover-links">
+                <a class="login-recover-links-user" href="">¿Olvidaste tu usuario?</a>
+                <a class="login-recover-links-password" href="">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="login-register">
+                <p>Si aún no estás registrado,</p>
+                <a class="login-register-button" href="/formulario">Creá tu cuenta</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-text">
+            <p class="footer-text-copyright">Copyright Mí Café 2020</p>
+            <small class="footer-text-terms">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</small>
+        </div>
+    </footer>
+</body>
+</html>

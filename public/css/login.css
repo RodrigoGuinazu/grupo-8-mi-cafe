@@ -208,6 +208,24 @@
     margin: 5px;
 }
 
+/*Mensaje Login: incorrecto*/
+
+.login-submit-message-wrong-user {
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    margin: 3px;
+}
+
+/*Mensaje Login: crear cuenta*/
+.login-user-not-found.html {
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    margin: 3px;
+}
+
+
 .login-recover-links {
     color: white;
     display: flex;
