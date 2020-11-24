@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Producto</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/detalle-producto.css">
 </head>
@@ -12,12 +14,12 @@
 
         <header class="navbar">
             <div class="navbar-superior">
-                <div class="navbar-logo"><i class="fas fa-coffee"></i></div>
+                <div class="navbar-logo"><a href="/index"><i class="fas fa-coffee"></i></div></a>
                 <div class="input-icon">
                     <i class="fas fa-search"></i>
                     <input type="search" class="navbar-search" placeholder="        Busca tu producto">
                 </div>
-                <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
+                <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
                 <div class="navbar-burger"><i class="fas fa-bars"></i></div>
             </div>
             <div class="navbar-inferior">
@@ -25,7 +27,7 @@
             </div>
         </header>
 
-
+    <section class="articulo-precio-envio-padre">
         <section class="articulo">
 
             <h2>Cafe Cabrales dorado 400gr</h2>
@@ -37,18 +39,16 @@
             </article>
         </section>
 
-        <div class="puntuacion">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-        </div>
-
         <section class="precio-envio">
            
             <article >
-
+                <div class="puntuacion">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
                 <div class="precio">
                     <div><i class="fas fa-money-bill"></i></div>
                     <div><p class="pesos">$400</p></div>
-                    <div><button class="boton-carrito" type="button">Agregar al Carrito</button></div>
+                    <div><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
                 </div>
             
                 <div class="pagos">
@@ -98,6 +98,7 @@
             
             </article>
         </section>
+    </section>
 
         <section class="descripcion">
             
@@ -105,6 +106,7 @@
                 <h3 align="center">Descripcion del Cafe:</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis hic nemo, aspernatur nulla quos maiores veritatis nam. Soluta obcaecati provident repudiandae vel veritatis voluptates praesentium natus quisquam sunt. Vero temporibus veritatis ullam corrupti praesentium, eos odio id ea mollitia, quia expedita earum quam culpa obcaecati sint provident ipsam ut commodi ipsum nulla! Omnis minus inventore deserunt delectus, dicta iste molestiae, vitae aliquam ut quia magni cum quidem reiciendis distinctio. Nostrum consequatur nesciunt eaque, repellendus id iste accusantium dolor tenetur, distinctio cupiditate minus.</p>
             </article>
+
         </section>
 
         <section class="recomendacion">
@@ -123,10 +125,19 @@
                  </div>
         </section>
 
-        <div class="copyright">
-            <p>Copyright © 2020 Mi Cafe S.R.L.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa tempore. Error sed distinctio eligendi natus qui a quasi minima.</p>
+        <div class="redes">
+            <h3 class="nombre-marca">Mi Café</h3>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-whatsapp"></i>
         </div>
+
+        <footer class="pie">
+            <p>Copyright © 2020 Mi Cafe S.R.L.</p>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et ab sunt voluptatum totam eius
+                nemo. Explicabo eum magnam ut fuga laborum minus, assumenda facere at quod quo debitis omnis est non
+                architecto tenetur neque rerum necessitatibus cum, dolorum totam!.</small>
+        </footer>
 
     </main>
 </body>

@@ -17,8 +17,8 @@ app.get('/formulario', function(req, res){
     res.sendFile(__dirname + '/views/formulario-registro.html');
 });
 
-app.get('/carrito', function(req, res){
-    res.sendFile(__dirname + '/views/carrito.html');
+app.get('/carrito-vacio', function(req, res){
+    res.sendFile(__dirname + '/views/carrito-vacio.html');
 });
 
 app.get('/carrito-lleno', function(req, res){
@@ -27,6 +27,14 @@ app.get('/carrito-lleno', function(req, res){
 
 app.get('/login', function(req, res){
     res.sendFile(__dirname + '/views/login.html');
+});
+
+app.get('/login-wrong-user', function(req, res){
+    res.sendFile(__dirname + '/views/login-wrong-user.html');
+});
+
+app.get('/login-user-not-found', function(req, res){
+    res.sendFile(__dirname + '/views/login-user-not-found.html');
 });
 
 app.get('/index', function(req, res){

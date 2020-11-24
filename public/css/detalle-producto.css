@@ -1,6 +1,13 @@
 * {
     padding: 0;
     margin: 0;
+    background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* NAVBAR */
@@ -9,24 +16,32 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: #ededed;
+    background-color: #D1B894;
+}
+
+.navbar div {
+    background-color: #D1B894;
+}
+
+.navbar a {
+    background-color: #D1B894;
 }
 
 .navbar-superior {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #ededed;
+    background-color: #D1B894;
     padding-top: 6px;
     vertical-align: top;
 }
 
 .navbar i {
-    background-color: #ededed;
+    background-color: #D1B894;
 }
 
 .navbar-logo i {
-    background-color: #ededed;
+    background-color: #D1B894;
     color: black;
     font-size: 25px;
     margin-top: 4px;
@@ -34,7 +49,7 @@
 
 .navbar-burger {
     font-size: 25px;
-    background-color: #ededed;
+    background-color: #D1B894;
     color: black;
     flex-direction: row;
     justify-content: space-around;
@@ -46,7 +61,7 @@
     height: 20px;
     padding: 1px;
     font-size: 14px;
-    background-color: white;
+    background-color: #D1B894;
     border: 1px solid black;
     border-radius: 6px;
     box-sizing: border-box;
@@ -58,46 +73,59 @@
 .input-icon i {
     position: absolute;
     color: black;
-    background-color: white;
-    border: 1px solid white;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
     border-radius: 6px;
     margin-top: 7px;
-    padding-left: 2px;
+    padding-left: 3px;
 }
 
 .navbar-cart {
     font-size: 25px;
     margin-right: 6px;
-    background-color: #ededed;
+    background-color: #D1B894;
     color: black;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 4px;
 }
 
+.navbar-cart a {
+    background-color: #D1B894;
+}
+
 .navbar-inferior {
-    border-top: 1px solid gray;
-    background-color: #ededed;
+    border-top: 1px solid black;
+    background-color: #D1B894;
 }
 
 .location {
-    background-color: #ededed;
+    background-color: #D1B894;
 }
 
 .location i {
     margin-left: 3px;
     margin-right: 6px;
     font-size: 14px;
-    background-color: #ededed;
+    background-color: #D1B894;
     color: black;
 }
 
 .location h4 {
     display: inline-block;
-    background-color: #ededed;
+    background-color: #D1B894;
     color: black;
-    margin-top: 2%;
+    margin-top: 6px;
+    margin-bottom: 2px;
     font-size: 14px;
+}
+
+/* ARTICULO ENVIO PADRE */
+
+.articulo-precio-envio-padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* PRODUCTO */
@@ -105,9 +133,14 @@
 .articulo {
     padding-top: 75px;
     padding-bottom: 20px;
+    width: 50%;
+    max-width: 595px;
+    flex-direction: row;
 }
 
 .articulo h2 {
+    text-align: center;
+    margin-left: 10px;
     font-size: 21px;
     padding-bottom: 4px;
 }
@@ -120,6 +153,7 @@
 
 .img-principal img {
     width: 85%;
+    max-width: 500px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -130,28 +164,25 @@
     padding-top: 85px;
 }
 
-.puntuacion {
-    margin-left: 19px;
-    margin-bottom: 6px;
-}
-
-.fa-star {
-    color: goldenrod;
-}
-
 /* PRECIO Y ENVIO */
 
 .precio-envio{
     padding: 10px;
     margin-top: 6px;
     margin-bottom: 6px;
+    width: 50%;
+    max-width: 340px;
     display: flex;
+    align-self: center;
     flex-direction: row;
     justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .precio-envio div {
-    margin-bottom: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     display: inline-block;
     flex-direction: row;
     justify-content: space-around;
@@ -159,6 +190,16 @@
 
 .precio-envio i {
     font-size: 25px;
+}
+
+.puntuacion {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.fa-star::before {
+    color: goldenrod;
+    font-size: 18px;
 }
 
 .precio div {
@@ -171,8 +212,8 @@
     text-align: center;
     color: white;
     padding: 4px;
-    background-color: rgb(19, 19, 194);
-    border: 1px solid rgb(19, 19, 194);
+    background-color: black;
+    border: 1px solid black;
     border-radius: 4px;
 }
 
@@ -201,11 +242,19 @@
 
 /* DESCRIPCION DEL PRODUCTO */
 
-.descripcion {
+.descripcion article {
+    max-width: 500px;
+    border: 1px solid black;
     margin: 6px;
     padding: 6px;
-    border: 1px solid black;
     border-radius: 4px;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 .descripcion p {
@@ -239,12 +288,45 @@
 
 .recomendados img {
     width: 27%;
+    max-width: 300px;
+    max-height: 300px;
     flex-direction: row;
     justify-content: space-around;
 }
 
 /* COPYRIGHT */
 
-.copyright p {
+.redes {
     background-color: white;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.redes h3 {
+    background-color: white;
+}
+
+.redes i {
+    background-color:white;
+    font-size: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.pie {
+    background-color:white;
+    text-align: center;
+    padding-top: 10px
+}
+
+.pie p {
+    background-color:white;
+    font-size: 8px;
+}
+
+.pie small {
+    background-color:white;
+    font-size: 8px
 }
