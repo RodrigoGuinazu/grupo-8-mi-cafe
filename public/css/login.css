@@ -78,10 +78,11 @@
     background-color: #D1B894;
     color: black;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     margin-top: 4px;
 }
 
+/*
 .input-icon .navbar-search {
     width: 100%;
     height: 20px;
@@ -104,7 +105,7 @@
     border-radius: 6px;
     margin-top: 7px;
     padding-left: 3px;
-}
+}*/
 
 .navbar-cart {
     font-size: 25px;
@@ -266,25 +267,45 @@ a {
 
 /*FOOTER*/
 
-.footer-text {
-    background-color: white;
-    color: black;
+.footer {
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
-
 }
 
-.footer-text-copyright {
-    font-weight: 600;
-    width: 100%;
+.redes {
+    background-color: white;
+    text-align: center;
+    padding-top: 6px;
 }
 
-.footer-text-terms {
-    font-weight: 300;
-    width: 100%;
+.redes h3 {
+    background-color: white;
+}
+
+.redes i {
+    background-color:white;
+    font-size: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.pie {
+    background-color:white;
+    text-align: center;
+    padding-top: 10px
+}
+
+.pie p {
+    background-color:white;
+    font-size: 8px;
+}
+
+.pie small {
+    background-color:white;
+    font-size: 8px
 }
