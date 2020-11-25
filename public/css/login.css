@@ -156,7 +156,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 85px;
     padding-bottom: 50px;
     justify-content: space-around;
     align-content: center;
@@ -169,7 +169,10 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    max-width: 75px;
+}
+
+.login-credential-image img {
+    max-width: 80px;
 }
 
 .login-credential-alternative {
@@ -186,16 +189,29 @@
     max-width: 40px;
 }
 
-.login-credential-user {
-    padding: 5px;
+.login-credential {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.login-credential-password {
+.login-credential-user input, .login-credential-remindme {
     padding: 5px;
+    margin: 5px;
+    width: 90%;
+    border: none;
+}
+
+.login-credential-password input {
+    padding: 5px;
+    margin: 5px;
+    width: 70%;
+    border: none;
 }
 
 .login-submit {
     padding: 10px;
+    margin: 5px
 }
 
 .login-submit-button {
