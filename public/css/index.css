@@ -124,15 +124,6 @@ img {
     font-size: 14px;
 }
 
-.body-completo{
-    margin-top: 16px;
-    margin-bottom: 12px;
-    margin-left: 5px;
-    font-family: 'Roboto', sans-serif;
-    display:flex;
-    flex-wrap: wrap;
-}
-
 /*ULTIMAS VISITAS*/
 
 .ultimas-visitas-titulo {
@@ -263,15 +254,15 @@ img {
 /* OPINIONES */
 
 .opiniones{
-    width: 50%;
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space around;
     align-items: center;
     position:relative;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .opinion-cliente{
