@@ -242,7 +242,7 @@ a {
 /* DESCRIPCION DEL PRODUCTO */
 
 .descripcion article {
-    max-width: 500px;
+    max-width: 1195px;
     border: 1px solid black;
     margin: 6px;
     padding: 6px;
@@ -286,7 +286,7 @@ a {
 }
 
 .recomendados img {
-    width: 27%;
+    width: 19%;
     max-width: 300px;
     max-height: 300px;
     flex-direction: row;
