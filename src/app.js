@@ -9,10 +9,6 @@ app.get('/detalle', function(req, res){
     res.sendFile(__dirname + '/views/detalle-producto.html');
 });
 
-app.get('/borrador', function(req, res){
-    res.sendFile(__dirname + '/views/borrador.html');
-});
-
 app.get('/formulario', function(req, res){
     res.sendFile(__dirname + '/views/formulario-registro.html');
 });
@@ -44,3 +40,8 @@ app.get('/index', function(req, res){
 app.get('*', (req, res) => {
     res.sendFile(__dirname.replace("\src", "") + '/public/' + req.url);
   });
+
+/*
+app.get('/borrador', function(req, res){
+    res.sendFile(__dirname + '/views/borrador.html');
+});*/
