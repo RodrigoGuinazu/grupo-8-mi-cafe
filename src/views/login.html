@@ -17,11 +17,14 @@
     <header class="navbar">
         <div class="navbar-superior">
             <div class="navbar-logo"><a href="/index"><i class="fas fa-coffee"></i></div></a>
+            
             <!--
             <div class="input-icon">
                 <i class="fas fa-search"></i>
                 <input type="search" class="navbar-search" placeholder="        Busca tu producto">
-            </div>-->
+            </div>
+            -->
+
             <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
             <div class="navbar-burger"><i class="fas fa-bars"></i></div>
         </div>
@@ -45,13 +48,16 @@
             <form class="login-credential" action="/" method="GET">
                 <div class="login-credential-user">
                     <p>...ó ingresá con tu usuario:</p>
-                    <p><input type="text" name="user" id="user" placeholder="Mi.usuario" style="text-align:center"></p>
+                    <input type="text" name="user" id="user" placeholder="Mi.usuario" style="text-align:center">
                 </div>
 
                 <div class="login-credential-password">
-                    <p><input type="password" name="password" id="password" placeholder="Contraseña" style="text-align:center" ></p>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" style="text-align:center" >
                     <i class="fas fa-eye-slash"></i>
-                    <p><input type="checkbox" name="remindme" value="remindme">Recordarme</p>
+                </div>
+
+                <div class="login-credential-remindme">
+                    <input type="checkbox" name="remindme" value="remindme">Recordarme
                 </div>
                 
                 <div class="login-submit">
