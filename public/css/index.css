@@ -125,9 +125,6 @@ img {
 }
 
 .body-completo{
-    margin-top: 16px;
-    margin-bottom: 12px;
-    margin-left: 5px;
     font-family: 'Roboto', sans-serif;
     display:flex;
     flex-wrap: wrap;
