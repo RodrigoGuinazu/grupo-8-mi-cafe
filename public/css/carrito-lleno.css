@@ -155,8 +155,8 @@
     flex-direction: row;
     justify-content: space-around;
     margin-top: 4px;
-    margin-left: 310px*/
-}
+    margin-left: 310px
+}*/
 
 .navbar-inferior {
     border-top: 1px solid gray;
@@ -288,8 +288,6 @@
 .continua img {
     width: 50%;
     margin-bottom: 15px;
-
-    
 }
 
 .fa-angle-right {
@@ -314,12 +312,7 @@
     border-top: 1px solid #b8b8b8;
     border-bottom: 1px solid #b8b8b8;
 }
-  
-    margin: auto;
-    font-style: italic
-}
     
-
 .nombre-marca {
     font-size: 14px;
     font-style: italica;

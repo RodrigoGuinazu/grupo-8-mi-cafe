@@ -9,6 +9,11 @@ a {
     color: black;
 }
 
+img {
+    display: block;
+    margin: auto
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -129,38 +134,124 @@ a {
 }
 
 /*ULTIMAS VISITAS*/
-.ultimas-visitas-titulo{
+
+.ultimas-visitas-titulo {
     padding-top:60px;
     text-decoration: underline;
+    display: flex;
+    justify-content: center;
 }
-.ultimas-visitas-colombia{
-    padding-top:20px; 
+.ultimas-visitas-colombia {
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px
 }
+
+.ultimas-visitas-colombia-producto, .ultimas-visitas-colombia-imagen, .ultimas-visitas-colombia-precio, .ultimas-visitas-colombia-aviso, .boton-agregar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px
+}
+
 .ultimas-visitas-brasil{
-    padding-top:20px;    
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    margin-top: 3px;
+    margin-bottom: 3px   
 }
+
+.ultimas-visitas-brasil-producto, .ultimas-visitas-brasil-imagen, .ultimas-visitas-brasil-precio, .ultimas-visitas-brasil-aviso, .boton-agregar {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px
+}
+
+/*.ultimas-visitas-boton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 6px
+}*/
 
 /* OFERTAS */
-.ofertas-titulo{
-    padding-top:20px;
-    text-decoration: underline;   
+.ofertas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.ofertas-precio{
+.ofertas-titulo {
+    padding-top:20px;
+    text-decoration: underline; 
+    justify-content: center;
+    flex-direction: column;  
+    text-align: center
+}
+
+.ofertas-detalles-bourbon {
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    margin-top: 3px;
+    margin-bottom: 3px   
+}
+
+.ofertas-detalles-bourbon-producto, .ofertas-detalles-bourbon-imagen, .ofertas-detalles-bourbon-precio, .ofertas-detalles-bourbon-aviso {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px
+}
+
+.ofertas-detalles-guatemala {
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    margin-top: 3px;
+    margin-bottom: 3px   
+}
+
+.ofertas-detalles-guatemala-producto, .ofertas-detalles-guatemala-imagen, .ofertas-detalles-guatemala-precio, .ofertas-detalles-guatemala-aviso {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px
+}
+
+/*.ofertas-precio{
     padding:5px;
 }
 
 .ofertas h4{
     padding-top:20px; 
-}
+}*/
 
-.ofertaza{
+.ofertaza {
     color: red;
     text-decoration: underline;
 }
 
 .boton-carrito {
-    width: 17%;
+    width: 100%;
     text-align: center;
     color: white;
     padding: 3px;
