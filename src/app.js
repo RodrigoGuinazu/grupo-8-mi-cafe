@@ -9,6 +9,10 @@ app.get('/detalle', function(req, res){
     res.sendFile(__dirname + '/views/detalle-producto.html');
 });
 
+app.get('/navbar', function(req, res){
+    res.sendFile(__dirname + '/views/navbar.html');
+});
+
 app.get('/formulario', function(req, res){
     res.sendFile(__dirname + '/views/formulario-registro.html');
 });
