@@ -142,35 +142,164 @@ div.navbar-location {
     background-color: #D1B894;
 }
 
+/* PIE DE PAGINA */
+
+/* PIE DE PAGINA - REDES */
+
+div.redes {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 12px;
+}
+
+.redes i {
+    background-color: white;
+    font-size: 25px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+/* PIE DE PAGINA - CONTACTO */
+
+.contacto i {
+    background-color: white;
+    font-size: 17px;
+    width: 100%;
+}
+
+li {
+    background-color: white;
+    list-style-type: none;
+}
+
+.contacto a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+/* PIE DE PAGINA - MEDIOS DE PAGO */
+
+.medios-de-pago {
+    width: 70%;
+}
+
+.cards {
+    height: 25px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #00000012;
+}
+
+.pagos-envios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* PIE DE PAGINA - ENVIOS */
+
+.formas-de-envio {
+    width: 30%;
+}
+
+
+/* PIE DE PAGINA - OTROS  */
+
+footer {
+    background-color: white;
+    padding: 12px;
+}
+
+footer p {
+    background-color: white;
+}
+
+footer h4 {
+    background-color: white;
+}
+
+footer div {
+    background-color: white;
+}
+
+.tipografia {
+    font-family: 'Yellowtail', cursive;
+    background-color: white;
+}
+
+.tipografia-logo {
+    font-family: 'Yellowtail', cursive;
+    font-size: 35px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    width: 100%;
+}
+
 /* MOBILE */
+
+/* NAVBAR MOBILE */
 
 @media (max-width: 767px){
 
-.navbar-cart {
-    display: none;
+    .navbar-cart {
+        display: none;
+    }
+    
+    .navbar-location-desktop {
+        display: none;
+    }
+    
+    .navbar-categorias {
+        display: none;
+    }
+    
+    .navbar-categorias {
+        display: none;
+    }
+    
+    .navbar-usuario {
+        display: none;
+    }
+    
+    /* PIE DE PAGINA MOBILE */
+
+    .redes-desktop {
+        display: none;
+    }
+
+    .medios-de-pago-desktop {
+        display: none;
+    }
+
+    .formas-de-envio-desktop {
+        display: none;
+    }
+
+    div.pagos-envios {
+        margin-top: 12px;
+    }
+
+    div.contacto {
+        margin-top: 12px;
+    }
+
+    p.copyright {
+        margin-top: 12px;
+    }
 }
 
-.navbar-location-desktop {
-    display: none;
-}
-
-.navbar-categorias {
-    display: none;
-}
-
-.navbar-categorias {
-    display: none;
-}
-
-.navbar-usuario {
-    display: none;
-}
-
-}
-
-/* TABLET */
+/* DESKTOP - TABLET */
 
 @media (min-width: 768px) {
+
+    /* NAVBAR TABLET - DESKTOP */
 
     .navbar-cart {
         font-size: 25px;
@@ -250,10 +379,62 @@ div.navbar-location {
     .navbar-usuario i {
         background-color: #D1B894;
     }
+
+    /* PIE DE PAGINA TABLET - DESKTOP */
+
+    div.redes {
+        display: none;
+    }
+
+    .redes-desktop a {
+        color: black;
+        text-decoration: none;
+        font-size: 22px;
+        background-color: white;
+    }
+
+    .redes-desktop i {
+        background-color: white;
+    }
+
+    div.pie-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 12px;
+    }
+
+    div.redes-desktop {
+        width: 20%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    .pagos-envios {
+        display: none;
+    }
+
+    div.medios-de-pago-desktop {
+        width: 35%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.formas-de-envio-desktop {
+        width: 15%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.contacto {
+        width: 25%;
+        height: 126px;
+    }
+
+    p.copyright {
+        margin-top: 12px;
+    }
+
 }
 
-/* DESKTOP */
-
-@media (min-width: 1050px) {
-    
-}
