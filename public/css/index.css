@@ -59,6 +59,7 @@ div.search {
     border-radius: 4px 0 0 4px;
     outline: none;
     color: black;
+    background: #ededed;
   }
 
 .searchButton {
@@ -66,7 +67,7 @@ div.search {
     height: 35px;
     border: 1px solid #D1B894;
     border-left: none;
-    background:  #ededed;
+    background: #ededed;
     text-align: center;
     color: black;
     border-radius: 0 4px 4px 0;
@@ -75,7 +76,7 @@ div.search {
 }
 
 .fa-search:before {
-    background-color:  #ededed;
+    background-color: #ededed;
 }
 
 /* NAVBAR-MENU-HAMBURGESA */
@@ -146,22 +147,24 @@ div.navbar-location {
 .main-sections {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .about-us, .coffee-info, .coffee-family, .coffee-profile, .coffee-community {
     padding: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
+    border-bottom: 2px solid #D1B894;
+    border-top: 2px solid #D1B894;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,21 +191,23 @@ div.navbar-location {
 }
 
 .main-sections p {
-    width: max-content;
+    width: 100%;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
+    text-align: center;
     font-weight: bolder;
     text-shadow: black 0.1em 0.1em 0.2em
 }
 
-.main-sections button {
+.main-sections-button {
     width: max-content;
     padding: 15px 20px;
     border-radius: 20px;
     text-align: center;
     font-weight: bolder;
     color: white;
-    font-size: 30px;
+    font-size: 15px;
+    text-decoration: none;
     border: solid black 1px;
     background-color:black;
     outline: none;
@@ -210,44 +215,60 @@ div.navbar-location {
     margin: 5px;
 }
 
-button:focus {
+.main-sections-button:focus {
     background-color:#D1B894;
     border: solid #D1B894 1px;
     color: black;
-    cursor: auto;
 }
 
 /* OPINIONES */
 
 .opinions{
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    /*position:relative;*/
-    justify-content: center;
     background-color: #ededed;
 
 }
 
-.opinions p{
-    width: 80%;
-    color: white;
-    font-size: 30px;
+.opinions-title{
+    width: 100%;
+    color: black;
+    margin: 5px;
+    padding: 15px;
+    font-size: 35px;
     font-weight: bolder;
-    text-shadow: black 0.1em 0.1em 0.2em
+    text-align: center;
+}
+
+.opinions article{
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    align-self: space-around;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 3px 3px 3px #D1B894;
+}
+
+.fa-quote-left, .fa-quote-right {
+    display: none;
 }
 
 .opinion-cliente{
-    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 .nombre-cliente{
-    font-size: small;
-    padding-bottom: 20px
+    font-style: italic;
+    font-size: 15px;
+    padding: 10px
 }
 
 
@@ -544,6 +565,81 @@ footer div {
 
     p.copyright {
         margin-top: 12px;
+    }
+
+    /*Secciones principales*/
+
+    .about-us, .coffee-info, .coffee-family, .coffee-profile, .coffee-community {
+        width: 100%;
+        height: 75vh;
+    }
+
+    .main-sections p {
+        width: 100%;
+        color: white;
+        font-size: 50px;
+    }
+    
+    .main-sections-button {
+        font-size: 20px;
+    }
+
+    .main-sections-button:hover {
+        background-color:#D1B894;
+        border: solid #D1B894 1px;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* OPINIONES */
+
+    .opinions {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .opinions-title {
+        width: 100%;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .fa-quote-left, .fa-quote-right {
+        display: block;
+        text-align: center;
+    }
+
+    .opinions article {
+        width: 20%;
+        height: 30vh;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .opinion-cliente{
+        width: 100%;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .nombre-cliente{
+        width: 100%;
+        font-style: italic;
+        font-size: 15px;
+        padding: 10px
     }
 
 }
