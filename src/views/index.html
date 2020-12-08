@@ -1,107 +1,166 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Mi Café</title>
+        <title>Mí Café</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
         <link rel="stylesheet" href="/css/index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <header class="navbar">
-        <div class="navbar-superior">
-            <div class="navbar-logo"><i class="fas fa-coffee"></i></div>
-            <div class="search">
-                <input type="text" class="searchTerm" placeholder="Busca tu Producto">
-                <button type="submit" class="searchButton">
-                  <i class="fa fa-search"></i>
-               </button>
-             </div>
-            <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
-            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-        </div>
-        <div class="navbar-inferior">
-            <div class="location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Avenida Siempre Viva 742</h4></div>
-        </div>
-    </header>
    
-<body>
+    <body>
+        <main>
+            <header class="navbar">
 
-    <main>
-     <div class= "ultimas-visitas-titulo">
-     <h2>Basado en tus últimas visitas</h2>
-     </div>
-
-     <div class="ultimas-visitas-colombia">
-      <h4 class="ultimas-visitas-colombia-producto">Café de especialidad tostado Colombia</h4>
-      <img class="ultimas-visitas-colombia-imagen" width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-colombia-guanes-genuino-14-kg-D_NQ_NP_787555-MLA42564298723_072020-F.webp" alt="Imagen Café Colombia">
-        <p class="ultimas-visitas-colombia-precio">$1.299,99</p>
-        <p class="ultimas-visitas-colombia-aviso">Aprovecha esta oferta!!!</p>
-        <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
-     </div>
-
-     <div class="ultimas-visitas-brasil">
-     <h4 class="ultimas-visitas-brasil-producto">Café premium tostado Brasil Catuai</h4>
-     <img class="ultimas-visitas-brasil-imagen" width="200px" src="https://http2.mlstatic.com/cafe-premium-tostado-brasil-catuai-1-kg-D_NQ_NP_787296-MLA42540120808_072020-O.webp" alt="Imagen Café Brasil Catuai">
-        <p class="ofertas-precio ultimas-visitas-brasil-precio">$1.000</p>
-        <p class="ultimas-visitas-brasil-aviso">En 3 cuotas sin interés!!!</p>
-        <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
-     </div>
+                <div class="navbar-superior">
     
-     <div class= "ofertas">
-         
-        <div class= "ofertas-titulo">
-            <h2>Ofertas</h2>
-        </div>
-
-        <div class="ofertas-detalles-bourbon"></div>
-            <h4 class="ofertas-detalles-bourbon-producto">Café Bourbon</h4>
-            <img class="ofertas-detalles-bourbon-imagen" width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-brasil-bourbon-14-kg-D_Q_NP_746964-MLA42541880767_072020-F.webp" alt="Imagen cafe en oferta1">
-            <p class="ofertas-precio ofertas-detalles-bourbon-precio">$500</p>
-            <p class="ofertas-detalles-bourbon-aviso">Pocas unidades, apurate!!</p>
-            <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
-        </div>
-
-        <div class="ofertas-detalles-guatemala">
-            <h4 class="ofertas-detalles-guatemala-producto">Café tostado Guatemala</h4>
-            <img class="ofertas-detalles-guatemala-imagen" width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-grano-tostado-guatemala-barista-14-kg-D_NQ_NP_949151-MLA42617364974_072020-F.webp" alt="Imagen cafe en oferta2">
-            <p class="ofertas-precio ofertas-detalles-guatemala-precio">$600</p>
-            <p class= "ofertaza ofertas-detalles-guatemala-aviso">Ofertaza!!</p>
-            <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
-        </div>
-
-    </div>
+                    <div class="navbar-logo"><a href="/index">Mí Café</div></a>
     
-    <div class= "opiniones">
-            <h3>Opiniones de nuestros clientes</h3>
-        <section>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Busca tu Producto">
+                        <button type="submit" class="searchButton">
+                          <i class="fa fa-search"></i>
+                       </button>
+                    </div>
+    
+                       <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+    
+                       <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
+                       
+                </div>
+    
+                <div class="navbar-inferior">
+    
+                    <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Av. Siempre Viva 742</h4></div>
+    
+                    <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson <br> Av. Siempre Viva 742</h4></div>
+    
+                    <div class="navbar-categorias">
+                        <a href="">Cafés</a><span> - </span>
+                        <a href="">Cafeteras</a><span> - </span>
+                        <a href="">Accesorios</a>
+                    </div>
+    
+                    <div class="navbar-usuario">
+                        <a href=""><i class="far fa-user-circle"></i> Homero Simpson </a>
+                    </div>
+                </div>
+            </header>
 
-            <article>
-                <p class="opinion-cliente">"Me encanta el trato personalizado que tienen"</p>
-                <p class=nombre-cliente>Carlos S.</p>
-            </article>
+            <section class="main-sections">
+                <div class="about-us">
+                    <p>Hola! Soy Mí Café </p>
+                    <button type="button">Conoceme</button>
+                </div>
 
-            <article>
-                <p class="opinion-cliente">"Muy buena variedad de café! Los amo!!"</p>
-                <p class=nombre-cliente>Lucía F.</p>
-            </article>
+                <div class="coffee-info">
+                    <p>El mundo en un grano de café</p>
+                    <button type="button">Viajemos</button>
+                </div>
 
-        </section>
-    </div>
+                <div class="coffee-family">
+                    <p>Familia de productos Mí Café</p>
+                    <button type="button">Conocela</button>
+                </div>
 
-    <div class="redes">
-        <h3 class="nombre-marca">Mi Café</h3>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-whatsapp"></i>
-    </div>
+                <div class="coffee-profile">
+                    <p>Tu personalidad es única, tu café también!</p>
+                    <button type="button">Descubrila</button>
+                </div>
 
-    <footer class="pie">
-        <p>Copyright © 2020 Mi Cafe S.R.L.</p>
-        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et ab sunt voluptatum totam eius
-            nemo. Explicabo eum magnam ut fuga laborum minus, assumenda facere at quod quo debitis omnis est non
-            architecto tenetur neque rerum necessitatibus cum, dolorum totam!.</small>
-    </footer>
-
+                <div class="coffee-community">
+                    <p>Pertenecer tiene sus beneficios</p>
+                    <button type="button">Unite!</button>
+                </div>
+            </section>
         
- </body>
- </main>
+            <section class= "opinions">
+                    <div>
+                        <p class= "opinions-title">Qué opinan nuestros clientes</p>
+                    </div>
+
+                    <article>
+                        <p class="opinion-cliente">"Me encanta el trato personalizado que tienen"</p>
+                        <p class=nombre-cliente>Carlos S.</p>
+                    </article>
+
+                    <article>
+                        <p class="opinion-cliente">"Muy buena variedad de café! Los amo!!"</p><br>
+                        <p class=nombre-cliente>Lucía F.</p>
+                    </article>
+
+                    <article>
+                        <p class="opinion-cliente">"No tenía idea sobre las distintas variedades de café, y cómo tomar cada uno. Ahora, tengo mí perfil y disfruto de cada uno en distintas ocasiones"</p><br>
+                        <p class=nombre-cliente>Lorena B.</p>
+                    </article>
+
+                    <article>
+                        <p class="opinion-cliente">"Solía tomar café, pero ahora disfruto de mí nueva pasión!"</p><br>
+                        <p class=nombre-cliente>Rubén O.</p>
+                    </article>
+
+            </section>
+
+            <footer>
+                <h3 class="tipografia-logo">Mí Café</h3>
+            <div class="redes">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+
+            <div class="pie-desktop">
+                <div class="redes-desktop">
+                    <ul>
+                        <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://twitter.com/MiCafe16"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href=""><i class="fab fa-facebook-square"> Facebook</i></a></li>
+                    </ul>
+                </div>
+                    
+                <div class="pagos-envios">
+                    <div class="medios-de-pago">
+                        <h4>Medios de Pago</h4>
+                        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+                    </div>
+
+                    <div class="formas-de-envio">
+                        <h4>Formas de Envio</h4>
+                        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+                    </div>
+                </div>
+
+                <div class="medios-de-pago-desktop">
+                    <h4>Medios de Pago</h4>
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+                </div>
+
+                <div class="formas-de-envio-desktop">
+                    <h4>Formas de Envio</h4>
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+                </div>
+
+                <div class="contacto">
+                    <h4>Contactanos</h4>
+                    <ul>
+                        <li><a href=""><i class="fab fa-whatsapp"> 011-2530-0369</i></a></li>
+                        <li><a href=""><i class="fas fa-map-marker-alt"> Calle Falsa 123</i></a></li>
+                        <li><a href=""><i class="far fa-envelope"> micafegrupo8@outlook.com</i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="copyright">Copyright © 2020 <span class="tipografia">Mí Café</span> S.R.L.</p>
+        </footer>
+
+        </main>
+    </body>
 </html>
