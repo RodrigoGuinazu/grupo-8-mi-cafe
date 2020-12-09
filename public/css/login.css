@@ -1,150 +1,147 @@
 * {
+    padding: 0;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    margin: 0 auto;
-
-}
-
-/*
-.navbar {
-    background-color: black;
-    color: white;
-    border-bottom: dotted purple;
-    font-weight: bold;
-    width: 100%;
-    padding: 5px;
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
 }
 
-.navbar-left {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    border-color: red;
+header.navbar{
+    background-color: #D1B894;
+    padding: 6px;
 }
 
-.navbar-right {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    border-color: green;
-}
-
-.navbar-logo {
-    max-width: 100px;
-}
-*/
-
-.navbar {
-    position: fixed;
-    top: 0px;
-    width: 100%;
+.navbar a {
+    color: black;
+    text-decoration: none;
     background-color: #D1B894;
 }
 
-.navbar div {
-    background-color: #D1B894;
-}
+/* NAVBAR-SUPERIOR */
 
 .navbar-superior {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #D1B894;
-    padding-top: 6px;
-    vertical-align: top;
-}
-
-.navbar i {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     background-color: #D1B894;
 }
 
-.navbar-logo i {
-    background-color: #D1B894;
+/* NAVBAR-LOGO */
+
+.navbar-logo {
+    max-width: 30%;
+}
+
+.navbar-logo a {
+    font-family: 'Yellowtail', cursive;
+    font-size: 30px;
+}
+
+/* NAVBAR-SEARCH */
+
+/*div.search {
+    width: 60%;
+}
+
+.search {
+    width: 60%;
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+}
+
+.searchTerm {
+    width: 65%;
+    border: 1px solid #D1B894;
+    border-right: none;
+    padding: 5px;
+    height: 35px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
     color: black;
-    font-size: 25px;
-    margin-top: 4px;
+    background: #ededed;
+  }
+
+.searchButton {
+    width: 40px;
+    height: 35px;
+    border: 1px solid #D1B894;
+    border-left: none;
+    background: #ededed;
+    text-align: center;
+    color: black;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 12px;
 }
+
+.fa-search:before {
+    background-color: #ededed;
+}
+*/
+
+/* NAVBAR-MENU-HAMBURGESA */
 
 .navbar-burger {
     font-size: 25px;
-    background-color: #D1B894;
-    color: black;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 4px;
 }
 
-/*
-.input-icon .navbar-search {
-    width: 100%;
-    height: 20px;
-    padding: 1px;
-    font-size: 14px;
-    background-color: #D1B894;
-    border: 1px solid black;
-    border-radius: 6px;
-    box-sizing: border-box;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 6px;
-}
-
-.input-icon i {
-    position: absolute;
-    color: black;
-    background-color: #D1B894;
-    border: 1px solid #D1B894;
-    border-radius: 6px;
-    margin-top: 7px;
-    padding-left: 3px;
-}*/
-
-.navbar-cart {
-    font-size: 25px;
-    margin-right: 6px;
-    background-color: #D1B894;
-    color: black;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 4px;
-}
-
-.navbar-cart a {
-    /*background-color: #D1B894;*/
-    color: black;
-}
+/* NAVBAR-INFERIOR */
 
 .navbar-inferior {
     border-top: 1px solid black;
     background-color: #D1B894;
+    display:none;
 }
 
-.location {
-    background-color: #D1B894;
-}
-
-.location i {
-    margin-left: 3px;
-    margin-right: 6px;
+.navbar-location {
     font-size: 14px;
-    background-color: #D1B894;
     color: black;
 }
 
-.location h4 {
+.navbar-location i {
     display: inline-block;
+    margin-top: 2px;
+}
+
+.navbar-location h4 {
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+/* NAVBAR-COLORES */
+
+div.navbar-logo {
     background-color: #D1B894;
-    color: black;
-    margin-top: 2%;
-    font-size: 14px;
+}
+
+.navbar-logo a {
+    background-color: #D1B894;
+}
+
+div.search {
+    background-color: #D1B894;
+}
+
+div.navbar-burger {
+    background-color: #D1B894;
+}
+
+div.navbar-burger i {
+    background-color: #D1B894;
+}
+
+div.navbar-location {
+    background-color: #D1B894;
+}
+
+.navbar-location i {
+    background-color: #D1B894;
+}
+
+.navbar-location h4 {
+    background-color: #D1B894;
 }
 
 /*BODY*/
@@ -205,7 +202,7 @@
 .login-credential-password input {
     padding: 5px;
     margin: 5px;
-    width: 70%;
+    width: 83%;
     border: none;
 }
 
@@ -281,47 +278,308 @@ a {
     padding: 5px;
 }
 
-/*FOOTER*/
+/* PIE DE PAGINA */
 
-.footer {
-    width: 100%;
-    box-sizing: border-box;
+/* PIE DE PAGINA - REDES */
+
+div.redes {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.redes {
     background-color: white;
-    text-align: center;
-    padding-top: 6px;
-}
-
-.redes h3 {
-    background-color: white;
+    margin-top: 12px;
 }
 
 .redes i {
-    background-color:white;
-    font-size: 30px;
-    margin-left: 6px;
-    margin-right: 6px;
-    margin-top: 6px;
-    margin-bottom: 15px;
+    background-color: white;
+    font-size: 25px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
 }
 
-.pie {
-    background-color:white;
-    text-align: center;
-    padding-top: 10px
+/* PIE DE PAGINA - CONTACTO */
+
+.contacto i {
+    background-color: white;
+    font-size: 17px;
+    width: 100%;
 }
 
-.pie p {
-    background-color:white;
-    font-size: 8px;
+li {
+    background-color: white;
+    list-style-type: none;
 }
 
-.pie small {
-    background-color:white;
-    font-size: 8px
+.contacto a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
 }
+
+/* PIE DE PAGINA - MEDIOS DE PAGO */
+
+.medios-de-pago {
+    width: 70%;
+}
+
+.cards {
+    height: 25px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #00000012;
+}
+
+.pagos-envios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* PIE DE PAGINA - ENVIOS */
+
+.formas-de-envio {
+    width: 30%;
+}
+
+
+/* PIE DE PAGINA - OTROS  */
+
+footer {
+    background-color: white;
+    padding: 12px;
+}
+
+footer p {
+    background-color: white;
+}
+
+footer h4 {
+    background-color: white;
+}
+
+footer div {
+    background-color: white;
+}
+
+.tipografia {
+    font-family: 'Yellowtail', cursive;
+    background-color: white;
+}
+
+.tipografia-logo {
+    font-family: 'Yellowtail', cursive;
+    font-size: 35px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    width: 100%;
+}
+
+/* MOBILE */
+
+/* NAVBAR MOBILE */
+
+@media (max-width: 767px){
+
+    .navbar-cart {
+        display: none;
+    }
+    
+    .navbar-location-desktop {
+        display: none;
+    }
+    
+    .navbar-categorias {
+        display: none;
+    }
+    
+    .navbar-categorias {
+        display: none;
+    }
+    
+    .navbar-usuario {
+        display: none;
+    }
+    
+    .login-credential-password input {
+        padding: 5px;
+        margin: 5px;
+        width: 85%;
+        border: none;
+    }
+    
+
+    /* PIE DE PAGINA MOBILE */
+
+    .redes-desktop {
+        display: none;
+    }
+
+    .medios-de-pago-desktop {
+        display: none;
+    }
+
+    .formas-de-envio-desktop {
+        display: none;
+    }
+
+    div.pagos-envios {
+        margin-top: 12px;
+    }
+
+    div.contacto {
+        margin-top: 12px;
+    }
+
+    p.copyright {
+        margin-top: 12px;
+    }
+}
+
+/* DESKTOP - TABLET */
+
+@media (min-width: 768px) {
+
+    /* NAVBAR TABLET - DESKTOP */
+
+    .navbar-cart {
+        font-size: 25px;
+    }
+
+    .navbar-cart i {
+        background-color: #D1B894;
+    }
+    
+    .navbar-cart a {
+        color: black;
+        background-color: #D1B894;
+    }
+
+    .navbar-burger {
+        display: none;
+    }
+
+    .navbar-inferior {
+        background-color: #D1B894;
+        border-top: 1px solid #D1B894;
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        align-items: baseline;
+        display:none;
+    }
+
+    .navbar-location {
+        display: none;
+    }
+
+    div.navbar-location-desktop {
+        width: 25%;
+        display: none;
+    }
+
+    .navbar-location-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 2px;
+        background-color: #D1B894;
+        display:none;
+    }
+
+    .navbar-location-desktop i {
+        font-size: 30px;
+        background-color: #D1B894;
+        display:none;
+    }
+
+    .navbar-location-desktop h4 {
+        width: 150px;
+        background-color: #D1B894;
+        margin-left: 2px;
+    }
+
+    .navbar-categorias {
+        width: 33%;
+        background-color: #D1B894;
+    }
+
+    .navbar-categorias span {
+        background-color: #D1B894;
+    }
+
+    .navbar-categorias a {
+        background-color: #D1B894;
+    }
+
+    .navbar-usuario {
+        background-color: #D1B894;
+        text-align: center;
+        width: 33%;
+        max-width: 150px;
+    }
+
+    .navbar-usuario i {
+        background-color: #D1B894;
+    }
+
+    /* PIE DE PAGINA TABLET - DESKTOP */
+
+    div.redes {
+        display: none;
+    }
+
+    .redes-desktop a {
+        color: black;
+        text-decoration: none;
+        font-size: 22px;
+        background-color: white;
+    }
+
+    .redes-desktop i {
+        background-color: white;
+    }
+
+    div.pie-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 12px;
+    }
+
+    div.redes-desktop {
+        width: 20%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    .pagos-envios {
+        display: none;
+    }
+
+    div.medios-de-pago-desktop {
+        width: 35%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.formas-de-envio-desktop {
+        width: 15%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.contacto {
+        width: 25%;
+        height: 126px;
+    }
+
+    p.copyright {
+        margin-top: 12px;
+    }
