@@ -5,41 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous"/>
-
+        crossorigin="anonymous"/>   
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/login.css">
-    <title>Mí Café</title>
+    <title>Mi Café</title>
 </head>
+
 <body>
+
     <header class="navbar">
+
         <div class="navbar-superior">
-            <div class="navbar-logo"><a href="/index"><i class="fas fa-coffee"></i></div></a>
-            
+
+            <div class="navbar-logo"><a href="/index">Mi Café</div></a>
+
             <!--
-            <div class="input-icon">
-                <i class="fas fa-search"></i>
-                <input type="search" class="navbar-search" placeholder="        Busca tu producto">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Busca tu Producto">
+                <button type="submit" class="searchButton">
+                  <i class="fa fa-search"></i>
+               </button>
             </div>
             -->
-            
-            <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
-            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+               <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+
+               <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
+               
         </div>
+
         <div class="navbar-inferior">
-            <div class="location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Avenida Siempre Viva 742</h4></div>
+
+            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Av. Siempre Viva 742</h4></div>
+
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson <br> Av. Siempre Viva 742</h4></div>
+
+            <div class="navbar-categorias">
+                <a href="">Cafés</a><span> - </span>
+                <a href="">Cafeteras</a><span> - </span>
+                <a href="">Accesorios</a>
+            </div>
+
+            <div class="navbar-usuario">
+                <a href=""><i class="far fa-user-circle"></i> Homero Simpson </a>
+            </div>
         </div>
     </header>
     
     <main>
         <section align="center" class="login">
-
             <div>
                 <p class="login-submit-message-wrong-user">Usuario/Contraseña inválidos</p>
             </div>
-
             <div class="login-credential-image">
                 <img src="img/avatar-icon.svg" alt="avatar-login">
             </div>
@@ -51,8 +69,8 @@
             </div>
 
             <form class="login-credential" action="/" method="GET">
-                <p>...ó ingresá con tu usuario:</p>
                 <div class="login-credential-user">
+                    <p>...ó ingresá con tu usuario:</p>
                     <input type="text" name="user" id="user" placeholder="Mi.usuario" style="text-align:center">
                 </div>
 
@@ -68,7 +86,6 @@
                 <div class="login-submit">
                     <a class="login-submit-button" href="/index">Ingresar</a>
                 </div>
-
             </form>
 
             <div class="login-recover-links">
@@ -82,20 +99,63 @@
             </div>
         </section>
     </main>
+    
     <footer>
-        <div class="redes">
-            <h3 class="nombre-marca">Mi Café</h3>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-whatsapp"></i>
+        <h3 class="tipografia-logo">Mí Café</h3>
+    <div class="redes">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-square"></i>
+    </div>
+
+    <div class="pie-desktop">
+        <div class="redes-desktop">
+            <ul>
+                <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/MiCafe16"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href=""><i class="fab fa-facebook-square"> Facebook</i></a></li>
+            </ul>
+        </div>
+            
+        <div class="pagos-envios">
+            <div class="medios-de-pago">
+                <h4>Medios de Pago</h4>
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+            </div>
+
+            <div class="formas-de-envio">
+                <h4>Formas de Envio</h4>
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+            </div>
         </div>
 
-        <div class="pie">
-            <p>Copyright © 2020 Mi Cafe S.R.L.</p>
-            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et ab sunt voluptatum totam eius
-                nemo. Explicabo eum magnam ut fuga laborum minus, assumenda facere at quod quo debitis omnis est non
-                architecto tenetur neque rerum necessitatibus cum, dolorum totam!.</small>
+        <div class="medios-de-pago-desktop">
+            <h4>Medios de Pago</h4>
+            <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+            <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+            <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+            <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
         </div>
+
+        <div class="formas-de-envio-desktop">
+            <h4>Formas de Envio</h4>
+            <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+        </div>
+
+        <div class="contacto">
+            <h4>Contactanos</h4>
+            <ul>
+                <li><a href=""><i class="fab fa-whatsapp"> 011-2530-0369</i></a></li>
+                <li><a href=""><i class="fas fa-map-marker-alt"> Calle Falsa 123</i></a></li>
+                <li><a href=""><i class="far fa-envelope"> micafegrupo8@outlook.com</i></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <p class="copyright">Copyright © 2020 <span class="tipografia">Mí Café</span> S.R.L.</p>
     </footer>
 </body>
 </html>
