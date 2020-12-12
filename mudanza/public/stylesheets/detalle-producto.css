@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+select {
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+
+select option {
+    background-color: black;
+    color: white;
+}
+
+/* ARTICULO ENVIO PADRE */
+
+.articulo-precio-envio-padre {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* PRODUCTO */
+
+
+
+.articulo {
+    padding-top: 12px;
+    padding-bottom: 20px;
+    width: 50%;
+    max-width: 595px;
+    flex-direction: row;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.titulo select :focus {
+    border-color: #D1B894;
+}
+
+.articulo h2 {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 21px;
+    padding-bottom: 4px;
+}
+
+.articulo .peso {
+    width: 100%;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 21px;
+    padding-bottom: 4px;
+}
+
+.imagenes-articulo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-principal {
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.imagenes-principales-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: none;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.imagenes-principales-box img {
+    width: 30%;
+    min-width: 100px;
+    max-width: 200px;
+    min-height: 100px;
+    max-height: 200px;
+    margin-top: 6px;
+}
+
+/* PRECIO Y ENVIO */
+
+.precio-envio{
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 340px;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.precio-envio article {
+    align-items: flex-start;
+}
+
+.precio-envio div {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.precio-envio i {
+    font-size: 25px;
+}
+
+.puntuacion {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.fa-star::before {
+    color: black;
+    font-size: 18px;
+}
+
+.precio div {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.boton-carrito {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 4px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-completo :hover {
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 4px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagos div {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.pagos div i {
+    color: rgb(0, 110, 255);
+}
+
+.envio div {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.envio div i {
+    color: green;
+}
+
+.valor-envio div {
+    font-size: 18px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+
+.links i {
+    font-size: 19px;
+}
+
+.links a {
+    color: #3483fa;
+}
+
+/* DESCRIPCION DEL PRODUCTO */
+
+.descripcion article {
+    max-width: 1195px;
+    border: 1px solid black;
+    margin: 6px;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.descripcion p {
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 6px;
+}
+
+/* OPINIONES */
+
+.opiniones {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.opiniones i {
+    font-size: 16px;
+}
+
+.fa-thumbs-up {
+    margin-right: 22px;
+    padding-bottom: 12px;
+}
+
+/* RECOMENDACIONES */
+
+.recomendacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recomendacion article {
+    background-color: white;
+    padding: 10px;
+    border: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    border: 1px solid #ededed;
+}
+
+.producto-info h3 {
+    background-color: white;
+}
+
+.caja-producto a {
+    background-color: white;
+}
+
+.recomendacion img {
+    width: 100%;
+}
+
+.producto-info .fa-truck {
+    color: green;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: -10px;
+}
+
+.producto-info .fa-credit-card {
+    color: rgb(0, 110, 255);
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    top: -10px;
+}
+
+.producto-info i {
+    background-color: white;
+}
+
+.producto-info {
+    border-top: 1px solid #b1b1b1;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.producto-info h3 {
+    font-weight: lighter;
+}
+
+.producto-info h2 {
+    background-color: white;
+    padding-top: 12px;
+}
+
+.caja-producto:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+/* DESKTOP - TABLET */
+
+@media (min-width: 768px) {
+
+    /* TABLET - DESKTOP */
+
+    .imagenes-principales-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .imagenes-principales-box img {
+        width: 30%;
+        min-width: 100px;
+        max-width: 200px;
+        min-height: 100px;
+        max-height: 200px;
+        margin-top: 6px;
+        margin-right: 12px;
+    }
+
+    div.recomendados {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+
+    .recomendacion article {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1050px) {
+
+    .descripcion article {
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-radius: 0px;
+        max-width: 600px;
+    }
+
+    .opiniones {
+        margin-top: 50px;
+        max-width: 600px;
+    }
+
+    .recomendacion article {
+        width: 20%;
+    }
+}
