@@ -274,6 +274,10 @@
     /*margin-top: 300px;*/ /*agregarle padding-bottom o margin-bottom al ultimo elemento antes que este*/
     text-align: center;
     /*background-color: rgb(231, 231, 231);*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
     ;
 }
 
@@ -338,21 +342,127 @@
     margin-bottom: 15px;
 }
 
-.pie {
-    /*background-color:rgb(231, 231, 231);*/
-    
-    text-align: center;
-    padding-top: 10px
+div.redes {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    background-color: white;
+    margin-top: 12px;
 }
 
-.pie p {
-    /*background-color:rgb(231, 231, 231);*/
-    
-    font-size: 8px;
+.redes i {
+    background-color: white;
+    font-size: 25px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
 }
 
-.pie small {
-    /*background-color:rgb(231, 231, 231);*/
-    
-    font-size: 8px
+/* PIE DE PAGINA - CONTACTO */
+
+.contacto i {
+    background-color: white;
+    font-size: 17px;
+    width: 100%;
+}
+
+li {
+    background-color: white;
+    list-style-type: none;
+}
+
+.contacto a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+/* PIE DE PAGINA - MEDIOS DE PAGO */
+
+.medios-de-pago {
+    width: 70%;
+}
+
+.cards {
+    height: 25px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #00000012;
+}
+
+.pagos-envios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* PIE DE PAGINA - ENVIOS */
+
+.formas-de-envio {
+    width: 30%;
+}
+
+
+/* PIE DE PAGINA - OTROS  */
+
+footer {
+    background-color: white;
+    padding: 12px;
+}
+
+footer p {
+    background-color: white;
+}
+
+footer h4 {
+    background-color: white;
+}
+
+footer div {
+    background-color: white;
+}
+
+.tipografia {
+    font-family: 'Yellowtail', cursive;
+    background-color: white;
+}
+
+.tipografia-logo {
+    font-family: 'Yellowtail', cursive;
+    font-size: 35px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    width: 100%;
+}
+
+/* PIE DE PAGINA MOBILE */
+
+@media (max-width: 767px){
+
+.redes-desktop {
+    display: none;
+}
+
+.medios-de-pago-desktop {
+    display: none;
+}
+
+.formas-de-envio-desktop {
+    display: none;
+}
+
+div.pagos-envios {
+    margin-top: 12px;
+}
+
+div.contacto {
+    margin-top: 12px;
+}
+
+p.copyright {
+    margin-top: 12px;
+}
 }
