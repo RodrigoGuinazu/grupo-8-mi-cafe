@@ -259,7 +259,7 @@ div.navbar-location {
 }
 
 .continua img {
-    width: 50%;
+    width: 35%;
     margin-bottom: 15px;
 }
 
@@ -431,6 +431,11 @@ p.copyright {
 }
 }
 
+
+
+
+
+
 /* ADAPTACION DESKTOP/TABLET HEADER Y FOOTER */
 
 @media (min-width: 768px) {
@@ -598,4 +603,4 @@ p.copyright {
     p.copyright {
         margin-top: 12px;
     }
-
+}

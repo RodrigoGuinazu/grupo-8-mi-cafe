@@ -17,34 +17,43 @@
 
 <body>
     <main>
-        <!--<header class="navbar">
-            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-            <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
-            <div class="navbar-location-x">
-                <div class="navbar-location"><i class="fas fa-map-marker-alt"></i></div><p class="direccion">Enviar a Calle Falsa 123</p><i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="title">
-                <h4 class="title-products">Tus productos</h4>
-            </div>
-        </header>-->
-
         <header class="navbar">
+
             <div class="navbar-superior">
-                <div class="navbar-logo"><i class="fas fa-coffee"></i></div>
-                <!--<div class="input-icon">
-                    <i class="fas fa-search"></i>
-                    <input type="search" class="navbar-search" placeholder="        Busca tu producto">
-                </div>-->
-                <!--<div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>-->
-                <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-            </div>
-            <div class="navbar-inferior">
-                <div class="location"><i class="fas fa-map-marker-alt"></i>
-                    <h4> Homero Simpson - Avenida Siempre Viva 742</h4>
+
+                <div class="navbar-logo"><a href="/index">Mí Café</div></a>
+
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Busca tu Producto">
+                    <button type="submit" class="searchButton">
+                      <i class="fa fa-search"></i>
+                   </button>
                 </div>
+
+                   <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+
+                   <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
+                   
             </div>
-            <div class="title">
-                <h4 class="title-products">Tu Carrito (2)</h4>
+
+            <div class="navbar-inferior">
+
+                <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Av. Siempre Viva 742</h4></div>
+
+                <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson <br> Av. Siempre Viva 742</h4></div>
+
+                <div class="navbar-categorias">
+                    <a href="">Cafés</a><span> - </span>
+                    <a href="">Cafeteras</a><span> - </span>
+                    <a href="">Accesorios</a>
+                </div>
+
+                <div class="navbar-usuario">
+                    <a href=""><i class="far fa-user-circle"></i> Homero Simpson </a>
+                </div>
+                <div class="title">
+                    <h4 class="title-products">Tu Carrito</h4>
+                </div>
             </div>
         </header>
 
@@ -64,26 +73,62 @@
             <i class="fas fa-angle-right"></i>
             </article>
         </section>
+        <footer>
+            <h3 class="tipografia-logo">Mí Café</h3>
         <div class="redes">
-            <h3 class="nombre-marca">Mi Café</h3>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-twitter"></i>
-            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-facebook-square"></i>
         </div>
-        <div class="categorias" align="center">
-            <ul>
-                <li><strong>Café</strong></li>
-                <li><strong>Cafeteras</strong></li>
-                <li><strong>Accesorios</strong></li>
-                <li><strong>Mi cuenta</strong></li>
-                <li><strong>Ayuda</strong></li>
-            </ul>
+
+        <div class="pie-desktop">
+            <div class="redes-desktop">
+                <ul>
+                    <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/MiCafe16"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href=""><i class="fab fa-facebook-square"> Facebook</i></a></li>
+                </ul>
+            </div>
+                
+            <div class="pagos-envios">
+                <div class="medios-de-pago">
+                    <h4>Medios de Pago</h4>
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+                </div>
+
+                <div class="formas-de-envio">
+                    <h4>Formas de Envio</h4>
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+                </div>
+            </div>
+
+            <div class="medios-de-pago-desktop">
+                <h4>Medios de Pago</h4>
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+            </div>
+
+            <div class="formas-de-envio-desktop">
+                <h4>Formas de Envio</h4>
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+            </div>
+
+            <div class="contacto">
+                <h4>Contactanos</h4>
+                <ul>
+                    <li><a href=""><i class="fab fa-whatsapp"> 011-2530-0369</i></a></li>
+                    <li><a href=""><i class="fas fa-map-marker-alt"> Calle Falsa 123</i></a></li>
+                    <li><a href=""><i class="far fa-envelope"> micafegrupo8@outlook.com</i></a></li>
+                </ul>
+            </div>
         </div>
-        <footer class="pie">
-            <p>Copyright © 2020 Mi Cafe S.R.L.</p>
-            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et ab sunt voluptatum totam eius nemo.
-                Explicabo eum magnam ut fuga laborum minus, assumenda facere at quod quo debitis omnis est non
-                architecto tenetur neque rerum necessitatibus cum, dolorum totam!.</small>
-        </footer>
+        
+        <p class="copyright">Copyright © 2020 <span class="tipografia">Mí Café</span> S.R.L.</p>
+    </footer>
     </main>
 </body>
