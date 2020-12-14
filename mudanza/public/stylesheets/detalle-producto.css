@@ -157,7 +157,7 @@ select option {
     cursor: pointer;
 }
 
-.boton-completo :hover {
+.boton-completo a :hover {
     width: 100%;
     text-align: center;
     color: black;
