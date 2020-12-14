@@ -27,7 +27,6 @@
     padding-bottom: 20px;
     margin-left: 6px;
     background-color: #ededed;
-    border-bottom: 1px solid #b8b8b8;
     /*padding-bottom: 250px*/
 }
 
@@ -122,48 +121,88 @@
     padding-top: 10px
 }
 
-/* CONTINUAR VIENDO PRODUCTOS */
+/* RECOMENDACIONES */
 
-.continua {
-    /*margin-top: 300px;*/ /*agregarle padding-bottom o margin-bottom al ultimo elemento antes que este*/
-    text-align: center;
-    background-color: #ededed;
+.recomendacion {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    background-color: #ededed;
 }
 
-.continua-viendo {
+.recomendacion article {
+    background-color: white;
+    padding: 10px;
+    border: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    border: 1px solid #ededed;
+}
+
+.producto-info h3 {
+    background-color: white;
+}
+
+.caja-producto a {
+    background-color: white;
+}
+
+.recomendacion img {
     width: 100%;
-    margin-bottom: 6px;
-    /*background-color: rgb(231, 231, 231);*/
-    
-    padding-top: 6px
 }
 
-.continua img {
-    width: 35%;
-    margin-bottom: 15px;
+.producto-info .fa-shopping-bag {
+    color: black;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: -10px;
 }
 
-.fa-angle-right {
-    font-size: 25px;
-    padding-bottom: 6px;
-    /*background-color: rgb(231, 231, 231)*/
-    
+.producto-info .fa-credit-card {
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    top: -10px;
 }
 
-.fa-angle-left {
-    font-size: 25px;
-    padding-bottom: 6px;
-    /*background-color:rgb(231, 231, 231)*/ 
+.producto-info i {
+    background-color: white;
+}
+
+.producto-info {
+    border-top: 1px solid #b1b1b1;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.producto-info h3 {
+    font-weight: lighter;
+}
+
+.producto-info h2 {
+    background-color: white;
+    padding-top: 12px;
+}
+
+.caja-producto:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 /* BOX PRODUCTOS */
 
-@media (max-width: 767px){
+@media (min-width: 768px) {
+    div.recomendados {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
 
+    .recomendacion article {
+        width: 40%;
+    }
 
 }
 
@@ -216,3 +255,23 @@
         display: none
     }
 }*/
+
+@media (min-width: 1050px) {
+
+    .descripcion article {
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-radius: 0px;
+        max-width: 600px;
+    }
+
+    .opiniones {
+        margin-top: 50px;
+        max-width: 600px;
+    }
+
+    .recomendacion article {
+        width: 20%;
+    }
+}
