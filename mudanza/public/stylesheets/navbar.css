@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #ededed;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -288,6 +287,12 @@ footer div {
 
     div.contacto {
         margin-top: 12px;
+        background-color: white;
+    }
+
+    div.contacto span {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
     }
 
     p.copyright {
@@ -411,6 +416,10 @@ footer div {
         border-right: 1px solid black;
     }
 
+    div.redes-desktop span {
+        background-color: white;
+    }
+
     .pagos-envios {
         display: none;
     }
@@ -430,6 +439,12 @@ footer div {
     div.contacto {
         width: 25%;
         height: 126px;
+        background-color: white;
+    }
+
+    div.contacto span {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
     }
 
     p.copyright {
