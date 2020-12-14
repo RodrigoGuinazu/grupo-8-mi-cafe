@@ -1,3 +1,4 @@
+**Sprint 1**
 >> Más de:
 - Reunirnos más seguidos por Discord.
 
@@ -17,3 +18,25 @@
 >> Menos de:
 - Querer avanzar en temas que aún no vimos.
 - Irse por las ramas.
+
+=================
+
+**Sprint 2**
+>> Más de:
+- Usar más Trello.
+
+>> Seguir haciendo:
+- Compartir disponibilidad para juntarse así nos organizamos.
+
+
+>> Empezar a hacer:
+- Dividir las tareas el mismo día que nos dan las consignas del sprint.
+- Leer todos los entregables para adelantar.
+- Registrar y comunicar la reuniones grupales.
+
+
+>> Parar de hacer:
+- Dejar todo para ultimo momento.
+
+>> Menos de:
+- Invertir tiempo en detalles que podremos solucionar mas adelante.
