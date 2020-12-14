@@ -1,53 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/carrito-lleno.css">
-</head>
+    <head>
+        <%- include('partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/carrito-lleno.css">
+        <title>Carrito</title>
+    </head>
 
 <body>
-
-    <body>
+    <%- include('partials/header.ejs')%>
         <main>
-            <!-- <header class="navbar">
-                <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-                <div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>
-                <div class="navbar-location-x">
-                    <div class="navbar-location"><i class="fas fa-map-marker-alt"></i></div>
-                    <p class="direccion">Enviar a Calle Falsa 123</p><i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="title">
-                    <h4 class="title-products">Tu Carrito (2)</h4>
-                </div>
-            </header> -->
-            <header class="navbar">
-                <div class="navbar-superior">
-                    <div class="navbar-logo"><i class="fas fa-coffee"></i></div>
-                    <!--<div class="input-icon">
-                        <i class="fas fa-search"></i>
-                        <input type="search" class="navbar-search" placeholder="        Busca tu producto">
-                    </div>-->
-                    <!--<div class="navbar-cart"><i class="fas fa-shopping-cart"></i></div>-->
-                    <div class="navbar-burger"><i class="fas fa-bars"></i></div>
-                </div>
-                <div class="navbar-inferior">
-                    <div class="location"><i class="fas fa-map-marker-alt"></i>
-                        <h4> Homero Simpson - Avenida Siempre Viva 742</h4>
-                    </div>
-                </div>
-                <div class="title">
-                    <h4 class="title-products">Tu Carrito (2)</h4>
-                </div>
-            </header>
-
             <div class="contenido-carrito-1">
                 <div class="contenido-carrito-left">
                     <img width="100%"
@@ -104,6 +67,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="finalizar-pedido">
+                <button type="submit" class="button-finalizar-pedido">Finalizar Pedido</button>
+                <div class="preguntas-frecuentes"><a href=""><small>Preguntas Frecuentes</small></a></div>
+                </div>
             </div>
 
             <section class="continua">
@@ -115,26 +82,7 @@
                 <i class="fas fa-angle-right"></i>
                 </article>
             </section>
-            <div class="redes">
-                <h3 class="nombre-marca">Mi Café</h3>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="categorias" align="center">
-                <ul>
-                    <li><strong>Café</strong></li>
-                    <li><strong>Cafeteras</strong></li>
-                    <li><strong>Accesorios</strong></li>
-                    <li><strong>Mi cuenta</strong></li>
-                    <li><strong>Ayuda</strong></li>
-                </ul>
-            </div>
-            <footer class="pie">
-                <p>Copyright © 2020 Mi Cafe S.R.L.</p>
-                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et ab sunt voluptatum totam eius
-                    nemo. Explicabo eum magnam ut fuga laborum minus, assumenda facere at quod quo debitis omnis est non
-                    architecto tenetur neque rerum necessitatibus cum, dolorum totam!.</small>
-            </footer>
+
+            <%- include('partials/footer.ejs')%>
         </main>
     </body>
