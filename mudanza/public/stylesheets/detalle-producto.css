@@ -174,7 +174,7 @@ select option {
 }
 
 .pagos div i {
-    color: rgb(0, 110, 255);
+    color: black;
 }
 
 .envio div {
@@ -183,7 +183,7 @@ select option {
 }
 
 .envio div i {
-    color: green;
+    color: black;
 }
 
 .valor-envio div {
@@ -280,8 +280,8 @@ select option {
     width: 100%;
 }
 
-.producto-info .fa-truck {
-    color: green;
+.producto-info .fa-shopping-bag {
+    color: black;
     position: absolute;
     right: 20px;
     font-size: 20px;
@@ -289,7 +289,7 @@ select option {
 }
 
 .producto-info .fa-credit-card {
-    color: rgb(0, 110, 255);
+    color: black;
     position: absolute;
     font-size: 20px;
     left: 0px;
