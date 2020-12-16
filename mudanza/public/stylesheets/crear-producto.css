@@ -1,0 +1,93 @@
+
+/* FORMULARIO */
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    background-color: #ededed;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario {
+    background-color: #ededed;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form div {
+    width: 100%;
+    align-self: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.formulario input[type=text] {
+    width: 100%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px #ededed;
+    border-radius: 6px;
+    background-color: white;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario input[type=file] {
+    width: 100%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px #ededed;
+    border-radius: 6px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-detail p {
+    margin: 5px;
+    padding: 5px;
+}
+
+select option {
+    background-color: black;
+    color: white;
+}
+
+.product-create-button {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 4px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.product-create-button:hover {
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 4px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
