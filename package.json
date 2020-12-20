@@ -1,9 +1,9 @@
 {
-  "name": "mudanza",
+  "name": "grupo-8-mi-cafe",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./src/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

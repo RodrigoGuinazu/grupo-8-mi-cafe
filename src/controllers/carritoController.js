@@ -1,9 +1,9 @@
 let carritoController = {
     carritoLleno: function(req, res) {
-        res.render('carrito-lleno');
+        res.render('products/carrito-lleno');
     },
     carritoVacio: function(req, res) {
-        res.render('carrito-vacio');
+        res.render('products/carrito-vacio');
     }
 }
 

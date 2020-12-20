@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('partials/head.ejs')%>
+        <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/login.css">
         <title>Login</title>
     </head>
 
 <body>
-    <%- include('partials/header.ejs')%>
+    <%- include('../partials/header.ejs')%>
     
     <main>
         <section align="center" class="login">
-            <div>
-                <p class="login-submit-message-wrong-user">No existe una cuenta registrada, con el usuario 'NNNNN'. Por favor, generá tu cuenta.</p>
-            </div>
             <div class="login-credential-image">
                 <img src="/images/avatar-icon.svg" alt="avatar-login">
             </div>
@@ -52,11 +49,11 @@
 
             <div class="login-register">
                 <p>Si aún no estás registrado,</p>
-                <a class="login-register-button" href="/formulario">Creá tu cuenta</a>
+                <a class="login-register-button" href="/register">Creá tu cuenta</a>
             </div>
         </section>
     </main>
-    <%- include('partials/footer.ejs')%>
+    <%- include('../partials/footer.ejs')%>
     
 </body>
 </html>

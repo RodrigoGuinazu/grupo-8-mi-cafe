@@ -1,12 +1,12 @@
 let productosController = {
     detalleProducto: function(req, res) {
-        res.render('detalle-producto');
+        res.render('products/detalle-producto');
     },
     listadoProducto: function(req, res) {
-        res.render('listado-productos');
+        res.render('products/listado-productos');
     },
     crearProducto: function(req, res) {
-        res.render('crear-producto');
+        res.render('products/crear-producto');
     },
 }
 

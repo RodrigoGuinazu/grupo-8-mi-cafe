@@ -1,12 +1,12 @@
 let loginController = {
     login: function(req, res) {
-        res.render('login');
+        res.render('users/login');
     },
     wrongUser: function(req, res) {
-        res.render('login-wrong-user');
+        res.render('users/login-wrong-user');
     },
     userNotFound: function(req, res) {
-        res.render('login-user-not-found');
+        res.render('users/login-user-not-found');
     }
 }
 
