@@ -4,14 +4,14 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
-        <title>Crear Producto</title>
+        <title>Editar Producto</title>
     </head>
 
 <body>
     <%- include('../partials/header.ejs')%>
     <main>
         <section align="center" class="formulario">
-            <h2>Crear nuevo producto</h2>
+            <h2>Editar producto "x"</h2>
             <form action="" method="POST">
                 <div class="product-type">
                     <select>
@@ -39,8 +39,10 @@
                    <textarea name="comentarios" rows="10" cols="40"></textarea>
                </div>
                <div class="product-create">
-                <button class="product-create-button"><a href="/productos/listado">Publicar</a></button>
-
+                <button class="product-create-button"><a href="/productos/listado">Guardar Cambios</a></button>
+                </div>
+                <div class="product-create">
+                    <button class="product-cancel-button"><a href="/productos/listado">Cancelar</a></button>
                 </div>
             </form>
         </section>

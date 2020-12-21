@@ -5,5 +5,6 @@ let router = express.Router();
 router.get ('/detalle', productosController.detalleProducto);
 router.get ('/listado', productosController.listadoProducto);
 router.get ('/crear', productosController.crearProducto);
+router.get ('/editar', productosController.editarProducto);
 
 module.exports = router;

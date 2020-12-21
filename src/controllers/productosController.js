@@ -8,6 +8,9 @@ let productosController = {
     crearProducto: function(req, res) {
         res.render('products/crear-producto');
     },
+    editarProducto: function(req, res) {
+        res.render('products/editar-producto');
+    },
 }
 
 module.exports = productosController;
