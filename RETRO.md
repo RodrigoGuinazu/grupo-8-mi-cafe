@@ -60,8 +60,4 @@
 - Dejar todo para ultimo momento.
 
 >> Menos de:
-<<<<<<< HEAD
 - Invertir tiempo en detalles que podremos solucionar más adelante.
-=======
-- Invertir tiempo en detalles que podremos solucionar más adelante.
->>>>>>> 61ea47bab353d3695e677fb611cac2929a851cd3
