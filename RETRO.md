@@ -40,3 +40,24 @@
 
 >> Menos de:
 - Invertir tiempo en detalles que podremos solucionar mas adelante.
+
+=================
+
+*Sprint 3*
+>> Más de:
+- Usar más Trello.
+- commits más cortos y sencillos, sin tantos cambios.
+
+>> Seguir haciendo:
+- Organizar los tiempos de trabajo y tener varias metas durante el sprint.
+- Grabar lo que hagamos en grupo para poder revisarlo si alguien no estuvo presente o si hay que revisar algo.
+- Leer todos los entregables para ver si hay que adelantar algo de teoría
+
+>> Empezar a hacer:
+- Dividir las tareas el mismo día que nos dan las consignas del sprint.
+
+>> Parar de hacer:
+- Dejar todo para ultimo momento.
+
+>> Menos de:
+- Invertir tiempo en detalles que podremos solucionar más adelante.
