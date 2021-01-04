@@ -22,12 +22,35 @@ module.exports = {
         let accesorios = productos.filter(function (producto) {
             return producto.categoria == "accesorio"
         })
-
+        
         res.render('products/listado-productos', { cafes, cafeteras, accesorios });
     },
+
+    listadoCafes: function(req, res) {
+        let cafes = productos.filter(function (producto) {
+            return producto.categoria == "cafe"
+        })
+        res.render("products/listado-cafes", { cafes })
+    },
+
+    listadoCafeteras: function(req, res) {
+        let cafeteras = productos.filter(function (producto) {
+            return producto.categoria == "cafetera"
+        })
+        res.render("products/listado-cafeteras", { cafeteras })
+    },
+
+    listadoAccesorios: function(req, res) {
+        let accesorios = productos.filter(function (producto) {
+            return producto.categoria == "accesorio"
+        })
+        res.render("products/listado-accesorios", { accesorios })
+    },
+
     crearProducto: function(req, res) {
         res.render('products/crear-producto');
     },
+
     editarProducto: function(req, res) {
         res.render('products/editar-producto');
     },

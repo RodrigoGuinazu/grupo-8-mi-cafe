@@ -1,0 +1,86 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/listado-productos.css">
+        <title>Mi Cafe</title>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <main>
+            <section class="tarjeta-producto">
+
+                 <!--PRODUCTOS-->
+
+                <h3>Accesorios</h3>
+                <div class="categoria cafes">
+                    <% accesorios.forEach(producto =>{ %>
+                    <article class="caja-producto">
+                        <a href="/productos/detalle">
+                            <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <h2 class="precio-producto">$<%= producto.precio %> </h2>
+                            <h3><%= producto.nombre %> </h3>
+                        </div>                
+                    </article>
+                    <% }) %>
+                </div>
+                   
+            </section>
+            <%- include('../partials/footer.ejs')%>
+        </main>
+    </body>
+</html>
+
+<!--
+     <div class= "ultimas-visitas-titulo">
+     <h2>Basado en tus últimas visitas</h2>
+     </div>
+
+     <div class="ultimas-visitas-colombia">
+      <h4 class="ultimas-visitas-colombia-producto">Café de especialidad tostado Colombia</h4>
+      <img class="ultimas-visitas-colombia-imagen" width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-colombia-guanes-genuino-14-kg-D_NQ_NP_787555-MLA42564298723_072020-F.webp" alt="Imagen Café Colombia">
+        <p class="ultimas-visitas-colombia-precio">$1.299,99</p>
+        <p class="ultimas-visitas-colombia-aviso">Aprovecha esta oferta!!!</p>
+        <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+     </div>
+
+     <div class="ultimas-visitas-brasil">
+     <h4 class="ultimas-visitas-brasil-producto">Café premium tostado Brasil Catuai</h4>
+     <img class="ultimas-visitas-brasil-imagen" width="200px" src="https://http2.mlstatic.com/cafe-premium-tostado-brasil-catuai-1-kg-D_NQ_NP_787296-MLA42540120808_072020-O.webp" alt="Imagen Café Brasil Catuai">
+        <p class="ofertas-precio ultimas-visitas-brasil-precio">$1.000</p>
+        <p class="ultimas-visitas-brasil-aviso">En 3 cuotas sin interés!!!</p>
+        <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+     </div>
+    
+     <div class= "ofertas">
+         
+        <div class= "ofertas-titulo">
+            <h2>Ofertas</h2>
+        </div>
+
+        <div class="ofertas-detalles-bourbon"></div>
+            <h4 class="ofertas-detalles-bourbon-producto">Café Bourbon</h4>
+            <img class="ofertas-detalles-bourbon-imagen" width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-brasil-bourbon-14-kg-D_Q_NP_746964-MLA42541880767_072020-F.webp" alt="Imagen cafe en oferta1">
+            <p class="ofertas-precio ofertas-detalles-bourbon-precio">$500</p>
+            <p class="ofertas-detalles-bourbon-aviso">Pocas unidades, apurate!!</p>
+            <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+        </div>
+
+        <div class="ofertas-detalles-guatemala">
+            <h4 class="ofertas-detalles-guatemala-producto">Café tostado Guatemala</h4>
+            <img class="ofertas-detalles-guatemala-imagen" width="200px" src="https://http2.mlstatic.com/cafe-de-especialidad-grano-tostado-guatemala-barista-14-kg-D_NQ_NP_949151-MLA42617364974_072020-F.webp" alt="Imagen cafe en oferta2">
+            <p class="ofertas-precio ofertas-detalles-guatemala-precio">$600</p>
+            <p class= "ofertaza ofertas-detalles-guatemala-aviso">Ofertaza!!</p>
+            <div class="boton-agregar"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+        </div>
+
+    </div>
+    -->
