@@ -11,7 +11,19 @@ module.exports = {
         res.render('products/detalle-producto', { productos });
     },
     listadoProducto: function(req, res) {
-        res.render('products/listado-productos', { productos });
+        let cafes = productos.filter(function (producto) {
+            return producto.categoria == "cafe"
+        })
+
+        let cafeteras = productos.filter(function (producto) {
+            return producto.categoria == "cafetera"
+        })
+
+        let accesorios = productos.filter(function (producto) {
+            return producto.categoria == "accesorio"
+        })
+
+        res.render('products/listado-productos', { cafes, cafeteras, accesorios });
     },
     crearProducto: function(req, res) {
         res.render('products/crear-producto');
@@ -20,3 +32,5 @@ module.exports = {
         res.render('products/editar-producto');
     },
 }
+
+//res.render('products/listado-productos', { productos });

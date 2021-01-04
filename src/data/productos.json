@@ -103,7 +103,7 @@
         "peso": 0,
         "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
         "precio": 400,
-        "categoria": "accesorios",
+        "categoria": "accesorio",
         "imagen": "espumador.jpg"
     },
     {
@@ -112,7 +112,7 @@
         "peso": 0,
         "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
         "precio": 800,
-        "categoria": "accesorios",
+        "categoria": "accesorio",
         "imagen": "Capsulas recargables.jpg"
     },
     {
@@ -121,7 +121,7 @@
         "peso": 0,
         "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
         "precio": 4000,
-        "categoria": "accesorios",
+        "categoria": "accesorio",
         "imagen": "molinillo.jpg"
     },
     {
@@ -130,7 +130,7 @@
         "peso": 0,
         "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
         "precio": 600,
-        "categoria": "accesorios",
+        "categoria": "accesorio",
         "imagen": "taza personalizada.jpg"
     }
 ]
