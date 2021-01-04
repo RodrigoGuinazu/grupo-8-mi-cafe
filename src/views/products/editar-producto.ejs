@@ -11,35 +11,46 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <section align="center" class="formulario">
-            <h2>Editar producto "x"</h2>
-            <form action="" method="POST">
+            <h2>Editar producto <%= productToEdit.nombre %></h2>
+            <form action="/productos/<%= productToEdit.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="product-type">
-                    <select>
-                        <option>Cafés</option>
-                        <option>Cafeteras</option>
-                        <option>Accesorios</option>
+                    <label for="">Categoria</label>
+                    <br>
+                    <select name="categoria">
+                        <option value="Cafes">Cafés</option>
+                        <option value="Cafeteras">Cafeteras</option>
+                        <option value="Accesorios">Accesorios</option>
                     </select>
                 </div>
                 <div class="product-img">
+                    <label for="">Imagen del Producto</label>
+                    <br>
                     <input type="file" name="product-img">
                 </div>
                 <div class="product-name">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+                    <label for="">Titulo</label>
+                    <br>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" value="<%= productToEdit.nombre %>">
                 </div>
                 <div class="product-weight">
-                    <input type="checkbox">250gr</input>
-                    <input type="checkbox">500gr</input>
-                    <input type="checkbox">1000gr</input>
+                    <label for="">Peso en gr</label>
+                    <br>
+                    <input type="checkbox" name="peso" value="250gr">250gr</input>
+                    <input type="checkbox" name="peso" value="500gr">500gr</input>
+                    <input type="checkbox" name="peso" value="1000gr">1000gr</input>
+                    <input type="checkbox" name="peso" value="N/A">N/A</input>
                 </div>
                 <div class="product-price">
-                    <input type="text" name="precio" id="precio" placeholder="$00,0">
+                    <label for="">Precio</label>
+                    <br>
+                    <input type="text" name="precio" id="precio" placeholder="$00,0" value="<%= productToEdit.precio %>">
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>
-                   <textarea name="comentarios" rows="10" cols="40"></textarea>
+                   <textarea name="descripcion" rows="10" cols="40"><%= productToEdit.descripcion %></textarea>
                </div>
                <div class="product-create">
-                <button class="product-create-button"><a href="/productos/listado">Guardar Cambios</a></button>
+                <button type="submit" class="product-create-button">Guardar Cambios</button>
                 </div>
                 <div class="product-create">
                     <button class="product-cancel-button"><a href="/productos/listado">Cancelar</a></button>
