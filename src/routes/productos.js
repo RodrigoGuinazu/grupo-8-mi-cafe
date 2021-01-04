@@ -21,6 +21,7 @@ router.get ('/listado/cafes', productosController.listadoCafes);
 router.get ('/listado/cafeteras', productosController.listadoCafeteras);
 router.get ('/listado/accesorios', productosController.listadoAccesorios);
 router.get ('/crear', productosController.crearProducto);
+router.post('/crear', productosController.guardarProducto);
 router.get ('/:id/editar', productosController.editarProducto);
 router.put ('/:id', upload.any(), productosController.modificacion);
 //router.delete('/:id/eliminar', productosController.eliminarProducto)
