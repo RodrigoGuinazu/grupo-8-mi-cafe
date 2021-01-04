@@ -55,6 +55,7 @@ let productosController = {
 
         res.render('products/editar-producto', {productToEdit: productToEdit});
     },
+
     modificacion: (req, res) => {
         products.forEach(product => {
             if(req.params.id == product.id){
@@ -74,4 +75,5 @@ let productosController = {
     },
 }
 
+module.exports = productosController
 //res.render('products/listado-productos', { productos });
