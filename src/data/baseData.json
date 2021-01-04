@@ -1,3 +1,5 @@
+// JSON DE PRODUCTOS
+
 [{
     "id": 1,
     "nombre": "Café Amalfi",
@@ -132,5 +134,100 @@
     "precio": 600,
     "categoria": "accesorio",
     "imagen": "taza personalizada.jpg"
+}
+]
+
+
+// JSON DE USUARIOS
+
+[{
+    "id": 1,
+    "first_name": "Admin",
+    "last_name": "Admin",
+    "email": "Admin@MiCafe.com.ar",
+    "password": "admin123",
+    "category": "administrador",
+    "image": ""
+},
+{
+    "id": 2,
+    "first_name": "Karlotta",
+    "last_name": "Exall",
+    "email": "kexall1@domainmarket.com",
+    "password": "AwrYCqZO6x0",
+    "category": "user",
+    "image": "user_2.jpg"
+},
+{
+    "id": 3,
+    "first_name": "Thelma",
+    "last_name": "Soans",
+    "email": "tsoans2@hugedomains.com",
+    "password": "WSAymf39GZ0",
+    "category": "user",
+    "image": "user_3.jpg"
+},
+{
+    "id": 4,
+    "first_name": "Aymer",
+    "last_name": "Feldhuhn",
+    "email": "afeldhuhn3@livejournal.com",
+    "password": "Cr0JSrfah",
+    "category": "user",
+    "image": "user_4.jpg"
+},
+{
+    "id": 5,
+    "first_name": "Isa",
+    "last_name": "Chappelle",
+    "email": "ichappelle4@canalblog.com",
+    "password": "e8hM8z",
+    "category": "user",
+    "image": "user_5.jpg"
+},
+{
+    "id": 6,
+    "first_name": "Jaquith",
+    "last_name": "Klimkin",
+    "email": "jklimkin5@bizjournals.com",
+    "password": "88aMeX82Vk",
+    "category": "user",
+    "image": "user_6.jpg"
+},
+{
+    "id": 7,
+    "first_name": "Brannon",
+    "last_name": "Siward",
+    "email": "bsiward6@ibm.com",
+    "password": "Gb4AMA2lYMJC",
+    "category": "user",
+    "image": "user_7.jpg"
+},
+{
+    "id": 8,
+    "first_name": "Genny",
+    "last_name": "Labon",
+    "email": "glabon7@webs.com",
+    "password": "T6RPXpwI",
+    "category": "user",
+    "image": "user_8.jpg"
+},
+{
+    "id": 9,
+    "first_name": "Aurelea",
+    "last_name": "Caddie",
+    "email": "acaddie8@de.vu",
+    "password": "JyqHoY5spbb",
+    "category": "user",
+    "image": "user_9.jpg"
+},
+{
+    "id": 10,
+    "first_name": "Brooks",
+    "last_name": "Antushev",
+    "email": "bantushev9@w3.org",
+    "password": "HTot8f5u",
+    "category": "user",
+    "image": "user_10.jpg"
 }
 ]
