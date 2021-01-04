@@ -101,6 +101,18 @@ select option {
 
 }
 
+.product-delete-button {
+    text-align: center;
+    color: white;
+    padding: 4px;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 6px
+}
+
 .product-cancel-button:hover {
     width: 60%;
     text-align: center;
