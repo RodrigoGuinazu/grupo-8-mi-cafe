@@ -4,7 +4,7 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
-        <title>Crear Producto</title>
+        <title>Crear nuevo producto</title>
     </head>
 
 <body>
@@ -12,7 +12,7 @@
     <main>
         <section align="center" class="formulario">
             <h2>Crear nuevo producto</h2>
-            <form action="" method="POST">
+            <form method="POST" action="/productos/crear" enctype="multipart/form-data">
                 <div class="product-type">
                     <select>
                         <option>Cafés</option>
@@ -40,7 +40,6 @@
                </div>
                <div class="product-create">
                 <button class="product-create-button"><a href="/productos/listado">Publicar</a></button>
-
                 </div>
             </form>
         </section>
