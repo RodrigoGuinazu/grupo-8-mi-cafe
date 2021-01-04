@@ -9,15 +9,15 @@ let productosController = {
         res.render('products/detalle-producto', { productos });
     },
     listadoProducto: function(req, res) {
-        let cafes = productos.filter(function (producto) {
+        let cafes = products.filter(function (producto) {
             return producto.categoria == "cafe"
         })
 
-        let cafeteras = productos.filter(function (producto) {
+        let cafeteras = products.filter(function (producto) {
             return producto.categoria == "cafetera"
         })
 
-        let accesorios = productos.filter(function (producto) {
+        let accesorios = products.filter(function (producto) {
             return producto.categoria == "accesorio"
         })
         
@@ -25,21 +25,21 @@ let productosController = {
     },
 
     listadoCafes: function(req, res) {
-        let cafes = productos.filter(function (producto) {
+        let cafes = products.filter(function (producto) {
             return producto.categoria == "cafe"
         })
         res.render("products/listado-cafes", { cafes })
     },
 
     listadoCafeteras: function(req, res) {
-        let cafeteras = productos.filter(function (producto) {
+        let cafeteras = products.filter(function (producto) {
             return producto.categoria == "cafetera"
         })
         res.render("products/listado-cafeteras", { cafeteras })
     },
 
     listadoAccesorios: function(req, res) {
-        let accesorios = productos.filter(function (producto) {
+        let accesorios = products.filter(function (producto) {
             return producto.categoria == "accesorio"
         })
         res.render("products/listado-accesorios", { accesorios })
