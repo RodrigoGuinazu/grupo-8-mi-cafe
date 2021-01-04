@@ -24,6 +24,7 @@ router.get ('/crear', productosController.crearProducto);
 router.post('/crear', productosController.guardarProducto);
 router.get ('/:id/editar', productosController.editarProducto);
 router.put ('/:id', upload.any(), productosController.modificacion);
-//router.delete('/:id/eliminar', productosController.eliminarProducto)
+router.delete ('/:id/eliminar', productosController.eliminarProducto);
+
 
 module.exports = router;
