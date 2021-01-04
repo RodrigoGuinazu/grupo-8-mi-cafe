@@ -45,8 +45,36 @@ let productosController = {
         res.render("products/listado-accesorios", { accesorios })
     },
 
-    crearProducto: function(req, res) {
-        res.render('products/crear-producto');
+    crearProducto: (req, res) => {
+        res.render("products/crear-producto");
+    },
+
+    guardarProducto: (req, res) => {
+        let productos = {
+            "id": id[i]++,
+            "nombre": req.body.nombre,
+            "peso": req.body.peso,
+            "descripcion": req.body.descripcion,
+            "precio": req.body.precio,
+            "categoria": req.body.categoria,
+            "imagen": req.body.imagen
+        }
+
+        let archivoProductos = fs.readFileSync('productos.json', {encoding:'utf-8'});
+        
+        if (archivoProductos == "") {
+    		productos = [];
+        } else {
+            productos = JSON.parse(archivoProductos);
+        }
+
+        productos.push(productos);
+
+        productosJSON = JSON.stringify(productos);
+
+        fs.writeFileSync('productos.json', productosJSON);
+
+        res.redirect("products/listado");
     },
 
     editarProducto: function(req, res) {
