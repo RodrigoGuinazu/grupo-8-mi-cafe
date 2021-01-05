@@ -5,9 +5,12 @@ let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json')
 products = JSON.parse(products);
 
 let productosController = {
-    detalleProducto: function(req, res) {
-        res.render('products/detalle-producto', { productos });
-    },
+    detalleProducto: function(req, res, next) {
+        const id = req.params.id
+        let productDetail = products.find(product => product.id == id);
+
+        res.render('products/detalle-producto', {productDetail: productDetail});
+},
     listadoProducto: function(req, res) {
         let cafes = products.filter(function (producto) {
             return producto.categoria == "cafe"
