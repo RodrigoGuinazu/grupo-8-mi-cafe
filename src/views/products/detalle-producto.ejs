@@ -12,14 +12,8 @@
     <main>
     <section class="articulo-precio-envio-padre">
         <section class="articulo">
-
             <article class="imagenes-articulo">
-                    <img class="img-principal" src="https://www.cabrales.com/wp-content/uploads/2016/05/Cabrales_COLOMBIA-768x768-600x600.jpg" alt="imagen-principal">
-                    <article class="imagenes-principales-box">
-                        <img src="https://d26lpennugtm8s.cloudfront.net/stores/001/153/109/products/colombia_x_1k1-4644525705fac0bae415874730650638-640-0.jpg" alt="cafe-2">
-                        <img src="https://www.cabrales.com/wp-content/uploads/2016/07/colombia_molido_500g.jpg" alt="cafe-3">
-                        <img src="https://d26lpennugtm8s.cloudfront.net/stores/001/153/109/products/colombia_x_1k1-4644525705fac0bae415874730650638-640-0.jpg" alt="cafe-4">
-                    </article>
+                 <img class="img-principal" src="/images/products/<%= productDetail.imagen %>" alt="imagen-principal">
             </article>
         </section>
 
@@ -27,7 +21,7 @@
            
             <article>
                 <div class="titulo">
-                    <h2>Cafe Cabrales Dorado<span>
+                    <h2><%= productDetail.nombre %><span>
                         <select name="peso" id="">
                             <option value="250">250gr</option>
                             <option value="500">500gr</option>
@@ -39,7 +33,7 @@
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                 </div>
                 <div class="precio">
-                    <div><p class="pesos">$400</p></div>
+                    <div><p class="pesos">$<%= productDetail.precio %></p></div>
                     <div class="boton-completo"><a href="/carrito/lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
                 </div>
                 <div class="boton-completo"><a href="/carrito/lleno"><button class="boton-carrito" type="button">Comprar Ahora</button></a></div>
@@ -102,8 +96,8 @@
         <section class="descripcion">
             
             <article>
-                <h3 align="center">Descripcion del Cafe:</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis hic nemo, aspernatur nulla quos maiores veritatis nam. Soluta obcaecati provident repudiandae vel veritatis voluptates praesentium natus quisquam sunt. Vero temporibus veritatis ullam corrupti praesentium, eos odio id ea mollitia, quia expedita earum quam culpa obcaecati sint provident ipsam ut commodi ipsum nulla! Omnis minus inventore deserunt delectus, dicta iste molestiae, vitae aliquam ut quia magni cum quidem reiciendis distinctio. Nostrum consequatur nesciunt eaque, repellendus id iste accusantium dolor tenetur, distinctio cupiditate minus.</p>
+                <h3 align="center">Descripcion del Artículo:</h3>
+                <p><%= productDetail.descripcion %><p>
             </article>
 
         </section>
