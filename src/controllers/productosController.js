@@ -5,9 +5,12 @@ let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json')
 products = JSON.parse(products);
 
 let productosController = {
-    detalleProducto: function(req, res) {
-        res.render('products/detalle-producto', { productos });
-    },
+    detalleProducto: function(req, res, next) {
+        const id = req.params.id
+        let productDetail = products.find(product => product.id == id);
+
+        res.render('products/detalle-producto', {productDetail: productDetail});
+},
     listadoProducto: function(req, res) {
         let cafes = products.filter(function (producto) {
             return producto.categoria == "cafe"
@@ -106,8 +109,21 @@ let productosController = {
             
         });
         const JSONproduct = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONproduct);
+        fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSONproduct);
         res.redirect('/')
+    },
+
+    eliminarProducto: function (req, res) {
+        // Almacena en una variable el id de producto ingresado en url
+        const idProducto = req.params.id
+        // Recorre el JSON y retorna los que cumplen con la condicion almacenandolo en products
+        let productsFilter = products.filter(function(product) {
+            return product.id != idProducto
+        })
+        // Sobreescribo en products.json la variable products fitlrando el id de URL
+        fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSON.stringify(productsFilter))
+        // Redirecciona a la pagina que quieras
+        res.redirect("/productos/listado") // siempre redirecciono la ruta que quiero que muestre
     },
 }
 

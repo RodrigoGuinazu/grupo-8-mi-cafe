@@ -17,6 +17,7 @@ var storage = multer.diskStorage({
 let router = express.Router();
 router.get ('/detalle', productosController.detalleProducto);
 router.get ('/listado', productosController.listadoProducto);
+router.get ('/:id/detalle', productosController.detalleProducto);
 router.get ('/listado/cafes', productosController.listadoCafes);
 router.get ('/listado/cafeteras', productosController.listadoCafeteras);
 router.get ('/listado/accesorios', productosController.listadoAccesorios);
@@ -24,6 +25,7 @@ router.get ('/crear', productosController.crearProducto);
 router.post('/crear', upload.any(), productosController.guardarProducto);
 router.get ('/:id/editar', productosController.editarProducto);
 router.put ('/:id', upload.any(), productosController.modificacion);
-//router.delete('/:id/eliminar', productosController.eliminarProducto)
+router.delete ('/:id/editar', productosController.eliminarProducto);
+
 
 module.exports = router;

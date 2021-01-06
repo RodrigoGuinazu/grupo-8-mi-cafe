@@ -57,8 +57,8 @@
                 </div>
             </form>
             <div>
-                <form action="/listado-productos?_METHOD=DELETE" method="POST">
-                    <button class="product-delete-button"><a href="/productos/listado">Eliminar producto</a></button>
+                <form action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
+                    <button class="product-delete-button" type="submit">Eliminar producto</button>
                 </form>
             </div>
         </section>
