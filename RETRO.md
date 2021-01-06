@@ -43,7 +43,7 @@
 
 =================
 
-*Sprint 3*
+**Sprint 3**
 >> Más de:
 - Usar más Trello.
 - commits más cortos y sencillos, sin tantos cambios.
@@ -61,3 +61,32 @@
 
 >> Menos de:
 - Invertir tiempo en detalles que podremos solucionar más adelante.
+
+=================
+
+**Sprint 4**
+>> Más de:
+- Ayudarnos entre nosotros para resolver los stoppers.
+- Anotar ideas que no están dentro de los Sprints.
+- Llamadas mas frecuentes
+
+>> Seguir haciendo:
+- Apoyarnos entre nosotros.
+- Sorteo de tareas.
+- Usar Trello.
+- Grabar el Discord cuando nos juntamos.
+
+
+>> Empezar a hacer:
+- Organizarnos apenas tengamos las pautas.
+- Diagramas de flujo por usuario.
+- Crear mapa del sitio.
+
+
+>> Parar de hacer:
+- Enfocarse en detalles pequeños.
+
+>> Menos de:
+- Invertir tiempo en detalles que podremos solucionar más adelante.
+
+=================
