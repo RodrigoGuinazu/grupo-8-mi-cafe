@@ -17,7 +17,7 @@ const { ppid } = require('process');
 
 var app = express();
 
-var methodOverride = require('method-override');
+const methodOverride = require('method-override');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
@@ -27,6 +27,7 @@ app.use('/carrito', carritoRouter);
 app.use('/productos', productosRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/', indexRouter)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

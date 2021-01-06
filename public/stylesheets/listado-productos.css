@@ -70,6 +70,36 @@ main {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+.button-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.button-create {
+    width: max-content;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border: solid black 1px;
+    background-color:black;
+    outline: none;
+    padding: 15px 20px;
+    margin: 5px;
+}
+
+.button-create:focus {
+    background-color:#049125;
+    border: solid #049125 1px;
+}
+
 @media (min-width: 768px) {
 
     div.categoria {
@@ -81,6 +111,16 @@ main {
     .caja-producto {
         width: 40%;
     }
+
+    .button-create {
+        font-size: 20px;
+    }
+
+    .button-create:hover {
+        background-color:#049125;
+        border: solid #049125 1px;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 1050px) {
@@ -89,78 +129,3 @@ main {
         width: 20%;
     }
 }
-
-/* OFERTAS
-.ofertas {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.ofertas-titulo {
-    padding-top:20px;
-    text-decoration: underline; 
-    justify-content: center;
-    flex-direction: column;  
-    text-align: center
-}
-
-.ofertas-detalles-bourbon {
-    padding-top:20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    margin-top: 3px;
-    margin-bottom: 3px   
-}
-
-.ofertas-detalles-bourbon-producto, .ofertas-detalles-bourbon-imagen, .ofertas-detalles-bourbon-precio, .ofertas-detalles-bourbon-aviso {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 3px;
-    margin-bottom: 3px
-}
-
-.ofertas-detalles-guatemala {
-    padding-top:20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    margin-top: 3px;
-    margin-bottom: 3px   
-}
-
-.ofertas-detalles-guatemala-producto, .ofertas-detalles-guatemala-imagen, .ofertas-detalles-guatemala-precio, .ofertas-detalles-guatemala-aviso {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 3px;
-    margin-bottom: 3px
-}
-
-.ofertas-precio{
-    padding:5px;
-}
-
-.ofertas h4{
-    padding-top:20px; 
-}
-
-.ofertaza {
-    color: red;
-    text-decoration: underline;
-}
-
-.boton-carrito {
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding: 3px;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-*/

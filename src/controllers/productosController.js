@@ -5,9 +5,12 @@ let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json')
 products = JSON.parse(products);
 
 let productosController = {
-    detalleProducto: function(req, res) {
-        res.render('products/detalle-producto', { productos });
-    },
+    detalleProducto: function(req, res, next) {
+        const id = req.params.id
+        let productDetail = products.find(product => product.id == id);
+
+        res.render('products/detalle-producto', {productDetail: productDetail});
+},
     listadoProducto: function(req, res) {
         let cafes = products.filter(function (producto) {
             return producto.categoria == "cafe"
@@ -49,32 +52,40 @@ let productosController = {
         res.render("products/crear-producto");
     },
 
-    guardarProducto: (req, res) => {
-        let productos = {
-            "id": id[i]++,
-            "nombre": req.body.nombre,
-            "peso": req.body.peso,
-            "descripcion": req.body.descripcion,
-            "precio": req.body.precio,
-            "categoria": req.body.categoria,
-            "imagen": req.body.imagen
+    guardarProducto: (req, res, next) => {
+        let arrayId = [];
+
+        arrayId = products.map(function(obj) {
+            return obj.id
+        })
+
+        let mayorId = arrayId.reduce((a, b) => {
+            if(a > b) {
+                return a
+            } else {
+                return b
+            }
+        })
+
+        let nuevoId = mayorId+1;
+
+        let producto = {
+            id: nuevoId,
+            nombre: req.body.nombre,
+            peso: req.body.peso,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            categoria: req.body.categoria,
+            imagen: req.files[0].filename,
         }
 
-        let archivoProductos = fs.readFileSync('productos.json', {encoding:'utf-8'});
-        
-        if (archivoProductos == "") {
-    		productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
-        }
+        products.push(producto);
 
-        productos.push(productos);
+        const JSONnewProduct = JSON.stringify(products)
 
-        productosJSON = JSON.stringify(productos);
+        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
 
-        fs.writeFileSync('productos.json', productosJSON);
-
-        res.redirect("products/listado");
+        res.redirect("/productos/listado");
     },
 
     editarProducto: function(req, res) {
@@ -98,8 +109,21 @@ let productosController = {
             
         });
         const JSONproduct = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONproduct);
+        fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSONproduct);
         res.redirect('/')
+    },
+
+    eliminarProducto: function (req, res) {
+        // Almacena en una variable el id de producto ingresado en url
+        const idProducto = req.params.id
+        // Recorre el JSON y retorna los que cumplen con la condicion almacenandolo en products
+        let productsFilter = products.filter(function(product) {
+            return product.id != idProducto
+        })
+        // Sobreescribo en products.json la variable products fitlrando el id de URL
+        fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSON.stringify(productsFilter))
+        // Redirecciona a la pagina que quieras
+        res.redirect("/productos/listado") // siempre redirecciono la ruta que quiero que muestre
     },
 }
 

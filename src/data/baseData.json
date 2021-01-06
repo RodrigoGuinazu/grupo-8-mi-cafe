@@ -1,3 +1,5 @@
+// JSON DE PRODUCTOS
+
 [{
     "id": 1,
     "nombre": "Café Amalfi",
@@ -24,7 +26,8 @@
     "precio": 500,
     "categoria": "cafe",
     "imagen": "IRIS Mí Café.jpg"
-}, {
+},
+{
     "id": 4,
     "nombre": "Café Italo",
     "peso": 500,
@@ -32,7 +35,8 @@
     "precio": 390,
     "categoria": "cafe",
     "imagen": "ITALO Mí Café.jpg"
-}, {
+},
+{
     "id": 5,
     "nombre": "Café Malta",
     "peso": 250,
@@ -40,7 +44,8 @@
     "precio": 380,
     "categoria": "cafe",
     "imagen": "MALTA Mí Café.jpg"
-}, {
+},
+{
     "id": 6,
     "nombre": "Café Petra",
     "peso": 500,
@@ -48,7 +53,8 @@
     "precio": 458,
     "categoria": "cafe",
     "imagen": "PETRA Mí Café.jpg"
-}, {
+},
+{
     "id": 7,
     "nombre": "Café Zafiro",
     "peso": 1000,
@@ -56,7 +62,8 @@
     "precio": 552,
     "categoria": "cafe",
     "imagen": "ZAFIRO Mí Café.jpg"
-}, {
+},
+{
     "id": 8,
     "nombre": "Cafetera Nespresso Inissia",
     "peso": 0,
@@ -64,7 +71,8 @@
     "precio": 9500,
     "categoria": "cafetera",
     "imagen": "Cafetera Nespresso Roja.jpg"
-}, {
+},
+{
     "id": 9,
     "nombre": "Cafetera Krups Dolce Gusto",
     "peso": 0,
@@ -72,7 +80,8 @@
     "precio": 12500,
     "categoria": "cafetera",
     "imagen": "Cafetera Krups Dolce Gusto.jpg"
-}, {
+},
+{
     "id": 10,
     "nombre": "Cafetera Bodum",
     "peso": 0,
@@ -80,7 +89,8 @@
     "precio": 5000,
     "categoria": "cafetera",
     "imagen": "cafetera bodum.jpg"
-}, {
+},
+{
     "id": 11,
     "nombre": "Cafetera Magefesa",
     "peso": 0,
@@ -88,7 +98,8 @@
     "precio": 3300,
     "categoria": "cafetera",
     "imagen": "Cafetera Magefesa.jpg"
-}, {
+},
+{
     "id": 12,
     "nombre": "Espumador",
     "peso": 0,
@@ -96,7 +107,8 @@
     "precio": 400,
     "categoria": "accesorio",
     "imagen": "espumador.jpg"
-}, {
+},
+{
     "id": 13,
     "nombre": "Capsulas recargables",
     "peso": 0,
@@ -104,7 +116,8 @@
     "precio": 800,
     "categoria": "accesorio",
     "imagen": "Capsulas recargables.jpg"
-}, {
+},
+{
     "id": 14,
     "nombre": "Molinillo",
     "peso": 0,
@@ -112,7 +125,8 @@
     "precio": 4000,
     "categoria": "accesorio",
     "imagen": "molinillo.jpg"
-}, {
+},
+{
     "id": 15,
     "nombre": "Taza Mí Café",
     "peso": 0,
@@ -120,4 +134,100 @@
     "precio": 600,
     "categoria": "accesorio",
     "imagen": "taza personalizada.jpg"
-}]
+}
+]
+
+
+// JSON DE USUARIOS
+
+[{
+    "id": 1,
+    "first_name": "Admin",
+    "last_name": "Admin",
+    "email": "Admin@MiCafe.com.ar",
+    "password": "admin123",
+    "category": "administrador",
+    "image": ""
+},
+{
+    "id": 2,
+    "first_name": "Karlotta",
+    "last_name": "Exall",
+    "email": "kexall1@domainmarket.com",
+    "password": "AwrYCqZO6x0",
+    "category": "user",
+    "image": "user_2.jpg"
+},
+{
+    "id": 3,
+    "first_name": "Thelma",
+    "last_name": "Soans",
+    "email": "tsoans2@hugedomains.com",
+    "password": "WSAymf39GZ0",
+    "category": "user",
+    "image": "user_3.jpg"
+},
+{
+    "id": 4,
+    "first_name": "Aymer",
+    "last_name": "Feldhuhn",
+    "email": "afeldhuhn3@livejournal.com",
+    "password": "Cr0JSrfah",
+    "category": "user",
+    "image": "user_4.jpg"
+},
+{
+    "id": 5,
+    "first_name": "Isa",
+    "last_name": "Chappelle",
+    "email": "ichappelle4@canalblog.com",
+    "password": "e8hM8z",
+    "category": "user",
+    "image": "user_5.jpg"
+},
+{
+    "id": 6,
+    "first_name": "Jaquith",
+    "last_name": "Klimkin",
+    "email": "jklimkin5@bizjournals.com",
+    "password": "88aMeX82Vk",
+    "category": "user",
+    "image": "user_6.jpg"
+},
+{
+    "id": 7,
+    "first_name": "Brannon",
+    "last_name": "Siward",
+    "email": "bsiward6@ibm.com",
+    "password": "Gb4AMA2lYMJC",
+    "category": "user",
+    "image": "user_7.jpg"
+},
+{
+    "id": 8,
+    "first_name": "Genny",
+    "last_name": "Labon",
+    "email": "glabon7@webs.com",
+    "password": "T6RPXpwI",
+    "category": "user",
+    "image": "user_8.jpg"
+},
+{
+    "id": 9,
+    "first_name": "Aurelea",
+    "last_name": "Caddie",
+    "email": "acaddie8@de.vu",
+    "password": "JyqHoY5spbb",
+    "category": "user",
+    "image": "user_9.jpg"
+},
+{
+    "id": 10,
+    "first_name": "Brooks",
+    "last_name": "Antushev",
+    "email": "bantushev9@w3.org",
+    "password": "HTot8f5u",
+    "category": "user",
+    "image": "user_10.jpg"
+}
+]
