@@ -49,32 +49,40 @@ let productosController = {
         res.render("products/crear-producto");
     },
 
-    guardarProducto: (req, res) => {
-        let productos = {
-            "id": id[i]++,
-            "nombre": req.body.nombre,
-            "peso": req.body.peso,
-            "descripcion": req.body.descripcion,
-            "precio": req.body.precio,
-            "categoria": req.body.categoria,
-            "imagen": req.body.imagen
+    guardarProducto: (req, res, next) => {
+        let arrayId = [];
+
+        arrayId = products.map(function(obj) {
+            return obj.id
+        })
+
+        let mayorId = arrayId.reduce((a, b) => {
+            if(a > b) {
+                return a
+            } else {
+                return b
+            }
+        })
+
+        let nuevoId = mayorId+1;
+
+        let producto = {
+            id: nuevoId,
+            nombre: req.body.nombre,
+            peso: req.body.peso,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            categoria: req.body.categoria,
+            imagen: req.files[0].filename,
         }
 
-        let archivoProductos = fs.readFileSync('productos.json', {encoding:'utf-8'});
-        
-        if (archivoProductos == "") {
-    		productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
-        }
+        products.push(producto);
 
-        productos.push(productos);
+        const JSONnewProduct = JSON.stringify(products)
 
-        productosJSON = JSON.stringify(productos);
+        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
 
-        fs.writeFileSync('productos.json', productosJSON);
-
-        res.redirect("products/listado");
+        res.redirect("/productos/listado");
     },
 
     editarProducto: function(req, res) {
