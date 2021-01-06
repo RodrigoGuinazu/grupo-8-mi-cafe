@@ -37,3 +37,8 @@ Actualmente trabajo de operario en el centro de almacenamiento y distribución d
 </ul>
 
 <a href="https://trello.com/b/AMU9cmgw/m%C3%AD-caf%C3%A9">Tablero de Trabajo</a>
+
+<h3>Sprint-4</h3>
++ Se incorporó un botón 'Crear' en 'Listado de producto' que sólo será visible para el Responsable del sitio.
++ Se incorporó un botón 'Editar' en 'Detalle de producto' que sólo será visible para el Responsable del sitio.
++ Cuando se elimina o crear un producto, es necesario actualizar la página para ver los cambios.
