@@ -14,10 +14,10 @@
             <h2>Crear nuevo producto</h2>
             <form method="POST" action="/productos/crear" enctype="multipart/form-data">
                 <div class="product-type">
-                    <select>
-                        <option>Cafés</option>
-                        <option>Cafeteras</option>
-                        <option>Accesorios</option>
+                    <select name="categoria">
+                        <option value="cafe">Cafés</option>
+                        <option value="cafetera">Cafeteras</option>
+                        <option value="accesorio">Accesorios</option>
                     </select>
                 </div>
                 <div class="product-img">
@@ -27,19 +27,22 @@
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
                 </div>
                 <div class="product-weight">
-                    <input type="checkbox">250gr</input>
-                    <input type="checkbox">500gr</input>
-                    <input type="checkbox">1000gr</input>
+                    <input type="checkbox" name="peso" value="250">250gr</input>
+                    <input type="checkbox" name="peso" value="500">500gr</input>
+                    <input type="checkbox" name="peso" value="1000">1000gr</input>
                 </div>
                 <div class="product-price">
-                    <input type="text" name="precio" id="precio" placeholder="$00,0">
+                    <input type="number" name="precio" id="precio" placeholder="$00,0">
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>
                    <textarea name="comentarios" rows="10" cols="40"></textarea>
                </div>
                <div class="product-create">
-                <button class="product-create-button"><a href="/productos/listado">Publicar</a></button>
+                <button class="product-create-button">Publicar</button>
+                </div>
+                <div>
+                    <button class="product-cancel-button"><a href="/productos/listado">Cancelar</a></button>
                 </div>
             </form>
         </section>
