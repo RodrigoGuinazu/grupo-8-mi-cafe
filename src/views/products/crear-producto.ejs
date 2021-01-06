@@ -27,9 +27,12 @@
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
                 </div>
                 <div class="product-weight">
-                    <input type="checkbox" name="peso" value="250">250gr</input>
-                    <input type="checkbox" name="peso" value="500">500gr</input>
-                    <input type="checkbox" name="peso" value="1000">1000gr</input>
+                    <select name="categoria">
+                        <option value="250">250gr</option>
+                        <option value="500">500gr</option>
+                        <option value="1000">1000gr</option>
+                        <option value="N/A">N/A</option>
+                    </select>
                 </div>
                 <div class="product-price">
                     <input type="number" name="precio" id="precio" placeholder="$00,0">
