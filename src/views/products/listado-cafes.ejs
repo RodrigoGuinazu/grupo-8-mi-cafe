@@ -19,7 +19,7 @@
                 <div class="categoria cafes">
                     <% cafes.forEach(producto =>{ %>
                     <article class="caja-producto">
-                        <a href="/productos/detalle">
+                        <a href="/productos/<%= producto.id %>/detalle">
                             <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
                         </a>
                         <div class="producto-info">
