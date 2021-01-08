@@ -36,3 +36,22 @@ Weekly (20210105)
   + RG: Modificación de producto (métodos HTTP), se logró que el ID del producto (no la posición del Array) se refleje en la URL correspondiente [Completado].
   + AV: Alta de productos (métodos HTTP), se logró generar la numeración secuencial de los productos al crearlos desde la vista 'Crear producto' [Completado].
 + Se realizará la Retrospectiva, con las acciones de mejora y mitigación, desarrolladas durante el Sprint 4 [En curso].
+
+=======
+
+:: Sprint 5 (20210108) ::
+
++ Se abordarán las tarjetas 'pendientes' del Sprint 4 (Login y #404), antes de iniciar las tareas del Sprint 5.
+
++ Se dividieron las tareas del Sprint 5 de la siguiente manera:
+
+  + FS: Autenticación Login + Estructura de archivos y carpetas.
+  + RS: Vista de Perfil de Usuario + Transformar Multer en Middleware.
+  + RG: Incorporar MULTER a imagen de perfil de usuario + Revisión de JSON de usuarios (campos).
+  + AV: Ruteo de usuarios logueados y no logueados (Session) + Vista de Registro de usuarios (campos).
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Weekly (NNNNN)
