@@ -117,14 +117,13 @@ let productosController = {
                 product.descripcion = req.body.descripcion;
                 product.precio = req.body.precio;
                 product.categoria = req.body.categoria;
-                product.imagen = req.files[0].filename;
-                console.log(product);
+                product.imagen = req.files[0].imagen
             }
             
         });
         const JSONproduct = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSONproduct);
-        res.redirect('/')
+        res.redirect('detalle')
     },
 
     eliminarProducto: function (req, res) {

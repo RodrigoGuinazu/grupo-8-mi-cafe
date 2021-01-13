@@ -6,8 +6,7 @@
     "precio": 420,
     "categoria": "cafe",
     "imagen": "amalfi_mi_cafe.jpg"
-},
-{
+}, {
     "id": 2,
     "nombre": "Café Dala",
     "peso": 500,
@@ -15,8 +14,7 @@
     "precio": 450,
     "categoria": "cafe",
     "imagen": "dala_mi_cafe.jpg"
-},
-{
+}, {
     "id": 3,
     "nombre": "Café Iris",
     "peso": 250,
@@ -67,10 +65,10 @@
 }, {
     "id": 9,
     "nombre": "Cafetera Krups Dolce Gusto",
-    "peso": 0,
+    "peso": "250",
     "descripcion": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    "precio": 12500,
-    "categoria": "cafetera",
+    "precio": "12500",
+    "categoria": "cafe",
     "imagen": "cafetera_krups_dolce_gusto.jpg"
 }, {
     "id": 10,

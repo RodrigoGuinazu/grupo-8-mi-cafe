@@ -24,7 +24,7 @@ router.get ('/listado/accesorios', productosController.listadoAccesorios);
 router.get ('/crear', productosController.crearProducto);
 router.post('/crear', upload.any(), productosController.guardarProducto);
 router.get ('/:id/editar', productosController.editarProducto);
-router.put ('/:id', upload.any(), productosController.modificacion);
+router.put ('/:id/detalle', upload.any(), productosController.modificacion);
 router.delete ('/:id/editar', productosController.eliminarProducto);
 
 
