@@ -112,12 +112,15 @@ let productosController = {
     modificacion: (req, res) => {
         products.forEach(product => {
             if(req.params.id == product.id){
-                product.nombre = req.body.nombre;
-                product.peso = req.body.peso;
-                product.descripcion = req.body.descripcion;
-                product.precio = req.body.precio;
-                product.categoria = req.body.categoria;
-                product.imagen = req.files[0].imagen
+                product.nombre = req.body.nombre,
+                product.peso = req.body.peso,
+                product.descripcion = req.body.descripcion,
+                product.precio = req.body.precio,
+                product.categoria = req.body.categoria,
+                product.imagen = req.body.imagen
+            }
+            if (req.params.id == product.id && req.body.imagen == undefined){
+                product.imagen = "stock_image.jpg"
             }
             
         });

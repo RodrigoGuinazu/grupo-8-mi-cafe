@@ -68,7 +68,7 @@
     "peso": "250",
     "descripcion": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     "precio": "12500",
-    "categoria": "cafe",
+    "categoria": "cafetera",
     "imagen": "cafetera_krups_dolce_gusto.jpg"
 }, {
     "id": 10,
@@ -104,7 +104,7 @@
     "imagen": "capsulas_recargables.jpg"
 }, {
     "id": 14,
-    "nombre": "Molinillo",
+    "nombre": "molinillo",
     "peso": 0,
     "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
     "precio": 4000,
@@ -117,5 +117,5 @@
     "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
     "precio": 600,
     "categoria": "accesorio",
-    "imagen": "taza_personalizada.jpg"
+    "imagen": "taza_mi_cafe.jpg"
 }]
