@@ -27,7 +27,7 @@ app.use('/carrito', carritoRouter);
 app.use('/productos', productosRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
-app.use('/', indexRouter)
+app.use('/', indexRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
