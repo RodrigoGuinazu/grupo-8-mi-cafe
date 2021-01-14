@@ -11,7 +11,7 @@ function multerProductosMW(req,res,next){
   })
    
   var upload = multer({ storage: storage })
-  next();
+  return upload.any();
 }
 
   module.exports = multerProductosMW;

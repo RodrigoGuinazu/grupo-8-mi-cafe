@@ -92,7 +92,6 @@ let productosController = {
             categoria: req.body.categoria,
             imagen: req.files[0].filename,
         }
-
         products.push(producto);
 
         const JSONnewProduct = JSON.stringify(products)
