@@ -118,6 +118,9 @@ let productosController = {
                 product.precio = req.body.precio,
                 product.categoria = req.body.categoria
             }
+            if (req.params.id == product.id && req.body.imagen != undefined){
+                product.imagen = req.body.imagen
+            }
             if (req.params.id == product.id && req.body.imagen == undefined){
                 product.imagen = product.imagen
             }
