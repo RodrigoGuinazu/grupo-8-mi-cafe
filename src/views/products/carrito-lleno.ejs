@@ -77,56 +77,21 @@
 
                 <h3>Productos Relacionados</h3>
                 <div class="recomendados">
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$420</h2>
-                            <h3>Cafe Cabrales Super</h3>
-                        </div> 
-                    </article>
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$450</h2>
-                            <h3>Cafe Cabrales La Planta de Cafe</h3>
-                        </div> 
-                    </article>
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$380</h2>
-                            <h3>Cafe Cabrales Prestige</h3>
-                        </div> 
-                    </article>
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://www.cabrales.com/wp-content/uploads/2016/10/Al_Grano_Molido_500.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$400</h2>
-                            <h3>Cafe Cabrales Al Grano de Cafe</h3>
-                        </div> 
-                    </article>
-
-                 </div>
+                    <% recomendacion.forEach(recomendado =>{ %>
+                     <article class="caja-producto">
+                         <a href="/productos/<%= recomendado.id %>/detalle">
+                             <img src="/images/products/<%= recomendado.imagen %>" alt="recomendacion">
+                         </a>
+                         <div class="producto-info">
+                             <i class="fas fa-credit-card"></i>
+                             <i class="fas fa-shopping-bag"></i>
+                             <h2 class="precio-producto">$<%= recomendado.precio %> </h2>
+                             <h3><%= recomendado.nombre %> </h3>
+                         </div>                
+                     </article>
+                     <% }) %>
+ 
+                  </div>
         </section>
 
             <%- include('../partials/footer.ejs')%>

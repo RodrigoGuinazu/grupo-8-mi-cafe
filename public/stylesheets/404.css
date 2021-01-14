@@ -5,3 +5,15 @@ img{
 h1{
     font-size: 70px;
 }
+
+@media (max-width: 768px) {
+    img.img_error{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1050px) {
+    img.img_error{
+        width: 80%;
+    }
+}

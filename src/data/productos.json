@@ -6,22 +6,20 @@
     "precio": 420,
     "categoria": "cafe",
     "imagen": "amalfi_mi_cafe.jpg"
-},
-{
+}, {
     "id": 2,
     "nombre": "Café Dala",
-    "peso": 500,
+    "peso": "250",
     "descripcion": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-    "precio": 450,
+    "precio": "450",
     "categoria": "cafe",
     "imagen": "dala_mi_cafe.jpg"
-},
-{
+}, {
     "id": 3,
     "nombre": "Café Iris",
-    "peso": 250,
+    "peso": "250",
     "descripcion": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
-    "precio": 500,
+    "precio": "500",
     "categoria": "cafe",
     "imagen": "iris_mi_cafe.jpg"
 }, {
@@ -98,18 +96,18 @@
     "imagen": "espumador.jpg"
 }, {
     "id": 13,
-    "nombre": "Capsulas recargables",
-    "peso": 0,
+    "nombre": "Capsulas Recargables",
+    "peso": "250",
     "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
-    "precio": 800,
+    "precio": "800",
     "categoria": "accesorio",
     "imagen": "capsulas_recargables.jpg"
 }, {
     "id": 14,
     "nombre": "Molinillo",
-    "peso": 0,
+    "peso": "250",
     "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
-    "precio": 4000,
+    "precio": "4000",
     "categoria": "accesorio",
     "imagen": "molinillo.jpg"
 }, {
@@ -119,5 +117,5 @@
     "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
     "precio": 600,
     "categoria": "accesorio",
-    "imagen": "taza_personalizada.jpg"
+    "imagen": "taza_mi_cafe.jpg"
 }]

@@ -32,5 +32,4 @@ router.get ('/:id/editar', productosController.editarProducto);
 router.put ('/:id', multerProductosMW, productosController.modificacion);
 router.delete ('/:id/editar', productosController.eliminarProducto);
 
-
 module.exports = router;

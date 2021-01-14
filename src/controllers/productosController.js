@@ -8,8 +8,22 @@ let productosController = {
     detalleProducto: function(req, res, next) {
         const id = req.params.id
         let productDetail = products.find(product => product.id == id);
+        let recomendacion = []
 
-        res.render('products/detalle-producto', {productDetail: productDetail});
+        let randomNum = function() {
+            const numeroRandom = products[Math.floor(Math.random() * products.length)];
+            if (recomendacion.includes(numeroRandom) && recomendacion.includes(id)) {
+                randomNum()
+            } else {
+                recomendacion.push(numeroRandom);
+            }
+        }
+
+        while(recomendacion.length < 4){
+            randomNum()
+        }
+
+        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
 },
     listadoProducto: function(req, res) {
         let cafes = products.filter(function (producto) {
@@ -98,19 +112,21 @@ let productosController = {
     modificacion: (req, res) => {
         products.forEach(product => {
             if(req.params.id == product.id){
-                product.nombre = req.body.nombre;
-                product.peso = req.body.peso;
-                product.descripcion = req.body.descripcion;
-                product.precio = req.body.precio;
-                product.categoria = req.body.categoria;
-                product.imagen = req.files[0].filename;
-                console.log(product);
+                product.nombre = req.body.nombre
+                product.peso = req.body.peso
+                product.descripcion = req.body.descripcion
+                product.precio = req.body.precio
+                product.categoria = req.body.categoria
+                if (req.files[0] != undefined){
+                    product.imagen = req.files[0].filename
+                }
             }
+            
             
         });
         const JSONproduct = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSONproduct);
-        res.redirect('/')
+        res.redirect('detalle')
     },
 
     eliminarProducto: function (req, res) {
