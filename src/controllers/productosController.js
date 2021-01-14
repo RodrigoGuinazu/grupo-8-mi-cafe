@@ -116,12 +116,15 @@ let productosController = {
                 product.peso = req.body.peso,
                 product.descripcion = req.body.descripcion,
                 product.precio = req.body.precio,
-                product.categoria = req.body.categoria,
-                product.imagen = req.files[0].filename
+                product.categoria = req.body.categoria
             }
             if (req.params.id == product.id && req.body.imagen == undefined){
                 product.imagen = "stock_image.jpg"
             }
+            if (req.params.id == product.id && req.body.imagen != undefined){
+                product.imagen = req.files[0].filename
+            }
+
             
         });
         const JSONproduct = JSON.stringify(products);
