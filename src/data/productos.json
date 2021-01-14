@@ -113,9 +113,10 @@
 }, {
     "id": 15,
     "nombre": "Taza Mí Café",
-    "peso": 0,
+    "peso": "250",
     "descripcion": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
-    "precio": 600,
+    "precio": "600",
     "categoria": "accesorio",
     "imagen": "taza_mi_cafe.jpg"
-}]
+}
+]

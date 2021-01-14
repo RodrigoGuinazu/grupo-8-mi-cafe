@@ -117,7 +117,7 @@ let productosController = {
                 product.descripcion = req.body.descripcion,
                 product.precio = req.body.precio,
                 product.categoria = req.body.categoria,
-                product.imagen = req.body.imagen
+                product.imagen = req.files[0].filename
             }
             if (req.params.id == product.id && req.body.imagen == undefined){
                 product.imagen = "stock_image.jpg"
