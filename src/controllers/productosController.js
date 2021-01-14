@@ -112,18 +112,16 @@ let productosController = {
     modificacion: (req, res) => {
         products.forEach(product => {
             if(req.params.id == product.id){
-                product.nombre = req.body.nombre,
-                product.peso = req.body.peso,
-                product.descripcion = req.body.descripcion,
-                product.precio = req.body.precio,
+                product.nombre = req.body.nombre
+                product.peso = req.body.peso
+                product.descripcion = req.body.descripcion
+                product.precio = req.body.precio
                 product.categoria = req.body.categoria
+                if (req.files[0] != undefined){
+                    product.imagen = req.files[0].filename
+                }
             }
-            if (req.params.id == product.id && req.body.imagen != undefined){
-                product.imagen = req.body.imagen
-            }
-            if (req.params.id == product.id && req.body.imagen == undefined){
-                product.imagen = product.imagen
-            }
+            
             
         });
         const JSONproduct = JSON.stringify(products);
