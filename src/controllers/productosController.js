@@ -119,12 +119,8 @@ let productosController = {
                 product.categoria = req.body.categoria
             }
             if (req.params.id == product.id && req.body.imagen == undefined){
-                product.imagen = "stock_image.jpg"
+                product.imagen = product.imagen
             }
-            if (req.params.id == product.id && req.body.imagen != undefined){
-                product.imagen = req.files[0].filename
-            }
-
             
         });
         const JSONproduct = JSON.stringify(products);
