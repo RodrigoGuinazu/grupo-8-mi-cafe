@@ -130,6 +130,7 @@ a {
     background-color:gray;
     color: black;
     padding: 5px;
+    margin: 8px;
 }
 
 /* MOBILE */
@@ -138,17 +139,29 @@ a {
 
 @media (max-width: 767px){
     
+    .navbar-logo{
+        margin-bottom: 5px;
+    }
+
     .login-credential-password input {
         padding: 5px;
         margin: 5px;
         width: 85%;
         border: none;
     }
+    .searchTerm{
+        width: 72%;
+        margin-bottom: 5px;
+    }
 
+    .pie-desktop {
+     font-size: 12px;
+     }
 }
-
 /* DESKTOP - TABLET */
 
 @media (min-width: 768px) {
-
+     .searchTerm {
+        width: 80%;
+     }
 }

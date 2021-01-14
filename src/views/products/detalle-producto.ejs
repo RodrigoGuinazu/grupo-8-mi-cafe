@@ -51,38 +51,7 @@
 
                 <div class="valor-envio">
                     <div><label for="">Elegi tu Provincia</label></p></div>
-                    <div>
-                    <select name="provincia" id="">
-                        <option value="BA">Buenos Aires</option>
-                        <option value="CA">Catamarca</option>
-                        <option value="CHA">Chaco</option>
-                        <option value="CHU">Chubut</option>
-                        <option value="CORD">Córdoba</option>
-                        <option value="CORR">Corrientes</option>
-                        <option value="ER">Entre Ríos</option>
-                        <option value="FO">Formosa</option>
-                        <option value="JU">Jujuy</option>
-                        <option value="LP">La Pampa</option>
-                        <option value="LR">La Rioja
-                        </option>
-                        <option value="ME">Mendoza</option>
-                        <option value="MI">Misiones</option>
-                        <option value="NE">Neuquén</option>
-                        <option value="RN">Río Negro</option>
-                        <option value="SA">Salta</option>
-                        <option value="SJ">San Juan</option>
-                        <option value="SC">Santa Cruz
-                        </option>
-                        <option value="SF">Santa Fe
-                        </option>
-                        <option value="SGO">Santiago del Estero
-                        </option>
-                        <option value="TF">Tierra del Fuego
-                        </option>
-                        <option value="TU">Tucumán</option>
-                    </select>
-                    </div>
-                </div>
+                    <%- include('../partials/provinciasSelect.ejs')%>
 
                 <div class="links">
                     <a href=""><i class="far fa-heart"></i> Agregar a favoritos</a>
@@ -143,54 +112,19 @@
 
                 <h3>Productos Relacionados</h3>
                 <div class="recomendados">
-
+                   <% recomendacion.forEach(recomendado =>{ %>
                     <article class="caja-producto">
-                        <a href="">
-                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion">
+                        <a href="/productos/<%= recomendado.id %>/detalle">
+                            <img src="/images/products/<%= recomendado.imagen %>" alt="recomendacion">
                         </a>
                         <div class="producto-info">
                             <i class="fas fa-credit-card"></i>
                             <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$420</h2>
-                            <h3>Cafe Cabrales Super</h3>
-                        </div> 
+                            <h2 class="precio-producto">$<%= recomendado.precio %> </h2>
+                            <h3><%= recomendado.nombre %> </h3>
+                        </div>                
                     </article>
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$450</h2>
-                            <h3>Cafe Cabrales La Planta de Cafe</h3>
-                        </div> 
-                    </article>
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$380</h2>
-                            <h3>Cafe Cabrales Prestige</h3>
-                        </div> 
-                    </article>
-
-                    <article class="caja-producto">
-                        <a href="">
-                            <img src="https://www.cabrales.com/wp-content/uploads/2016/10/Al_Grano_Molido_500.jpg" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$400</h2>
-                            <h3>Cafe Cabrales Al Grano de Cafe</h3>
-                        </div> 
-                    </article>
+                    <% }) %>
 
                  </div>
         </section>
