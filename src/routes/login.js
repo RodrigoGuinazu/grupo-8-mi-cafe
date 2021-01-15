@@ -3,7 +3,7 @@ let loginController = require('../controllers/loginController');
 
 let router = express.Router();
 router.get ('', loginController.login)
-router.post('', loginController.validarLogin)
+router.post('', loginController.processLogin)
 router.get ('/wrong-user', loginController.wrongUser);
 router.get ('/user-not-found', loginController.userNotFound);
 

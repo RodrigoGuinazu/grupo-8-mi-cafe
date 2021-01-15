@@ -1,7 +1,8 @@
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt"); => DEBE REQUERIRSE EN EL REGISTRO
 const fs = require('fs');
+const path = require('path');
 
-let users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {encoding: 'utf-8'});
+let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
 users = JSON.parse(users);
 
 let loginController = {
@@ -15,8 +16,21 @@ let loginController = {
         res.render('users/login-user-not-found');
     },
     processLogin: function(req, res) {
-        let archivoUsuario
-    })
+        //let usuarios;
+        //if(users == "") {
+            //usuarios = []
+        //} else {
+            //usuarios = JSON.parse(users)
+        //}
+
+        for(let i = 0; i < users.length; i++) {
+            if(req.body.email == users[i].email && req.body.password == users[i].password) {
+                res.send("Estas logueado")
+            } else {
+                res.send("Error")
+            }
+        }
+    }
 }
 
 module.exports = loginController;
