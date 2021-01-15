@@ -13,9 +13,9 @@ router.get ('/listado/cafes', productosController.listadoCafes);
 router.get ('/listado/cafeteras', productosController.listadoCafeteras);
 router.get ('/listado/accesorios', productosController.listadoAccesorios);
 router.get ('/crear', productosController.crearProducto);
-router.post('/crear', multerProductos().any(), productosController.guardarProducto);
+router.post('/crear', multerProductos.any(), productosController.guardarProducto);
 router.get ('/:id/editar', productosController.editarProducto);
-router.put ('/:id/detalle', multerProductos().any(), productosController.modificacion);
+router.put ('/:id/detalle', multerProductos.any(), productosController.modificacion);
 router.delete ('/:id/editar', productosController.eliminarProducto);
 
 module.exports = router;
