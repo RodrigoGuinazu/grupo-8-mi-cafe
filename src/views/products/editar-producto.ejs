@@ -17,6 +17,7 @@
                     <label for="">Categoria</label>
                     <br>
                     <select name="categoria">
+                        <option value="<%= productToEdit.categoria %>" selected><%= productToEdit.categoria %></option>
                         <option value="cafe">Cafés</option>
                         <option value="cafetera">Cafeteras</option>
                         <option value="accesorio">Accesorios</option>
@@ -36,6 +37,7 @@
                     <label for="">Peso en gr</label>
                     <br>
                     <select name="peso">
+                        <option value="<%= productToEdit.peso %>" selected><%= productToEdit.peso %></option>
                         <option value="250">250gr</option>
                         <option value="500">500gr</option>
                         <option value="1000">1000gr</option>
