@@ -22,11 +22,6 @@
             <article>
                 <div class="titulo">
                     <h2><%= productDetail.nombre %><span>
-                        <select name="peso" id="">
-                            <option value="250">250gr</option>
-                            <option value="500">500gr</option>
-                            <option value="1000">1kg</option>
-                        </select>
                     </span></h2>
                 </div>
                 <div class="puntuacion">
@@ -55,12 +50,21 @@
 
                 <div class="links">
                     <a href=""><i class="far fa-heart"></i> Agregar a favoritos</a>
+                    <br>
+                    <br>
                     <a href=""><i class="fas fa-share-alt"></i> Compartir</a>
                 </div>
 
                 <div class="button-section">
                     <a class="button-create" href="/productos/<%= productDetail.id %>/editar">Editar</a>
                 </div>
+
+                <br>
+                <br>
+
+                <article class="descripcion-desktop">
+                    <p><%= productDetail.descripcion %><p>
+                </article>
             
             </article>
             
@@ -70,7 +74,6 @@
         <section class="descripcion">
             
             <article>
-                <h3 align="center">Descripcion del Artículo:</h3>
                 <p><%= productDetail.descripcion %><p>
             </article>
 
