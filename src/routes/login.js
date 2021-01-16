@@ -1,6 +1,7 @@
 let express = require('express');
 let loginController = require('../controllers/loginController');
 const { check, validationResult, body } = require("express-validator");
+const path = require('path');
 
 let router = express.Router();
 router.get ('', loginController.login)

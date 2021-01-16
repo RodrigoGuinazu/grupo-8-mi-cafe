@@ -1,10 +1,11 @@
 // const bcrypt = require("bcrypt"); => DEBE REQUERIRSE EN EL REGISTRO
 const fs = require('fs');
 const path = require('path');
-const { check, validationResult, body } = require("express-validator");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcrypt")
 
-//let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
-//users = JSON.parse(users);
+let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
+users = JSON.parse(users);
 
 let loginController = {
     login: function(req, res) {
@@ -20,33 +21,22 @@ let loginController = {
         let errors = validationResult(req);
 
         if(errors.isEmpty) {
-            let usersJSON = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
-            let usuarios;
-            if(usersJSON == "") {
-                usuarios = [];
+            let usuarioALoguearse = users.find(user => user.email == req.body.email);
+            console.log(usuarioALoguearse);
+
+            if(usuarioALoguearse != undefined) {
+                if(bcrypt.compareSync(usuarioALoguearse.password, req.body.password)) {
+                    return res.redirect("/productos/listado")
+                } else {
+                    res.render("login", { msge: "Credenciales inválidas"})
+                }
             } else {
-                usuarios = JSON.parse(usersJSON);
+                 res.render("login", { msge: "Credenciales inválidas"});
             }
-
-            for(let i = 0; i < usuarios.length; i++) {
-                if(req.body.email == usuarios[i].email) {
-                    if(bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-                        let usuarioALoguearse = usuarios[i];
-                        break;
-                    }
-                } 
-            }
-
-            if (usuarioALoguearse == undefined) { // => Si el usuario aun es undefined que arroje errores. Si ya encontro y valido email y contraseña en el for, ¿Por que seria undefined?
-                return res.render("login", { errors: [
-                    {msge: "Credenciales Invalidas"}
-                ]})
-            }
-
         } else {
-            return res.render("login", {errors: errors.errors}); // => consultar la logica de errors: errors.errors
+            res.render("login", {errors: errors.errors});
         }
-    }
+    }    
 }
 
 module.exports = loginController;
