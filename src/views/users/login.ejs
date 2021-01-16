@@ -22,7 +22,7 @@
                 <img class="login-credential-alternative-tw"  src="/images/tw-icon.svg" alt="Login Twitter">
             </div>
 
-            <% if (typeof errors == "string") { %>
+            <% if (typeof errors != "undefined") { %>
                 <p style="color:red">ERROR</p>
                 <ul>
                     <% for (let i = 0; i < errors.length; i++) { %>
@@ -33,10 +33,11 @@
                 </ul>
             <% } %>
 
-            <form class="login-credential" action="/" method="POST">
+            <form class="login-credential" action="/usuarios/login" method="POST">
                 <div class="login-credential-user">
+                    <br>
                     <p>...ó ingresá con tu usuario:</p>
-                    <input type="email" name="email" id="email" placeholder="email" style="text-align:center">
+                    <input type="email" name="email" id="email" placeholder="mail" style="text-align:center">
                 </div>
 
                 <div class="login-credential-password">

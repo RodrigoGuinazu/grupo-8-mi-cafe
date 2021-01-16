@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require("express-validator");
-const bcrypt = require("bcrypt")
 
 let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
 users = JSON.parse(users);
@@ -19,24 +18,23 @@ let loginController = {
     //},
     processLogin: function(req, res) {
         let errors = validationResult(req);
+        console.log(errors)
 
-        if(errors.isEmpty) {
             let usuarioALoguearse = users.find(user => user.email == req.body.email);
-            console.log(usuarioALoguearse);
-
             if(usuarioALoguearse != undefined) {
-                if(bcrypt.compareSync(usuarioALoguearse.password, req.body.password)) {
-                    return res.redirect("/productos/listado")
+                //if(bcrypt.comapreSync(usuarioALoguearse.password, req.body.password))
+                if(usuarioALoguearse.password == req.body.password) {
+                    res.render("index")
                 } else {
-                    res.render("login", { msge: "Credenciales inválidas"})
+                res.render("users/login", { errors: [
+                    {msg: "Credenciales incorrectas"}
+                ]})
                 }
             } else {
-                 res.render("login", { msge: "Credenciales inválidas"});
-            }
-        } else {
-            res.render("login", {errors: errors.errors});
+            res.render("users/login", { errors: [
+                {msg: "No existe ningun usuario registrado con ese email"}
+            ]})
         }
-    }    
+    }
 }
-
 module.exports = loginController;

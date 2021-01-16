@@ -26,7 +26,7 @@ app.use(methodOverride("_method"));
 // APP.USE
 app.use('/carrito', carritoRouter);
 app.use('/productos', productosRouter);
-app.use('/login', loginRouter);
+app.use('/usuarios', loginRouter);
 app.use('/register', registerRouter);
 app.use('/', indexRouter);
 
