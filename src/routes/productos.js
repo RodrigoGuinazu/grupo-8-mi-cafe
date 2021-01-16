@@ -3,7 +3,7 @@ let productosController = require('../controllers/productosController');
 const path = require('path');
 let multer = require('multer');
 let multerProductos = require('../middlewares/multerProductos');
-
+let indexController = require('../controllers/indexController');
 
 let router = express.Router();
 router.get ('/detalle', productosController.detalleProducto);
@@ -17,5 +17,6 @@ router.post('/crear', multerProductos.any(), productosController.guardarProducto
 router.get ('/:id/editar', productosController.editarProducto);
 router.put ('/:id/detalle', multerProductos.any(), productosController.modificacion);
 router.delete ('/:id/editar', productosController.eliminarProducto);
+router.get ('/conoceme', indexController.nosotrosMC);
 
 module.exports = router;
