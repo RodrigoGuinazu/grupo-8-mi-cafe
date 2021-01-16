@@ -22,6 +22,17 @@
                 <img class="login-credential-alternative-tw"  src="/images/tw-icon.svg" alt="Login Twitter">
             </div>
 
+            <% if (typeof errors != "undefined") { %>
+                <p style="color:red">ERROR</p>
+                <ul>
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+
             <form class="login-credential" action="/" method="POST">
                 <div class="login-credential-user">
                     <p>...ó ingresá con tu usuario:</p>
