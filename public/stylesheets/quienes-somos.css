@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.quienes-somos {
+    background-image: url("../images/products/black-background-coffee-beans.jpg");
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px grey;
+}
+
+.quienes-somos-textos{
+    line-height: 25px;
+}
+
+.quienes-somos div{
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.quienes-somos h1{
+     text-decoration: underline;
+     margin-left: 17px;
+     padding: 5px;
+}
+
+.quienes-somos-especialidad h2{
+    padding-bottom: 8px;
+}

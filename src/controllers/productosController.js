@@ -78,7 +78,6 @@ let productosController = {
             categoria: req.body.categoria,
             imagen: req.files[0].filename,
         }
-
         products.push(producto);
 
         const JSONnewProduct = JSON.stringify(products)
@@ -98,19 +97,21 @@ let productosController = {
     modificacion: (req, res) => {
         products.forEach(product => {
             if(req.params.id == product.id){
-                product.nombre = req.body.nombre;
-                product.peso = req.body.peso;
-                product.descripcion = req.body.descripcion;
-                product.precio = req.body.precio;
-                product.categoria = req.body.categoria;
-                product.imagen = req.files[0].filename;
-                console.log(product);
+                product.nombre = req.body.nombre
+                product.peso = req.body.peso
+                product.descripcion = req.body.descripcion
+                product.precio = req.body.precio
+                product.categoria = req.body.categoria
+                if (req.files[0] != undefined){
+                    product.imagen = req.files[0].filename
+                }
             }
+            
             
         });
         const JSONproduct = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSONproduct);
-        res.redirect('/')
+        res.redirect('detalle')
     },
 
     eliminarProducto: function (req, res) {

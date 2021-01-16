@@ -1,7 +1,7 @@
 
 let indexController = {
     nosotrosMC: function(req, res) {
-        res.send('Somos Mí Café');
+      res.render('products/quienes-somos');
       },
     regionesMC: function(req, res) {
         res.send('Regiones del café');

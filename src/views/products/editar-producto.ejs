@@ -12,11 +12,12 @@
     <main>
         <section align="center" class="formulario">
             <h2>Editar producto <%= productToEdit.nombre %></h2>
-            <form action="/productos/<%= productToEdit.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="product-type">
                     <label for="">Categoria</label>
                     <br>
                     <select name="categoria">
+                        <option value="<%= productToEdit.categoria %>" selected><%= productToEdit.categoria %></option>
                         <option value="cafe">Cafés</option>
                         <option value="cafetera">Cafeteras</option>
                         <option value="accesorio">Accesorios</option>
@@ -25,7 +26,7 @@
                 <div class="product-img">
                     <label for="">Imagen del Producto</label>
                     <br>
-                    <input type="file" name="product-img">
+                    <input type="file" name="imagen">
                 </div>
                 <div class="product-name">
                     <label for="">Titulo</label>
@@ -35,7 +36,8 @@
                 <div class="product-weight">
                     <label for="">Peso en gr</label>
                     <br>
-                    <select name="categoria">
+                    <select name="peso">
+                        <option value="<%= productToEdit.peso %>" selected><%= productToEdit.peso %></option>
                         <option value="250">250gr</option>
                         <option value="500">500gr</option>
                         <option value="1000">1000gr</option>
