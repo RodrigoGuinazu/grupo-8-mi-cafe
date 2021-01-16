@@ -76,6 +76,16 @@
     margin: 5px;
 }
 
+.login-submit :hover {
+    width: 50%;
+    text-align: center;
+    color: black;
+    padding: 4px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 4px;
+    cursor: pointer;
+}
 /*Mensaje Login: incorrecto*/
 
 .login-submit-message-wrong-user {
