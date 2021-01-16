@@ -9,7 +9,22 @@ let productosController = {
         const id = req.params.id
         let productDetail = products.find(product => product.id == id);
 
-        res.render('products/detalle-producto', {productDetail: productDetail});
+        let recomendacion = []
+
+        let randomNum = function() {
+            const numeroRandom = products[Math.floor(Math.random() * products.length)];
+            if (recomendacion.includes(numeroRandom) && recomendacion.includes(id)) {
+                randomNum()
+            } else {
+                recomendacion.push(numeroRandom);
+            }
+        }
+
+        while(recomendacion.length < 4){
+            randomNum()
+        }
+
+        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
 },
     listadoProducto: function(req, res) {
         let cafes = products.filter(function (producto) {
