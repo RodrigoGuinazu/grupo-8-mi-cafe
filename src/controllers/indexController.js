@@ -7,7 +7,7 @@ let indexController = {
         res.render('viaja');
       },
     perfilMC: function(req, res) {
-        res.send('Tu perfil de café');
+        res.render('perfil-cafe');
       }
 
 };
