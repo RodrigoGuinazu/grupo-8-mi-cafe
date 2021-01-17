@@ -40,16 +40,11 @@ let usersController = {
     },
     processRegister: function(req, res, next) {
 
-        /*const errors = validationResult(req);
-
-        
-        if (usersJSON == "") {
-            users = [];
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            return res.render('users/formulario-registro', {errors: errors.errors});
         } else {
-            users = JSON.parse(usersJSON);
-        }*/
-    
-        let arrayId = [];
+            let arrayId = [];
 
         arrayId = users.map(function(obj) {
             return obj.id
@@ -79,18 +74,9 @@ let usersController = {
         let usersJSON = JSON.stringify(users);
         fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), usersJSON);
         res.redirect("/usuarios/login");
+        }
         
     }
-        
-        /*else {
-        res.render("users/register", { errors: errors.errors})
-    }*/
-
-        /*if (!errors.isEmpty()) {
-            res.render("register", { errors: errors.errors})
-        } else {
-            res.send("registro correcto!")
-        }*/
 }
 
 module.exports = usersController;

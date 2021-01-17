@@ -10,19 +10,18 @@ var router = express.Router();
 router.get ('/login', usersController.login);
 router.post('/login',usersController.processLogin);
 router.get ('/register', usersController.register);
-router.post('/register', /*[
+router.post('/register', [
   check('nombre').isLength().withMessage('Ingresá tu nombre.'),
   check('apellido').isLength().withMessage('Ingresá tu apellido.'),
 	check('email').isEmail().withMessage('Ingresá un Email válido.'),
-  check('password').isLength( {min: 8} ).withMessage('Las contraseñas tener al menos 8 caracteres.'),
-  check('confirmar-password').equals('password').withMessage('Las contraseñas deben coincidir.')
-  /*body('confirmar-password').custom(function(value) {
-    if (req.body.password != req.body.confirmar-password) {
-      return false;
-    } else {
+  check('password').isLength( {min: 8} ).withMessage('La contraseña debe tener al menos 8 caracteres.'),
+  body('confirmarPassword').custom(function(value) {
+    if ('password' != 'confirmarPassword') {
       return true;
+    } else {
+      return false;
     }
   }).withMessage('Las contraseñas deben coincidir.')
-],*/ usersController.processRegister);
+], usersController.processRegister);
 
 module.exports = router;
