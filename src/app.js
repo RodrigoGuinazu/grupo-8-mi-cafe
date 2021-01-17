@@ -9,8 +9,6 @@ var session = require("express-session");
 let indexRouter = require('./routes/index');
 let productosRouter = require('./routes/productos');
 let carritoRouter = require('./routes/carrito');
-let loginRouter = require('./routes/login');
-let registerRouter = require('./routes/register');
 
 
 var usersRouter = require('./routes/users');
@@ -26,8 +24,7 @@ app.use(methodOverride("_method"));
 // APP.USE
 app.use('/carrito', carritoRouter);
 app.use('/productos', productosRouter);
-app.use('/usuarios', loginRouter);
-app.use('/register', registerRouter);
+app.use('/usuarios', usersRouter);
 app.use('/', indexRouter);
 
 // view engine setup

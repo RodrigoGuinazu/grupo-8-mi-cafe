@@ -1,6 +1,5 @@
 let express = require('express');
 let productosController = require('../controllers/productosController');
-const path = require('path');
 let multer = require('multer');
 let multerProductos = require('../middlewares/multerProductos');
 let indexController = require('../controllers/indexController');

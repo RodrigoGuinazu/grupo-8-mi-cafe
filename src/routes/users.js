@@ -1,16 +1,15 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+const path = require('path');
+let multer = require('multer');
+let multerUsuarios = require('../middlewares/multerUsuarios');
 let { check, validationResult, body } = require('express-validator');
-let registerController = require('../controllers/registerController');
+let usersController = require('../controllers/usersController');
 
 
-/* GET users listing.
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-*/
-
-router.get ('/register', registerController.register);
+var router = express.Router();
+router.get ('/login', usersController.login);
+router.post('/login',usersController.processLogin);
+router.get ('/register', usersController.register);
 router.post('/login', /*[
   check('nombre').isLength().withMessage('Ingresá tu nombre.'),
   check('apellido').isLength().withMessage('Ingresá tu apellido.'),
@@ -24,6 +23,6 @@ router.post('/login', /*[
       return true;
     }
   }).withMessage('Las contraseñas deben coincidir.')
-],*/ registerController.processRegister);
+],*/ usersController.processRegister);
 
 module.exports = router;
