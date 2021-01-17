@@ -3,7 +3,6 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    
 }
 
 .perfil-cafe {
@@ -22,4 +21,8 @@
     margin-left: 5px;
     padding: 5px;
     text-decoration: underline;
+}
+
+.tipo-cafe-listado, .con-leche, .comentarios-cafe, .contanos{
+    margin-bottom: 5px;
 }
