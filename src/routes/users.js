@@ -15,13 +15,13 @@ router.post('/register', [
   check('apellido').isLength().withMessage('Ingresá tu apellido.'),
 	check('email').isEmail().withMessage('Ingresá un Email válido.'),
   check('password').isLength( {min: 8} ).withMessage('La contraseña debe tener al menos 8 caracteres.'),
-  body('confirmarPassword').custom(function(value) {
+  /*body('confirmarPassword').custom(function(value) {
     if ('password' != 'confirmarPassword') {
       return true;
     } else {
       return false;
     }
-  }).withMessage('Las contraseñas deben coincidir.')
+  }).withMessage('Las contraseñas deben coincidir.')*/
 ], usersController.processRegister);
 
 module.exports = router;

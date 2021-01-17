@@ -5,4 +5,12 @@
     "email": "Admin@MiCafe.com.ar",
     "password": "admin123",
     "category": "administrador"
+}, {
+    "id": 2,
+    "nombre": "Prueba",
+    "apellido": "6",
+    "email": "adsfasd@dsrfsda.com",
+    "password": "123456789",
+    "fechaNacimiento": "2012-12-12",
+    "genero": "Masculino"
 }]
