@@ -1,16 +1,28 @@
-[{
-    "id": 1,
-    "nombre": "Admin",
-    "apellido": "Admin",
-    "email": "Admin@MiCafe.com.ar",
-    "password": "admin123",
-    "category": "administrador"
-}, {
-    "id": 2,
-    "nombre": "Prueba",
-    "apellido": "6",
-    "email": "adsfasd@dsrfsda.com",
-    "password": "123456789",
-    "fechaNacimiento": "2012-12-12",
-    "genero": "Masculino"
-}]
+[
+    {
+        "id": 1,
+        "nombre": "Admin",
+        "apellido": "Admin",
+        "email": "Admin@MiCafe.com.ar",
+        "password": "admin123",
+        "category": "administrador"
+    },
+    {
+        "id": 2,
+        "nombre": "Prueba",
+        "apellido": "6",
+        "email": "adsfasd@dsrfsda.com",
+        "password": "123456789",
+        "fechaNacimiento": "2012-12-12",
+        "genero": "Masculino"
+    },
+    {
+        "id": 3,
+        "nombre": "Ana",
+        "apellido": "V",
+        "email": "ana@gmail.com",
+        "password": "$2b$10$ABw0X/SRG49AuMHkF2pI3eW8XKvcq7AdUGipmlR1UVHEbmzi9LHsW",
+        "fechaNacimiento": "1988-10-23",
+        "genero": "Femenino"
+    }
+]
