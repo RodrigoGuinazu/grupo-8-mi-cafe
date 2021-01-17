@@ -49,39 +49,40 @@ let usersController = {
             users = JSON.parse(usersJSON);
         }*/
     
-    let arrayId = [];
+        let arrayId = [];
 
-    arrayId = users.map(function(obj) {
-        return obj.id
-    })
+        arrayId = users.map(function(obj) {
+            return obj.id
+        })
 
-    let mayorId = arrayId.reduce((a, b) => {
-        if(a > b) {
-            return a
-        } else {
-            return b
+        let mayorId = arrayId.reduce((a, b) => {
+            if(a > b) {
+                return a
+            } else {
+                return b
+            }
+        })
+        let nuevoId = mayorId+1;
+
+        let user = {
+            id: nuevoId,
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: req.body.password,
+            fechaNacimiento: req.body.fechaNacimiento,
+            genero: req.body.genero,
+            //imagen: req.files[0].filename,
         }
-    })
-    let nuevoId = mayorId+1;
 
-    let user = {
-        id: nuevoId,
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        email: req.body.email,
-        password: req.body.password,
-        confirmarPassword: req.body.confirmar-password,
-        fechaNacimiento: req.body.fecha-nacimiento,
-        genero: req.body.genero,
-        imagen: req.files[0].filename,
+        users.push(user);
+        let usersJSON = JSON.stringify(users);
+        fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), usersJSON);
+        res.redirect("/usuarios/login");
+        
     }
-
-    users.push(user);
-    let usersJSON = JSON.stringify(users);
-    fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), usersJSON);
-    res.redirect("/usuarios/login");
-    
-    } /*else {
+        
+        /*else {
         res.render("users/register", { errors: errors.errors})
     }*/
 
