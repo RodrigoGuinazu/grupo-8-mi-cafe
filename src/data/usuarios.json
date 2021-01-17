@@ -1,7 +1,7 @@
 [{
         "id": 1,
-        "first_name": "Admin",
-        "last_name": "Admin",
+        "nombre": "Admin",
+        "apellido": "Admin",
         "email": "Admin@MiCafe.com.ar",
         "password": "admin123",
         "category": "administrador"
