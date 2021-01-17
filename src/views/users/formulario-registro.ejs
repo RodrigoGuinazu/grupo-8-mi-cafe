@@ -15,7 +15,7 @@
         </section>
 
         <% if (typeof errors != 'undefined') {%>
-            <p styles= "color=red">ERROR</p>
+            <p style= "color:red">ERROR</p>
             <ul>
                 <% for (let i = 0; i < errors.length; i++) { %>
                     <li>
@@ -26,13 +26,13 @@
         <% } %>
 
         <section align="center" class="formulario">
-            <form action="usuarios/login" method="POST">
+            <form action="/usuarios/login" method="POST" enctype="multipart/form-data">
                 <div>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                    <input type="password" name="password" id="password" placeholder="Password" required><i class="fas fa-eye-slash"></i>
-                    <input type="password" name="confirmar-password" id="confirmar-password" placeholder="Confirma tu Password" required><i class="fas fa-eye-slash"></i>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" >
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="password" name="password" id="password" placeholder="Password"><i class="fas fa-eye-slash"></i>
+                    <input type="password" name="confirmar-password" id="confirmar-password" placeholder="Confirma tu Password"><i class="fas fa-eye-slash"></i>
                     <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
                 </div>
                 <div class="genero">
@@ -43,11 +43,11 @@
                     <option value="Indistinto" name="genero">Indistinto</option>
                     </select>
                 </div>
-
+                <!--
                 <div class="user-img">
                     <input type="file" name="user-img">
                 </div>
-
+                -->
                 <div class="checkbox">
                     <p><input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones</p><br>
                     <p><input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional</p>
@@ -55,7 +55,7 @@
 
                 <img src="/images/captcha.jpg" alt="captcha">
 
-                <button class="crear-cuenta" type="submit">Creá tu Cuenta</button>
+                <button class="crear-cuenta">Creá tu Cuenta</button>
 
                 <a href="/login"><button class="usuario-existente" type="button">¿Ya tenés una cuenta? <br> Clickea aquí para ingresar</button></a>
             </form>
