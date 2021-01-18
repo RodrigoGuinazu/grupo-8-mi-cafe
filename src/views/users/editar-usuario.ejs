@@ -11,45 +11,40 @@
     <main>
         
         <section class="titulo">
-            <h2>Completá tus datos</h2>
+            <h2>Edita tu Perfil</h2>
         </section>
-
-        <% if (typeof errors != 'undefined') {%>
-            <p style= "color:red">ERROR</p>
-            <ul>
-                <% for (let i = 0; i < errors.length; i++) { %>
-                    <li>
-                        <%= errors[i].msg %>
-                    </li>
-                <% } %>
-            </ul>
-        <% } %>
 
         <section align="center" class="formulario">
             <form method="POST" action="/usuarios/register" enctype="multipart/form-data">
                 <div>
-                    <input type="text" name="direccion" id="direccion" placeholder="Direccion" required>
+                    <input type="text" name="nombre" value="Nombre">
+                    <input type="text" name="apellido" value="Apellido">
+                    <input type="text" name="direccion" id="direccion" placeholder="Direccion">
+                    <br>
+                    <label class="titulo" for="">Fecha de Nacimiento</label>
+                    <br>
                     <input type="date" name="fechaNacimiento" id="fechaNacimiento">
-                    <input type="password" name="password" id="password" placeholder="Cambia tu Password"><i class="fas fa-eye-slash" required></i>
-                    
+                    <div class="genero">
+                        <label for="" class="titulo">Género</label>
+                        <br>
+                        <select name="genero" id="">
+                        <option value="Femenino" name="genero">Femenino</option>
+                        <option value="Masculino" name="genero">Masculino</option>
+                        <option value="Indistinto" name="genero">Indistinto</option>
+                        </select>
+                    </div>
                 </div>
                 
-                <div class="genero">
-                    <label for="">Género</label>
-                    <select name="genero" id="">
-                    <option value="Femenino" name="genero">Femenino</option>
-                    <option value="Masculino" name="genero">Masculino</option>
-                    <option value="Indistinto" name="genero">Indistinto</option>
-                    </select>
-                </div>
+                
             
-                <label for="">Subi tu Foto</label>
-                <div class="imagen">
+                <div class="subir-imagen">
+                    <label class="titulo" for="">Subi tu Foto</label>
+                    <br>
                     <input type="file" name="imagen">
                 </div>
 
-                <button class="crear-cuenta" type="submit">Confirmar Cambios</button>
-                <button class="crear-cuenta"><a href="/usuarios/editar">Descartar Cambios</a></button>
+                <button class="confirmar-cambios" type="submit">Confirmar Cambios</button>
+                <a href="/usuarios/editar"><button class="descartar-cambios">Descartar Cambios</button></a>
             </form>
         </section>
     <%- include('../partials/footer.ejs')%>

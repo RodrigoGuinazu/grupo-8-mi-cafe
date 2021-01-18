@@ -49,9 +49,9 @@ h2 {
     width: 75%;
     max-width: 340px;
     height: 35px;
-    border:solid 1px #ededed;
+    border:solid 1px white;
     border-radius: 6px;
-    background-color: lightgray;
+    background-color: white;
     margin-top: 12px;
     margin-bottom: 12px;
     padding: 5px;
@@ -59,19 +59,43 @@ h2 {
     justify-content: center;
 }
 
-.genero {
+.formulario select {
+    width: 75%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px white;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formulario input[type=file] {
+    width: 75%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px white;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*.genero {
     width: 75%;
     max-width: 340px;
     margin-top: 12px;
     margin-bottom: 12px;
-    margin-left: 44px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
-
-.genero select {
-    margin-left: 4px;
-}
+*/
 
 .formulario input[type=password] {
     width: 75%;
@@ -125,6 +149,32 @@ h2 {
     margin-bottom: 12px;
 }
 
+.descartar-cambios {
+    width: 75%;
+    max-width: 350px;
+    height: 50px;
+    border:solid 1px black;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.confirmar-cambios {
+    width: 75%;
+    max-width: 350px;
+    height: 50px;
+    border:solid 1px black;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .usuario-existente:focus {
     background-color:#D1B894;
     border: solid #D1B894 1px;
@@ -135,6 +185,10 @@ h2 {
     background-color:#D1B894;
     border: solid #D1B894 1px;
     color: black;
+}
+
+.titulo {
+    font-weight: bolder;
 }
 
 /* DESKTOP - TABLET */
@@ -151,5 +205,20 @@ h2 {
         border: solid #D1B894 1px;
         color: black;
         cursor: pointer;
+    }
+    .descartar-cambios:hover {
+        background-color:rgb(184, 15, 15);
+        border: solid rgb(184, 15, 15) 1px;
+        color: black;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    .confirmar-cambios:hover {
+        background-color:rgb(3, 112, 3);
+        border: solid rgb(3, 112, 3) 1px;
+        color: black;
+        cursor: pointer;
+        font-weight: bolder;
     }
 }
