@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require("express-validator");
+const bcrypt = require('bcrypt');
 
 let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
 users = JSON.parse(users);
@@ -17,13 +18,13 @@ let usersController = {
     //},
     processLogin: function(req, res) {
         let errors = validationResult(req);
-        console.log(errors)
+        console.log(errors);
 
             let usuarioALoguearse = users.find(user => user.email == req.body.email);
             if(usuarioALoguearse != undefined) {
-                //if(bcrypt.comapreSync(usuarioALoguearse.password, req.body.password))
-                if(usuarioALoguearse.password == req.body.password) {
-                    res.render("index")
+                if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
+                    req.session.usuarioALoguearse = usuarioALoguearse;
+                    res.send("el usuario logueado es " + usuarioALoguearse.email);
                 } else {
                 res.render("users/login", { errors: [
                     {msg: "Credenciales incorrectas"}
