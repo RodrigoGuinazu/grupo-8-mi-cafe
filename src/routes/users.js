@@ -11,7 +11,8 @@ var router = express.Router();
 router.get ('/login', usersController.login);
 router.post('/login',usersController.processLogin);
 router.get ('/register', usersController.register);
-router.post('/register', multerUsuarios.any(), registrationValidate, usersController.processRegister);
-router.get ('/editar', usersController.editar);
+router.post('/register', registrationValidate, usersController.processRegister);
+router.get ('/:id/editar', usersController.editar);
+router.patch ('/:id/editar',multerUsuarios.any(), usersController.modificacion);
 
 module.exports = router;

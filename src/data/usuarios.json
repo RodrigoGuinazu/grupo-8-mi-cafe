@@ -19,10 +19,10 @@
     "apellido": "dfdfdas",
     "email": "homero@hotmail.com",
     "password": "123456789",
-    "fechaNacimiento": "0012-12-12",
-    "direccion": "dasfdfad 432",
-    "genero": "Masculino",
-    "imagen": "imagen-1610927316793.jpg"
+    "fechaNacimiento": "",
+    "direccion": "cambiando 123",
+    "genero": "Femenino",
+    "imagen": "imagen-1611006661179.jpg"
 }, {
     "id": 4,
     "nombre": "GFSDGFSD",

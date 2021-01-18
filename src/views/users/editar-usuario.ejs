@@ -15,11 +15,11 @@
         </section>
 
         <section align="center" class="formulario">
-            <form method="POST" action="/usuarios/register" enctype="multipart/form-data">
+            <form method="POST" action="/usuarios/<%= userToEdit.id %>/editar?_method=PATCH" enctype="multipart/form-data">
                 <div>
-                    <input type="text" name="nombre" value="Nombre">
-                    <input type="text" name="apellido" value="Apellido">
-                    <input type="text" name="direccion" id="direccion" placeholder="Direccion">
+                    <input type="text" name="nombre" id="nombre" value="<%= userToEdit.nombre %>">
+                    <input type="text" name="apellido" id="apellido" value="<%= userToEdit.apellido %>">
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" value="<%= userToEdit.direccion %>">
                     <br>
                     <label class="titulo" for="">Fecha de Nacimiento</label>
                     <br>
@@ -44,9 +44,14 @@
                 </div>
 
                 <button class="confirmar-cambios" type="submit">Confirmar Cambios</button>
-                <a href="/usuarios/editar"><button class="descartar-cambios">Descartar Cambios</button></a>
             </form>
-        </section>
+          </section>
+          <div class="descartar">
+            <form method=GET action="/" align=center>
+                <a href="/"><button class="descartar-cambios">Descartar Cambios</button></a>
+              </form>
+          </div>
+          
     <%- include('../partials/footer.ejs')%>
         
     </main>

@@ -162,6 +162,10 @@ h2 {
     margin-bottom: 12px;
 }
 
+.descartar {
+    width: 100%;
+    background-color: #ededed;
+}
 .confirmar-cambios {
     width: 75%;
     max-width: 350px;

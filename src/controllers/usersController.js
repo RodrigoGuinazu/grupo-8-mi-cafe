@@ -82,8 +82,32 @@ let usersController = {
         
     },
     editar: function(req, res) {
-        return res.render('users/editar-usuario');           
+        const id = req.params.id
+        let userToEdit = users.find(user => user.id == id);
+
+        res.render('users/editar-usuario', {userToEdit: userToEdit});
     },
+    modificacion: (req, res) => {
+        users.forEach(user => {
+            if(req.params.id == user.id){
+                user.nombre = req.body.nombre
+                user.apellido = req.body.apellido
+                user.fechaNacimiento = req.body.fechaNacimiento
+                user.direccion = req.body.direccion
+                user.genero = req.body.genero
+                if (req.files[0] != undefined){
+                    user.imagen = req.files[0].filename
+                }
+            }
+            
+            
+        });
+        const JSONuser = JSON.stringify(users);
+        fs.writeFileSync(path.join(__dirname, '..','data','usuarios.json'), JSONuser);
+        res.redirect('/')
+    },
+
+
 }
 
 module.exports = usersController;
