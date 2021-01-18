@@ -10,7 +10,7 @@ var router = express.Router();
 router.get ('/login', usersController.login);
 router.post('/login',usersController.processLogin);
 router.get ('/register', usersController.register);
-router.post('/register', [
+router.post('/register', multerUsuarios.any(), [
   check('nombre').isLength().withMessage('Ingresá tu nombre.'),
   check('apellido').isLength().withMessage('Ingresá tu apellido.'),
 	check('email').isEmail().withMessage('Ingresá un Email válido.'),
