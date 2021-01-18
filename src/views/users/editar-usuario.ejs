@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
+        <title>Formulario de Registro</title>
+    </head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        
+        <section class="titulo">
+            <h2>Completá tus datos</h2>
+        </section>
+
+        <% if (typeof errors != 'undefined') {%>
+            <p style= "color:red">ERROR</p>
+            <ul>
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+
+        <section align="center" class="formulario">
+            <form method="POST" action="/usuarios/register" enctype="multipart/form-data">
+                <div>
+                    <input type="text" name="direccion" id="direccion" placeholder="Direccion" required>
+                    <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                    <input type="password" name="password" id="password" placeholder="Cambia tu Password"><i class="fas fa-eye-slash" required></i>
+                    
+                </div>
+                
+                <div class="genero">
+                    <label for="">Género</label>
+                    <select name="genero" id="">
+                    <option value="Femenino" name="genero">Femenino</option>
+                    <option value="Masculino" name="genero">Masculino</option>
+                    <option value="Indistinto" name="genero">Indistinto</option>
+                    </select>
+                </div>
+            
+                <label for="">Subi tu Foto</label>
+                <div class="imagen">
+                    <input type="file" name="imagen">
+                </div>
+
+                <button class="crear-cuenta" type="submit">Confirmar Cambios</button>
+                <button class="crear-cuenta"><a href="/usuarios/editar">Descartar Cambios</a></button>
+            </form>
+        </section>
+    <%- include('../partials/footer.ejs')%>
+        
+    </main>
+</body>
+</html>

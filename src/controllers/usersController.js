@@ -80,7 +80,10 @@ let usersController = {
         res.redirect("/usuarios/login");
         }
         
-    }
+    },
+    editar: function(req, res) {
+        return res.render('users/editar-usuario');           
+    },
 }
 
 module.exports = usersController;
