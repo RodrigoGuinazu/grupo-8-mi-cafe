@@ -59,15 +59,18 @@ let usersController = {
         })
         let nuevoId = mayorId+1;
 
+
+
         let user = {
             id: nuevoId,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
             password: req.body.password,
-            fechaNacimiento: req.body.fechaNacimiento,
-            genero: req.body.genero,
-            //imagen: req.files[0].filename,
+            fechaNacimiento: "",
+            direccion: "",
+            genero: "",
+            imagen: "",
         }
 
         users.push(user);
