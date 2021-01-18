@@ -67,7 +67,7 @@ let usersController = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password, 10),
             fechaNacimiento: "",
             direccion: "",
             genero: "",
