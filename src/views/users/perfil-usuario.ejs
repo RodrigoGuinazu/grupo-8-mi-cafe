@@ -23,14 +23,12 @@
                     <div> Dirección: <%= user.direccion %> </div>
                     <div> Fecha de nacimiento: <%= user.fechaNacimiento %></div>
                     <div> Genero: <%= user.genero %> </div>
-                    <div> Imagen: <%= user.imagen %> </div>
-              
+                    <div> Imagen: <img src="<%= user.imagen %>" alt="Foto de Perfil"></div>
                     <br>
-                    <a href="/usuarios/editar"> <button class="confirmar-cambios"> Editar </button></a> 
-                
-
+                    <a href="/usuarios/editar"> <button class="confirmar-cambios"> Editar </button></a>
+                </div>
+        </section>
     <%- include('../partials/footer.ejs')%>
- </div>
     </main>
 </body>
 </html>
