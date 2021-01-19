@@ -72,6 +72,7 @@ let usersController = {
             direccion: "",
             genero: "",
             imagen: "",
+            role: "",
         }
 
         users.push(user);
