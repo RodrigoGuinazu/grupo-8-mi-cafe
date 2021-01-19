@@ -16,6 +16,6 @@ router.get ('/register', userMiddleware, usersController.register);
 router.post('/register', registrationValidate, usersController.processRegister);
 router.get ('/editar', guestMiddleware, usersController.editar);
 router.patch ('/editar',multerUsuarios.any(), usersController.modificacion);
-router.get ('/profile', guestMiddleware, usersController.profile);
+router.get ('/perfil', guestMiddleware, usersController.perfil);
 
 module.exports = router;

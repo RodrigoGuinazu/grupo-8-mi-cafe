@@ -17,16 +17,20 @@
         <section align="center" class="formulario">
             
                 <div>
-                    <h2> <%= user.nombre %> </h2>
-                    <h2> <%= user.apellido %> </h2>
-                    <h2> <%= user.direccion %> </h2>
-                    <h2> <%= user.fechaNacimiento %></h2>
-                    <h2> <%= user.genero %> </h2>
+                    <div> Nombre: <%= user.nombre %> </div>
+                    <div> Apellido: <%= user.apellido %> </div>
+                    <div> Email: <%= user.email %> </div>
+                    <div> Dirección: <%= user.direccion %> </div>
+                    <div> Fecha de nacimiento: <%= user.fechaNacimiento %></div>
+                    <div> Genero: <%= user.genero %> </div>
+                    <div> Imagen: <%= user.imagen %> </div>
               
+                    <br>
+                    <a href="/usuarios/editar"> <button class="confirmar-cambios"> Editar </button></a> 
                 
-          
-    <%- include('../partials/footer.ejs')%>
-        
+
+     <%- include('../partials/footer.ejs')%>
+                 </div>
     </main>
 </body>
 </html>
