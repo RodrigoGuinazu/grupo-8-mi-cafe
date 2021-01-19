@@ -82,14 +82,11 @@ let usersController = {
         
     },
     editar: function(req, res) {
-        const id = req.params.id
-        let userToEdit = users.find(user => user.id == id);
-
-        res.render('users/editar-usuario', {userToEdit: userToEdit});
+        res.render('users/editar-usuario');
     },
     modificacion: (req, res) => {
         users.forEach(user => {
-            if(req.params.id == user.id){
+            if(req.session.usuarioALoguearse.id == user.id){
                 user.nombre = req.body.nombre
                 user.apellido = req.body.apellido
                 user.fechaNacimiento = req.body.fechaNacimiento
@@ -99,7 +96,6 @@ let usersController = {
                     user.imagen = req.files[0].filename
                 }
             }
-            
             
         });
         const JSONuser = JSON.stringify(users);

@@ -39,7 +39,7 @@
 
         <div class="navbar-usuario">
             <% if(locals.user) { %>
-            <a href="/usuarios/:i/editar"><i class="far fa-user-circle"></i> <%= user.nombre %>  </a>
+            <a href="/usuarios/login"><i class="far fa-user-circle"></i> <%= user.nombre %> <%= user.apellido %> </a>
             <% } else {%>
             <a href="/usuarios/login"><i class="far fa-user-circle"></i> Ingresa  </a>
             <% } %>

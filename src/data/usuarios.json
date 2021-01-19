@@ -4,8 +4,8 @@
     "apellido": "4",
     "email": "probando4@hotmail.com",
     "password": "$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu",
-    "fechaNacimiento": "",
-    "direccion": "",
-    "genero": "",
+    "fechaNacimiento": "0112-12-12",
+    "direccion": "asdsafsd 1312",
+    "genero": "Masculino",
     "imagen": ""
 }]
