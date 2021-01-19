@@ -18,9 +18,9 @@ let usersController = {
     //},
     processLogin: function(req, res) {
         let errors = validationResult(req);
-        console.log(errors);
 
             let usuarioALoguearse = users.find(user => user.email == req.body.email);
+            console.log(usuarioALoguearse);
             if(usuarioALoguearse != undefined) {
                 if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
                     req.session.usuarioALoguearse = usuarioALoguearse;

@@ -12,25 +12,18 @@ let carritoRouter = require('./routes/carrito');
 
 
 var usersRouter = require('./routes/users');
-const { ppid } = require('process');
 
 var app = express();
 
 const methodOverride = require('method-override');
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
-
-// APP.USE
-app.use('/carrito', carritoRouter);
-app.use('/productos', productosRouter);
-app.use('/usuarios', usersRouter);
-app.use('/', indexRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
@@ -40,8 +33,11 @@ app.use(session({
   saveUninitialized: true
 }))
 
+// APP.USE
+app.use('/carrito', carritoRouter);
+app.use('/productos', productosRouter);
+app.use('/usuarios', usersRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
