@@ -24,7 +24,7 @@ let usersController = {
             if(usuarioALoguearse != undefined) {
                 if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
                     req.session.usuarioALoguearse = usuarioALoguearse;
-                    res.send("el usuario logueado es " + usuarioALoguearse.email);
+                    res.redirect('/');
                 } else {
                 res.render("users/login", { errors: [
                     {msg: "Credenciales incorrectas"}
@@ -60,8 +60,6 @@ let usersController = {
         })
         let nuevoId = mayorId+1;
 
-
-
         let user = {
             id: nuevoId,
             nombre: req.body.nombre,
@@ -72,6 +70,7 @@ let usersController = {
             direccion: "",
             genero: "",
             imagen: "",
+            role: "user",
         }
 
         users.push(user);
@@ -82,14 +81,11 @@ let usersController = {
         
     },
     editar: function(req, res) {
-        const id = req.params.id
-        let userToEdit = users.find(user => user.id == id);
-
-        res.render('users/editar-usuario', {userToEdit: userToEdit});
+        res.render('users/editar-usuario');
     },
     modificacion: (req, res) => {
         users.forEach(user => {
-            if(req.params.id == user.id){
+            if(req.session.usuarioALoguearse.id == user.id){
                 user.nombre = req.body.nombre
                 user.apellido = req.body.apellido
                 user.fechaNacimiento = req.body.fechaNacimiento
@@ -100,13 +96,14 @@ let usersController = {
                 }
             }
             
-            
         });
         const JSONuser = JSON.stringify(users);
         fs.writeFileSync(path.join(__dirname, '..','data','usuarios.json'), JSONuser);
         res.redirect('/')
     },
-
+    profile: function(req, res) {
+        res.render('users/perfil-usuario');
+    },
 
 }
 

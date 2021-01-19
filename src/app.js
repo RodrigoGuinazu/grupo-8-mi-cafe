@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require("express-session");
+let authMiddleware = require('./middlewares/authMiddleware.js')
 
 // REQUIRES
 let indexRouter = require('./routes/index');
@@ -32,6 +33,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+app.use(authMiddleware);
 
 // APP.USE
 app.use('/carrito', carritoRouter);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
+        <title>Perfil de usuario</title>
+    </head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        
+        <section class="titulo">
+            <h2>Hola <%= user.nombre %>!</h2>
+        </section>
+
+        <section align="center" class="formulario">
+            
+                <div>
+                    <h2> <%= user.nombre %> </h2>
+                    <h2> <%= user.apellido %> </h2>
+                    <h2> <%= user.direccion %> </h2>
+                    <h2> <%= user.fechaNacimiento %></h2>
+                    <h2> <%= user.genero %> </h2>
+              
+                
+          
+    <%- include('../partials/footer.ejs')%>
+        
+    </main>
+</body>
+</html>

@@ -20,32 +20,15 @@
         </div>
 
         <section align="center" class="formulario">
-            <form method="POST" action="/usuarios/register" enctype="multipart/form-data">
+            <form method="POST" action="/usuarios/register">
                 <div>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-                      <!--<input type="date" name="fechaNacimiento" id="fechaNacimiento">-->
-                      <!--<input type="text" name="direccion" id="direccion" placeholder="Direccion" required>-->
-                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                    <input type="password" name="password" id="password" placeholder="Password"><i class="fas fa-eye-slash" required></i>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="password" name="password" id="password" placeholder="Password"><i class="fas fa-eye-slash"></i>
                     <!--<input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirma tu Password" required><i class="fas fa-eye-slash"></i>-->
-                    
                 </div>
-                <!--
-                <div class="genero">
-                    <label for="">Género</label>
-                    <select name="genero" id="">
-                    <option value="Femenino" name="genero">Femenino</option>
-                    <option value="Masculino" name="genero">Masculino</option>
-                    <option value="Indistinto" name="genero">Indistinto</option>
-                    </select>
-                </div>
-                -->
-                <!--
-                <div class="imagen">
-                    <input type="file" name="imagen">
-                </div>
-                -->
+                
                 <div class="checkbox">
                     <p><input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones</p><br>
                     <p><input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional</p>

@@ -4,30 +4,31 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
-        <title>Formulario de Registro</title>
+        <title>Formulario de Edición</title>
     </head>
 <body>
     <%- include('../partials/header.ejs')%>
     <main>
         
         <section class="titulo">
-            <h2>Edita tu Perfil</h2>
+            <h2>Hola <%= user.nombre %>! Edita tu Perfil</h2>
         </section>
 
         <section align="center" class="formulario">
-            <form method="POST" action="/usuarios/<%= userToEdit.id %>/editar?_method=PATCH" enctype="multipart/form-data">
+            <form method="POST" action="/usuarios/editar?_method=PATCH" enctype="multipart/form-data">
                 <div>
-                    <input type="text" name="nombre" id="nombre" value="<%= userToEdit.nombre %>">
-                    <input type="text" name="apellido" id="apellido" value="<%= userToEdit.apellido %>">
-                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" value="<%= userToEdit.direccion %>">
+                    <input type="text" name="nombre" id="nombre" value="<%= user.nombre %>">
+                    <input type="text" name="apellido" id="apellido" value="<%= user.apellido %>">
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" value="<%= user.direccion %>">
                     <br>
                     <label class="titulo" for="">Fecha de Nacimiento</label>
                     <br>
-                    <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<%= user.fechaNacimiento %>">
                     <div class="genero">
                         <label for="" class="titulo">Género</label>
                         <br>
                         <select name="genero" id="">
+                        <option value="<%= user.genero %>"><%= user.genero %></option>
                         <option value="Femenino" name="genero">Femenino</option>
                         <option value="Masculino" name="genero">Masculino</option>
                         <option value="Indistinto" name="genero">Indistinto</option>

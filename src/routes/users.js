@@ -4,15 +4,18 @@ let multer = require('multer');
 let multerUsuarios = require('../middlewares/multerUsuarios');
 let { check, validationResult, body } = require('express-validator');
 let usersController = require('../controllers/usersController');
-const registrationValidate = require('../middlewares/registrationValidate')
+const registrationValidate = require('../middlewares/registrationValidate');
+const userMiddleware = require('../middlewares/userMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 var router = express.Router();
-router.get ('/login', usersController.login);
+router.get ('/login', userMiddleware, usersController.login);
 router.post('/login',usersController.processLogin);
-router.get ('/register', usersController.register);
+router.get ('/register', userMiddleware, usersController.register);
 router.post('/register', registrationValidate, usersController.processRegister);
-router.get ('/:id/editar', usersController.editar);
-router.patch ('/:id/editar',multerUsuarios.any(), usersController.modificacion);
+router.get ('/editar', guestMiddleware, usersController.editar);
+router.patch ('/editar',multerUsuarios.any(), usersController.modificacion);
+router.get ('/profile', guestMiddleware, usersController.profile);
 
 module.exports = router;

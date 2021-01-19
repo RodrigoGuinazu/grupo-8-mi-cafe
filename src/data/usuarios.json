@@ -1,76 +1,23 @@
 [{
     "id": 1,
     "nombre": "Admin",
-    "apellido": "Admin",
-    "email": "Admin@MiCafe.com.ar",
-    "password": "admin123",
-    "category": "administrador"
+    "apellido": "Mi Cafe",
+    "email": "admin@hotmail.com",
+    "password": "$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu",
+    "fechaNacimiento": "1990-01-01",
+    "direccion": "Calle Falsa 123",
+    "genero": "Masculino",
+    "imagen": "",
+    "role": "admin"
 }, {
     "id": 2,
-    "nombre": "Prueba",
-    "apellido": "6",
-    "email": "adsfasd@dsrfsda.com",
-    "password": "123456789",
-    "fechaNacimiento": "2012-12-12",
-    "genero": "Masculino"
-}, {
-    "id": 3,
-    "nombre": "afdas",
-    "apellido": "dfdfdas",
-    "email": "homero@hotmail.com",
-    "password": "123456789",
+    "nombre": "Francisco",
+    "apellido": "Silva",
+    "email": "francisco@gmail.com",
+    "password": "$2b$10$c0AVLRddaNbDHwd3DIA1lO9eIzKUHxYM2hSEwjI7rlH8.rcru5qsS",
     "fechaNacimiento": "",
-    "direccion": "cambiando 123",
-    "genero": "Femenino",
-    "imagen": "imagen-1611006661179.jpg"
-}, {
-    "id": 4,
-    "nombre": "GFSDGFSD",
-    "apellido": "sdafdas",
-    "email": "adsfasd@dsrfsda.co",
-    "password": "123456789",
-    "fechaNacimiento": "4321-12-12",
-    "direccion": "gfsd fe 45",
-    "genero": "Femenino",
-    "imagen": ""
-}, {
-    "id": 5,
-    "nombre": "Rodrigo",
-    "apellido": "Guinazu",
-    "email": "lologg2008@outlook.com",
-    "password": "123456789",
-    "fechaNacimiento": "32143-12-12",
-    "direccion": "Larrea 435",
-    "genero": "Femenino",
-    "imagen": ""
-}, {
-    "id": 6,
-    "nombre": "Prueba",
-    "apellido": "1234",
-    "email": "adsfasd@dsrfsda.com",
-    "password": "123456789",
-    "fechaNacimiento": "",
-    "direccion": "",
+    "direccion": "La Cigueña 2481",
     "genero": "",
-    "imagen": ""
-}, {
-    "id": 7,
-    "nombre": "prueba",
-    "apellido": "123",
-    "email": "probando@hotmail.com",
-    "password": "123456789",
-    "fechaNacimiento": "",
-    "direccion": "",
-    "genero": "",
-    "imagen": ""
-}, {
-    "id": 8,
-    "nombre": "Prueba",
-    "apellido": "4",
-    "email": "probando4@hotmail.com",
-    "password": "$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu",
-    "fechaNacimiento": "",
-    "direccion": "",
-    "genero": "",
-    "imagen": ""
+    "imagen": "imagen-1611095282613.jpg",
+    "role": "user"
 }]
