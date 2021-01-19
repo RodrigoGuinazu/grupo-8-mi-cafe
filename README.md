@@ -44,3 +44,5 @@ Actualmente trabajo de operario en el centro de almacenamiento y distribución d
  <p> -Se incorporó un botón 'Eliminar' en la página de edición que sólo será visible para el Responsable del sitio. </p>
  <p> -Cuando se elimina o crear un producto, es necesario actualizar la página para ver los cambios.  </p>
  
+ -----
+ <h3>Se cambió a "localhost:3030"</h3>

@@ -60,8 +60,6 @@ let usersController = {
         })
         let nuevoId = mayorId+1;
 
-
-
         let user = {
             id: nuevoId,
             nombre: req.body.nombre,
@@ -72,6 +70,7 @@ let usersController = {
             direccion: "",
             genero: "",
             imagen: "",
+            role: "user",
         }
 
         users.push(user);

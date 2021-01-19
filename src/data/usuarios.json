@@ -1,11 +1,23 @@
 [{
     "id": 1,
-    "nombre": "Prueba",
-    "apellido": "4",
-    "email": "probando4@hotmail.com",
+    "nombre": "Admin",
+    "apellido": "Mi Cafe",
+    "email": "admin@hotmail.com",
     "password": "$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu",
-    "fechaNacimiento": "0112-12-12",
-    "direccion": "asdsafsd 1312",
+    "fechaNacimiento": "1990-01-01",
+    "direccion": "Calle Falsa 123",
     "genero": "Masculino",
-    "imagen": ""
+    "imagen": "",
+    "role": "admin"
+}, {
+    "id": 2,
+    "nombre": "Francisco",
+    "apellido": "Silva",
+    "email": "francisco@gmail.com",
+    "password": "$2b$10$c0AVLRddaNbDHwd3DIA1lO9eIzKUHxYM2hSEwjI7rlH8.rcru5qsS",
+    "fechaNacimiento": "",
+    "direccion": "La Cigueña 2481",
+    "genero": "",
+    "imagen": "imagen-1611095282613.jpg",
+    "role": "user"
 }]

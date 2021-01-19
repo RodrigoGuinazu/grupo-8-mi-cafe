@@ -107,6 +107,7 @@ div.search {
     margin-top: 2px;
 }
 
+.navbar-location-desktop h4 
 /* NAVBAR-COLORES */
 
 div.navbar-logo {
@@ -358,7 +359,7 @@ footer div {
     .navbar-location-desktop h4 {
         width: 150px;
         background-color: #D1B894;
-        margin-left: 2px;
+        margin-left: 6px;
     }
 
     .navbar-categorias {
