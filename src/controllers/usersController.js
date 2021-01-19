@@ -101,7 +101,7 @@ let usersController = {
         fs.writeFileSync(path.join(__dirname, '..','data','usuarios.json'), JSONuser);
         res.redirect('/')
     },
-    profile: function(req, res) {
+    perfil: function(req, res) {
         res.render('users/perfil-usuario');
     },
 

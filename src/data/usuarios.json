@@ -20,4 +20,15 @@
     "genero": "",
     "imagen": "imagen-1611095282613.jpg",
     "role": "user"
+}, {
+    "id": 3,
+    "nombre": "Rodrigo",
+    "apellido": "Sanchez",
+    "email": "rodrigosan06@gmail.com",
+    "password": "$2b$10$SX9/59B3nGTPqn0Gwa4Apeo4l97uOGQY3XFLNQKvvDx6VKSAzswdu",
+    "fechaNacimiento": "",
+    "direccion": "Prueba 12345",
+    "genero": "Masculino",
+    "imagen": "",
+    "role": "user"
 }]
