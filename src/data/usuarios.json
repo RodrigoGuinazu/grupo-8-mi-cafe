@@ -1,12 +1,13 @@
 [{
     "id": 1,
-    "nombre": "Prueba",
-    "apellido": "4",
-    "email": "probando4@hotmail.com",
+    "nombre": "Admin",
+    "apellido": "Mi Cafe",
+    "email": "admin@hotmail.com",
     "password": "$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu",
-    "fechaNacimiento": "0112-12-12",
-    "direccion": "asdsafsd 1312",
+    "fechaNacimiento": "1990-01-01",
+    "direccion": "Calle Falsa 123",
     "genero": "Masculino",
     "imagen": "",
-    "role": ""
-}]
+    "role": "admin"
+}
+]
