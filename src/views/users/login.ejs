@@ -4,6 +4,7 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/login.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
         <title>Login</title>
     </head>
 
@@ -22,17 +23,9 @@
                 <img class="login-credential-alternative-tw"  src="/images/tw-icon.svg" alt="Login Twitter">
             </div>
 
-            <% if (typeof errors != "undefined") { %>
-                <p style="color:red">ERROR</p> 
-                <br>
-                <ul>
-                    <% for (let i = 0; i < errors.length; i++) { %>
-                        <li>
-                            <%= errors[i].msg %>
-                        </li>
-                    <% } %>
-                </ul>
-            <% } %>
+            <div class="lista-errores">
+                <%- include('../partials/vistaErroresValidaciones.ejs') %>
+            </div>
 
             <form class="login-credential" action="/usuarios/login" method="POST">
                 <div class="login-credential-user">

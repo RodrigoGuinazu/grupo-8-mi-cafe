@@ -4,6 +4,7 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
         <title>Formulario de Registro</title>
     </head>
 <body>
@@ -14,16 +15,9 @@
             <h2>Completá tus datos</h2>
         </section>
 
-        <% if (typeof errors != 'undefined') {%>
-            <p style= "color:red">ERROR</p>
-            <ul>
-                <% for (let i = 0; i < errors.length; i++) { %>
-                    <li>
-                        <%= errors[i].msg %>
-                    </li>
-                <% } %>
-            </ul>
-        <% } %>
+        <div class="lista-errores">
+            <%- include('../partials/vistaErroresValidaciones.ejs') %>
+        </div>
 
         <section align="center" class="formulario">
             <form method="POST" action="/usuarios/register">

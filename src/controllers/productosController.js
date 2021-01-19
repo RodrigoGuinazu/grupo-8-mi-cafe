@@ -25,7 +25,21 @@ let productosController = {
         }
 
         res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
-},
+    },
+    buscarProducto: function(req, res){
+        let busquedaUsuario = req.query.search;
+        res.send(busquedaUsuario);
+
+        let resultadoBusqueda = [];
+
+        for(let i = 0; i<products.length; i++) {
+            if(products[i].nombre.includes(busquedaUsuario)) {
+                resultadoBusqueda.push(products[i]);
+            }
+        }
+        res.render('resultadoBusqueda', {resultadoBusqueda: resultadoBusqueda});
+    },
+
     listadoProducto: function(req, res) {
         let cafes = products.filter(function (producto) {
             return producto.categoria == "cafe"
