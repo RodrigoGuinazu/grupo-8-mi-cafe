@@ -19,9 +19,17 @@
 
     <div class="navbar-inferior">
 
+        <% if(locals.user) { %>
+            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> <%= user.nombre %> - <%= user.direccion %></h4></div>
+        <% } else {%>
         <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Av. Siempre Viva 742</h4></div>
+        <% } %>
 
-        <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson <br> Av. Siempre Viva 742</h4></div>
+        <% if(locals.user) { %>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> <%= user.nombre %> <br> <%= user.direccion %></h4></div>
+        <% } else {%>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson <br> Av. Siempre Viva 742</h4></div>
+        <% } %>
 
         <div class="navbar-categorias">
             <a href="/productos/listado/cafes">Cafés</a><span> - </span>
@@ -30,7 +38,11 @@
         </div>
 
         <div class="navbar-usuario">
-            <a href="/usuarios/login"><i class="far fa-user-circle"></i> Homero Simpson </a>
+            <% if(locals.user) { %>
+            <a href="/usuarios/login"><i class="far fa-user-circle"></i> <%= user.nombre %>  </a>
+            <% } else {%>
+            <a href="/usuarios/login"><i class="far fa-user-circle"></i> Ingresa  </a>
+            <% } %>
         </div>
     </div>
 </header>
