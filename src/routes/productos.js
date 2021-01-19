@@ -7,6 +7,7 @@ let indexController = require('../controllers/indexController');
 let router = express.Router();
 router.get ('/detalle', productosController.detalleProducto);
 router.get ('/listado', productosController.listadoProducto);
+router.get ('/resultadoBusqueda', productosController.buscarProducto);
 router.get ('/:id/detalle', productosController.detalleProducto);
 router.get ('/listado/cafes', productosController.listadoCafes);
 router.get ('/listado/cafeteras', productosController.listadoCafeteras);

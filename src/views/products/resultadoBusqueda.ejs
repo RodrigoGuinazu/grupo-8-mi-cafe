@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/listado-productos.css">
+        <title>Mi Cafe</title>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <main>
+            <section class="tarjeta-producto">
+                <div class="button-section">
+                    <a class="button-create" href="/productos/crear">Crear</a>
+                </div>
+
+                 <!--PRODUCTOS-->
+                <h2>Resultados de tu búsqueda</h2>
+                <% for(let i = 0; i < resultadoBusqueda.lenght; i++) { %>
+                    <div class="categoria cafes">
+                        <% cafes.forEach(producto =>{ %>
+                        <article class="caja-producto">
+                            <a href="/productos/<%= producto.id %>/detalle">
+                                <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
+                            </a>
+                            <div class="producto-info">
+                                <i class="fas fa-credit-card"></i>
+                                <i class="fas fa-shopping-bag"></i>
+                                <h2 class="precio-producto">$<%= producto.precio %> </h2>
+                                <h3><%= producto.nombre %> </h3>
+                            </div>                
+                        </article>
+                        <% }) %>
+                    </div>
+
+                    <h3>Cafeteras</h3>
+                    <div class="categoria cafes">
+                        <% cafeteras.forEach(producto =>{ %>
+                        <article class="caja-producto">
+                            <a href="/productos/<%= producto.id %>/detalle">
+                                <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
+                            </a>
+                            <div class="producto-info">
+                                <i class="fas fa-credit-card"></i>
+                                <i class="fas fa-shopping-bag"></i>
+                                <h2 class="precio-producto">$<%= producto.precio %> </h2>
+                                <h3><%= producto.nombre %> </h3>
+                            </div>                
+                        </article>
+                        <% }) %>
+                    </div>
+
+                    <h3>Accesorios</h3>
+                    <div class="categoria cafes">
+                        <% accesorios.forEach(producto =>{ %>
+                        <article class="caja-producto">
+                            <a href="/productos/<%= producto.id %>/detalle">
+                                <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
+                            </a>
+                            <div class="producto-info">
+                                <i class="fas fa-credit-card"></i>
+                                <i class="fas fa-shopping-bag"></i>
+                                <h2 class="precio-producto">$<%= producto.precio %> </h2>
+                                <h3><%= producto.nombre %> </h3>
+                            </div>                
+                        </article>
+                        <% }) %>
+                    </div>
+                <% } %> 
+            </section>
+            <%- include('../partials/footer.ejs')%>
+        </main>
+    </body>
+</html>
