@@ -24,7 +24,7 @@ let usersController = {
             if(usuarioALoguearse != undefined) {
                 if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
                     req.session.usuarioALoguearse = usuarioALoguearse;
-                    res.send("el usuario logueado es " + usuarioALoguearse.email);
+                    res.redirect('/');
                 } else {
                 res.render("users/login", { errors: [
                     {msg: "Credenciales incorrectas"}
