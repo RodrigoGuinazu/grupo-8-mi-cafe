@@ -23,7 +23,10 @@
                     <div> Dirección: <%= user.direccion %> </div>
                     <div> Fecha de nacimiento: <%= user.fechaNacimiento %></div>
                     <div> Genero: <%= user.genero %> </div>
-                                  
+                    <div> Imagen: </div>
+                    <img src="/images/users/<%= user.imagen %>"> 
+                    
+                    
                     <br>
                     <a href="/usuarios/editar"> <button class="confirmar-cambios"> Editar </button></a> 
                 
