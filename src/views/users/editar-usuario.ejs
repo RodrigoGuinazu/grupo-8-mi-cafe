@@ -4,14 +4,14 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
-        <title>Formulario de Registro</title>
+        <title>Formulario de Edición</title>
     </head>
 <body>
     <%- include('../partials/header.ejs')%>
     <main>
         
         <section class="titulo">
-            <h2>Edita tu Perfil</h2>
+            <h2>Edita tu Perfil <%= userToEdit.email %></h2>
         </section>
 
         <section align="center" class="formulario">
