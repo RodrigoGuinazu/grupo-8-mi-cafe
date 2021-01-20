@@ -90,3 +90,31 @@
 - Invertir tiempo en detalles que podremos solucionar más adelante.
 
 =================
+
+**Sprint 5**
+>> Más de:
+- Aplicar CSS a las páginas que están quedando fuera de los Sprints.
+- Hablar con personas de otros equipos para tener mas opiniones.
+- Ir más allá de lo pedido.
+
+
+>> Seguir haciendo:
+- Resolver las cosas en equipo y pedirnos ayuda.
+- Dejar asentado en nuevas tarjetas lo que no se llegó a hacer.
+- Sorteo de tareas apenas estén dadas.
+- Contar con el equipo.
+
+
+>> Empezar a hacer:
+- Completar tarjetas pendientes de Trello.
+- Desagregar aún más las tareas en Trello.
+
+
+>> Parar de hacer:
+- No dejar muchas cosas para ultimo momento.
+
+>> Menos de:
+- Invertir tiempo en detalles que podremos solucionar más adelante.
+
+=================
+
