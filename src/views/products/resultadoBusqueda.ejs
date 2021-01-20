@@ -19,9 +19,9 @@
 
                  <!--PRODUCTOS-->
                 <h2>Resultados de tu búsqueda</h2>
-                <% for(let i = 0; i < resultadoBusqueda.lenght; i++) { %>
+                <% for(let i = 0; i < resultadoBusqueda.length; i++) { %>
                     <div class="categoria cafes">
-                        <% cafes.forEach(producto =>{ %>
+                        <% resultadoBusqueda.forEach(producto =>{ %>
                         <article class="caja-producto">
                             <a href="/productos/<%= producto.id %>/detalle">
                                 <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
@@ -35,8 +35,8 @@
                         </article>
                         <% }) %>
                     </div>
-
-                    <h3>Cafeteras</h3>
+                    
+                    <!--<h3>Cafeteras</h3>
                     <div class="categoria cafes">
                         <% cafeteras.forEach(producto =>{ %>
                         <article class="caja-producto">
@@ -68,8 +68,8 @@
                             </div>                
                         </article>
                         <% }) %>
-                    </div>
-                <% } %> 
+                    </div>-->
+                <% } %>
             </section>
             <%- include('../partials/footer.ejs')%>
         </main>

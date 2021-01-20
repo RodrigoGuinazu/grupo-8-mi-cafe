@@ -28,16 +28,17 @@ let productosController = {
     },
     buscarProducto: function(req, res){
         let busquedaUsuario = req.query.search;
-        res.send(busquedaUsuario);
 
         let resultadoBusqueda = [];
 
-        for(let i = 0; i<products.length; i++) {
-            if(products[i].nombre.includes(busquedaUsuario)) {
-                resultadoBusqueda.push(products[i]);
+        products.forEach(busqueda => {
+            if((busqueda.nombre).includes(busquedaUsuario)){
+                resultadoBusqueda.push(busqueda)
             }
-        }
-        res.render('resultadoBusqueda', {resultadoBusqueda: resultadoBusqueda});
+        })
+        console.log(resultadoBusqueda)
+        
+        res.render('products/resultadoBusqueda', {resultadoBusqueda});
     },
 
     listadoProducto: function(req, res) {

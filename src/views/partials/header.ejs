@@ -5,10 +5,12 @@
         <div class="navbar-logo"><a href="/">Mí Café</div></a>
 
         <div class="search">
-            <input type="text" class="searchTerm" placeholder="Busca tu Producto">
-            <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-           </button>
+            <form class="search" action="/productos/resultadoBusqueda" method="GET">
+                <input type="text" name="search" class="searchTerm" placeholder="Busca tu Producto">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
         </div>
 
            <div class="navbar-burger"><i class="fas fa-bars"></i></div>
