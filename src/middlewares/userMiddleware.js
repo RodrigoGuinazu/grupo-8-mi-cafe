@@ -14,7 +14,7 @@ let userMiddleware = {
         }
     },
     admin: function(req, res, next){
-        if(req.session.usuarioALoguearse && locals.user.role == 'admin'){
+        if(req.session.usuarioALoguearse && req.session.usuarioALoguearse.role == 'admin'){
             next();
         } else {
             res.redirect('/')
