@@ -24,6 +24,11 @@ let usersController = {
             if(usuarioALoguearse != undefined) {
                 if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
                     req.session.usuarioALoguearse = usuarioALoguearse;
+
+                    if(req.body.remindme){
+                        res.cookie('usuario', usuarioALoguearse.email, {maxAge: 1000 * 60 * 60})
+                        res.locals.usuarioALoguearse = req.session.usuarioALoguearse
+                    }
                     res.redirect('/');
                 } else {
                 res.render("users/login", { errors: [
@@ -35,6 +40,10 @@ let usersController = {
                 {msg: "No existe ningun usuario registrado con ese email"}
             ]})
         }
+    },
+    logout: function(req, res){
+        req.session.destroy();
+        res.redirect('/usuarios/login')
     },
     register: function(req, res) {
         res.render('users/formulario-registro');
