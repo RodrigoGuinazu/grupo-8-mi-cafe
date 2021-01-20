@@ -73,20 +73,19 @@ div.foto-perfil{
     background-color:#D1B894;
     border: solid #D1B894 1px;
     color: black;
+    font-weight: bolder;
     cursor: pointer;
 }
 
 .descartar-cambios {
-    width: 75%;
-    max-width: 350px;
-    height: 50px;
+    width: 100%;
     border:solid 1px black;
     border-radius: 6px;
     color: white;
     text-align: center;
     background-color: black;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin: 5px;
+    padding: 10px;
 }
 
 .descartar-cambios:hover {
@@ -94,7 +93,30 @@ div.foto-perfil{
     border: solid rgb(184, 15, 15) 1px;
     color: black;
     cursor: pointer;
+    font-weight: bolder
+}
+
+.button-create {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.button-create:hover {
+    width: 100%;
+    text-align: center;
+    color: black;
     font-weight: bolder;
+    background-color: #049125;
+    border: 1px solid #049125;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* DESKTOP - TABLET */
