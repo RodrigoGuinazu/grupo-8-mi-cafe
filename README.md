@@ -46,3 +46,4 @@ Actualmente trabajo de operario en el centro de almacenamiento y distribución d
  
  -----
  <h3>Se cambió a "localhost:3030"</h3>
+ <h3> Usuario Admin: admin@hotmail.com , Contraseña: 123456789 </h3> 
