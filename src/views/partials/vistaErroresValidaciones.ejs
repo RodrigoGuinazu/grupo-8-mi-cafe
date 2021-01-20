@@ -1,10 +1,14 @@
-<% if (typeof errors != "undefined") { %>
-    <p>ERROR</p>
-    <ul>
-        <% for (let i = 0; i < errors.length; i++) { %>
-            <li>
-                <%= errors[i].msg %>
-            </li>
+<section align="center">
+    <div class="lista-errores">
+        <% if (typeof errors != "undefined") { %>
+            <i class="fas fa-exclamation-circle"></i>
+            <ul class="lista-errores ul">
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <li class="lista-errores li">
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
         <% } %>
-    </ul>
-<% } %>
+    </div>
+</section>
