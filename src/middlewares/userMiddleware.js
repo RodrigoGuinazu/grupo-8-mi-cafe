@@ -1,10 +1,25 @@
-module.exports = function(req, res, next) {
-
-    if(req.session.usuarioALoguearse){
-        res.redirect('/usuarios/editar')
-    } else {
-        next();
+let userMiddleware = {
+    registered: function(req, res, next) {
+        if(req.session.usuarioALoguearse){
+            res.redirect('/usuarios/perfil')
+        } else {
+            next();
+        }
+    },
+    guest: function(req, res, next) {
+        if(req.session.usuarioALoguearse){
+            next();
+        } else {
+            res.redirect('/usuarios/login')
+        }
+    },
+    admin: function(req, res, next){
+        if(req.session.usuarioALoguearse && locals.user.role == 'admin'){
+            next();
+        } else {
+            res.redirect('/')
+        }
     }
-    
-    
 }
+
+module.exports = userMiddleware;

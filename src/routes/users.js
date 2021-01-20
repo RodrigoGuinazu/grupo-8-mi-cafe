@@ -6,16 +6,16 @@ let { check, validationResult, body } = require('express-validator');
 let usersController = require('../controllers/usersController');
 const registrationValidate = require('../middlewares/registrationValidate');
 const userMiddleware = require('../middlewares/userMiddleware');
-const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 var router = express.Router();
-router.get ('/login', userMiddleware, usersController.login);
+router.get ('/login', userMiddleware.registered, usersController.login);
 router.post('/login',usersController.processLogin);
-router.get ('/register', userMiddleware, usersController.register);
+router.get ('/register', userMiddleware.registered, usersController.register);
 router.post('/register', registrationValidate, usersController.processRegister);
-router.get ('/editar', guestMiddleware, usersController.editar);
+router.get ('/editar', userMiddleware.guest, usersController.editar);
 router.patch ('/editar',multerUsuarios.any(), usersController.modificacion);
-router.get ('/perfil', guestMiddleware, usersController.perfil);
+router.get ('/perfil', userMiddleware.guest, usersController.perfil);
 
 module.exports = router;
+
