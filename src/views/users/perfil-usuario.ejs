@@ -28,7 +28,15 @@
                     
                     
                     <br>
-                    <a href="/usuarios/editar"> <button class="confirmar-cambios"> Editar </button></a>
+                    <a href="/usuarios/editar"> <button class="confirmar-cambios"> Edita tu Usuario </button></a>
+                    <br>
+                    <br>
+                    <% if(locals.user && locals.user.role == 'admin') { %> 
+                        <div class="button-section">
+                            <a class="button-create" href="/productos/crear">Crear Producto</a>
+                        </div>
+                        <br>
+                    <% } %>
                 </div>
         </section>
     <%- include('../partials/footer.ejs')%>

@@ -195,6 +195,33 @@ h2 {
     font-weight: bolder;
 }
 
+.button-create {
+    width: max-content;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border: solid black 1px;
+    background-color:black;
+    outline: none;
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.button-create:focus {
+    background-color:#049125;
+    border: solid #049125 1px;
+}
+
+.button-create:hover {
+    background-color:#049125;
+    border: solid #049125 1px;
+    cursor: pointer;
+}
+
 /* DESKTOP - TABLET */
 
 @media (min-width: 768px) {
