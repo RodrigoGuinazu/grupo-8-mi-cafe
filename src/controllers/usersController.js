@@ -24,6 +24,11 @@ let usersController = {
             if(usuarioALoguearse != undefined) {
                 if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
                     req.session.usuarioALoguearse = usuarioALoguearse;
+
+                    if(req.body.remindme){
+                        res.cookie('usuario', usuarioALoguearse.email, {maxAge: 1000 * 60 * 60})
+                        res.locals.usuarioALoguearse = req.session.usuarioALoguearse
+                    }
                     res.redirect('/');
                 } else {
                 res.render("users/login", { errors: [
