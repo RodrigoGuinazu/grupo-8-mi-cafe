@@ -3,7 +3,7 @@
     <head>
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
-        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
+        <link rel="stylesheet" href="/stylesheets/perfil-usuario.css">
         <title>Perfil de usuario</title>
     </head>
 <body>
@@ -14,29 +14,24 @@
             <h2>Hola <%= user.nombre %>!</h2>
         </section>
 
-        <section align="center" class="formulario">
+        <section align="center">
             
-                <div>
-                    <div> Nombre: <%= user.nombre %> </div>
-                    <div> Apellido: <%= user.apellido %> </div>
-                    <div> Email: <%= user.email %> </div>
-                    <div> Dirección: <%= user.direccion %> </div>
-                    <div> Fecha de nacimiento: <%= user.fechaNacimiento %></div>
-                    <div> Genero: <%= user.genero %> </div>
-                    <div> Imagen: </div>
+                <div class="info-usuario">
+                    <div class="nombre"> Nombre: <%= user.nombre %> </div>
+                    <div class="apellido"> Apellido: <%= user.apellido %> </div>
+                    <div class="email"> Email: <%= user.email %> </div>
+                    <div class="direccion"> Dirección: <%= user.direccion %> </div>
+                    <div class="fecha-nacimiento"> Fecha de nacimiento: <%= user.fechaNacimiento %></div>
+                    <div class="genero"> Genero: <%= user.genero %> </div>
+                    <div class="foto-perfil"> Foto de perfil: </div>
                     <img src="/images/users/<%= user.imagen %>" alt="Foto de perfil"> 
                     
                     
                     <br>
-                    <a href="/usuarios/editar"> <button class="confirmar-cambios"> Edita tu Usuario </button></a>
+                    <a href="/usuarios/editar"> <button class="editar-usuario"> Edita tu Usuario </button></a>
                     <br>
                     <br>
-                    <% if(locals.user && locals.user.role == 'admin') { %> 
-                        <div class="button-section">
-                            <a class="button-create" href="/productos/crear">Crear Producto</a>
-                        </div>
-                        <br>
-                    <% } %>
+                    
                 </div>
         </section>
     <%- include('../partials/footer.ejs')%>
