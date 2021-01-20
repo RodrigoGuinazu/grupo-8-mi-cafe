@@ -41,6 +41,10 @@ let usersController = {
             ]})
         }
     },
+    logout: function(req, res){
+        req.session.destroy();
+        res.redirect('/usuarios/login')
+    },
     register: function(req, res) {
         res.render('users/formulario-registro');
     },

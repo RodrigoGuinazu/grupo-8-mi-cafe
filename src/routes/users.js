@@ -11,6 +11,7 @@ const userMiddleware = require('../middlewares/userMiddleware');
 var router = express.Router();
 router.get ('/login', userMiddleware.registered, usersController.login);
 router.post('/login',usersController.processLogin);
+router.get ('/logout', usersController.logout);
 router.get ('/register', userMiddleware.registered, usersController.register);
 router.post('/register', registrationValidate, usersController.processRegister);
 router.get ('/editar', userMiddleware.guest, usersController.editar);
