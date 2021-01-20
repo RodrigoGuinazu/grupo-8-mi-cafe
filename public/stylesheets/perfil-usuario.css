@@ -1,0 +1,82 @@
+
+/* PERFIL DE USUARIO */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    text-align: center;
+    background-color: #ededed;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-usuario {
+    background-color: #ededed;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.nombre{
+    width: 100%;
+}
+
+div.apellido{
+    width: 100%;
+} 
+div.email{
+    width: 100%;
+} 
+div.direccion{
+    width: 100%;
+}
+div.fecha-nacimiento{
+    width: 100%;
+} 
+div.genero{
+    width: 100%;
+} 
+div.foto-perfil{
+    width: 100%;
+}
+
+
+.editar-usuario {
+    width: 75%;
+    max-width: 350px;
+    height: 50px;
+    border:solid 1px black;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.editar-usuario:focus {
+    background-color:#D1B894;
+    border: solid #D1B894 1px;
+}
+
+.editar-usuario:hover {
+    background-color:#D1B894;
+    border: solid #D1B894 1px;
+    color: black;
+    cursor: pointer;
+}
+
+/* DESKTOP - TABLET */
+
+/*@media (min-width: 768px) { */
+   
