@@ -55,12 +55,14 @@
                     <a href=""><i class="fas fa-share-alt"></i> Compartir</a>
                 </div>
 
+                <% if(locals.user && locals.user.role == 'admin') { %> 
                 <div class="button-section">
                     <a class="button-create" href="/productos/<%= productDetail.id %>/editar">Editar</a>
                 </div>
+                <br>
+                <br>
+                <% } %>
 
-                <br>
-                <br>
 
                 <article class="descripcion-desktop">
                     <h4> Descripción del producto: </h4>
