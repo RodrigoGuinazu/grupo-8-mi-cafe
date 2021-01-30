@@ -97,6 +97,14 @@ select option {
     align-items: flex-start;
 }
 
+.precio {
+    width: 100%;
+}
+
+.botones {
+    margin-left: 10px;
+}
+
 .precio-envio article {
     align-items: flex-start;
 }
@@ -121,7 +129,7 @@ select option {
 }
 
 .fa-star::before {
-    color: black;
+    color: #ff8c00;
     font-size: 18px;
 }
 
@@ -245,25 +253,45 @@ div.links {
     justify-content: center;
 }
 
+.descripcion h4 {
+    font-size: x-large;
+}
+
 .descripcion p {
     text-align: center;
     padding: 10px;
-    width: 90%;
+    width: 100%;
     margin-bottom: 6px;
 }
 
 /* OPINIONES */
 
+.titulo-opiniones {
+        font-size: x-large;
+        margin-top: 50px;
+        margin-bottom: 30px;
+}
+
 .opiniones {
     margin-left: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     max-width: 400px;
     padding: 10px;
 }
 
+.opinion {
+    max-width: 100%;
+}
+
 .opiniones i {
     font-size: 16px;
+}
+
+.puntuacion-opiniones {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .fa-thumbs-up {
@@ -392,16 +420,29 @@ div.links {
         font-size: larger;
     }
 
-    .opiniones {
-        margin-top: 50px;
-        max-width: 600px;
-    }
-
     .recomendacion article {
         width: 20%;
     }
-}
 
-@media (min-width: 1500px) {
-   
+    .opiniones {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .opinion {
+        width: 30%;
+    }
+    
+    .opiniones i {
+        font-size: 16px;
+    }
+    
+    .fa-thumbs-up {
+        margin-right: 22px;
+        padding-bottom: 12px;
+    }
 }
