@@ -40,6 +40,7 @@ select option {
     width: 50%;
     max-width: 595px;
     flex-direction: row;
+    background-color: white;
 }
 
 .titulo {
@@ -108,6 +109,7 @@ select option {
 .precio-envio article {
     align-items: flex-start;
 }
+
 
 .precio-envio div {
     margin-top: 3px;
@@ -374,6 +376,21 @@ div.links {
 
     /* TABLET - DESKTOP */
 
+    .articulo-precio-envio-padre {
+        background-color: white;
+        border: 5px solid red;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .precio-envio {
+        padding: 0px;
+    }
+
+    .articulo-precio-envio-padre i , a, h2, h3, h4, article, label, p {
+        background-color: white;
+    }
+
     .imagenes-principales-box {
         display: flex;
         flex-wrap: wrap;
@@ -415,9 +432,15 @@ div.links {
     }
 
     .descripcion-desktop {
-        margin-left: 10px;
-        width: 100%;
+        display: flexbox;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: 8%;
+        width: 80%;
+        text-align: justify;
+        align-content: space-around;
         font-size: larger;
+        background-color: white;
     }
 
     .recomendacion article {
