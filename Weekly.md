@@ -112,3 +112,52 @@ Weekly (20210119)
 
 =======
 
+:: Sprint 6 (20210121) ::
+
++ Se abordarán las tarjetas 'pendientes' del Sprint 5, antes de iniciar las tareas del Sprint 6.
+
++ Se plasmaron las tareas del Sprint 6 en Trello. Dado que aún no se conoce la magnitud de las mismas, están asignadas a todo el equipo.
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210123)
+
++ Se inició la generación del Diagrama de relaciones.
+
+=======
+
+Daily (20210124)
+
++ Se continúa con la generación del Diagrama de relaciones, para presentar borrador el lunes 25/01/2021.
+
+=======
+
+Daily (20210126)
+
++ Se aplican las correcciones del 25/01/2021 al Diagrama de relaciones, para volver a presentar borrador.
+
+=======
+
+Daily (20210129)
+
++ Se aplican las correcciones del 27/01/2021 al Diagrama de relaciones, para volver a presentar borrador.
+
+=======
+
+Daily (20210130)
+
++ Se abordan las tarjetas pendientes y correcciones del Sprint 5
+
++ Se aguardan las correcciones del al Diagrama de relaciones, para poder avanzar con las tareas del Sprint 6.
+
+=======
+
+Daily (20210131)
+
++ Se continúa con las tarjetas pendientes y correcciones del Sprint 5
+
+=======
+
+Daily (202101XX)
