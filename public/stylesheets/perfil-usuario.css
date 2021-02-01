@@ -1,8 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* BOTONES USUARIO */
+
 section.usuario {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #ededed;
+}
+
+.logout-mobile {
+    align-self: flex-end;
+    font-size: large;
+    font-weight: bold;
+    color:rgb(184, 15, 15);
+    text-decoration: none;
+    margin: 10px;
 }
 
 section.usuario img {
@@ -13,33 +32,30 @@ section.usuario img {
     margin-top: 12px;
 }
 
-div.boton_usuario {
+.nombre_completo {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.boton_usuario {
+    display: flex;
+    padding: 8px;
+    width: 50%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
     max-width: 380px;
     border-radius: 10px;
     border: 1px solid black
 }
 
-.boton_usuario {
-    width: 50%;
-    height: 40px;
-    background-color: black;
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.boton_usuario button {
-    margin-top: 7px;
-}
-
-.usuario .boton_usuario button {
-    width: 100%;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    font-size: 17px;
-    border-color: black;
+a.boton_usuario {
+    justify-content: center;
+    text-decoration: none;
 }
 
 .usuario .boton_usuario i {
@@ -47,10 +63,49 @@ div.boton_usuario {
     right: 10px;
     font-size: 20px;
     color: white;
+    background-color: transparent;
 }
 
-.logout {
-    align-self: flex-end;
+.boton_usuario:hover {
+    text-align: center;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 10px;
+}
+
+.boton_usuario:hover i {
+    color: black;
+}
+
+@media (max-width: 1023px) {
+    .datos_usuario {
+        display: none; 
+    }
+
+    .logout-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+
+.usuario_contenedor {
+    display: flex;
+    flex-direction: row;
+}
+
+.logout-mobile {
+    display: none;
+}
+
+.logout-desktop {
+    position: absolute;
+    right: 5px;
+    top: 100px;
     font-size: large;
     font-weight: bold;
     color:rgb(184, 15, 15);
@@ -58,133 +113,28 @@ div.boton_usuario {
     margin: 10px;
 }
 
-.nombre_completo {
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-
-/* PERFIL DE USUARIO */
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-}
-
-
-h2 {
-    text-align: center;
-    background-color: #ededed;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.info-usuario {
-    background-color: #ededed;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-div.nombre{
-    width: 100%;
-}
-
-div.apellido{
-    width: 100%;
-} 
-div.email{
-    width: 100%;
-} 
-div.direccion{
-    width: 100%;
-}
-div.fecha-nacimiento{
-    width: 100%;
-} 
-div.genero{
-    width: 100%;
-} 
-div.foto-perfil{
-    width: 100%;
-}
-
-
-.editar-usuario {
-    width: 75%;
-    max-width: 350px;
-    height: 50px;
-    border:solid 1px black;
-    border-radius: 6px;
-    color: white;
-    text-align: center;
-    background-color: black;
+section.usuario img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 5px rgb(102, 102, 102));
     margin-top: 12px;
-    margin-bottom: 12px;
 }
 
-.editar-usuario:focus {
-    background-color:#D1B894;
-    border: solid #D1B894 1px;
+.boton_usuario {
+    width: 90%
 }
 
-.editar-usuario:hover {
-    background-color:#D1B894;
-    border: solid #D1B894 1px;
-    color: black;
-    font-weight: bolder;
-    cursor: pointer;
+.usuario {
+    width: 20%;
 }
 
-.descartar-cambios {
-    width: 100%;
-    border:solid 1px black;
-    border-radius: 6px;
-    color: white;
-    text-align: center;
-    background-color: black;
-    margin: 5px;
-    padding: 10px;
+.datos_usuario {
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 60px;
+    background-color: white;
 }
 
-.descartar-cambios:hover {
-    background-color:rgb(184, 15, 15);
-    border: solid rgb(184, 15, 15) 1px;
-    color: black;
-    cursor: pointer;
-    font-weight: bolder
 }
-
-.button-create {
-    width: 100%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    text-decoration: none;
-}
-
-.button-create:hover {
-    width: 100%;
-    text-align: center;
-    color: black;
-    font-weight: bolder;
-    background-color: #049125;
-    border: 1px solid #049125;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-/* DESKTOP - TABLET */
-
-/*@media (min-width: 768px) { */
-   
