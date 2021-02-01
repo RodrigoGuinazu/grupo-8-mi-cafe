@@ -30,6 +30,7 @@ header.navbar{
 
 .navbar-logo {
     max-width: 30%;
+    background-color: #D1B894;
 }
 
 .navbar-logo a {
@@ -44,15 +45,16 @@ div.search {
 }
 
 .search {
-    width: 60%;
+    width: 100%;
     position: relative;
     display: flex;
-    margin-left: 5%;
+    margin-left: 7.5%;
 }
 
 .searchTerm {
     width: 65%;
     border: 1px solid #D1B894;
+    background-color: white;
     border-right: none;
     padding: 5px;
     height: 35px;
@@ -76,6 +78,10 @@ div.search {
 
 .fa-search:before {
     background-color:  #ededed;
+}
+
+form.search {
+    background-color: #D1B894;
 }
 
 /* NAVBAR-MENU-HAMBURGESA */
@@ -131,6 +137,7 @@ div.navbar-burger i {
 }
 
 div.navbar-location {
+    margin-top: 3px;
     background-color: #D1B894;
 }
 
@@ -373,6 +380,8 @@ footer div {
 
     .navbar-categorias a {
         background-color: #D1B894;
+        font-size: large;
+        font-weight: bold;
     }
 
     .navbar-usuario {
