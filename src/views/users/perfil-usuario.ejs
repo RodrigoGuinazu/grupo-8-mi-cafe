@@ -9,36 +9,42 @@
 <body>
     <%- include('../partials/header.ejs')%>
     <main>
-        
-        <section class="titulo">
-            <h2>Hola <%= user.nombre %>!</h2>
-        </section>
-
-        <section align="center">
-            
-                <div class="info-usuario">
-                    <div class="nombre"> Nombre: <%= user.nombre %> </div>
-                    <div class="apellido"> Apellido: <%= user.apellido %> </div>
-                    <div class="email"> Email: <%= user.email %> </div>
-                    <div class="direccion"> Dirección: <%= user.direccion %> </div>
-                    <div class="fecha-nacimiento"> Fecha de nacimiento: <%= user.fechaNacimiento %></div>
-                    <div class="genero"> Genero: <%= user.genero %> </div>
-                    <div class="foto-perfil"> Foto de perfil: </div>
-                    <img src="/images/users/<%= user.imagen %>" alt="Foto de perfil"> 
-                    
-                    
-                    <br>
-                    <a href="/usuarios/editar"> <button class="editar-usuario"> Edita tu Usuario </button></a>
-                    <br>
-                    <br>
-                    <% if(locals.user && locals.user.role == 'admin') { %> 
-                        <div class="button-section">
-                            <a class="button-create" href="/productos/crear">Crear Producto</a>
-                        </div>
-                        <br>
-                    <% } %>
-                    <a href="/usuarios/logout"><button class="descartar-cambios">Log Out</button></a>
+        <section class="usuario">
+            <a class= "logout" href="/usuarios/logout">Log Out <i class="fas fa-power-off"></i></a>
+            <div class="foto_usuario">
+                <img src="/images/users/<%= user.imagen %>" alt="Foto de perfil">
+            </div>
+            <h3 class="nombre_completo"><%= user.nombre %> <%= user.apellido %></h3>
+            <% if(locals.user && locals.user.role == 'admin') { %> 
+                <div class="boton_usuario">
+                    <a href="/productos/crear"><button>Crear Producto</button></a>
                 </div>
+            <% } %>
+            <% if(locals.user && locals.user.role != 'admin') { %> 
+            <div class="boton_usuario">
+                <a href=""><button>Mi Perfil <i class="far fa-user-circle"></i></button></a>
+            </div>
+            <div class="boton_usuario">
+                <a href=""><button>Compras <i class="fas fa-shopping-bag"></i></button></a>
+            </div>
+            <div class="boton_usuario">
+                <a href=""><button>Favoritos <i class="fas fa-heart"></i></button></a>
+            </div>
+            <div class="boton_usuario">
+                <a href=""><button>Tarjetas <i class="fas fa-credit-card"></i></button></a>
+            </div>
+            <div class="boton_usuario">
+                <a href=""><button>Direcciones <i class="fas fa-map-marker-alt"></i></button></a>
+            </div>
+            <div class="boton_usuario">
+                <a href=""><button>Comentarios <i class="far fa-comments"></i></button></a>
+            </div>
+            <% } %>
+            <div class="boton_usuario">
+                <a href=""><button>Ajustes <i class="fas fa-cogs"></i></button></a>
+            </div>
+            <br>
+            <br>
         </section>
     <%- include('../partials/footer.ejs')%>
     </main>
