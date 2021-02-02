@@ -18,7 +18,7 @@ USE `mi_cafe` ;
 -- Table `mi_cafe`.`roles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`roles` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(45) NOT NULL DEFAULT 'user',
   `created_at` TIMESTAMP NOT NULL,
   `updated_at` TIMESTAMP NULL,
@@ -31,16 +31,17 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`users` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
-  `role_id` BIGINT NOT NULL,
+  `role_id` BIGINT UNSIGNED NOT NULL,
   `created_at` TIMESTAMP NOT NULL DEFAULT NOW(),
   `updated_at` TIMESTAMP NULL DEFAULT NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `role_id_idx` (`role_id` ASC),
   CONSTRAINT `role_id`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`role_id`)
     REFERENCES `mi_cafe`.`roles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -51,8 +52,8 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`profiles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`profiles` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id_profile` BIGINT NOT NULL,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id_profile` BIGINT UNSIGNED NOT NULL,
   `birthdate` DATE NULL,
   `age` TINYINT(3) NULL,
   `name` VARCHAR(100) NOT NULL,
@@ -63,8 +64,9 @@ CREATE TABLE IF NOT EXISTS `mi_cafe`.`profiles` (
   `updated_at` TIMESTAMP NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `user_id_profile_idx` (`user_id_profile` ASC),
   CONSTRAINT `user_id_profile`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`user_id_profile`)
     REFERENCES `mi_cafe`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -75,7 +77,7 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`categories`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`categories` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `category` VARCHAR(50) NULL,
   `created_at` TIMESTAMP NOT NULL,
   `updated_at` TIMESTAMP NULL,
@@ -88,7 +90,7 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`weights`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`weights` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `weight` INT(4) UNSIGNED NOT NULL,
   `created_at` TIMESTAMP NOT NULL,
   `updated_at` TIMESTAMP NULL,
@@ -101,7 +103,7 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`colors`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`colors` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `color` VARCHAR(50) NOT NULL,
   `created_at` TIMESTAMP NOT NULL,
   `updated_at` TIMESTAMP NULL,
@@ -114,30 +116,33 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`products` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `price` DECIMAL NOT NULL,
   `description` TEXT NOT NULL,
   `image` VARCHAR(100) NOT NULL,
-  `category_id` BIGINT NOT NULL,
-  `weight_id` BIGINT NULL,
-  `colors_id` BIGINT NULL,
+  `category_id` BIGINT UNSIGNED NOT NULL,
+  `weight_id` BIGINT UNSIGNED NULL,
+  `colors_id` BIGINT UNSIGNED NULL,
   `created_at` TIMESTAMP NOT NULL DEFAULT NOW(),
   `updated_at` TIMESTAMP NULL DEFAULT NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `category_id_idx` (`category_id` ASC),
+  INDEX `weight_id_idx` (`weight_id` ASC),
+  INDEX `colors_id_idx` (`colors_id` ASC),
   CONSTRAINT `category_id`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`category_id`)
     REFERENCES `mi_cafe`.`categories` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `weight_id`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`weight_id`)
     REFERENCES `mi_cafe`.`weights` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `colors_id`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`colors_id`)
     REFERENCES `mi_cafe`.`colors` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -148,7 +153,7 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`addresses`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`addresses` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `province` VARCHAR(100) NOT NULL,
   `city` VARCHAR(100) NOT NULL,
   `zip_code` VARCHAR(8) NOT NULL,
@@ -161,8 +166,9 @@ CREATE TABLE IF NOT EXISTS `mi_cafe`.`addresses` (
   `updated_at` TIMESTAMP NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `profile_id_address_idx` (`profile_id_address` ASC),
   CONSTRAINT `profile_id_address`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`profile_id_address`)
     REFERENCES `mi_cafe`.`profiles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -173,7 +179,7 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`payment_methods`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`payment_methods` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(45) NOT NULL,
   `cardholder_name` VARCHAR(50) NOT NULL,
   `card_number` INT(16) UNSIGNED NOT NULL,
@@ -184,8 +190,9 @@ CREATE TABLE IF NOT EXISTS `mi_cafe`.`payment_methods` (
   `updated_at` TIMESTAMP NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `profile_id_payment_idx` (`profile_id_payment` ASC),
   CONSTRAINT `profile_id_payment`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`profile_id_payment`)
     REFERENCES `mi_cafe`.`profiles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -196,15 +203,16 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`carts`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`carts` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `total` DECIMAL NOT NULL,
-  `user_id_cart` BIGINT NOT NULL,
+  `user_id_cart` BIGINT UNSIGNED NOT NULL,
   `created_at` TIMESTAMP NOT NULL,
   `updated_at` TIMESTAMP NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `user_id_cart_idx` (`user_id_cart` ASC),
   CONSTRAINT `user_id_cart`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`user_id_cart`)
     REFERENCES `mi_cafe`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -215,22 +223,24 @@ ENGINE = InnoDB;
 -- Table `mi_cafe`.`products_carts`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`products_carts` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `cart_id` BIGINT NOT NULL,
-  `product_id` BIGINT NOT NULL,
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `cart_id` BIGINT UNSIGNED NOT NULL,
+  `product_id` BIGINT UNSIGNED NOT NULL,
   `product_total` TINYINT UNSIGNED NOT NULL,
   `subtotal` DECIMAL UNSIGNED NOT NULL,
   `created_at` TIMESTAMP NOT NULL,
   `updated_at` TIMESTAMP NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
+  INDEX `cart_id_idx` (`cart_id` ASC),
+  INDEX `product_id_idx` (`product_id` ASC),
   CONSTRAINT `cart_id`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`cart_id`)
     REFERENCES `mi_cafe`.`carts` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `product_id`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`product_id`)
     REFERENCES `mi_cafe`.`products` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
