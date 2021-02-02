@@ -13,9 +13,11 @@
             <a class= "logout-desktop" href="/usuarios/logout">Log Out <i class="fas fa-power-off"></i></a>
             <section class="usuario">
                 <a class= "logout-mobile" href="/usuarios/logout">Log Out <i class="fas fa-power-off"></i></a>
+                <% if(user.imagen != "") { %> 
                 <div class="foto_usuario">
                     <img src="/images/users/<%= user.imagen %>" alt="Foto de perfil">
                 </div>
+                <% } %>
                 <h3 class="nombre_completo"><%= user.nombre %> <%= user.apellido %></h3>
                 <% if(locals.user && locals.user.role == 'admin') { %> 
 
