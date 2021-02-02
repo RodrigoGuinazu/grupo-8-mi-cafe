@@ -112,14 +112,8 @@ h2 {
     justify-content: center;
 }
 
-.formulario img {
-    padding: 12px;
-    width: 85%;
-    max-width: 340px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    flex-direction: column;
-    justify-content: center;
+.g-recaptcha {
+    display: inline-block;
 }
 
 .usuario-existente {

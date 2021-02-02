@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
         <link rel="stylesheet" href="/stylesheets/errores.css">
         <title>Formulario de Registro</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 <body>
     <%- include('../partials/header.ejs')%>
@@ -28,13 +29,15 @@
                     <input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirma tu Password" required><i class="fas fa-eye-slash"></i>
                 </div>
                 
+                <!-- 
                 <div class="checkbox">
                     <p><input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones</p><br>
                     <p><input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional</p>
                 </div>
+                -->
 
-                <img src="/images/captcha.jpg" alt="captcha">
-
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                
                 <button class="crear-cuenta" type="submit">Creá tu Cuenta</button>
 
                 <a href="/usuarios/login"><button class="usuario-existente" type="button">¿Ya tenés una cuenta? <br> Clickea aquí para ingresar</button></a>
