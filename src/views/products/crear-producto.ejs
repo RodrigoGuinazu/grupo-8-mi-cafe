@@ -4,6 +4,7 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
         <title>Crear nuevo producto</title>
     </head>
 
@@ -12,6 +13,7 @@
     <main>
         <section align="center" class="formulario">
             <h2>Crear nuevo producto</h2>
+            <%- include('../partials/vistaErroresValidaciones.ejs') %>
             <form method="POST" action="/productos/crear" enctype="multipart/form-data">
                 <div class="product-type">
                     <select name="categoria">

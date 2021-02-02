@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require("express-validator");
 
 let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
 products = JSON.parse(products);
@@ -83,38 +84,46 @@ let productosController = {
     },
 
     guardarProducto: (req, res, next) => {
-        let arrayId = [];
 
-        arrayId = products.map(function(obj) {
-            return obj.id
-        })
+        const errors = validationResult(req);
+        
+        //if(!errors.isEmpty()){
+            //return res.render('products/crear-producto', {errors: errors.errors});
+           // console.log(errors);
+        //} else {
+            let arrayId = [];
 
-        let mayorId = arrayId.reduce((a, b) => {
-            if(a > b) {
-                return a
-            } else {
-                return b
+            arrayId = products.map(function(obj) {
+                return obj.id
+            })
+
+            let mayorId = arrayId.reduce((a, b) => {
+                if(a > b) {
+                    return a
+                } else {
+                    return b
+                }
+            })
+
+            let nuevoId = mayorId+1;
+
+            let producto = {
+                id: nuevoId,
+                nombre: req.body.nombre,
+                peso: req.body.peso,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                categoria: req.body.categoria,
+                imagen: req.files[0].filename,
             }
-        })
+            products.push(producto);
 
-        let nuevoId = mayorId+1;
+            const JSONnewProduct = JSON.stringify(products)
 
-        let producto = {
-            id: nuevoId,
-            nombre: req.body.nombre,
-            peso: req.body.peso,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            categoria: req.body.categoria,
-            imagen: req.files[0].filename,
-        }
-        products.push(producto);
+            fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
 
-        const JSONnewProduct = JSON.stringify(products)
-
-        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
-
-        res.redirect("/productos/listado");
+            res.redirect("/productos/listado");
+       // }
     },
 
     editarProducto: function(req, res) {
