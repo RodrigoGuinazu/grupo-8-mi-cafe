@@ -213,6 +213,9 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`attributes` (
   `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `updated_at` TIMESTAMP NULL,
+  `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -225,6 +228,9 @@ CREATE TABLE IF NOT EXISTS `mi_cafe`.`products_attributes` (
   `attribute_product_id` BIGINT UNSIGNED NOT NULL,
   `attribute_id` BIGINT UNSIGNED NOT NULL,
   `value` VARCHAR(100) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `updated_at` TIMESTAMP NULL,
+  `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
   INDEX `product_id_idx` (`attribute_product_id` ASC),
   INDEX `attribute_id_idx` (`attribute_id` ASC),
