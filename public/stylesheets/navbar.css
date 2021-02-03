@@ -267,10 +267,6 @@ footer div {
         display: none;
     }
     
-    .navbar-categorias {
-        display: none;
-    }
-    
     .navbar-usuario {
         display: none;
     }
@@ -372,6 +368,7 @@ footer div {
     .navbar-categorias {
         width: 33%;
         background-color: #D1B894;
+        margin-left: 3%;
     }
 
     .navbar-categorias span {
