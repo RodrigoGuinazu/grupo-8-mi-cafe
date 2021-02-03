@@ -87,32 +87,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mi_cafe`.`weights`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mi_cafe`.`weights` (
-  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `weight` INT(4) UNSIGNED NOT NULL,
-  `created_at` TIMESTAMP NOT NULL,
-  `updated_at` TIMESTAMP NULL,
-  `deleted_at` TIMESTAMP NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mi_cafe`.`colors`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mi_cafe`.`colors` (
-  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `color` VARCHAR(50) NOT NULL,
-  `created_at` TIMESTAMP NOT NULL,
-  `updated_at` TIMESTAMP NULL,
-  `deleted_at` TIMESTAMP NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `mi_cafe`.`products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`products` (
@@ -122,28 +96,14 @@ CREATE TABLE IF NOT EXISTS `mi_cafe`.`products` (
   `description` TEXT NOT NULL,
   `image` VARCHAR(100) NOT NULL,
   `category_id` BIGINT UNSIGNED NOT NULL,
-  `weight_id` BIGINT UNSIGNED NULL,
-  `colors_id` BIGINT UNSIGNED NULL,
   `created_at` TIMESTAMP NOT NULL DEFAULT NOW(),
   `updated_at` TIMESTAMP NULL DEFAULT NULL,
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
   INDEX `category_id_idx` (`category_id` ASC),
-  INDEX `weight_id_idx` (`weight_id` ASC),
-  INDEX `colors_id_idx` (`colors_id` ASC),
   CONSTRAINT `category_id`
     FOREIGN KEY (`category_id`)
     REFERENCES `mi_cafe`.`categories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `weight_id`
-    FOREIGN KEY (`weight_id`)
-    REFERENCES `mi_cafe`.`weights` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `colors_id`
-    FOREIGN KEY (`colors_id`)
-    REFERENCES `mi_cafe`.`colors` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -225,7 +185,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mi_cafe`.`products_carts` (
   `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `cart_id` BIGINT UNSIGNED NOT NULL,
-  `product_id` BIGINT UNSIGNED NOT NULL,
+  `cart_product_id` BIGINT UNSIGNED NOT NULL,
   `product_total` TINYINT UNSIGNED NOT NULL,
   `subtotal` DECIMAL UNSIGNED NOT NULL,
   `created_at` TIMESTAMP NOT NULL,
@@ -233,15 +193,49 @@ CREATE TABLE IF NOT EXISTS `mi_cafe`.`products_carts` (
   `deleted_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
   INDEX `cart_id_idx` (`cart_id` ASC),
-  INDEX `product_id_idx` (`product_id` ASC),
+  INDEX `product_id_idx` (`cart_product_id` ASC),
   CONSTRAINT `cart_id`
     FOREIGN KEY (`cart_id`)
     REFERENCES `mi_cafe`.`carts` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `product_id`
-    FOREIGN KEY (`product_id`)
+  CONSTRAINT `cart_product_id`
+    FOREIGN KEY (`cart_product_id`)
     REFERENCES `mi_cafe`.`products` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mi_cafe`.`attributes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mi_cafe`.`attributes` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mi_cafe`.`products_attributes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mi_cafe`.`products_attributes` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `attribute_product_id` BIGINT UNSIGNED NOT NULL,
+  `attribute_id` BIGINT UNSIGNED NOT NULL,
+  `value` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `product_id_idx` (`attribute_product_id` ASC),
+  INDEX `attribute_id_idx` (`attribute_id` ASC),
+  CONSTRAINT `attribute_product_id`
+    FOREIGN KEY (`attribute_product_id`)
+    REFERENCES `mi_cafe`.`products` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `attribute_id`
+    FOREIGN KEY (`attribute_id`)
+    REFERENCES `mi_cafe`.`attributes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
