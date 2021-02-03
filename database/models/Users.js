@@ -1,28 +1,28 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Payment_method";
+    let alias = "Users";
     let cols = {
         id: {
             type: dataTypes.BIGINT,
             PrimaryKey: true,
             autoIncrement: true
         },
-        type: {
+        email: {
             type: dataTypes.STRING
         },
-        cardholder_name: {
+        password: {
             type: dataTypes.STRING
         },
-        card_number: {
-            type: dataTypes.INTEGER
+        role_id: {
+            type: dataTypes.BIGINT
         },
-        expiration_date: {
-            type: dataTypes.INTEGER
+        created_at: {
+            type: dataTypes.DATE
         },
-        security_code: {
-            type: dataTypes.INTEGER
+        updated_at: {
+            type: dataTypes.DATE
         },
-        profile_id_payment: {
-            type: dataTypes.BIGINT(20)
+        deleted_at: {
+            type: dataTypes.DATE
         }
     };
     let config = {
@@ -32,7 +32,8 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: "deleted_at"
     };
 
-    const Payment_method = sequelize.define(alias, cols, config);
+    const Users = sequelize.define(alias, cols, config);
     
-    return Payment_method
+    return Users
 }
+
