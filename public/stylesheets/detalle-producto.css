@@ -106,8 +106,9 @@ select option {
     margin-left: 10px;
 }
 
-.precio-envio article {
+.precio-envio-article {
     align-items: flex-start;
+    background-color: white;
 }
 
 
@@ -117,10 +118,20 @@ select option {
     display: inline-block;
     flex-direction: row;
     justify-content: space-around;
+    background-color: white;
 }
 
 .precio-envio i {
     font-size: 25px;
+    background-color: white;
+}
+
+.precio-envio p {
+    background-color: white;
+}
+
+.precio-envio h2 {
+    background-color: white;
 }
 
 .puntuacion {
@@ -188,6 +199,11 @@ select option {
     margin-left: 10px;
     justify-content: center;
     padding-bottom: 5px;
+    background-color: white;
+}
+
+.valor-envio label {
+    background-color: white;
 }
 
 .links {
@@ -200,14 +216,17 @@ select option {
 
 div.links {
     margin-bottom: 20px;
+    background-color: white;
 }
 
 .links i {
     font-size: 19px;
+    background-color: white;
 }
 
 .links a {
     color: #3483fa;
+    background-color: white;
 }
 
 
@@ -260,6 +279,24 @@ div.links {
 }
 
 .descripcion p {
+    line-height: 30px;
+}
+
+.descripcion-desktop article {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 6px;
+}
+
+.descripcion-desktop h4 {
+    font-size: x-large;
+}
+
+.descripcion-desktop p {
+    line-height: 33px;
+}
+
+.descripcion p {
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -307,6 +344,11 @@ div.links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 50px;
+}
+
+.recomendacion h4 {
+    font-size: x-large;
 }
 
 .recomendacion article {
@@ -372,23 +414,54 @@ div.links {
 
 /* DESKTOP - TABLET */
 
+@media (max-width: 767px) {
+    .articulo {
+        background-color: transparent;
+    }
+
+    .precio-envio-article{
+        background-color: transparent;
+    }
+
+    .precio-envio p {
+        background-color: transparent;
+    }
+
+    .precio-envio h2 {
+        background-color: transparent;
+    }
+
+    .precio-envio a {
+        background-color: transparent;
+    }
+
+    .precio-envio i {
+        background-color: transparent;
+    }
+
+    .precio-envio label {
+        background-color: transparent;
+    }
+
+    .precio-envio div {
+        background-color: transparent;
+    }
+}
+
 @media (min-width: 768px) {
 
     /* TABLET - DESKTOP */
 
     .articulo-precio-envio-padre {
         background-color: white;
-        border: 5px solid red;
+        margin: 50px 100px 20px 100px;
+        border: 5px solid white;
         border-radius: 5px;
         background-color: white;
     }
 
     .precio-envio {
         padding: 0px;
-    }
-
-    .articulo-precio-envio-padre i , a, h2, h3, h4, article, label, p {
-        background-color: white;
     }
 
     .imagenes-principales-box {
@@ -416,6 +489,12 @@ div.links {
 
     .recomendacion article {
         width: 40%;
+    }
+
+    .opiniones {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
     }
 }
 
