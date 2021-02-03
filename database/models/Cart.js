@@ -23,22 +23,13 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Cart = sequelize.define(alias, cols, config);
+
+    Cart.associate = function(models){
+        Cart.belongsTo(models.User, {
+            as: "user_id",
+            foreignKey: "user_id_cart"
+        })
+    }
     
     return Cart
 }
-
-//CREATE TABLE IF NOT EXISTS `mi_cafe`.`carts` (
-    //`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    //`total` DECIMAL NOT NULL,
-    //`user_id_cart` BIGINT UNSIGNED NOT NULL,
-    //`created_at` TIMESTAMP NOT NULL,
-    //`updated_at` TIMESTAMP NULL,
-    //`deleted_at` TIMESTAMP NULL,
-    PRIMARY KEY (`id`),
-    INDEX `user_id_cart_idx` (`user_id_cart` ASC),
-    CONSTRAINT `user_id_cart`
-      FOREIGN KEY (`user_id_cart`)
-      REFERENCES `mi_cafe`.`users` (`id`)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION)
-  ENGINE = InnoDB
