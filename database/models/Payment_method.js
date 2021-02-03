@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Payment_method";
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT,
             PrimaryKey: true,
             autoIncrement: true
         },
