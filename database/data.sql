@@ -12,5 +12,3 @@ insert into users (email, password,role_id,created_at) values ('chicos@gmail.com
 
 insert into roles (type,created_at) values ('admin',now());
 insert into roles (type,created_at) values ('user',now());
--- modificado 02/02 21:30hs FS --
-insert into users (email, password,role_id,created_at) values ('chicos@gmail.com', '$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu',2,now());
