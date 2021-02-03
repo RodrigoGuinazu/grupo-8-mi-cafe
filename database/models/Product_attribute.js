@@ -1,12 +1,18 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Color";
+    let alias = "Product_attribute";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
             autoIncrement: true
         },
-        color: {
+        attribute_product_id: {
+            type: dataTypes.BIGINT.UNSIGNED
+        },
+        attribute_id: {
+            type: dataTypes.BIGINT.UNSIGNED
+        },
+        value: {
             type: dataTypes.STRING
         },
         created_at: {
@@ -26,8 +32,8 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: "deleted_at"
     };
 
-    const Color = sequelize.define(alias, cols, config);
+    const Product_attribute = sequelize.define(alias, cols, config);
     
-    return Color
+    return Product_attribute
 }
 
