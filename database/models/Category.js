@@ -1,12 +1,12 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Colors";
+    let alias = "Category";
     let cols = {
         id: {
             type: dataTypes.BIGINT,
             PrimaryKey: true,
             autoIncrement: true
         },
-        color: {
+        category: {
             type: dataTypes.STRING
         },
         created_at: {
@@ -26,8 +26,8 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: "deleted_at"
     };
 
-    const Colors = sequelize.define(alias, cols, config);
+    const Category = sequelize.define(alias, cols, config);
     
-    return Colors
+    return Category
 }
 

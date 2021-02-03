@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Users";
+    let alias = "User";
     let cols = {
         id: {
             type: dataTypes.BIGINT,
@@ -32,8 +32,8 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: "deleted_at"
     };
 
-    const Users = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
     
-    return Users
+    return User
 }
 
