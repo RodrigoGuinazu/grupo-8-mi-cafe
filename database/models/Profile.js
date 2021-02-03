@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE
         },
         age: {
-            type: dataTypes.INTEGER
+            type: dataTypes.TINYINT(3)
         },
         name: {
             type: dataTypes.STRING
