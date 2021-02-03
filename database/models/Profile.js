@@ -38,27 +38,13 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Profile = sequelize.define(alias, cols, config);
+
+    Profile.associate = function(models){
+        Profile.belongsTo(models.User, {
+            as: "user_id",
+            foreignKey: "user_id_profile"
+        })
+    }
     
     return Profile
 }
-
-//CREATE TABLE IF NOT EXISTS `mi_cafe`.`profiles` (
-    //`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    //`user_id_profile` BIGINT UNSIGNED NOT NULL,
-    //`birthdate` DATE NULL,
-    //`age` TINYINT(3) NULL,
-    //`name` VARCHAR(100) NOT NULL,
-    //`lastname` VARCHAR(100) NOT NULL,
-    //`image` VARCHAR(100) NULL,
-    //`gender` VARCHAR(1) NOT NULL,
-    //`created_at` TIMESTAMP NOT NULL,
-    //`updated_at` TIMESTAMP NULL,
-    //`deleted_at` TIMESTAMP NULL,
-    PRIMARY KEY (`id`),
-    INDEX `user_id_profile_idx` (`user_id_profile` ASC),
-    CONSTRAINT `user_id_profile`
-      FOREIGN KEY (`user_id_profile`)
-      REFERENCES `mi_cafe`.`users` (`id`)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION)
-  ENGINE = InnoDB
