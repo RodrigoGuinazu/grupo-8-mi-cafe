@@ -83,47 +83,39 @@ let productosController = {
         res.render("products/crear-producto");
     },
 
-    guardarProducto: (req, res, next) => {
+    guardarProducto: (req, res, next) => {   
+        let arrayId = [];
 
-        const errors = validationResult(req);
-        
-        //if(!errors.isEmpty()){
-            //return res.render('products/crear-producto', {errors: errors.errors});
-           // console.log(errors);
-        //} else {
-            let arrayId = [];
+        arrayId = products.map(function(obj) {
+            return obj.id
+        })
 
-            arrayId = products.map(function(obj) {
-                return obj.id
-            })
-
-            let mayorId = arrayId.reduce((a, b) => {
-                if(a > b) {
-                    return a
-                } else {
-                    return b
-                }
-            })
-
-            let nuevoId = mayorId+1;
-
-            let producto = {
-                id: nuevoId,
-                nombre: req.body.nombre,
-                peso: req.body.peso,
-                descripcion: req.body.descripcion,
-                precio: req.body.precio,
-                categoria: req.body.categoria,
-                imagen: req.files[0].filename,
+        let mayorId = arrayId.reduce((a, b) => {
+            if(a > b) {
+                return a
+            } else {
+                return b
             }
-            products.push(producto);
+        })
 
-            const JSONnewProduct = JSON.stringify(products)
+        let nuevoId = mayorId+1;
 
-            fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
+        let producto = {
+            id: nuevoId,
+            nombre: req.body.nombre,
+            peso: req.body.peso,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            categoria: req.body.categoria,
+            imagen: req.files[0].filename,
+        }
+        products.push(producto);
 
-            res.redirect("/productos/listado");
-       // }
+        const JSONnewProduct = JSON.stringify(products)
+
+        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
+
+        res.redirect("/productos/listado");
     },
 
     editarProducto: function(req, res) {

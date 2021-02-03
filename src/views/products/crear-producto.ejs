@@ -23,10 +23,10 @@
                     </select>
                 </div>
                 <div class="product-img">
-                    <input type="file" name="product-img">
+                    <input type="file" name="product-img" required>
                 </div>
                 <div class="product-name">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" required>
                 </div>
                 <div class="product-weight">
                     <select name="peso">
@@ -37,11 +37,11 @@
                     </select>
                 </div>
                 <div class="product-price">
-                    <input type="number" name="precio" id="precio" placeholder="$00,0">
+                    <input type="number" name="precio" id="precio" placeholder="$00,0" required>
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>
-                   <textarea name="descripcion" rows="10" cols="40"></textarea>
+                   <textarea name="descripcion" rows="10" cols="40" required></textarea>
                </div>
                <div class="product-create">
                 <button class="product-create-button">Publicar</button>

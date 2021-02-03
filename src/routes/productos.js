@@ -4,7 +4,6 @@ let multer = require('multer');
 let multerProductos = require('../middlewares/multerProductos');
 let indexController = require('../controllers/indexController');
 const userMiddleware = require('../middlewares/userMiddleware');
-const productosValidate = require('../middlewares/productosValidate');
 
 let router = express.Router();
 router.get ('/detalle', productosController.detalleProducto);
