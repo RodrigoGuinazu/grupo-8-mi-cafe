@@ -51,8 +51,12 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "category_id"
         }),
         Product.belongsToMany(models.Attribute, {
-            as: "attribute",
-            foreignKey: "Attribute_id"
+            as: "attributes",
+            foreignKey: "attribute_id"
+        }),
+        Product.belongsToMany(models.Cart, {
+            as: "carts",
+            foreignKey: "cart_id"
         })
     }
     
