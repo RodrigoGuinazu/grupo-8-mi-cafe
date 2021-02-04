@@ -2,17 +2,15 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Cart";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
-            UNSIGNED: true,
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
             autoIncrement: true
         },
         total: {
             type: dataTypes.DECIMAL
         },
         user_id_cart: {
-            type: dataTypes.BIGINT,
-            UNSIGNED: true
+            type: dataTypes.BIGINT.UNSIGNED
         }
     };
     let config = {
