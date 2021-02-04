@@ -1,13 +1,15 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Weight";
+    let alias = "Address";
     let cols = {
         id: {
             type: dataTypes.BIGINT,
             PrimaryKey: true,
+            UNSIGNED: true,
             autoIncrement: true
         },
-        weight: {
-            type: dataTypes.INTEGER.UNSIGNED
+        type: {
+            type: dataTypes.STRING,
+            allowNull: false
         }
     };
     let config = {
@@ -17,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: "deleted_at"
     };
 
-    const Weight = sequelize.define(alias, cols, config);
+    const Role = sequelize.define(alias, cols, config);
     
-    return Weight
+    return Address
 }

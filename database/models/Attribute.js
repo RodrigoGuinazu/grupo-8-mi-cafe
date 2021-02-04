@@ -1,19 +1,13 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "User";
+    let alias = "Attribute";
     let cols = {
         id: {
             type: dataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
         },
-        email: {
+        name: {
             type: dataTypes.STRING
-        },
-        password: {
-            type: dataTypes.STRING
-        },
-        role_id: {
-            type: dataTypes.BIGINT
         },
         created_at: {
             type: dataTypes.DATE
@@ -32,8 +26,7 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: "deleted_at"
     };
 
-    const User = sequelize.define(alias, cols, config);
+    const Attribute = sequelize.define(alias, cols, config);
     
-    return User
+    return Attribute
 }
-

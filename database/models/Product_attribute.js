@@ -33,6 +33,19 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Product_attribute = sequelize.define(alias, cols, config);
+
+    // AL SER TABLA PIVOT SE RELACIONA DIRECTAMENTE PRODUCT CON ATTRIBUTE.
+
+    /*Product_attribute.associate = function(models){
+        Attribute.belongsToMany(models.Product, {
+            as: "product",
+            foreignKey: "Product_attribute_id"
+        }),
+        Product.belongsToMany(models.Attribute, {
+            as: "attribute",
+            foreignKey: "Attribute_id"
+        })
+    }*/
     
     return Product_attribute
 }
