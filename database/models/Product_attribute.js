@@ -34,16 +34,18 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product_attribute = sequelize.define(alias, cols, config);
 
-    Product_attribute.associate = function(models){
-        Attribute.belongsTo(models.Product, {
+    // AL SER TABLA PIVOT SE RELACIONA DIRECTAMENTE PRODUCT CON ATTRIBUTE.
+
+    /*Product_attribute.associate = function(models){
+        Attribute.belongsToMany(models.Product, {
             as: "product",
             foreignKey: "Product_attribute_id"
         }),
-        Product.hasTo(models.Attribute, {
+        Product.belongsToMany(models.Attribute, {
             as: "attribute",
             foreignKey: "Attribute_id"
         })
-    }
+    }*/
     
     return Product_attribute
 }
