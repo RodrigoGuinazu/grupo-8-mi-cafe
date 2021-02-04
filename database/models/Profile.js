@@ -2,20 +2,20 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Profile";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
-            UNSIGNED: true,
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
             autoIncrement: true
         },
         user_id_profile: {
-            type: dataTypes.BIGINT,
-            UNSIGNED: true
+            type: dataTypes.BIGINT.UNSIGNED
         },
         birthdate: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
+            allowNull: true
         },
         age: {
-            type: dataTypes.TINYINT(3)
+            type: dataTypes.TINYINT(3),
+            allowNull: true
         },
         name: {
             type: dataTypes.STRING
@@ -24,7 +24,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         image: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: true
         },
         gender: {
             type: dataTypes.STRING(1)
