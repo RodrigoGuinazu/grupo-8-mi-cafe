@@ -51,7 +51,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Address.associate = function(models){
         Address.belongsTo(models.Profile, {
-            as: "profile_address",
+            as: "profile",
             foreignKey: "profile_id_address"
         })
     }

@@ -31,13 +31,17 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function(models){
         User.belongsTo(models.Role, {
-            as: "user_role",
+            as: "role",
             foreignKey: "role_id"
         }),
         User.hasOne(models.Profile, {
-            as: "user_profile",
+            as: "profile",
             foreignKey: "user_id_profile"
-        })
+        }),
+        User.hasMany(models.Cart, {
+            as: "carts",
+            foreignKey: "user_id_cart"
+        }),
     }
     
     return User

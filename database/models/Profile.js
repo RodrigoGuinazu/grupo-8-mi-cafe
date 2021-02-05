@@ -47,15 +47,15 @@ module.exports = (sequelize, dataTypes) => {
 
     Profile.associate = function(models){
         Profile.belongsTo(models.User, {
-            as: "user_profile",
+            as: "user",
             foreignKey: "user_id_profile"
         }),
         Profile.hasMany(models.Payment_method, {
-            as: "payment_profile",
+            as: "payments",
             foreignKey: "profile_id_payment"
         }),
         Profile.hasMany(models.Address, {
-            as: "address_profile",
+            as: "addresses",
             foreignKey: "profile_id_address"
         })
     }

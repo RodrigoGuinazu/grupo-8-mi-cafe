@@ -43,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
     
     Payment_method.associate = function(models){
         Payment_method.belongsTo(models.Profile, {
-            as: "profile_payment",
+            as: "profile",
             foreignKey: "profile_id_payment"
         })
     }
