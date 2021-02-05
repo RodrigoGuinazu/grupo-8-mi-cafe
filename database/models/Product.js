@@ -5,27 +5,27 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
         name: {
             type: dataTypes.STRING,
+            allowNull: false
         },
         price: {
-            type: dataTypes.DECIMAL
+            type: dataTypes.DECIMAL(10,2), /*CONSULTAR ALE*/
+            allowNull: false
         },
         description: {
-            type: dataTypes.TEXT
+            type: dataTypes.TEXT,
+            allowNull: false
         },
         image: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         category_id: {
             type: dataTypes.BIGINT.UNSIGNED,
-        },
-        weight_id: {
-            type: dataTypes.BIGINT.UNSIGNED,
-        },
-        colors_id: {
-            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         },
     };
     let config = {
@@ -44,11 +44,17 @@ module.exports = (sequelize, dataTypes) => {
         }),
         Product.belongsToMany(models.Attribute, {
             as: "attributes",
-            foreignKey: "attribute_id"
+            through: "products_attributes",
+            foreignKey: "attribute_product_id",
+            otherKey: "attribute_id",
+            timestamps: true
         }),
         Product.belongsToMany(models.Cart, {
             as: "carts",
-            foreignKey: "cart_id"
+            through: "products_carts",
+            foreignKey: "cart_id",
+            otherKey: "cart_product_id",
+            timestamps: true
         })
     }
     

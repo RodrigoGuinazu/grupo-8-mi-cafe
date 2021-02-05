@@ -2,21 +2,26 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Product_cart";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
-            autoIncrement: true
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
         },
         cart_id: {
-            type: dataTypes.BIGINT.UNSIGNED
+            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         },
-        product_id: {
-            type: dataTypes.BIGINT.UNSIGNED
+        cart_product_id: {
+            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         },
         product_total: {
-            type: dataTypes.TINYINT
+            type: dataTypes.TINYINT.UNSIGNED,
+            allowNull: false
         },
         subtotal: {
-            type: dataTypes.DECIMAL
+            type: dataTypes.DECIMAL.UNSIGNED,
+            allowNull: false
         }
     };
     let config = {
@@ -27,17 +32,6 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Product_cart = sequelize.define(alias, cols, config);
-
-    /*Product_cart.associate = function(models){
-        Product.belongsToMany(models.Cart, {
-            as: "carts",
-            foreignKey: "cart_id"
-        }),
-        Cart.belongsToMany(models.Product, {
-            as: "products",
-            foreignKey: "product_id"
-        })
-    }*/
     
     return Product_cart
 }

@@ -4,10 +4,12 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         user_id_profile: {
-            type: dataTypes.BIGINT.UNSIGNED
+            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         },
         birthdate: {
             type: dataTypes.DATE,
@@ -18,17 +20,20 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true
         },
         name: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         lastname: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         image: {
             type: dataTypes.STRING,
             allowNull: true
         },
         gender: {
-            type: dataTypes.STRING(1)
+            type: dataTypes.STRING(1),
+            allowNull: false
         }
     };
     let config = {
@@ -42,8 +47,16 @@ module.exports = (sequelize, dataTypes) => {
 
     Profile.associate = function(models){
         Profile.belongsTo(models.User, {
-            as: "user",
+            as: "user_profile",
             foreignKey: "user_id_profile"
+        }),/*REVISAR CON  ALE !!!*/
+        Profile.hasMany(models.Payment_method, {
+            as: "payment_profile",
+            foreignKey: "profile_id_payment"
+        }),
+        Profile.hasMany(models.Address, {
+            as: "address_profile",
+            foreignKey: "profile_id_address"
         })
     }
     

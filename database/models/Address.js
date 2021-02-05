@@ -2,10 +2,10 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Address";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
-            UNSIGNED: true,
-            autoIncrement: true
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
         },
         province: {
             type: dataTypes.STRING,
@@ -23,18 +23,20 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        nomber: {
+        number: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
         flat: {
-            type: dataTypes.STRING,
+            type: dataTypes.INTEGER,
+            allowNull: true
         },
         apartment: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(10),
+            allowNull: true
         },
-        city: {
-            type: dataTypes.STRING,
+        profile_id_address: {
+            type: dataTypes.BIGINT.UNSIGNED,
             allowNull: false
         }
     };
@@ -48,8 +50,8 @@ module.exports = (sequelize, dataTypes) => {
     const Address = sequelize.define(alias, cols, config);
 
     Address.associate = function(models){
-        Address.belongsTo(models.User, {
-            as: "profiles",
+        Address.belongsTo(models.Profile, {
+            as: "profile_address",
             foreignKey: "profile_id_address"
         })
     }

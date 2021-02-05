@@ -2,27 +2,34 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Payment_method";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
-            autoIncrement: true
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
         },
         type: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         cardholder_name: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         card_number: {
-            type: dataTypes.INTEGER
+            type: dataTypes.BIGINT(16).UNSIGNED,
+            allowNull: false
         },
         expiration_date: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER(4).UNSIGNED,
+            allowNull: false
         },
         security_code: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER(4).UNSIGNED,
+            allowNull: false
         },
         profile_id_payment: {
-            type: dataTypes.BIGINT(20)
+            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         }
     };
     let config = {
@@ -36,8 +43,8 @@ module.exports = (sequelize, dataTypes) => {
     
     Payment_method.associate = function(models){
         Payment_method.belongsTo(models.Profile, {
-            as: "profile",
-            foreignKey: "Profile_id_payment"
+            as: "profile_payment",
+            foreignKey: "profile_id_payment"
         })
     }
 

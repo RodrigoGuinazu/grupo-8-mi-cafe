@@ -5,18 +5,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
         category: {
-            type: dataTypes.STRING
-        },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
-        deleted_at: {
-            type: dataTypes.DATE
+            type: dataTypes.STRING,
+            allowNull: true
         }
     };
     let config = {
@@ -27,7 +20,12 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Category = sequelize.define(alias, cols, config);
-    
+
+    Category.associate = function(models){
+        Category.hasMany(models.Product, {
+            as: "product_category",
+            foreignKey: "category_id"
+        })
+    }
     return Category
 }
-

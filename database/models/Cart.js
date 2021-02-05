@@ -4,13 +4,16 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         total: {
-            type: dataTypes.DECIMAL
+            type: dataTypes.DECIMAL,
+            allowNull: false
         },
         user_id_cart: {
-            type: dataTypes.BIGINT.UNSIGNED
+            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         }
     };
     let config = {
@@ -27,9 +30,12 @@ module.exports = (sequelize, dataTypes) => {
             as: "user",
             foreignKey: "user_id_cart"
         }),
-        Cart.belongsToMany(models.Product, {
+       Cart.belongsToMany(models.Product, {
             as: "products",
-            foreignKey: "product_id"
+            through: "products_carts",
+            foreignKey: "cart_product_id",
+            otherKey: "cart_id",
+            timestamps: true
         })
     }
     

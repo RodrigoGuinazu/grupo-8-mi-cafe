@@ -5,24 +5,19 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
         email: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         password: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         role_id: {
-            type: dataTypes.BIGINT
-        },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
-        deleted_at: {
-            type: dataTypes.DATE
+            type: dataTypes.BIGINT.UNSIGNED,
+            allowNull: false
         }
     };
     let config = {
@@ -33,6 +28,17 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config);
+
+    User.associate = function(models){
+        User.belongsTo(models.Role, {
+            as: "user_role",
+            foreignKey: "role_id"
+        }),/*REVISAR CON ALE !!!*/
+        User.hasMany(models.Profile, {
+            as: "user_profile",
+            foreignKey: "user_id_profile"
+        })
+    }
     
     return User
 }

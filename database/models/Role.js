@@ -2,10 +2,10 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Address";
     let cols = {
         id: {
-            type: dataTypes.BIGINT,
-            PrimaryKey: true,
-            UNSIGNED: true,
-            autoIncrement: true
+            type: dataTypes.BIGINT.UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
         },
         type: {
             type: dataTypes.STRING,
@@ -20,6 +20,13 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Role = sequelize.define(alias, cols, config);
+
+    Role.associate = function(models){
+        Role.hasMany(models.User, {
+            as: "role_user",
+            foreignKey: "role_id"
+        })
+    }
     
-    return Address
+    return Role
 }
