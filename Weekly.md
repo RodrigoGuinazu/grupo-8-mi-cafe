@@ -156,8 +156,36 @@ Daily (20210130)
 
 Daily (20210131)
 
-+ Se continúa con las tarjetas pendientes y correcciones del Sprint 5
++ Se continúa en la resolución de las tarjetas pendientes y correcciones del Sprint 5.
 
 =======
 
-Daily (202101XX)
+Daily (20210203)
+
++ Se resolvieron las tarjetas pendientes del Sprint 5 (Vistas pendientes).
+
++ Se corrigieron las PK y FK.
+
++ Se avanzó con la creación de los Modelos y las Relaciones.
+
++ Se empezaron a generar los scripts para poblar las tablas.
+
++ Se creó la versión final del DER, y se generó archivo .PNG del mismo.
+
++ Al final del Sprint, se abordarán cuestiones pendientes de lógica y estilos.
+
+=======
+
+Daily (20210204)
+
++ Se realizó una revisión general del DER.
+
++ Se terminaron de generar los scripts para poblar las tablas.
+
++ Se corrigieron los modelos, con sus tipos de datos y relaciones.
+
+=======
+
+Daily (20210205)
+
++ 
