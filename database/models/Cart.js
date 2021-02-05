@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
         }),
        Cart.belongsToMany(models.Product, {
             as: "products",
-            through: models.Product_cart,
+            through: models.Product_cart, // Como la tabla pivot tiene un modelo ya que ademas de los ids tiene datos extra, en vez de hacer la relacion a traves del nombre de la tabla "Products_carts", la relacionamos con el modelo que definimos en el proyecto (models.Product_cart)
             foreignKey: "cart_product_id",
             otherKey: "cart_id",
             timestamps: true
