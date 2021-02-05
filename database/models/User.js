@@ -33,8 +33,8 @@ module.exports = (sequelize, dataTypes) => {
         User.belongsTo(models.Role, {
             as: "user_role",
             foreignKey: "role_id"
-        }),/*REVISAR CON ALE !!!*/
-        User.hasMany(models.Profile, {
+        }),
+        User.hasOne(models.Profile, {
             as: "user_profile",
             foreignKey: "user_id_profile"
         })

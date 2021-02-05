@@ -44,14 +44,14 @@ module.exports = (sequelize, dataTypes) => {
         }),
         Product.belongsToMany(models.Attribute, {
             as: "attributes",
-            through: "products_attributes",
+            through: models.Product_attribute,
             foreignKey: "attribute_product_id",
             otherKey: "attribute_id",
             timestamps: true
         }),
         Product.belongsToMany(models.Cart, {
             as: "carts",
-            through: "products_carts",
+            through: models.Product_cart,
             foreignKey: "cart_id",
             otherKey: "cart_product_id",
             timestamps: true

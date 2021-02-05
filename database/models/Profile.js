@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
         Profile.belongsTo(models.User, {
             as: "user_profile",
             foreignKey: "user_id_profile"
-        }),/*REVISAR CON  ALE !!!*/
+        }),
         Profile.hasMany(models.Payment_method, {
             as: "payment_profile",
             foreignKey: "profile_id_payment"

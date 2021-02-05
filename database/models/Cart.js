@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
         }),
        Cart.belongsToMany(models.Product, {
             as: "products",
-            through: "products_carts",
+            through: models.Product_cart,
             foreignKey: "cart_product_id",
             otherKey: "cart_id",
             timestamps: true
