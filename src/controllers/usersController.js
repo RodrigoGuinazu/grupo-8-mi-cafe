@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcrypt');
+const db = require('../../database/models')
+const sequelize = require('sequelize')
+
 
 let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
 users = JSON.parse(users);
@@ -54,9 +57,17 @@ let usersController = {
         if(!errors.isEmpty()){
             return res.render('users/formulario-registro', {errors: errors.errors});
         } else {
-            let arrayId = [];
+        /*    let arrayId = [];*/
 
-        arrayId = users.map(function(obj) {
+            db.User.create({
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                role_id: 2
+            })
+        }
+        res.redirect("/usuarios/login");
+        
+        /*arrayId = users.map(function(obj) {
             return obj.id
         })
 
@@ -87,6 +98,7 @@ let usersController = {
         fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), usersJSON);
         res.redirect("/usuarios/login");
         }
+        */
         
     },
     editar: function(req, res) {
