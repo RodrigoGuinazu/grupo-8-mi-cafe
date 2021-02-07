@@ -112,6 +112,11 @@ let productosController = {
     },
 
     modificacion: (req, res) => {
+        /*
+        const {nombre, peso, descripcion, precio, categoria, } = req.body
+    
+        db.Product.update(req.body)
+        */
         products.forEach(product => {
             if(req.params.id == product.id){
                 product.nombre = req.body.nombre
@@ -144,4 +149,3 @@ let productosController = {
 }
 
 module.exports = productosController
-//res.render('products/listado-productos', { productos });

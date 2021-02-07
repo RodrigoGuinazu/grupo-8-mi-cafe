@@ -22,13 +22,13 @@
     <div class="navbar-inferior">
         
         <% if(locals.user) { %>
-            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> <%= user.nombre %> - <%= user.direccion %></h4></div>
+            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> <%= user.name %> - <%= user.address %></h4></div>
         <% } else {%>
         <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis a tu domicilio </h4></div>
         <% } %>
 
         <% if(locals.user) { %>
-            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4>Enviar a <br><%= user.direccion %></h4></div>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4>Enviar a <br><%= user.address %></h4></div>
         <% } else {%>
             <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis <br> a tu domicilio </h4></div>
         <% } %>
@@ -41,7 +41,7 @@
 
         <div class="navbar-usuario">
             <% if(locals.user) { %>
-            <a href="/usuarios/perfil"><i class="far fa-user-circle"></i> <%= user.nombre %> <%= user.apellido %> </a>
+            <a href="/usuarios/perfil"><i class="far fa-user-circle"></i> <%= user.email %> <%= user.last_name %> </a>
             <% } else {%>
             <a href="/usuarios/login"><i class="far fa-user-circle"></i> Ingresa  </a>
             <% } %>

@@ -4,6 +4,7 @@ var indexController = require('../controllers/indexController')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log(res.locals)
   res.render('index', { title: 'Express' });
 });
 router.get('/conoceme', indexController.nosotrosMC);

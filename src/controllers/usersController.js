@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcrypt');
 const db = require('../../database/models')
@@ -13,31 +11,31 @@ let usersController = {
     // LOGICA LOGIN
     processLogin: function(req, res) {
         let errors = validationResult(req);
-
+        
         db.User.findOne({
             where: {
-                email: req.body.email
+                email: req.body.email,
             }
-        } 
-        )
+        })
         .then(usuarioALoguearse => {
+
             if(usuarioALoguearse){
-                if(bcrypt.compare(req.body.password, usuarioALoguearse.password)){
+                let comparacion = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
+
+                if(comparacion){
                     req.session.usuarioALoguearse = usuarioALoguearse;
 
                     if(req.body.remindme){
-                        res.cookie('usuario', req.session.usuarioALoguearse, {maxAge: 1000 * 60 * 60})
-                        res.locals.usuarioALoguearse = req.session.usuarioALoguearse
+                        res.cookie('usuario', req.session.usuarioALoguearse, {maxAge: 1000 * 60 * 60});
+                        res.locals.usuarioALoguearse = req.session.usuarioALoguearse;
                     }
                     res.redirect('/');
                 } else{
-                    res.render('users/login',
-                    {errors: [{msg: "Credenciales incorrectas"}]})
+                    res.render('users/login', {errors: {msg: "Credenciales incorrectas"}})
                 }
-                } else{
-                    res.render("users/login",
-                    { errors: [{msg: "Credenciales incorrectas"}]})
-                }             
+            } else{
+                res.render('users/login', {errors: {msg: "Credenciales incorrectas"}})
+            }
         })
         .catch(function(error){
             console.log(error);
