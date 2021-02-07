@@ -12,25 +12,16 @@ let productosController = {
             .then(productDetail => {
                 res.render('products/detalle-producto', {productDetail: productDetail});
             })
-        /*const id = req.params.id
-        let productDetail = products.find(product => product.id == id);
-
-        let recomendacion = []
-
-        let randomNum = function() {
-            const numeroRandom = products[Math.floor(Math.random() * products.length)];
-            if (recomendacion.includes(numeroRandom) && recomendacion.includes(id)) {
-                randomNum()
-            } else {
-                recomendacion.push(numeroRandom);
-            }
-        }
-
-        while(recomendacion.length < 4){
-            randomNum()
-        }
-
-        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});*/
+            .catch(function(error){
+                console.log(error);
+            })
+        /*db.Product.findAll({ limit: 5 })
+            .then((recomendacion) => {
+                res.render('products/detalle-producto', {recomendacion});
+            })
+            .catch(function(error){
+                console.log(error);
+            })*/
     },
     buscarProducto: function(req, res){
         let busquedaUsuario = req.query.search;
@@ -48,19 +39,13 @@ let productosController = {
     },
 
     listadoProducto: function(req, res) {
-        let cafes = products.filter(function (producto) {
-            return producto.categoria == "cafe"
-        })
-
-        let cafeteras = products.filter(function (producto) {
-            return producto.categoria == "cafetera"
-        })
-
-        let accesorios = products.filter(function (producto) {
-            return producto.categoria == "accesorio"
-        })
-        
-        res.render('products/listado-productos', { cafes, cafeteras, accesorios });
+        db.Product.findAll()
+            .then(producto => {
+                res.render('products/listado-productos', {producto: producto});
+            })
+            .catch(function(error){
+                console.log(error);
+            })
     },
 
     listadoCafes: function(req, res) {
