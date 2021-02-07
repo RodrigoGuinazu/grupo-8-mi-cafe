@@ -75,7 +75,6 @@ let productosController = {
                 console.log(error);
             })
     },
-
     listadoAccesorios: function(req, res) {
         db.Product.findAll({
             where: {
@@ -94,38 +93,14 @@ let productosController = {
         res.render("products/crear-producto");
     },
 
-    guardarProducto: (req, res, next) => {   
-        let arrayId = [];
-
-        arrayId = products.map(function(obj) {
-            return obj.id
+    guardarProducto: (req, res, next) => {
+        db.Product.create({
+            namer: req.body.nombre,
+            description: req.body.descripcion,
+            price: req.body.precio,
+            category: req.body.categoria,
+            image: req.files[0].filename,
         })
-
-        let mayorId = arrayId.reduce((a, b) => {
-            if(a > b) {
-                return a
-            } else {
-                return b
-            }
-        })
-
-        let nuevoId = mayorId+1;
-
-        let producto = {
-            id: nuevoId,
-            nombre: req.body.nombre,
-            peso: req.body.peso,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            categoria: req.body.categoria,
-            imagen: req.files[0].filename,
-        }
-        products.push(producto);
-
-        const JSONnewProduct = JSON.stringify(products)
-
-        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSONnewProduct);
-
         res.redirect("/productos/listado");
     },
 
