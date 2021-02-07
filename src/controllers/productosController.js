@@ -132,16 +132,14 @@ let productosController = {
     },
 
     eliminarProducto: function (req, res) {
-        // Almacena en una variable el id de producto ingresado en url
-        const idProducto = req.params.id
-        // Recorre el JSON y retorna los que cumplen con la condicion almacenandolo en products
-        let productsFilter = products.filter(function(product) {
-            return product.id != idProducto
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
         })
-        // Sobreescribo en products.json la variable products fitlrando el id de URL
-        fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSON.stringify(productsFilter))
-        // Redirecciona a la pagina que quieras
-        res.redirect("/productos/listado") // siempre redirecciono la ruta que quiero que muestre
+        .then(
+            res.redirect("/productos/listado")
+        )
     },
 }
 
