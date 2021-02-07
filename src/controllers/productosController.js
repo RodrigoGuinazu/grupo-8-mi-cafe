@@ -63,10 +63,17 @@ let productosController = {
     },
 
     listadoCafeteras: function(req, res) {
-        let cafeteras = products.filter(function (producto) {
-            return producto.categoria == "cafetera"
+        db.Product.findAll({
+            where: {
+                category_id: 2
+            }
         })
-        res.render("products/listado-cafeteras", { cafeteras })
+            .then(cafeteras => {
+                res.render('products/listado-cafeteras', {cafeteras: cafeteras});
+            })
+            .catch(function(error){
+                console.log(error);
+            })
     },
 
     listadoAccesorios: function(req, res) {
