@@ -49,10 +49,17 @@ let productosController = {
     },
 
     listadoCafes: function(req, res) {
-        let cafes = products.filter(function (producto) {
-            return producto.categoria == "cafe"
+        db.Product.findAll({
+            where: {
+                category_id: 1
+            }
         })
-        res.render("products/listado-cafes", { cafes })
+            .then(cafes => {
+                res.render('products/listado-cafes', {cafes: cafes});
+            })
+            .catch(function(error){
+                console.log(error);
+            })
     },
 
     listadoCafeteras: function(req, res) {
