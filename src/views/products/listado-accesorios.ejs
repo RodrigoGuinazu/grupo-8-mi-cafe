@@ -26,13 +26,13 @@
                     <% accesorios.forEach(producto =>{ %>
                     <article class="caja-producto">
                         <a href="/productos/<%= producto.id %>/detalle">
-                            <img src="/images/products/<%= producto.imagen %>" alt="recomendacion">
+                            <img src="/images/products/<%= producto.image %>" alt="recomendacion">
                         </a>
                         <div class="producto-info">
                             <i class="fas fa-credit-card"></i>
                             <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$<%= producto.precio %> </h2>
-                            <h3><%= producto.nombre %> </h3>
+                            <h2 class="precio-producto">$<%= producto.price %> </h2>
+                            <h3><%= producto.name %> </h3>
                         </div>                
                     </article>
                     <% }) %>

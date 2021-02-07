@@ -77,10 +77,17 @@ let productosController = {
     },
 
     listadoAccesorios: function(req, res) {
-        let accesorios = products.filter(function (producto) {
-            return producto.categoria == "accesorio"
+        db.Product.findAll({
+            where: {
+                category_id: 3
+            }
         })
-        res.render("products/listado-accesorios", { accesorios })
+            .then(accesorios  => {
+                res.render('products/listado-accesorios', {accesorios : accesorios });
+            })
+            .catch(function(error){
+                console.log(error);
+            })
     },
 
     crearProducto: (req, res) => {
