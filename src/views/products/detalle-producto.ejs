@@ -13,7 +13,7 @@
     <section class="articulo-precio-envio-padre">
         <section class="articulo">
             <article class="imagenes-articulo">
-                 <img class="img-principal" src="/images/products/<%= productDetail.imagen %>" alt="imagen-principal">
+                 <img class="img-principal" src="/images/products/<%= productDetail.image %>" alt="imagen-principal">
             </article>
         </section>
 
@@ -21,14 +21,14 @@
            
             <article class="precio-envio-article">
                 <div class="titulo">
-                    <h2><%= productDetail.nombre %><span>
+                    <h2><%= productDetail.name %><span>
                     </span></h2>
                 </div>
                 <div class="puntuacion">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                 </div>
                 <div class="precio">
-                    <div><p class="pesos">$<%= productDetail.precio %></p></div>
+                    <div><p class="pesos">$<%= productDetail.price %></p></div>
                 </div>
                 <div class="botones">
                     <div class="boton-completo"><a href="/carrito/lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
@@ -71,7 +71,7 @@
             <article >
                 <h4> Descripción del producto: </h4>
                 <br>
-                <p><%= productDetail.descripcion %><p>
+                <p><%= productDetail.description %><p>
             </article>
         </div>
         <section class="descripcion">
@@ -79,7 +79,7 @@
             <article>
                 <h4 align="center"> Descripción del producto: </h4>
                 <br>
-                <p><%= productDetail.descripcion %><p>
+                <p><%= productDetail.description %><p>
             </article>
 
         </section>
@@ -113,27 +113,7 @@
                     <div class="like-dislike"><i class="far fa-thumbs-up"></i><span><i class="far fa-thumbs-down"></i></span></div>
                 </div>
         </section>
-
-        <section class="recomendacion">
-            
-                <h4>Productos Relacionados</h4>
-                <div class="recomendados">
-                   <% recomendacion.forEach(recomendado =>{ %>
-                    <article class="caja-producto">
-                        <a href="/productos/<%= recomendado.id %>/detalle">
-                            <img src="/images/products/<%= recomendado.imagen %>" alt="recomendacion">
-                        </a>
-                        <div class="producto-info">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-shopping-bag"></i>
-                            <h2 class="precio-producto">$<%= recomendado.precio %> </h2>
-                            <h3><%= recomendado.nombre %> </h3>
-                        </div>                
-                    </article>
-                    <% }) %>
-
-                 </div>
-        </section>
+        
     <%- include('../partials/footer.ejs')%>
 
     </main>

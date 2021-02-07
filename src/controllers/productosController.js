@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../../database/models')
 const { validationResult } = require("express-validator");
 
 let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
@@ -7,7 +8,11 @@ products = JSON.parse(products);
 
 let productosController = {
     detalleProducto: function(req, res, next) {
-        const id = req.params.id
+        db.Product.findByPk(req.params.id)
+            .then(productDetail => {
+                res.render('products/detalle-producto', {productDetail: productDetail});
+            })
+        /*const id = req.params.id
         let productDetail = products.find(product => product.id == id);
 
         let recomendacion = []
@@ -25,7 +30,7 @@ let productosController = {
             randomNum()
         }
 
-        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
+        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});*/
     },
     buscarProducto: function(req, res){
         let busquedaUsuario = req.query.search;
