@@ -22,27 +22,32 @@ let usersController = {
     processLogin: function(req, res) {
         let errors = validationResult(req);
 
-            let usuarioALoguearse = users.find(user => user.email == req.body.email);
-            console.log(usuarioALoguearse);
-            if(usuarioALoguearse != undefined) {
-                if(bcrypt.compareSync(req.body.password, usuarioALoguearse.password)) {
-                    req.session.usuarioALoguearse = usuarioALoguearse;
+        let usuarioALoguearse = db.User.findOne({where: { email: req.body.email }})
+            .then(function(usuarioALoguearse){
+                if(usuarioALoguearse != undefined){
+                    if(bcrypt.compare(req.body.password, usuarioALoguearse.password)){
+                        req.session.usuarioALoguearse = usuarioALoguearse;
 
-                    if(req.body.remindme){
-                        res.cookie('usuario', usuarioALoguearse.email, {maxAge: 1000 * 60 * 60})
-                        res.locals.usuarioALoguearse = req.session.usuarioALoguearse
+                        if(req.body.remindme){
+                            res.cookie('usuario', usuarioALoguearse.email, {maxAge: 1000 * 60 * 60})
+                            res.locals.usuarioALoguearse = req.session.usuarioALoguearse
+                        }
+
+                        res.redirect('/');
+                    } else{
+                        res.render('usres/login', {errors: [
+                            {msg: "Credenciales incorrectas"}
+                        ]})
                     }
-                    res.redirect('/');
-                } else {
-                res.render("users/login", { errors: [
-                    {msg: "Credenciales incorrectas"}
-                ]})
-                }
-            } else {
-            res.render("users/login", { errors: [
-                {msg: "No existe ningun usuario registrado con ese email"}
-            ]})
-        }
+                    } else{
+                        res.render("users/login", { errors: [
+                            {msg: "No existe ningun usuario registrado con ese email"}
+                        ]})
+                    }
+        })
+        .catch(function(error){
+            console.log(error);
+        })
     },
     logout: function(req, res){
         req.session.destroy();
@@ -105,27 +110,37 @@ let usersController = {
         res.render('users/editar-usuario');
     },
     modificacion: (req, res) => {
-        users.forEach(user => {
-            if(req.session.usuarioALoguearse.id == user.id){
-                user.nombre = req.body.nombre
-                user.apellido = req.body.apellido
-                user.fechaNacimiento = req.body.fechaNacimiento
-                user.direccion = req.body.direccion
-                user.genero = req.body.genero
-                if (req.files[0] != undefined){
-                    user.imagen = req.files[0].filename
+        if(req.files[0] != undefined){
+            db.Profile.update({
+                name: req.body.nombre,
+                last_name: req.body.apellido,
+                birthdate: req.body.fechaNacimiento,
+                gender: req.body.genero,
+                image: req.files[0].filename
+            },
+            {
+                where: {
+                    usuarioALoguearse.id == User.id
                 }
-            }
-            
-        });
-        const JSONuser = JSON.stringify(users);
-        fs.writeFileSync(path.join(__dirname, '..','data','usuarios.json'), JSONuser);
-        res.redirect('/')
+            })
+        } else{
+            db.Profile.update({
+                name: req.body.nombre,
+                last_name: req.body.apellido,
+                birthdate: req.body.fechaNacimiento,
+                gender: req.body.genero,
+                image: image
+            },
+            {
+                where: {
+                    usuarioALoguearse.id == user.id
+                }
+            })
+        }
     },
     perfil: function(req, res) {
         res.render('users/perfil-usuario');
-    },
-
+    }
 }
 
 module.exports = usersController;

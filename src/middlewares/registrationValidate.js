@@ -6,8 +6,8 @@ let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {e
 users = JSON.parse(users);
 
 module.exports = [
-    check('nombre').isLength({min:1}).withMessage('Ingresá tu nombre.'),
-    check('apellido').isLength({min:1}).withMessage('Ingresá tu apellido.'),
+    //check('nombre').isLength({min:1}).withMessage('Ingresá tu nombre.'),
+    //check('apellido').isLength({min:1}).withMessage('Ingresá tu apellido.'),
     check('email').isEmail().withMessage('Ingresá un E-mail válido.'),
     check('password').isStrongPassword().withMessage('La contraseña debe tener al menos 8 caracteres, 1 Mayuscula, 1 Numero y 1 Caracter especial.'),
     body('confirmarPassword')
