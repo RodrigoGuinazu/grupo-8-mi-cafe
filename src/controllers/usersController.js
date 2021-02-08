@@ -73,11 +73,11 @@ let usersController = {
     },
     // LOGICA EDICION
     modificacion: (req, res) => {
-        db.Profile.update({
-            name: req.body.nombre,
-            last_name: req.body.apellido,
-            birthdate: req.body.fechaNacimiento,
-            gender: req.body.genero
+        db.User.update({
+            name: req.body.name,
+            lastname: req.body.lastname,
+            birthdate: req.body.birthdate,
+            gender: req.body.gender
         },
         {
             where: {
@@ -85,7 +85,7 @@ let usersController = {
             }
         })
         .then( resultado => {
-            res.redirect('/usuarios/login')
+            res.redirect('/usuarios/perfil')
             })
         .catch(error => {
             res.send(error)
