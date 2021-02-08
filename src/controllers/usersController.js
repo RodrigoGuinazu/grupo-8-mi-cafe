@@ -13,7 +13,6 @@ let usersController = {
         let errors = validationResult(req);
         
         db.User.findOne({
-            include: [{association: "addresses"}],
             where: {
                 email: req.body.email,
             }
