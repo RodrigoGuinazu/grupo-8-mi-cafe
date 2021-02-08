@@ -22,13 +22,13 @@
     <div class="navbar-inferior">
         
         <% if(locals.user) { %>
-            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> <%= user.name %> - <%= user.address %></h4></div>
+            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> <%= user.name %> - <%= user.addresses.street %> <%= user.addresses.number %></h4></div>
         <% } else {%>
         <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis a tu domicilio </h4></div>
         <% } %>
 
         <% if(locals.user) { %>
-            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4>Enviar a <br><%= user.address %></h4></div>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4>Enviar a <br><%= user.addresses.street %> <%= user.addresses.number %></h4></div>
         <% } else {%>
             <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis <br> a tu domicilio </h4></div>
         <% } %>
