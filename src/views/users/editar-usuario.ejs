@@ -17,31 +17,26 @@
         <section align="center" class="formulario">
             <form method="POST" action="/usuarios/editar?_method=PATCH" enctype="multipart/form-data">
                 <div>
-                    <input type="text" name="nombre" id="nombre" value="<%= user.nombre %>">
-                    <input type="text" name="apellido" id="apellido" value="<%= user.apellido %>">
-                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" value="<%= user.direccion %>">
+                    <label for="" class="titulo">Nombre</label>
+                    <br>
+                    <input type="text" name="name" id="name" value="<%= user.name %>">
+                    <label for="" class="titulo">Apellido</label>
+                    <br>
+                    <input type="text" name="lastname" id="lastname" value="<%= user.lastname %>">
                     <br>
                     <label class="titulo" for="">Fecha de Nacimiento</label>
                     <br>
-                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<%= user.fechaNacimiento %>">
+                    <input type="date" name="birthdate" id="birthdate" value="<%= user.fechaNacimiento %>">
                     <div class="genero">
                         <label for="" class="titulo">Género</label>
                         <br>
-                        <select name="genero" id="">
-                        <option value="<%= user.genero %>"><%= user.genero %></option>
-                        <option value="Femenino" name="genero">Femenino</option>
-                        <option value="Masculino" name="genero">Masculino</option>
-                        <option value="Indistinto" name="genero">Indistinto</option>
+                        <select name="gender" id="">
+                        <option value="<%= user.gender %>"><%= user.gender %></option>
+                        <option value="F" name="gender">Femenino</option>
+                        <option value="M" name="gender">Masculino</option>
+                        <option value="I" name="gender">Indistinto</option>
                         </select>
                     </div>
-                </div>
-                
-                
-            
-                <div class="subir-imagen">
-                    <label class="titulo" for="">Subi tu Foto</label>
-                    <br>
-                    <input type="file" name="imagen">
                 </div>
 
                 <button class="confirmar-cambios" type="submit">Confirmar Cambios</button>
