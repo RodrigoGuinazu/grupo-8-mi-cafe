@@ -19,12 +19,12 @@
                 </div>
                 <% } %>
                 <h3 class="nombre_completo"><%= user.nombre %> <%= user.apellido %></h3>
-                <% if(locals.user && locals.user.role == 'admin') { %> 
+                <% if(locals.user && locals.user.role_id == 1) { %> 
 
                 <a class="boton_usuario" href="/productos/crear">Crear Producto</a>
 
                 <% } %>
-                <% if(locals.user && locals.user.role != 'admin') { %> 
+                <% if(locals.user && locals.user.role_id != 1) { %> 
                
                 <a class="boton_usuario" href="/usuarios/editar">Mi Perfil <i class="far fa-user-circle"></i></a>
 
