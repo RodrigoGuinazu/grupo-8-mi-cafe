@@ -42,9 +42,9 @@ module.exports = (sequelize, dataTypes) => {
     const Payment_method = sequelize.define(alias, cols, config);
     
     Payment_method.associate = function(models){
-        Payment_method.belongsTo(models.Profile, {
-            as: "profile",
-            foreignKey: "profile_id_payment"
+        Payment_method.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "user_id_payment"
         })
     }
 
