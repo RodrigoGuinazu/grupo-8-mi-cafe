@@ -60,7 +60,7 @@ let usersController = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 name: req.body.name,
-                lastname: req.body.email,
+                lastname: req.body.lastname,
                 role_id: 2,
                 image: 'avatar_placeholder.png'
             })
