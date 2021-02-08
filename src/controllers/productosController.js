@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const db = require('../../database/models')
-const { validationResult } = require("express-validator");
-const { REPL_MODE_SLOPPY } = require('repl');
+const db = require('../../database/models');
 
 let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
 products = JSON.parse(products);
@@ -11,18 +9,17 @@ let productosController = {
     detalleProducto: function(req, res, next) {
         db.Product.findByPk(req.params.id)
             .then(productDetail => {
-                res.render('products/detalle-producto', {productDetail: productDetail});
+                db.Product.findAll({ limit: 4 })
+                    .then((recomendacion) => {
+                        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                    })
             })
             .catch(function(error){
                 console.log(error);
             })
-        /*db.Product.findAll({ limit: 5 })
-            .then((recomendacion) => {
-                res.render('products/detalle-producto', {recomendacion});
-            })
-            .catch(function(error){
-                console.log(error);
-            })*/
     },
     buscarProducto: function(req, res){
         let busquedaUsuario = req.query.search;
@@ -41,8 +38,8 @@ let productosController = {
 
     listadoProducto: function(req, res) {
         db.Product.findAll()
-            .then(producto => {
-                res.render('products/listado-productos', {producto: producto});
+            .then(productos => {
+                res.render('products/listado-productos', {productos: productos});
             })
             .catch(function(error){
                 console.log(error);

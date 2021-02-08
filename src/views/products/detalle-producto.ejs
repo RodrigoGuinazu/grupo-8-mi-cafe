@@ -113,6 +113,27 @@
                     <div class="like-dislike"><i class="far fa-thumbs-up"></i><span><i class="far fa-thumbs-down"></i></span></div>
                 </div>
         </section>
+
+        <section class="recomendacion">
+
+            <h3>Productos Relacionados</h3>
+            <div class="recomendados">
+                <% recomendacion.forEach(recomendado =>{ %>
+                 <article class="caja-producto">
+                     <a href="/productos/<%= recomendado.id %>/detalle">
+                         <img src="/images/products/<%= recomendado.image %>" alt="recomendacion">
+                     </a>
+                     <div class="producto-info">
+                         <i class="fas fa-credit-card"></i>
+                         <i class="fas fa-shopping-bag"></i>
+                         <h2 class="precio-producto">$<%= recomendado.price %> </h2>
+                         <h3><%= recomendado.name %> </h3>
+                     </div>                
+                 </article>
+                 <% }) %>
+
+              </div>
+        </section>
         
     <%- include('../partials/footer.ejs')%>
 

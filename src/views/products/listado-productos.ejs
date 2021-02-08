@@ -16,10 +16,9 @@
                 </div>
                 <% } %> 
 
-                 <!--PRODUCTOS-->
                 <h3>Cafés</h3>
                 <div class="categoria cafes">
-                    <% producto.forEach(producto =>{ %>
+                    <% productos.forEach(producto =>{ %>
                     <article class="caja-producto">
                         <a href="/productos/<%= producto.id %>/detalle">
                             <img src="/images/products/<%= producto.image %>" alt="recomendacion">
@@ -36,7 +35,7 @@
 
                 <h3>Cafeteras</h3>
                 <div class="categoria cafes">
-                    <% producto.forEach(producto =>{ %>
+                    <% productos.forEach(producto =>{ %>
                     <article class="caja-producto">
                         <a href="/productos/<%= producto.id %>/detalle">
                             <img src="/images/products/<%= producto.image %>" alt="recomendacion">
@@ -53,7 +52,7 @@
 
                 <h3>Accesorios</h3>
                 <div class="categoria cafes">
-                    <% producto.forEach(producto =>{ %>
+                    <% productos.forEach(producto =>{ %>
                     <article class="caja-producto">
                         <a href="/productos/<%= producto.id %>/detalle">
                             <img src="/images/products/<%= producto.image %>" alt="recomendacion">
