@@ -18,7 +18,7 @@ let usersController = {
             }
         })
         .then(usuarioALoguearse => {
-
+            console.log(usuarioALoguearse);
             if(usuarioALoguearse){
                 let comparacion = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
 
@@ -59,7 +59,10 @@ let usersController = {
             db.User.create({
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                role_id: 2
+                name: req.body.name,
+                lastname: req.body.email,
+                role_id: 2,
+                image: 'avatar_placeholder.png'
             })
         }
         res.redirect("/usuarios/login");
