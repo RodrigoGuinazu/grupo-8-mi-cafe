@@ -94,7 +94,24 @@ let usersController = {
     // VISTA PERFIL
     perfil: function(req, res) {
         res.render('users/perfil-usuario');
-    }
+    },
+
+    // LOGICA BORRADO
+    delete: (req, res) => {
+        db.User.destroy({
+            where: {
+                id: res.locals.user.id
+            }
+        })
+        .then( resultado => {
+                 req.session.destroy();
+                 res.redirect('/')
+            })
+        .catch(error => {
+            res.send(error)
+        })
+        }
+
 }
 
 module.exports = usersController;
