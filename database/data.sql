@@ -5,27 +5,19 @@ INSERT INTO roles (type,created_at) VALUES ('user',NOW());
 
 -- Tabla users
 
-INSERT INTO users (email, password, role_id, created_at) VALUES ('admin@hotmail.com', '$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu', 1, NOW());
-INSERT INTO users (email, password, role_id, created_at) VALUES ('francisco@gmail.com', '$2b$10$c0AVLRddaNbDHwd3DIA1lO9eIzKUHxYM2hSEwjI7rlH8.rcru5qsS', 2, NOW());
-INSERT INTO users (email, password, role_id, created_at) VALUES ('rodrigosan06@gmail.com', '$2b$10$SX9/59B3nGTPqn0Gwa4Apeo4l97uOGQY3XFLNQKvvDx6VKSAzswdu', 2, NOW());
-INSERT INTO users (email, password, role_id, created_at) VALUES ('rodrigo@hotmail.com', '$2b$10$y0PFqCKB3xKZ4nMHsG/wu.nA/6b7BSGtgBNoA7hlUuBLXwHFZu6kW', 2, NOW());
-INSERT INTO users (email, password, role_id, created_at) VALUES ('anav@gmail.com', '$2b$10$tDYdKWkvnskPAKdwhrTZpucLk4mQQJUgfQrPCo1sv8M.ke/vKwb2u', 2, NOW());
-
--- Tabla profiles
-
-INSERT INTO profiles (user_id_profile, birthdate, age, name, lastname, image, gender, created_at) VALUES (1, '1990-01-01', 31, 'Admin', 'MiCafe', 'imagen-1611157219600.jpg', 'I', NOW());
-INSERT INTO profiles (user_id_profile, birthdate, age, name, lastname, image, gender, created_at) VALUES (2, '2000-01-01', 21, 'Fran', 'Silva', 'imagen-1611095282613.jpg', 'M', NOW());
-INSERT INTO profiles (user_id_profile, birthdate, age, name, lastname, image, gender, created_at) VALUES (3, '1989-01-01', 32, 'Rodri', 'Sanchez', 'imagen-1611097738412.jpg', 'M', NOW());
-INSERT INTO profiles (user_id_profile, birthdate, age, name, lastname, image, gender, created_at) VALUES (4, '1993-01-01', 28, 'Rodri', 'Guina', 'imagen-1611098774970.jpg', 'M', NOW());
-INSERT INTO profiles (user_id_profile, birthdate, age, name, lastname, image, gender, created_at) VALUES (5, '1991-01-01', 30, 'Ani', 'Vargas', NULL, 'F', NOW());
+INSERT INTO users (email, password, name, lastname, role_id, image, birthdate, gender, created_at) VALUES ('admin@hotmail.com', '$2b$10$91Umf3AjCqjb5fPuGE1.Su5DgJgE8KtBqdfCSPrkQ060m3ARhjMQu', 'Admin', 'MiCafe', 1, 'imagen-1611157219600.jpg', '1990-01-01', 'I', NOW());
+INSERT INTO users (email, password, name, lastname, role_id, image, birthdate, gender, created_at) VALUES ('francisco@gmail.com', '$2b$10$c0AVLRddaNbDHwd3DIA1lO9eIzKUHxYM2hSEwjI7rlH8.rcru5qsS', 'Fran', 'Silva', 2, 'imagen-1611095282613.jpg', '2000-01-01', 'M', NOW());
+INSERT INTO users (email, password, name, lastname, role_id, image, birthdate, gender, created_at) VALUES ('rodrigosan06@gmail.com', '$2b$10$SX9/59B3nGTPqn0Gwa4Apeo4l97uOGQY3XFLNQKvvDx6VKSAzswdu', 'Rodri', 'Sanchez', 2, 'imagen-1611097738412.jpg', '1989-01-01', 'M', NOW());
+INSERT INTO users (email, password, name, lastname, role_id, image, birthdate, gender, created_at) VALUES ('rodrigo@hotmail.com', '$2b$10$y0PFqCKB3xKZ4nMHsG/wu.nA/6b7BSGtgBNoA7hlUuBLXwHFZu6kW', 'Rodri', 'Guina', 2, 'imagen-1611098774970.jpg', '1998-01-01', 'M', NOW());
+INSERT INTO users (email, password, name, lastname, role_id, image, birthdate, gender, created_at) VALUES ('anav@gmail.com', '$2b$10$tDYdKWkvnskPAKdwhrTZpucLk4mQQJUgfQrPCo1sv8M.ke/vKwb2u', 'Ani', 'Vargas', 2, NULL,'1991-01-01', 'F', NOW());
 
 -- Tabla payment_methods
 
-INSERT INTO payment_methods (type, cardholder_name, card_number, expiration_date, security_code, profile_id_payment, created_at) VALUES ('Debito', 'ADMIN MICAFE', 1234567891234567, 1212, 123, 1, NOW());
+INSERT INTO payment_methods (type, cardholder_name, card_number, expiration_date, security_code, user_id_payment, created_at) VALUES ('Debito', 'ADMIN MICAFE', 1234567891234567, 1212, 123, 1, NOW());
 
 -- Tabla addresses
 
-INSERT INTO addresses (province, city, zip_code, street, number, flat, apartment, profile_id_address, created_at) VALUES ('Buenos Aires', 'CABA', 'B1675', 'Monroe', 860, NULL, NULL, 1, NOW());
+INSERT INTO addresses (province, city, zip_code, street, number, flat, apartment, user_id_address, created_at) VALUES ('Buenos Aires', 'CABA', 'B1675', 'Monroe', 860, NULL, NULL, 1, NOW());
 
 -- Tabla categories
 
