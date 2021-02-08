@@ -98,10 +98,10 @@ let productosController = {
             price: req.body.price,
             category: req.body.category_id,
             image: req.files[0].filename,
-        })
-        db.Product_attribute.create({
-            value: req.body.attributes
-        })
+            Attribute: {
+                value: req.body.attributes
+            }
+        }, {include: [{association: 'Attribute'}]})
         res.redirect("/productos/listado");
     },
 
