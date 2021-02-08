@@ -16,28 +16,31 @@
             <%- include('../partials/vistaErroresValidaciones.ejs') %>
             <form method="POST" action="/productos/crear" enctype="multipart/form-data">
                 <div class="product-type">
-                    <select name="categoria">
-                        <option value="cafe">Cafés</option>
-                        <option value="cafetera">Cafeteras</option>
-                        <option value="accesorio">Accesorios</option>
+                    <select name="category"> <!--Tipo de producto, según Categoría-->
+                        <option value= 1>Cafés</option>
+                        <option value= 2>Cafeteras</option>
+                        <option value= 3>Accesorios</option>
                     </select>
                 </div>
                 <div class="product-img">
                     <input type="file" name="product-img" required>
                 </div>
                 <div class="product-name">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" required>
+                    <input type="text" name="name" id="nombre" placeholder="Nombre del producto" required>
                 </div>
-                <div class="product-weight">
-                    <select name="peso">
-                        <option value="250">250gr</option>
-                        <option value="500">500gr</option>
-                        <option value="1000">1000gr</option>
-                        <option value="N/A">N/A</option>
+
+                <div class="product-weight"> <!--Atributos de peso y color, según categoría-->
+                    <select name="attributes">
+                        <option value= "250">250gr</option>
+                        <option value= "500">500gr</option>
+                        <option value= "1000">1000gr</option>
+                        <option value= "Rojo">Rojo</option>
+                        <option value= "Negro">Negro</option>
+                        <option value= "Varios">Varios</option>
                     </select>
                 </div>
                 <div class="product-price">
-                    <input type="number" name="precio" id="precio" placeholder="$00,0" required>
+                    <input type="number" step=".01" name="precio" id="precio" placeholder="$00.00" required>
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>

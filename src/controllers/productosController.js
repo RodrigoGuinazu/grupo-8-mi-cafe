@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models')
 const { validationResult } = require("express-validator");
+const { REPL_MODE_SLOPPY } = require('repl');
 
 let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
 products = JSON.parse(products);
@@ -95,11 +96,14 @@ let productosController = {
 
     guardarProducto: (req, res, next) => {
         db.Product.create({
-            namer: req.body.nombre,
+            name: req.body.name,
             description: req.body.descripcion,
-            price: req.body.precio,
-            category: req.body.categoria,
+            price: req.body.price,
+            category: req.body.category_id,
             image: req.files[0].filename,
+        })
+        db.Product_attribute.create({
+            value: req.body.attributes
         })
         res.redirect("/productos/listado");
     },
@@ -124,9 +128,9 @@ let productosController = {
                 product.descripcion = req.body.descripcion
                 product.precio = req.body.precio
                 product.categoria = req.body.categoria
-                if (req.files[0] != undefined){
+                /*if (req.files[0] != undefined){
                     product.imagen = req.files[0].filename
-                }
+                }*/
             }
             
             
