@@ -10,7 +10,7 @@
         <%- include('../partials/header.ejs')%>
         <main>
             <section class="tarjeta-producto">
-                <% if(locals.user && locals.user.role == 'admin') { %> 
+                <% if(locals.user && locals.user.role_id == 1) { %> 
                 <div class="button-section">
                     <a class="button-create" href="/productos/crear">Crear</a>
                 </div>
