@@ -13,11 +13,13 @@ let usersController = {
         let errors = validationResult(req);
         
         db.User.findOne({
+            include: [{association: "addresses"}],
             where: {
                 email: req.body.email,
             }
         })
         .then(usuarioALoguearse => {
+            //return res.send(usuarioALoguearse)
             console.log(usuarioALoguearse);
             if(usuarioALoguearse){
                 let comparacion = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);

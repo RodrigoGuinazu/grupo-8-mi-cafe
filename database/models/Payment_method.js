@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(4).UNSIGNED,
             allowNull: false
         },
-        profile_id_payment: {
+        user_id_payment: {
             type: dataTypes.BIGINT.UNSIGNED,
             allowNull: false
         }

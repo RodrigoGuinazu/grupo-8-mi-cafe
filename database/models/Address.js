@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(10),
             allowNull: true
         },
-        profile_id_address: {
+        user_id_address: {
             type: dataTypes.BIGINT.UNSIGNED,
             allowNull: false
         }
