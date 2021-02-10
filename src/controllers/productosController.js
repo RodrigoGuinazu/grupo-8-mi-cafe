@@ -100,6 +100,15 @@ let productosController = {
             image: req.files[0].filename,
             category_id: req.body.category
         })
+        .then(product => {
+            product.addAttributes({
+                name:    
+            })
+        })
+        .catch(error => {
+            console.log(error);
+        })
+        res.redirect("/productos/listado");
         
         /*
         .then(product => {
@@ -114,7 +123,6 @@ let productosController = {
             })
         })
         */
-       res.redirect("/productos/listado")
         /*.catch(error => {
             console.log(error)
         })*/

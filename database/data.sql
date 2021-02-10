@@ -59,23 +59,27 @@ INSERT INTO products (name, price, description, image, category_id, created_at) 
 
 -- Tabla attributes
 
-INSERT INTO attributes (name, created_at) VALUES ('weight', NOW());
-INSERT INTO attributes (name, created_at) VALUES ('color', NOW());
+INSERT INTO attributes (name, created_at) VALUES ('250', NOW());
+INSERT INTO attributes (name, created_at) VALUES ('500', NOW());
+INSERT INTO attributes (name, created_at) VALUES ('1000', NOW());
+INSERT INTO attributes (name, created_at) VALUES ('Rojo', NOW());
+INSERT INTO attributes (name, created_at) VALUES ('Negro', NOW());
+INSERT INTO attributes (name, created_at) VALUES ('Varios', NOW());
 
 -- Tabla products_attributes
 
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (1, 1, '250', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (2, 1, '500', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (3, 1, '250', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (4, 1, '250', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (5, 1, '500', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (6, 1, '1000', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (7, 1, '500', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (8, 2, 'Rojo', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (9, 2, 'Negro', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (10, 2, 'Varios', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (11, 2, 'Negro', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (12, 2, 'Negro', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (13, 2, 'Negro', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (14, 2, 'Negro', NOW());
-INSERT INTO products_attributes (attribute_product_id, attribute_id, value, created_at) VALUES (15, 2, 'Negro', NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (1, 1, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (2, 2, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (3, 2, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (4, 3, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (5, 1, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (6, 1, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (7, 2, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (8, 4, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (9, 5, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (10, 6, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (11, 5, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (12, 5, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (13, 5, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (14, 5, NOW());
+INSERT INTO products_attributes (attribute_product_id, attribute_id, created_at) VALUES (15, 5, NOW());
