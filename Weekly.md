@@ -1,4 +1,4 @@
-:: Sprint 4 (20201218) ::
+** :: Sprint 4 (20201218) :: **
 
 + Se abordarán las tarjetas 'pendientes' y 'en proceso' del Sprint 3 (Vistas Creación y Edición de productos, ruteo de carpeta 'src'), antes de iniciar las tareas del Sprint 4.
 
@@ -39,7 +39,7 @@ Weekly (20210105)
 
 =======
 
-:: Sprint 5 (20210108) ::
+** :: Sprint 5 (20210108) :: **
 
 + Se abordarán las tarjetas 'pendientes' del Sprint 4 (Login y #404), antes de iniciar las tareas del Sprint 5.
 
@@ -108,11 +108,11 @@ Weekly (20210119)
 + Queda a revisión y mejora la vista y lógica de 'Carrito'.
 + Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
 
-+ Se realizará la Retrospectiva, con las acciones de mejora y mitigación, desarrolladas durante el Sprint 4 [En curso].
++ Se realizará la Retrospectiva, con las acciones de mejora y mitigación, desarrolladas durante el Sprint 5 [En curso].
 
 =======
 
-:: Sprint 6 (20210121) ::
+** :: Sprint 6 (20210121) :: **
 
 + Se abordarán las tarjetas 'pendientes' del Sprint 5, antes de iniciar las tareas del Sprint 6.
 
@@ -186,6 +186,13 @@ Daily (20210204)
 
 =======
 
-Daily (20210205)
+Daily (20210205-20210209)
 
-+ 
++ Se resolvieron los siguientes STOPPERS:
+  + CRUD Usuario: se generó la lógica completa del Modelo User para Crear, Leer, Editar, y Eliminar.
+  
+  + CRUD producto: se generó la lógica completa del Modelo Product para Leer, y Eliminar. En el caso del Modelo Product_Attribute, queda pendiente completar la relación con los Métodos Crear, y Editar; dado que no se lograr vincular al PRODUCTO con los ATRIBUTOS relacionados.
+
++ Queda pendiente resolver algunas correcciones del Sprint 5 (buscador, cookies, etc).
+
++ Se realizará la Retrospectiva, con las acciones de mejora y mitigación, desarrolladas durante el Sprint 6 [En curso].
