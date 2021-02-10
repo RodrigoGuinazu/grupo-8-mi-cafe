@@ -107,23 +107,6 @@ let productosController = {
             console.log(error);
         })
         res.redirect("/productos/listado");
-        
-        /*
-        .then(product => {
-            Product.addProduct_attribute({value: req.body.attribute})
-            .then(()=> {
-                product.reload({
-                    include: [{association: 'attributes'}]
-                })
-                .then(product => {
-                    res.redirect("/productos/listado", {product:product})
-                })
-            })
-        })
-        */
-        /*.catch(error => {
-            console.log(error)
-        })*/
     },
 
     editarProducto: function(req, res) {
@@ -145,12 +128,19 @@ let productosController = {
                 id: req.params.id
             })
         })
-        .then( resultado => {
-            res.redirect('detalle')
+        .then(edit => {
+            db.Product_attribute.update({
+                attribute_id: req.body.attribute,
+            },{
+                where: ({
+                    attribute_product_id: req.params.id
+                })
+            })
         })
-        .catch(error =>
-            console.log(error)
-            )
+        .catch(error => {
+            console.log(error);
+        })
+        res.redirect('detalle');
     },
 
     eliminarProducto: function (req, res) {
