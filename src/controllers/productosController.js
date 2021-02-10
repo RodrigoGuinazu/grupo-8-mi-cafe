@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models');
+const Product = require('../../database/models/Product');
 
 let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
 products = JSON.parse(products);
@@ -94,47 +95,56 @@ let productosController = {
     guardarProducto: (req, res, next) => {
         db.Product.create({
             name: req.body.name,
-            description: req.body.descripcion,
             price: req.body.price,
-            category: req.body.category_id,
+            description: req.body.description,
             image: req.files[0].filename,
-            Attribute: {
-                value: req.body.attributes
-            }
-        }, {include: [{association: 'Attribute'}]})
-        res.redirect("/productos/listado");
+            category_id: req.body.category
+        })
+        
+        /*
+        .then(product => {
+            Product.addProduct_attribute({value: req.body.attribute})
+            .then(()=> {
+                product.reload({
+                    include: [{association: 'attributes'}]
+                })
+                .then(product => {
+                    res.redirect("/productos/listado", {product:product})
+                })
+            })
+        })
+        */
+       res.redirect("/productos/listado")
+        /*.catch(error => {
+            console.log(error)
+        })*/
     },
 
     editarProducto: function(req, res) {
-        const id = req.params.id
-        let productToEdit = products.find(product => product.id == id);
-
-        res.render('products/editar-producto', {productToEdit: productToEdit});
+        db.Product.findByPk(req.params.id)
+        .then( Product => {
+            res.render('products/editar-producto', {Product: Product})
+        })
     },
 
     modificacion: (req, res) => {
-        /*
-        const {nombre, peso, descripcion, precio, categoria, } = req.body
-    
-        db.Product.update(req.body)
-        */
-        products.forEach(product => {
-            if(req.params.id == product.id){
-                product.nombre = req.body.nombre
-                product.peso = req.body.peso
-                product.descripcion = req.body.descripcion
-                product.precio = req.body.precio
-                product.categoria = req.body.categoria
-                /*if (req.files[0] != undefined){
-                    product.imagen = req.files[0].filename
-                }*/
-            }
-            
-            
-        });
-        const JSONproduct = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, '..','data','productos.json'), JSONproduct);
-        res.redirect('detalle')
+        db.Product.update({
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            image: req.files[0].filename,
+            category_id: req.body.category
+        },{
+            where: ({
+                id: req.params.id
+            })
+        })
+        .then( resultado => {
+            res.redirect('detalle')
+        })
+        .catch(error =>
+            console.log(error)
+            )
     },
 
     eliminarProducto: function (req, res) {

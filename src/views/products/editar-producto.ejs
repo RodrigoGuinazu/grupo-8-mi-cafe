@@ -11,47 +11,49 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <section align="center" class="formulario">
-            <h2>Editar producto <%= productToEdit.nombre %></h2>
-            <form action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h2>Editar producto <%= Product.name %></h2>
+            <form action="/productos/<%= Product.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="product-type">
-                    <label for="">Categoria</label>
+                    <label for="">Categoría</label>
                     <br>
-                    <select name="categoria">
-                        <option value="<%= productToEdit.categoria %>" selected><%= productToEdit.categoria %></option>
-                        <option value="cafe">Cafés</option>
-                        <option value="cafetera">Cafeteras</option>
-                        <option value="accesorio">Accesorios</option>
+                    <select name="category">
+                        <option value="<%= Product.category %>" selected><%= Product.category %></option>
+                        <option value= 1>Cafés</option>
+                        <option value= 2>Cafeteras</option>
+                        <option value= 3>Accesorios</option>
                     </select>
                 </div>
                 <div class="product-img">
                     <label for="">Imagen del Producto</label>
                     <br>
-                    <input type="file" name="imagen">
+                    <input type="file" name="image">
                 </div>
                 <div class="product-name">
                     <label for="">Titulo</label>
                     <br>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" value="<%= productToEdit.nombre %>">
+                    <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= Product.name %>">
                 </div>
                 <div class="product-weight">
                     <label for="">Peso en gr</label>
                     <br>
-                    <select name="peso">
-                        <option value="<%= productToEdit.peso %>" selected><%= productToEdit.peso %></option>
+                    <!--
+                    <select name="weight">
+                        <option value="<%= Product.weight %>" selected><%= Product.weight %></option>
                         <option value="250">250gr</option>
                         <option value="500">500gr</option>
                         <option value="1000">1000gr</option>
                         <option value="N/A">N/A</option>
                     </select>
+                    -->
                 </div>
                 <div class="product-price">
                     <label for="">Precio</label>
                     <br>
-                    <input type="text" name="precio" id="precio" placeholder="$00,0" value="<%= productToEdit.precio %>">
+                    <input type="text" name="price" id="price" placeholder="$00,0" value="<%= Product.price %>">
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>
-                   <textarea name="descripcion" rows="10" cols="40"><%= productToEdit.descripcion %></textarea>
+                   <textarea name="description" rows="10" cols="40"><%= Product.description %></textarea>
                </div>
                <div class="product-create">
                 <button type="submit" class="product-create-button">Guardar Cambios</button>
@@ -61,7 +63,7 @@
                 </div>
             </form>
             <div>
-                <form action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
+                <form action="/productos/<%= Product.id %>/editar?_method=DELETE" method="POST">
                     <button class="product-delete-button" type="submit">Eliminar producto</button>
                 </form>
             </div>

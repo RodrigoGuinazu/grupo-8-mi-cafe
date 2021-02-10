@@ -28,8 +28,8 @@
                 <div class="product-name">
                     <input type="text" name="name" id="nombre" placeholder="Nombre del producto" required>
                 </div>
-
-                <div class="product-weight"> <!--Atributos de peso y color, según categoría-->
+                <!--
+                <div class="product-weight">
                     <select name="attributes">
                         <option value= "250">250gr</option>
                         <option value= "500">500gr</option>
@@ -39,12 +39,13 @@
                         <option value= "Varios">Varios</option>
                     </select>
                 </div>
+                -->
                 <div class="product-price">
-                    <input type="number" step=".01" name="precio" id="precio" placeholder="$00.00" required>
+                    <input type="number" step=".01" name="price" id="precio" placeholder="$00.00" required>
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>
-                   <textarea name="descripcion" rows="10" cols="40" required></textarea>
+                   <textarea name="description" rows="10" cols="40" required></textarea>
                </div>
                <div class="product-create">
                 <button class="product-create-button">Publicar</button>
