@@ -47,7 +47,6 @@ Actualmente trabajo de operario en el centro de almacenamiento y distribución d
  -----
  <h3>Se cambió a "localhost:3030"</h3>
  <h3> Usuario Admin: admin@hotmail.com , Contraseña: 123456789 </h3>
-
  -----
 
  <h3>Sprint-6</h3>
@@ -56,5 +55,3 @@ Actualmente trabajo de operario en el centro de almacenamiento y distribución d
   <p> -Correr el script de estructura (database/structure.sql) </p>
   <p> -Correr el script de datos (database/data.sql) </p>
   <p> <strong>IMPORTANTE!</strong> Las credenciales para revisar el CRUD de productos son: E-mail: admin@hotmail.com,  Contraseña: 123456789</p>
- 
-
