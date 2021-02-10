@@ -101,9 +101,7 @@ let productosController = {
             category_id: req.body.category
         })
         .then(product => {
-            product.addAttributes({
-                name:    
-            })
+            product.addAttributes(req.body.attribute)
         })
         .catch(error => {
             console.log(error);
