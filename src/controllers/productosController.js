@@ -1,10 +1,5 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
-
-let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
-products = JSON.parse(products);
 
 let productosController = {
     detalleProducto: function(req, res, next) {
