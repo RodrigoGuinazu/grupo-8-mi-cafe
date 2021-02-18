@@ -14,13 +14,10 @@ module.exports = (sequelize, dataTypes) => {
         attribute_id: {
             type: dataTypes.BIGINT.UNSIGNED,
             allowNull: false
-        },
-        value: {
-            type: dataTypes.STRING,
-            allowNull: false
         }
     };
     let config = {
+        tableName: "products_attributes",
         timestamps: true,
         createdAt: "created_at",
         updatedAt: "updated_at",

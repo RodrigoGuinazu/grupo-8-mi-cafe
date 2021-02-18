@@ -45,7 +45,7 @@ module.exports = (sequelize, dataTypes) => {
         }),
         Product.belongsToMany(models.Attribute, {
             as: "attributes",
-            through: models.Product_attribute, // Como la tabla pivot tiene un modelo ya que ademas de los ids tiene datos extra, en vez de hacer la relacion a traves del nombre de la tabla "Products_attributes", la relacionamos con el modelo que definimos en el proyecto (models.Product_attribute)
+            through: "products_attributes",
             foreignKey: "attribute_product_id",
             otherKey: "attribute_id",
             timestamps: true

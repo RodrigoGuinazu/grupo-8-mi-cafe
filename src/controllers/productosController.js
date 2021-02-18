@@ -1,10 +1,5 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
-
-let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'), {encoding: 'utf-8'});
-products = JSON.parse(products);
 
 let productosController = {
     detalleProducto: function(req, res, next) {
@@ -100,24 +95,13 @@ let productosController = {
             image: req.files[0].filename,
             category_id: req.body.category
         })
-        
-        /*
         .then(product => {
-            Product.addProduct_attribute({value: req.body.attribute})
-            .then(()=> {
-                product.reload({
-                    include: [{association: 'attributes'}]
-                })
-                .then(product => {
-                    res.redirect("/productos/listado", {product:product})
-                })
-            })
+            product.addAttributes(req.body.attribute)
         })
-        */
-       res.redirect("/productos/listado")
-        /*.catch(error => {
-            console.log(error)
-        })*/
+        .catch(error => {
+            console.log(error);
+        })
+        res.redirect("/productos/listado");
     },
 
     editarProducto: function(req, res) {
@@ -139,12 +123,19 @@ let productosController = {
                 id: req.params.id
             })
         })
-        .then( resultado => {
-            res.redirect('detalle')
+        .then(edit => {
+            db.Product_attribute.update({
+                attribute_id: req.body.attribute,
+            },{
+                where: ({
+                    attribute_product_id: req.params.id
+                })
+            })
         })
-        .catch(error =>
-            console.log(error)
-            )
+        .catch(error => {
+            console.log(error);
+        })
+        res.redirect('detalle');
     },
 
     eliminarProducto: function (req, res) {
