@@ -2,8 +2,8 @@ const {check, body} = require('express-validator');
 const path = require('path');
 const fs = require('fs');
 
-let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
-users = JSON.parse(users);
+//let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
+//users = JSON.parse(users);
 
 module.exports = [
     check('name').isLength({min:1}).withMessage('Ingresá tu nombre.'),
