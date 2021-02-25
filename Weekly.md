@@ -196,3 +196,23 @@ Daily (20210205-20210209)
 + Queda pendiente resolver algunas correcciones del Sprint 5 (buscador, cookies, etc).
 
 + Se realizará la Retrospectiva, con las acciones de mejora y mitigación, desarrolladas durante el Sprint 6 [En curso].
+
+=======
+
+** :: Sprint 7 (20210225) :: **
+
++ Se plasmaron y sortearon las tareas del Sprint 7 en Trello:
+  + Login de usuarios - FS
+  + Registro de usuarios - AV
+  + Modificación de usuarios - RS
+  + Creación y Modificación de productos - RG
+
++ Se abordarán las tarjetas de la columna 'pendientes', en paralelo con las tareas del Sprint 7.
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (202103XX)
+
++ 
