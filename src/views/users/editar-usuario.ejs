@@ -4,6 +4,7 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
+        <script type="text/javascript" src="../../edit-user.js" defer></script>
         <title>Formulario de Edición</title>
     </head>
 <body>
@@ -15,18 +16,23 @@
         </section>
 
         <section align="center" class="formulario">
-            <form method="POST" action="/usuarios/editar?_method=PATCH" enctype="multipart/form-data">
+            <div class= errores>
+                <ul></ul>
+            </div>
+
+            <form method="POST" action="/usuarios/editar?_method=PATCH" enctype="multipart/form-data" class="editar">
                 <div>
                     <label for="" class="titulo">Nombre</label>
                     <br>
-                    <input type="text" name="name" id="name" value="<%= user.name %>">
+                    <input type="text" name="name" id="name" value="<%= user.name %>" class="name">
+                    <br>
                     <label for="" class="titulo">Apellido</label>
                     <br>
-                    <input type="text" name="lastname" id="lastname" value="<%= user.lastname %>">
+                    <input type="text" name="lastname" id="lastname" value="<%= user.lastname %>" class="lastname">
                     <br>
                     <label class="titulo" for="">Fecha de Nacimiento</label>
                     <br>
-                    <input type="date" name="birthdate" id="birthdate" value="<%= user.birthdate %>">
+                    <input type="date" name="birthdate" id="birthdate" value="<%= user.birthdate %>" class="birthdate">
                     <div class="genero">
                         <label for="" class="titulo">Género</label>
                         <br>
@@ -41,21 +47,22 @@
 
                 <button class="confirmar-cambios" type="submit">Confirmar Cambios</button>
             </form>
-          </section>
+          
           <div class="descartar">
-            <form method=GET action="/" align=center>
+            <form method=GET action="/" align=center class="descartar">
                 <a href="/"><button class="descartar-cambios">Descartar Cambios</button></a>
               </form>
           </div>
 
           <div class="eliminar">
-            <form action="/usuarios/eliminar?_method=DELETE" method="POST" align=center>
+            <form action="/usuarios/eliminar?_method=DELETE" method="POST" align=center class="eliminar">
                 <a href="/"><button class="eliminar-usuario">Eliminar Usuario</button></a>
-              </form>
+            </form>
           </div>
-          
+        </section>  
     <%- include('../partials/footer.ejs')%>
         
     </main>
+    
 </body>
 </html>
