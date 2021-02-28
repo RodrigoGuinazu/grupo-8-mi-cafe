@@ -17,11 +17,12 @@
             <h2>Hola <%= user.name %>! Edita tu Perfil</h2>
         </section>
 
+        <div class= errores>
+            <ul></ul>
+        </div>
+        
         <section align="center" class="formulario">
-            <div class= errores>
-                <ul></ul>
-            </div>
-
+        
             <form method="POST" action="/usuarios/editar?_method=PATCH" enctype="multipart/form-data" class="editar">
                 <div>
                     <label for="" class="titulo">Nombre</label>
