@@ -1,5 +1,5 @@
 window.addEventListener("load", function(){
-    let formularioEdicion = document.querySelector("form.editar");
+    let formularioEdicion = document.querySelector(".editar");
 
     formularioEdicion.addEventListener("submit",function(e){
    
@@ -30,7 +30,7 @@ window.addEventListener("load", function(){
     if(errores.length > 0){
        e.preventDefault();
 
-       let UlErrores = document.querySelector("div.errores ul");
+       let UlErrores = document.querySelector(".errores");
        for(let i = 0; i < errores.length; i++){
 
         UlErrores.innerHTML += "<li>" + errores[i] + "</li>"
@@ -41,3 +41,17 @@ window.addEventListener("load", function(){
 
  })
 })
+
+
+/*
+let botonSubmit = document.querySelector(".confirmar-cambios");
+
+botonSubmit.addEventListener("click", () => {
+swal({
+    title: "Cambios",
+    text: "Desea confirmar los cambios?",
+    icon: "success",
+    button: "Sí!",
+  });
+})
+*/
