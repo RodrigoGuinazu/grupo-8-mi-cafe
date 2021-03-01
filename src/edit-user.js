@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
        let UlErrores = document.querySelector(".errores");
        for(let i = 0; i < errores.length; i++){
 
-        UlErrores.innerHTML += "<li>" + errores[i] + "</li>"
+       UlErrores.innerHTML += "<li>" + errores[i] + "</li>"
 
        }
        
