@@ -3,10 +3,9 @@
     <head>
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
-        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
-        <script type="text/javascript" src="../../edit-user.js" defer></script>   
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
-        
+        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">  
+        <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+        -->
         <title>Formulario de Edición</title>
     </head>
 <body>
@@ -23,7 +22,7 @@
         
         <section align="center" class="formulario">
         
-            <form method="POST" action="/usuarios/editar?_method=PATCH" enctype="multipart/form-data" class="editar">
+            <form method="POST" action="/usuarios/editar?_method=PATCH" class="editar">
                 <div>
                     <label for="" class="titulo">Nombre</label>
                     <br>
@@ -66,5 +65,6 @@
     <%- include('../partials/footer.ejs')%>
         
     </main>
+    <script type="text/javascript" src="/js/edit-user.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ router.get ('/logout', usersController.logout);
 router.get ('/register', userMiddleware.registered, usersController.register);
 router.post('/register', registrationValidate, usersController.processRegister);
 router.get ('/editar', userMiddleware.guest, usersController.editar);
-router.patch ('/editar',multerUsuarios.any(), usersController.modificacion);
+router.patch ('/editar', usersController.modificacion);
 router.get ('/perfil', userMiddleware.guest, usersController.perfil);
 router.delete('/eliminar',usersController.delete);
 
