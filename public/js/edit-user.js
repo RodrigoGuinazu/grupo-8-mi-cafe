@@ -3,7 +3,7 @@
     formularioEdicion.addEventListener("submit",function(e){
    
     let errores = [];
-
+    
     let campoNombre = document.querySelector(".name");
 
     if (campoNombre.value == ""){
@@ -25,14 +25,13 @@
     if (campoFecha.value == ""){
         errores.push("El campo de Fecha de nacimiento tiene que estar completo");
     }
-    console.log(errores.length)
     
     if(errores.length > 0){
        e.preventDefault();
        let UlErrores = document.querySelector(".errores");
        for(let i = 0; i < errores.length; i++){
 
-       UlErrores.innerHTML += "<li>" + errores[i] + "</li>"
+       UlErrores.innerHTML += "<ul>" + errores[i] + "</ul>"
 
        }
       

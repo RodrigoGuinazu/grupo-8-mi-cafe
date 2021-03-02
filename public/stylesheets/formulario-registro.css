@@ -226,8 +226,10 @@ h2 {
     margin-bottom: 12px;
 }
 
-div.errores{
-    color: rgb(184, 15, 15) ;
+.errores{
+    color: rgb(184, 15, 15);
+    background-color: #ededed;
+    padding: 5px;
 }
 
 /* DESKTOP - TABLET */
