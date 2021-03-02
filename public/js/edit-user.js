@@ -39,16 +39,27 @@
 
  })
 
+/*LÓGICA DE POP UP ELIMINAR USUARIO EN DESARROLLO*/
+let eliminarUsuario = document.querySelector(".eliminar-usuario");
 
-/*
-let botonSubmit = document.querySelector(".confirmar-cambios");
-
-botonSubmit.addEventListener("click", () => {
-swal({
-    title: "Cambios",
-    text: "Desea confirmar los cambios?",
-    icon: "success",
-    button: "Sí!",
-  });
+eliminarUsuario.addEventListener("click", (e) => {
+    e.preventDefault();
+    swal({
+        title: "Eliminación de usuario",
+        text: "Está seguro que desea eliminar el usuario?",
+        icon: "warning",
+        buttons: ["Cancelar","Sí"],
+        dangerMode: true,
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+      })
+      .then((seBorra) => {
+        if (seBorra) {
+              swal("Tu usuario fue eliminado!", {
+            icon: "success",
+          });
+        } else {
+          swal("Tu usuario NO fue eliminado!");
+        }
+      });
 })
-*/
