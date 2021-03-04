@@ -16,10 +16,6 @@
             <h2>Hola <%= user.name %>! Edita tu Perfil</h2>
         </section>
 
-        <div class= errores>
-            <ul></ul>
-        </div>
-        
         <section align="center" class="formulario">
         
             <form method="POST" action="/usuarios/editar?_method=PATCH" class="editar">
@@ -27,16 +23,25 @@
                     <label for="" class="titulo">Nombre</label>
                     <br>
                     <input type="text" name="name" id="name" value="<%= user.name %>" class="name">
+                    <br> 
+                    <div class = "erroresNombre">
+                    </div>
                     <br>
                     <label for="" class="titulo">Apellido</label>
                     <br>
                     <input type="text" name="lastname" id="lastname" value="<%= user.lastname %>" class="lastname">
+                    <br>
+                    <div class = "erroresApellido">
+                    </div>
                     <br>
                     <label class="titulo" for="">Fecha de Nacimiento</label>
                     <br>
                     <input type="date" name="birthdate" id="birthdate" value="<%= user.birthdate %>" class="birthdate">
                     <div class="genero">
                         <label for="" class="titulo">Género</label>
+                        <br>
+                        <div class = "erroresFecha">
+                        </div>
                         <br>
                         <select name="gender" id="">
                         <option value="<%= user.gender %>"><%= user.gender %></option>
