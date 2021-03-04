@@ -2,42 +2,52 @@
 
     formularioEdicion.addEventListener("submit",function(e){
    
-    let errores = [];
-    
+    let errores = {
+      nombre: "",
+      apellido: "",
+      fecha: "",
+    }
+        
     let campoNombre = document.querySelector(".name");
 
     if (campoNombre.value == ""){
-        errores.push("El campo de Nombre tiene que estar completo");
+        errores.nombre = "El campo de Nombre tiene que estar completo";
     } else if (campoNombre.value.length < 2){
-        errores.push("El campo de Nombre debe tener al menos 2 caracteres");
+        errores.nombre = "El campo de Nombre debe tener al menos 2 caracteres";
     }
 
     let campoApellido = document.querySelector(".lastname");
 
     if (campoApellido.value == ""){
-        errores.push("El campo de Apellido tiene que estar completo");
+        errores.apellido = "El campo de Apellido tiene que estar completo";
     } else if (campoApellido.value.length < 2){
-        errores.push("El campo de Apellido debe tener al menos 2 caracteres");
+        errores.apellido = "El campo de Apellido debe tener al menos 2 caracteres";
     }
 
     let campoFecha = document.querySelector(".birthdate");
 
     if (campoFecha.value == ""){
-        errores.push("El campo de Fecha de nacimiento tiene que estar completo");
+        errores.fecha = "El campo de Fecha de nacimiento tiene que estar completo";
     }
-    
-    if(errores.length > 0){
+  
+    if(errores.nombre != "" || errores.apellido != "" || errores.fecha != ""){
        e.preventDefault();
-       let UlErrores = document.querySelector(".errores");
-       for(let i = 0; i < errores.length; i++){
+       
+       let erroresNombre = document.querySelector(".erroresNombre");
+       
+       erroresNombre.innerHTML = errores.nombre;
+       
+       let erroresApellido = document.querySelector(".erroresApellido");
+       
+       erroresApellido.innerHTML = errores.apellido;
 
-       UlErrores.innerHTML += "<ul>" + errores[i] + "</ul>"
+       let erroresFecha = document.querySelector(".erroresFecha");
+       
+       erroresFecha.innerHTML = errores.fecha
+       
+      }
+    })  
 
-       }
-      
-    }
-
- })
 
 /*LÓGICA DE POP UP ELIMINAR USUARIO EN DESARROLLO*/
 let eliminarUsuario = document.querySelector(".eliminar-usuario");
@@ -54,12 +64,13 @@ eliminarUsuario.addEventListener("click", (e) => {
         closeOnEsc: false,
       })
       .then((seBorra) => {
+        console.log(seBorra);
         if (seBorra) {
               swal("Tu usuario fue eliminado!", {
             icon: "success",
-          });
+          })
         } else {
           swal("Tu usuario NO fue eliminado!");
         }
-      });
+      })
 })
