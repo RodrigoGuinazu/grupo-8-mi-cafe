@@ -213,7 +213,7 @@ h2 {
     cursor: pointer;
 }
 
-.eliminar-usuario{
+.eliminar-usuario {
     width: 75%;
     max-width: 350px;
     height: 50px;
@@ -226,11 +226,12 @@ h2 {
     margin-bottom: 12px;
 }
 
-.errores{
-    color: rgb(184, 15, 15);
+.erroresNombre, .erroresApellido, .erroresFecha {
+    color: darkorange;
     background-color: #ededed;
     padding: 5px;
 }
+
 
 /* DESKTOP - TABLET */
 
