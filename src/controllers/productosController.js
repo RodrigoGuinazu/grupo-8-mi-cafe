@@ -1,5 +1,7 @@
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
+const Attribute = require('../../database/models/Attribute');
+const Category = require('../../database/models/Category');
 
 let productosController = {
     detalleProducto: function(req, res, next) {
@@ -84,7 +86,16 @@ let productosController = {
     },
 
     crearProducto: (req, res) => {
-        res.render("products/crear-producto");
+        let attributeRequest = db.Attribute.findAll()
+        let categoriesRequest = db.Category.findAll()
+
+        Promise.all([attributeRequest, categoriesRequest])
+        .then(([attributes, categories]) => {
+            return res.render("products/crear-producto", {attributes, categories})
+        })
+        .catch(function(error){
+			console.log(error);
+		})
     },
 
     guardarProducto: (req, res, next) => {
