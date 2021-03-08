@@ -1,5 +1,8 @@
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
+const Attribute = require('../../database/models/Attribute');
+const Product_attribute = require('../../database/models/Product_attribute');
+const Category = require('../../database/models/Category');
 
 let productosController = {
     detalleProducto: function(req, res, next) {
@@ -84,7 +87,16 @@ let productosController = {
     },
 
     crearProducto: (req, res) => {
-        res.render("products/crear-producto");
+        let attributeRequest = db.Attribute.findAll()
+        let categoriesRequest = db.Category.findAll()
+
+        Promise.all([attributeRequest, categoriesRequest])
+        .then(([attributes, categories]) => {
+            return res.render("products/crear-producto", {attributes, categories})
+        })
+        .catch(function(error){
+			console.log(error);
+		})
     },
 
     guardarProducto: (req, res, next) => {
@@ -105,9 +117,17 @@ let productosController = {
     },
 
     editarProducto: function(req, res) {
-        db.Product.findByPk(req.params.id)
-        .then( Product => {
-            res.render('products/editar-producto', {Product: Product})
+        let productToEdit = db.Product.findByPk(req.params.id)
+        let attributeRequest = db.Attribute.findAll()
+        let productAttributeRequest = db.Product_attribute.findOne({where:{attribute_product_id: req.params.id}})
+        let categoriesRequest = db.Category.findAll()
+
+        Promise.all([productToEdit, attributeRequest, productAttributeRequest, categoriesRequest])
+        .then(([productToEdit, attributes, productAttribute, categories]) => {
+            return res.render('products/editar-producto', {productToEdit, attributes, productAttribute, categories})
+        })
+        .catch(function(error){
+            console.log(error);
         })
     },
 

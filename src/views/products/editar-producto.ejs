@@ -11,16 +11,20 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <section align="center" class="formulario">
-            <h2>Editar producto <%= Product.name %></h2>
-            <form action="/productos/<%= Product.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h2>Editar producto <%= productToEdit.name %></h2>
+            <form action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="product-type">
                     <label for="">Categoría</label>
                     <br>
                     <select name="category">
-                        <option value="<%= Product.category %>" selected><%= Product.category %></option>
-                        <option value= 1>Cafés</option>
-                        <option value= 2>Cafeteras</option>
-                        <option value= 3>Accesorios</option>
+                        <% categories.forEach(category => { %>
+                            <% if(category.id == productToEdit.category_id) { %>
+                                <option value="<%= category.id %>"><%= category.category %></option>
+                            <% } %>
+                        <% }) %> 
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.category %></option>
+                        <% }); %>
                     </select>
                 </div>
                 <div class="product-img">
@@ -31,7 +35,7 @@
                 <div class="product-name">
                     <label for="">Titulo</label>
                     <br>
-                    <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= Product.name %>">
+                    <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= productToEdit.name %>">
                 </div>
                 <div class="product-weight">
                     <label for="">Peso en gr</label>
@@ -40,12 +44,14 @@
                 <div class="attribute-check">
                     <label for="">Atributos del Producto</label>
                     <select name="attribute" id="">
-                        <option value=1>250 gr</option>
-                        <option value=2>500 gr</option>
-                        <option value=3>1000 gr</option>
-                        <option value=4>Rojo</option>
-                        <option value=5>Negro</option>
-                        <option value=6>Varios</option>
+                        <% attributes.forEach(attribute => { %>
+                            <% if(attribute.id == productAttribute.attribute_id) { %>
+                                <option value="<%= attribute.id %>"><%= attribute.name %></option>
+                            <% } %>
+                        <% }) %> 
+                        <% attributes.forEach(attribute => { %>
+                            <option value="<%= attribute.id %>"><%= attribute.name %></option>
+                        <% }); %>
                     </select>
                 </div>
 
@@ -53,11 +59,11 @@
                 <div class="product-price">
                     <label for="">Precio</label>
                     <br>
-                    <input type="text" name="price" id="price" placeholder="$00,0" value="<%= Product.price %>">
+                    <input type="text" name="price" id="price" placeholder="$00,0" value="<%= productToEdit.price %>">
                 </div>
                <div class="product-detail">
                    <p><label>Detalle de producto</label></p>
-                   <textarea name="description" rows="10" cols="40"><%= Product.description %></textarea>
+                   <textarea name="description" rows="10" cols="40"><%= productToEdit.description %></textarea>
                </div>
                <div class="product-create">
                 <button type="submit" class="product-create-button">Guardar Cambios</button>
@@ -67,7 +73,7 @@
                 </div>
             </form>
             <div>
-                <form action="/productos/<%= Product.id %>/editar?_method=DELETE" method="POST">
+                <form action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
                     <button class="product-delete-button" type="submit">Eliminar producto</button>
                 </form>
             </div>

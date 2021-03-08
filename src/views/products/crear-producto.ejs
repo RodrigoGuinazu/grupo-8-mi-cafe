@@ -17,9 +17,9 @@
             <form method="POST" action="/productos/crear" enctype="multipart/form-data">
                 <div class="product-type">
                     <select name="category"> <!--Tipo de producto, según Categoría-->
-                        <option value= 1>Cafés</option>
-                        <option value= 2>Cafeteras</option>
-                        <option value= 3>Accesorios</option>
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.category %></option>
+                        <% }); %>
                     </select>
                 </div>
                 <div class="product-img">
@@ -32,12 +32,9 @@
                 <div class="attribute-check">
                     <label for="">Atributos del Producto</label>
                     <select name="attribute" id="">
-                        <option value=1>250 gr</option>
-                        <option value=2>500 gr</option>
-                        <option value=3>1000 gr</option>
-                        <option value=4>Rojo</option>
-                        <option value=5>Negro</option>
-                        <option value=6>Varios</option>
+                        <% attributes.forEach(attribute => { %>
+                            <option value="<%= attribute.id %>"><%= attribute.name %></option>
+                        <% }); %>
                     </select>
                 </div>
 

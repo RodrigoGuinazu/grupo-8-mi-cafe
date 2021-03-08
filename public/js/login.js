@@ -20,10 +20,8 @@ window.addEventListener("load", function() {
         campoEmail.addEventListener ("onblur", function () {
             if (campoEmail.value == "") {
                 emailError.innerHTML("El campo de E-mail debe estar completo.")
-            } else (regexEmail.test(campoEmail.value) == false) {
+            } else if (regexEmail.test(campoEmail.value) === false) {
                 emailError.innerHTML("El campo debe tener formato de E-mail.")
             }
         })
-
-
-    })
+})
