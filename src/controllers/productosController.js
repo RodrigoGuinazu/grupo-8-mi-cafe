@@ -1,6 +1,7 @@
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
 const Attribute = require('../../database/models/Attribute');
+const Product_attribute = require('../../database/models/Product_attribute');
 const Category = require('../../database/models/Category');
 
 let productosController = {
@@ -116,9 +117,17 @@ let productosController = {
     },
 
     editarProducto: function(req, res) {
-        db.Product.findByPk(req.params.id)
-        .then( Product => {
-            res.render('products/editar-producto', {Product: Product})
+        let productToEdit = db.Product.findByPk(req.params.id)
+        let attributeRequest = db.Attribute.findAll()
+        let productAttributeRequest = db.Product_attribute.findOne({where:{attribute_product_id: req.params.id}})
+        let categoriesRequest = db.Category.findAll()
+
+        Promise.all([productToEdit, attributeRequest, productAttributeRequest, categoriesRequest])
+        .then(([productToEdit, attributes, productAttribute, categories]) => {
+            return res.render('products/editar-producto', {productToEdit, attributes, productAttribute, categories})
+        })
+        .catch(function(error){
+            console.log(error);
         })
     },
 
