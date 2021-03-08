@@ -15,18 +15,18 @@
         <section class="titulo">
             <h2>Completá tus datos</h2>
         </section>
-
+        <!--Lista de Errores con Express Validator-->
         <%- include('../partials/vistaErroresValidaciones.ejs') %>
 
         <section align="center" class="formulario">
             <form method="POST" action="/usuarios/register">
                 <div>
-                    <input type="text" name="name" id="name" placeholder="Nombre">
-                    <input type="text" name="lastname" id="lastname" placeholder="Apellido">
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                    <input type="password" name="password" id="password" placeholder="Password"><i class="fas fa-eye-slash"></i>
+                    <input type="text" name="name" id="name" placeholder="Tu nombre">
+                    <input type="text" name="lastname" id="lastname" placeholder="Tu apellido">
+                    <input type="email" name="email" id="email" placeholder="Tu E-mail">
+                    <input type="password" name="password" id="password" placeholder="Tu contraseña"><i class="fas fa-eye-slash"></i>
                     <br>
-                    <input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirma tu Password"><i class="fas fa-eye-slash"></i>
+                    <input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirmá tu contraseña"><i class="fas fa-eye-slash"></i>
                 </div>
                
                 <div class="checkbox">
@@ -48,5 +48,6 @@
     <%- include('../partials/footer.ejs')%>
         
     </main>
+    <script type="text/javascript" src="/js/register.js"></script> <!--MODIFICAR a 'validator.js'-->
 </body>
 </html>
