@@ -34,7 +34,7 @@ window.addEventListener("load", function() {
 
 
 
-/*LÓGICA DE POP UP CONFIRMACION INICIO DE SESION*/
+/*LÓGICA DE POP UP CONFIRMACION INICIO DE SESION
 
 let confirmLogin = document.querySelector(".login-submit-button");
 
@@ -60,4 +60,4 @@ confirmLogin.addEventListener("click", (e) => {
         }
       })
     })
-})
+})*/
