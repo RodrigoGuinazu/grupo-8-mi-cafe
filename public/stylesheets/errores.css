@@ -19,6 +19,10 @@ div .lista-errores{
     border: solid #ededed;
 }
 
-
+.erroresImg, .erroresName, .erroresPrice, .erroresDescription {
+    color: darkorange;
+    background-color: #ededed;
+    padding: 5px;
+}
 
 
