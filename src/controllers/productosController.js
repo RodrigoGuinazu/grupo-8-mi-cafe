@@ -162,30 +162,63 @@ let productosController = {
                 console.log(error);
             })
         }else {
-            db.Product.update({
-                name: req.body.name,
-                price: req.body.price,
-                description: req.body.description,
-                image: req.files[0].filename,
-                category_id: req.body.category
-            },{
-                where: ({
-                    id: req.params.id
-                })
-            })
-            .then(edit => {
-                db.Product_attribute.update({
-                    attribute_id: req.body.attribute,
-                },{
-                    where: ({
-                        attribute_product_id: req.params.id
+            db.Product.findByPk(req.params.id)
+			.then(product => {
+				if(req.files.length == 0){
+                    db.Product.update({
+                        name: req.body.name,
+                        price: req.body.price,
+                        description: req.body.description,
+                        image: product.image,
+                        category_id: req.body.category
+                    },{
+                        where: ({
+                            id: req.params.id
+                        })
                     })
-                })
+                    .then(edit => {
+                        db.Product_attribute.update({
+                            attribute_id: req.body.attribute,
+                        },{
+                            where: ({
+                                attribute_product_id: req.params.id
+                            })
+                        })
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    res.redirect('detalle');
+                }else {
+                    db.Product.update({
+                        name: req.body.name,
+                        price: req.body.price,
+                        description: req.body.description,
+                        image: req.files[0].filename,
+                        category_id: req.body.category
+                    },{
+                        where: ({
+                            id: req.params.id
+                        })
+                    })
+                    .then(edit => {
+                        db.Product_attribute.update({
+                            attribute_id: req.body.attribute,
+                        },{
+                            where: ({
+                                attribute_product_id: req.params.id
+                            })
+                        })
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    res.redirect('detalle');
+                }
             })
-            .catch(error => {
-                console.log(error);
-            })
-            res.redirect('detalle');
+            .catch(function(error){
+				console.log(error);
+			})
         }
     },
 
