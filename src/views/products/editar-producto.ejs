@@ -12,6 +12,7 @@
     <main>
         <section align="center" class="formulario">
             <h2>Editar producto <%= productToEdit.name %></h2>
+            <%- include('../partials/vistaErroresValidaciones.ejs') %>
             <form action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="product-type">
                     <label for="">Categoría</label>

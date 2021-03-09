@@ -147,30 +147,46 @@ let productosController = {
     },
 
     modificacion: (req, res) => {
-        db.Product.update({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.files[0].filename,
-            category_id: req.body.category
-        },{
-            where: ({
-                id: req.params.id
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            let productToEdit = db.Product.findByPk(req.params.id)
+            let attributeRequest = db.Attribute.findAll()
+            let productAttributeRequest = db.Product_attribute.findOne({where:{attribute_product_id: req.params.id}})
+            let categoriesRequest = db.Category.findAll()
+
+            Promise.all([productToEdit, attributeRequest, productAttributeRequest, categoriesRequest])
+            .then(([productToEdit, attributes, productAttribute, categories]) => {
+                return res.render('products/editar-producto', {productToEdit, attributes, productAttribute, categories, errors: errors.errors})
             })
-        })
-        .then(edit => {
-            db.Product_attribute.update({
-                attribute_id: req.body.attribute,
+            .catch(function(error){
+                console.log(error);
+            })
+        }else {
+            db.Product.update({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: req.files[0].filename,
+                category_id: req.body.category
             },{
                 where: ({
-                    attribute_product_id: req.params.id
+                    id: req.params.id
                 })
             })
-        })
-        .catch(error => {
-            console.log(error);
-        })
-        res.redirect('detalle');
+            .then(edit => {
+                db.Product_attribute.update({
+                    attribute_id: req.body.attribute,
+                },{
+                    where: ({
+                        attribute_product_id: req.params.id
+                    })
+                })
+            })
+            .catch(error => {
+                console.log(error);
+            })
+            res.redirect('detalle');
+        }
     },
 
     eliminarProducto: function (req, res) {
