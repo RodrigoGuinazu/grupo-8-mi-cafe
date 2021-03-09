@@ -1,3 +1,4 @@
+const { validationResult } = require("express-validator");
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
 const Attribute = require('../../database/models/Attribute');
@@ -100,20 +101,34 @@ let productosController = {
     },
 
     guardarProducto: (req, res, next) => {
-        db.Product.create({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.files[0].filename,
-            category_id: req.body.category
-        })
-        .then(product => {
-            product.addAttributes(req.body.attribute)
-        })
-        .catch(error => {
-            console.log(error);
-        })
-        res.redirect("/productos/listado");
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            let attributeRequest = db.Attribute.findAll()
+            let categoriesRequest = db.Category.findAll()
+
+            Promise.all([attributeRequest, categoriesRequest])
+            .then(([attributes, categories]) => {
+                return res.render("products/crear-producto", {attributes, categories, errors: errors.errors})
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        }else {
+            db.Product.create({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: req.files[0].filename,
+                category_id: req.body.category
+            })
+            .then(product => {
+                product.addAttributes(req.body.attribute)
+            })
+            .catch(error => {
+                console.log(error);
+            })
+            res.redirect("/productos/listado");
+        }
     },
 
     editarProducto: function(req, res) {
