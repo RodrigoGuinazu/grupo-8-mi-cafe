@@ -19,6 +19,17 @@ div .lista-errores{
     border: solid #ededed;
 }
 
+div .erroresEmail {
+    color: darkorange;
+    background-color: #ededed;
+    font-size: 14px;
+}
+
+div .erroresPassword {
+    color: darkorange;
+    background-color: #ededed;
+    font-size: 14px;
+}
 
 
 
