@@ -5,59 +5,40 @@ window.addEventListener("load", function() {
         e.preventDefault();*/
         
         const campoEmail = document.querySelector("input.email");
+        const listaErroresEmail = document.querySelector(".erroresEmail");
         const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-        const emailError = document.querySelector(".erroresEmail")
+        /*const emailError = document.querySelector(".erroresEmail")*/
 
         /*DE ESTA MANERA ME EVITO HACER EL PREVENTDEFAULT YA QUE EL ERROR LO TIRA CUANDO SALGO DEL INPUT*/
 
         campoEmail.addEventListener ("blur", function () {
             if (campoEmail.value == "") {
-                emailError.innerHTML = "El campo de E-mail debe estar completo."
+                listaErroresEmail.innerHTML = "El campo de E-mail debe estar completo."
             } else if (regexEmail.test(campoEmail.value) === false) {
-                emailError.innerHTML = "El campo debe tener formato de E-mail."
+                listaErroresEmail.innerHTML = "El campo debe tener formato de E-mail."
             } else {
-                emailError.innerHTML = ""
+                listaErroresEmail.innerHTML = ""
             }
         })
 
         const campoPassword = document.querySelector("input.password");
-        const passwordError = document.querySelector(".erroresPassword");
-        const viewPass = document.querySelector("#view-pass");
+        const listaErroresPassword = document.querySelector(".erroresPassword");
+        const viewPass = document.getElementById("view-pass");
 
-        viewPass.addEventListener("click", function() {
+        campoPassword.addEventListener ("blur", function () {
+            if (campoPassword.value == "") {
+                listaErroresPassword.innerHTML = "Debes ingresar una contraseña."
+            }
+
+        viewPass.addEventListener("click", function(e) {
+            // preventDefault para sacarle la funcion del submit al ojito. CONSULTAR
+            e.preventDefault();
+
             if(campoPassword.getAttribute("type") == "password") {
                 campoPassword.setAttribute("type", "text")
             } else {
                 campoPassword.setAttribute("type", "password")
             }
         })
-
-
-
-/*LÓGICA DE POP UP CONFIRMACION INICIO DE SESION
-
-let confirmLogin = document.querySelector(".login-submit-button");
-
-confirmLogin.addEventListener("click", (e) => {
-    e.preventDefault();
-    swal({
-        title: "Inicio de Sesión",
-        text: "¿Estás seguro que tus datos ingresados son correctos?",
-        icon: "warning",
-        buttons: ["Mejor reviso de nuevo","Sí, estoy seguro"],
-        dangerMode: true,
-        closeOnClickOutside: false,
-        closeOnEsc: false,
-      })
-      .then((confirma) => {
-        console.log(confirma);
-        if (confirma) {
-              swal("Iniciaste sesion con exito!", {
-            icon: "success",
-          })
-        } else {
-          swal("Volvé a intentarlo");
-        }
-      })
     })
-})*/
+})
