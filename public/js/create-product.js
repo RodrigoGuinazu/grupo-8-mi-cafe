@@ -1,40 +1,43 @@
 window.addEventListener('load', function(){
     let form = document.querySelector('form')
-    form.addEventListener('submit', function(e){
-        let errores = {
+    form.addEventListener('blur', function(){
+        /*let errores = {
             image: "",
             name: "",
             price: "",
             description: ""
-        }
+        }*/
 
-        let image = document.querySelector('.product-img');
+        let erroresImg = document.querySelector(".erroresImg");
+        let erroresName = document.querySelector(".erroresName");
+        let erroresPrice = document.querySelector(".erroresPrice");
+        let erroresDescription = document.querySelector(".erroresDescription");
+
+        let image = document.querySelector('input.product-img');
         if(image.value == ""){
-            errores.image = "Debes subir la imagen del Producto"
+            erroresImg.innerHTML = "Debes subir la imagen del Producto"
         }
 
-        let name = document.querySelector('.name');
+        let name = document.querySelector('input.name');
         if(name.value == ""){
-            errores.name = "Debes ponerle un nombre al articulo"
+            erroresName.innerHTML = "Debes ponerle un nombre al articulo"
         }else if(name.value.length < 5){
-            errores.name = "El titulo debe tener al menos 5 caracteres"
+            erroresName.innerHTML = "El titulo debe tener al menos 5 caracteres"
         }
 
-        let price = document.querySelector('.price');
+        let price = document.querySelector('input.price');
         if(price.value < 0){
-            errores.price = "El precio deber ser mayor a $0"
+            erroresPrice.innerHTML = "El precio deber ser mayor a $0"
         }
 
-        let description = document.querySelector('.description');
+        let description = document.querySelector('textarea.description');
         if(description.value == ""){
-            errores.description = "La descripcion no puede estar vacia"
+            erroresDescription.innerHTML = "La descripcion no puede estar vacia"
         }else if(description.value.length < 20){
-            errores.description = "La descripcion debe tener al menos 20 caracteres"
+            erroresDescription.innerHTML = "La descripcion debe tener al menos 20 caracteres"
         }
 
-        if(errores.image != "" || errores.name != "" || errores.price != "" || errores.description != ""){
-            e.preventDefault();
-
+        /*if(errores.image != "" || errores.name != "" || errores.price != "" || errores.description != ""){
             let erroresImg = document.querySelector(".erroresImg");
        
             erroresImg.innerHTML = errores.image;
@@ -50,7 +53,7 @@ window.addEventListener('load', function(){
             let erroresDescription = document.querySelector(".erroresDescription");
             
             erroresDescription.innerHTML = errores.description
-        }
+        }*/
     })
 
 })
