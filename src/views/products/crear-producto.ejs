@@ -12,45 +12,53 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <section align="center" class="formulario">
-            <h2>Crear nuevo producto</h2>
+            <h2>Crear un nuevo Producto</h2>
             <%- include('../partials/vistaErroresValidaciones.ejs') %>
-            <form method="POST" action="/productos/crear" enctype="multipart/form-data">
+            <form class="form-create" method="POST" action="/productos/crear" enctype="multipart/form-data">
+
+                <div class="product-name">
+                    <label for="">Titulo:</label>
+                    <input type="text" name="name" id="nombre" placeholder="Titulo del Producto">
+                    <div class="erroresName"></div>
+                    <br>
+                </div>
 
                 <div class="product-type">
+                    <label for="">Categoria:</label>
+                    <br>
                     <select name="category"> <!--Tipo de producto, según Categoría-->
                         <% categories.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.category %></option>
                         <% }); %>
                     </select>
-                </div>
-
-                <div class="product-img">
-                    <input type="file" name="product-img">
-                    <br> 
-                    <div class="erroresImg"></div>
                     <br>
-                </div>
-
-                <div class="product-name">
-                    <input type="text" name="name" id="nombre" placeholder="Nombre del producto">
-                    <br> 
-                    <div class="erroresName"></div>
                     <br>
                 </div>
 
                 <div class="attribute-check">
-                    <label for="">Atributos del Producto</label>
+                    <label for="">Peso(gr)/Color:</label>
+                    <br>
                     <select name="attribute" id="">
                         <% attributes.forEach(attribute => { %>
                             <option value="<%= attribute.id %>"><%= attribute.name %></option>
                         <% }); %>
                     </select>
+                    <br>
+                    <br>
                 </div>
 
                 <div class="product-price">
+                    <label for="">Precio:</label>
+                    <br>
                     <input type="number" step=".01" name="price" id="precio" placeholder="$00.00">
-                    <br> 
                     <div class="erroresPrice"></div>
+                </div>
+
+                <div class="product-img">
+                    <label for="">Imagen:</label>
+                    <br>
+                    <input type="file" name="product-img">
+                    <div class="erroresImg"></div>
                     <br>
                 </div>
 
@@ -63,7 +71,7 @@
                </div>
 
                 <div class="product-create">
-                    <button class="product-create-button">Publicar</button>
+                    <button type="submit" class="product-create-button">Publicar</button>
                 </div>
 
                 <div>
