@@ -50,10 +50,10 @@
 
 
 /*LÓGICA DE POP UP ELIMINAR USUARIO EN DESARROLLO*/
-let eliminarUsuario = document.querySelector(".eliminar-usuario");
+let eliminarUsuario = document.querySelector("#eliminar");
 
-eliminarUsuario.addEventListener("click", (e) => {
-    e.preventDefault();
+eliminarUsuario.addEventListener("submit", (e) => {
+   e.preventDefault(); 
     swal({
         title: "Eliminación de usuario",
         text: "Está seguro que desea eliminar el usuario?",
@@ -64,10 +64,10 @@ eliminarUsuario.addEventListener("click", (e) => {
         closeOnEsc: false,
       })
       .then((seBorra) => {
-        console.log(seBorra);
-        if (seBorra) {
-              swal("Tu usuario fue eliminado!", {
-            icon: "success",
+        if (seBorra == true) {
+          eliminarUsuario.submit();
+          swal("Tu usuario fue eliminado!", {
+          icon: "success",
           })
         } else {
           swal("Tu usuario NO fue eliminado!");
