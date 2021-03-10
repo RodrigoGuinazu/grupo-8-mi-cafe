@@ -97,6 +97,8 @@ window.addEventListener('load', function() {
 
             erroresDescription.innerHTML = "La descripcion no puede estar vacia"
             erroresDescription.innerHTML = "La descripcion debe tener al menos 20 caracteres"
+        }else {
+            formCreate.submit()
         }
     })
 })
