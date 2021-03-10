@@ -64,17 +64,23 @@ window.addEventListener('load', function() {
             errores.name = "Debes ponerle un nombre al articulo"
         }else if(name.value.length < 5){
             errores.name = "El titulo debe tener al menos 5 caracteres"
+        }else {
+            errores.name = "" // En caso de que se cumplan las condiciones no mostramos ningun error
         }
 
 
         let price = document.querySelector('input.price');
         if(price.value <= 0){
             errores.price = "El precio deber ser mayor a $0"
+        }else {
+            errores.price = "" // En caso de que se cumplan las condiciones no mostramos ningun error
         }
 
         let image = document.querySelector('input.product-img');
         if(image.value == ""){
             errores.image = "Debes subir la imagen del Producto"
+        }else {
+            errores.image = "" // En caso de que se cumplan las condiciones no mostramos ningun error
         }
 
         let description = document.querySelector('textarea.description');
@@ -82,20 +88,20 @@ window.addEventListener('load', function() {
             errores.description = "La descripcion no puede estar vacia"
         }else if(description.value.length < 20){
             errores.description = "La descripcion debe tener al menos 20 caracteres"
+        }else {
+            errores.description = "" // En caso de que se cumplan las condiciones no mostramos ningun error
         }
 
         if(errores.image != "" || errores.name != "" || errores.price != "" || errores.description != ""){ // En caso de que haya un error hace lo siguiente
             e.preventDefault();
 
-            erroresName.innerHTML = "Debes ponerle un nombre al articulo"
-            erroresName.innerHTML = "El titulo debe tener al menos 5 caracteres"
+            erroresName.innerHTML = errores.name
 
-            erroresPrice.innerHTML = "El precio deber ser mayor a $0"
+            erroresPrice.innerHTML = errores.price
 
-            erroresImg.innerHTML = "Debes subir la imagen del Producto"
+            erroresImg.innerHTML = errores.image
 
-            erroresDescription.innerHTML = "La descripcion no puede estar vacia"
-            erroresDescription.innerHTML = "La descripcion debe tener al menos 20 caracteres"
+            erroresDescription.innerHTML = errores.description
         }else {
             formCreate.submit() // En el caso de que la condicion de arriba sea falsa (que no haya ningun error) permitimos el submit de formCreate
         }
