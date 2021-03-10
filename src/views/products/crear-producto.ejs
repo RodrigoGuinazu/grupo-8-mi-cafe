@@ -15,6 +15,7 @@
             <h2>Crear nuevo producto</h2>
             <%- include('../partials/vistaErroresValidaciones.ejs') %>
             <form method="POST" action="/productos/crear" enctype="multipart/form-data">
+
                 <div class="product-type">
                     <select name="category"> <!--Tipo de producto, según Categoría-->
                         <% categories.forEach(category => { %>
@@ -22,11 +23,19 @@
                         <% }); %>
                     </select>
                 </div>
+
                 <div class="product-img">
-                    <input type="file" name="product-img" required>
+                    <input type="file" name="product-img">
+                    <br> 
+                    <div class="erroresImg"></div>
+                    <br>
                 </div>
+
                 <div class="product-name">
-                    <input type="text" name="name" id="nombre" placeholder="Nombre del producto" required>
+                    <input type="text" name="name" id="nombre" placeholder="Nombre del producto">
+                    <br> 
+                    <div class="erroresName"></div>
+                    <br>
                 </div>
 
                 <div class="attribute-check">
@@ -39,21 +48,32 @@
                 </div>
 
                 <div class="product-price">
-                    <input type="number" step=".01" name="price" id="precio" placeholder="$00.00" required>
+                    <input type="number" step=".01" name="price" id="precio" placeholder="$00.00">
+                    <br> 
+                    <div class="erroresPrice"></div>
+                    <br>
                 </div>
+
                <div class="product-detail">
-                   <p><label>Detalle de producto</label></p>
-                   <textarea name="description" rows="10" cols="40" required></textarea>
+                    <p><label>Detalle de producto</label></p>
+                    <textarea name="description" rows="10" cols="40"></textarea>
+                    <br> 
+                    <div class="erroresDescription"></div>
+                    <br>
                </div>
-               <div class="product-create">
-                <button class="product-create-button">Publicar</button>
+
+                <div class="product-create">
+                    <button class="product-create-button">Publicar</button>
                 </div>
+
                 <div>
                     <button class="product-cancel-button"><a href="/productos/listado">Cancelar</a></button>
                 </div>
+
             </form>
         </section>
     <%- include('../partials/footer.ejs')%>
     </main>
+    <script type="text/javascript" src="/js/create-product.js"></script>
 </body>
 </html>

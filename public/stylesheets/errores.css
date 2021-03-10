@@ -19,6 +19,7 @@ div .lista-errores{
     border: solid #ededed;
 }
 
+<<<<<<< HEAD
 div .erroresEmail {
     color: darkorange;
     background-color: #ededed;
@@ -31,5 +32,8 @@ div .erroresPassword {
     font-size: 14px;
 }
 
-
-
+.erroresImg, .erroresName, .erroresPrice, .erroresDescription {
+    color: darkorange;
+    background-color: #ededed;
+    padding: 5px;
+}
