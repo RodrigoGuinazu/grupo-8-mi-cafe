@@ -18,56 +18,44 @@
 
                 <div class="product-name">
                     <label for="">Titulo:</label>
-                    <input type="text" name="name" id="nombre" placeholder="Titulo del Producto">
-                    <div class="erroresName"></div>
-                    <br>
+                    <input type="text" name="name" class="name" placeholder="Titulo del Producto">
+                    <div id="erroresName" class="lista-errores"></div>
                 </div>
 
                 <div class="product-type">
                     <label for="">Categoria:</label>
-                    <br>
                     <select name="category"> <!--Tipo de producto, según Categoría-->
                         <% categories.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.category %></option>
                         <% }); %>
                     </select>
-                    <br>
-                    <br>
                 </div>
 
                 <div class="attribute-check">
                     <label for="">Peso(gr)/Color:</label>
-                    <br>
-                    <select name="attribute" id="">
+                    <select name="attribute" id="attribute">
                         <% attributes.forEach(attribute => { %>
                             <option value="<%= attribute.id %>"><%= attribute.name %></option>
                         <% }); %>
                     </select>
-                    <br>
-                    <br>
                 </div>
 
                 <div class="product-price">
                     <label for="">Precio:</label>
-                    <br>
-                    <input type="number" step=".01" name="price" id="precio" placeholder="$00.00">
-                    <div class="erroresPrice"></div>
+                    <input type="number" step=".01" name="price" class="price" placeholder="$00.00">
+                    <div id="erroresPrice" class="lista-errores"></div>
                 </div>
 
                 <div class="product-img">
                     <label for="">Imagen:</label>
-                    <br>
-                    <input type="file" name="product-img">
-                    <div class="erroresImg"></div>
-                    <br>
+                    <input type="file" name="product-img" class="product-img">
+                    <div id="erroresImg" class="lista-errores"></div>
                 </div>
 
                <div class="product-detail">
                     <p><label>Detalle de producto</label></p>
-                    <textarea name="description" rows="10" cols="40"></textarea>
-                    <br> 
-                    <div class="erroresDescription"></div>
-                    <br>
+                    <textarea name="description" rows="10" class="description" cols="40"></textarea> 
+                    <div id="erroresDescription" class="lista-errores"></div>
                </div>
 
                 <div class="product-create">
@@ -75,7 +63,7 @@
                 </div>
 
                 <div>
-                    <button class="product-cancel-button"><a href="/productos/listado">Cancelar</a></button>
+                    <a href="/productos/listado" class="product-cancel-button">Cancelar</a>
                 </div>
 
             </form>
