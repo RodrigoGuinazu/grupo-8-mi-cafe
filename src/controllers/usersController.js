@@ -98,6 +98,21 @@ let usersController = {
         res.render('users/perfil-usuario');
     },
 
+    // VISTA AVATAR
+    avatar: function(req, res) {
+        res.render('users/avatar');
+    },
+
+    // VISTA DIRECCIONES
+    direcciones: function(req, res) {
+        res.render('users/direcciones');
+    },
+
+    // VISTA PAGOS
+    pagos: function(req, res) {
+        res.render('users/pagos');
+    },
+
     // LOGICA BORRADO
     delete: (req, res) => {
         db.User.destroy({

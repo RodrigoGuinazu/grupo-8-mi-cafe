@@ -18,6 +18,9 @@ router.get ('/editar', userMiddleware.guest, usersController.editar);
 router.patch ('/editar', usersController.modificacion);
 router.get ('/perfil', userMiddleware.guest, usersController.perfil);
 router.delete('/eliminar',usersController.delete);
+router.get ('/avatar', userMiddleware.guest, usersController.avatar);
+router.get ('/direcciones', userMiddleware.guest, usersController.direcciones);
+router.get ('/pagos', userMiddleware.guest, usersController.pagos);
 
 module.exports = router;
 
