@@ -87,7 +87,7 @@ window.addEventListener('load', function() {
         }
     })
 
-    // ELIMINAR PRODUCTO //
+    // ELIMINAR PRODUCTO (SWEET ALERT) //
 
     let deleteProduct = document.querySelector('form.delete-product');
 
@@ -97,17 +97,14 @@ window.addEventListener('load', function() {
             title: "Eliminar Producto",
             text: "Está seguro que desea eliminar el producto?",
             icon: "warning",
-            buttons: ["Cancelar","Sí"],
+            buttons: ["Cancelar","Sí"], // Siempre el de la izquierda es cancelar y el de la derecha OK
             dangerMode: true,
             closeOnClickOutside: true,
             closeOnEsc: false,
         })
-        .then((deleteProduct) => {
-            if (deleteProduct == true) {
-            deleteProduct.submit();
-            swal("El Producto fue eliminado!", {
-            icon: "success",
-            })
+        .then((productDelete) => {
+            if(productDelete == true) {
+                deleteProduct.submit();
             }
         })
     })
