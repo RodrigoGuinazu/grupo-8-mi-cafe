@@ -108,6 +108,11 @@ let usersController = {
         res.render('users/direcciones');
     },
 
+    // VISTA PARA LA CREACION DE DIRECCIONES
+    crearDireccion: function(req, res) {
+        res.render('users/crear-direccion');
+    },
+
     // VISTA PAGOS
     pagos: function(req, res) {
         res.render('users/pagos');
