@@ -3,12 +3,43 @@
     <head>
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
         <title>Agregar un Metodo de Pago</title>
     </head>
     <body>
         <%- include('../partials/header.ejs')%>
-        <main align="center">
-            <h1>Agregar un Metodo de Pago</h1>
+        <main>
+            <section class="titulo">
+                <h2>Agregar un Metodo de Pago</h2>
+            </section>
+
+            <section align="center" class="formulario">
+                <form method="POST" action="/usuarios/register"> <!-- MODIFICAR EL METODO Y ACTION -->
+                    <div>
+
+                        <label for="">Forma de Pago</label>
+                        <select name="type" id="type">
+                            <option value="debito">Tarjeta de Debito</option>
+                            <option value="credito">Tarjeta de Credito</option>
+                        </select>
+
+                        <label for="">Nombre de la Tarjeta</label>
+                        <input type="text" name="cardholder_name" id="cardholder_name" placeholder="Nombre tal cual aparece en la Tarjeta">
+
+                        <label for="">Numero de la Tarjeta</label>
+                        <input type="number" name="card_number" id="card_number" placeholder="Numero tal cual aparece en la Tarjeta"> <!-- MAXIMO DE 16 DIGITOS -->
+
+                        <label for="">Fecha de Vencimiento</label>
+                        <input type="number" name="expiration_date" id="expiration_date" placeholder="Fecha de Vencimiento"> <!-- VER COMO AGREGAR LA BARRA ENTRE EL MES Y EL AÑO / MAXIMO DE 4 DIGITOS -->
+
+                        <label for="">Codigo de Seguridad</label>
+                        <input type="number" name="security_code" id="security_code" placeholder="Codigo de Seguridad"> <!-- MAXIMO DE 4 DIGITOS -->
+
+                    </div>
+                    
+                    <button class="crear-cuenta" type="submit">Agregar Metodo de Pago</button>
+                </form>
+            </section>
 
             <%- include('../partials/footer.ejs')%>
         </main>
