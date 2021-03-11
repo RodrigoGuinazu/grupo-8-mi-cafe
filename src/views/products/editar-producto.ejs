@@ -4,6 +4,7 @@
         <%- include('../partials/head.ejs')%>
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
         <title>Editar Producto</title>
     </head>
 
@@ -13,11 +14,17 @@
         <section align="center" class="formulario">
             <h2>Editar producto <%= productToEdit.name %></h2>
             <%- include('../partials/vistaErroresValidaciones.ejs') %>
-            <form action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form class="edit-product" action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                <div class="product-name">
+                    <label for="">Titulo:</label>
+                    <input type="text" name="name" class="name" value="<%= productToEdit.name %>" placeholder="Titulo del Producto">
+                    <div id="erroresName" class="lista-errores"></div>
+                </div>
+
                 <div class="product-type">
-                    <label for="">Categoría</label>
-                    <br>
-                    <select name="category">
+                    <label for="">Categoria:</label>
+                    <select name="category"> <!--Tipo de producto, según Categoría-->
                         <% categories.forEach(category => { %>
                             <% if(category.id == productToEdit.category_id) { %>
                                 <option value="<%= category.id %>"><%= category.category %></option>
@@ -28,23 +35,10 @@
                         <% }); %>
                     </select>
                 </div>
-                <div class="product-img">
-                    <label for="">Imagen del Producto</label>
-                    <br>
-                    <input type="file" name="image">
-                </div>
-                <div class="product-name">
-                    <label for="">Titulo</label>
-                    <br>
-                    <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= productToEdit.name %>">
-                </div>
-                <div class="product-weight">
-                    <label for="">Peso en gr</label>
-                    <br>
-                    
+
                 <div class="attribute-check">
-                    <label for="">Atributos del Producto</label>
-                    <select name="attribute" id="">
+                    <label for="">Peso(gr)/Color:</label>
+                    <select name="attribute" id="attribute">
                         <% attributes.forEach(attribute => { %>
                             <% if(attribute.id == productAttribute.attribute_id) { %>
                                 <option value="<%= attribute.id %>"><%= attribute.name %></option>
@@ -56,25 +50,35 @@
                     </select>
                 </div>
 
-                </div>
                 <div class="product-price">
-                    <label for="">Precio</label>
-                    <br>
-                    <input type="text" name="price" id="price" placeholder="$00,0" value="<%= productToEdit.price %>">
+                    <label for="">Precio:</label>
+                    <input type="number" step=".01" name="price" class="price" value="<%= productToEdit.price %>" placeholder="$00.00">
+                    <div id="erroresPrice" class="lista-errores"></div>
                 </div>
-               <div class="product-detail">
-                   <p><label>Detalle de producto</label></p>
-                   <textarea name="description" rows="10" cols="40"><%= productToEdit.description %></textarea>
+
+                <div class="product-img">
+                    <label for="">Imagen:</label>
+                    <input type="file" name="product-img" class="product-img">
+                    <div id="erroresImg" class="lista-errores"></div>
+                </div>
+
+                <div class="product-detail">
+                    <p><label>Detalle de producto</label></p>
+                    <textarea name="description" rows="10" class="description" cols="40"><%= productToEdit.description %></textarea> 
+                    <div id="erroresDescription" class="lista-errores"></div>
                </div>
-               <div class="product-create">
-                <button type="submit" class="product-create-button">Guardar Cambios</button>
-                </div>
+
                 <div class="product-create">
-                    <button class="product-cancel-button"><a href="/productos/listado">Cancelar</a></button>
+                    <button type="submit" class="product-create-button">Guardar Cambios</button>
                 </div>
+
+                <div class="product-create">
+                    <a class="product-cancel-button" href="/productos/listado">Cancelar</a>
+                </div>
+                
             </form>
             <div>
-                <form action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
+                <form class="delete-product" action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
                     <button class="product-delete-button" type="submit">Eliminar producto</button>
                 </form>
             </div>
