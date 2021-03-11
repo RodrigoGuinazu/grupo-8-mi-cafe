@@ -12,7 +12,7 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <section align="center" class="formulario">
-            <h2>Editar producto <%= productToEdit.name %></h2>
+            <h2>Editando el Producto "<%= productToEdit.name %>"</h2>
             <%- include('../partials/vistaErroresValidaciones.ejs') %>
             <form class="edit-product" action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
 
@@ -85,5 +85,6 @@
         </section>
     <%- include('../partials/footer.ejs')%>
     </main>
+    <script type="text/javascript" src="/js/edit-product.js"></script>
 </body>
 </html>
