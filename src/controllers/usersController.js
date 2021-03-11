@@ -108,7 +108,7 @@ let usersController = {
         res.render('users/direcciones');
     },
 
-    // VISTA PARA LA CREACION DE DIRECCIONES
+    // VISTA PARA AGREGAR UNA DIRECCION
     crearDireccion: function(req, res) {
         res.render('users/crear-direccion');
     },
@@ -116,6 +116,11 @@ let usersController = {
     // VISTA PAGOS
     pagos: function(req, res) {
         res.render('users/pagos');
+    },
+
+    // VISTA PARA AGREGAR UN METODO DE PAGO
+    crearPago: function(req, res) {
+        res.render('users/crear-pago');
     },
 
     // LOGICA BORRADO

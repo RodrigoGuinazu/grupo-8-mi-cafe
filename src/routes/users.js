@@ -22,6 +22,7 @@ router.get ('/avatar', userMiddleware.guest, usersController.avatar);
 router.get ('/direcciones', userMiddleware.guest, usersController.direcciones);
 router.get ('/direcciones/crear', userMiddleware.guest, usersController.crearDireccion);
 router.get ('/pagos', userMiddleware.guest, usersController.pagos);
+router.get ('/pagos/crear', userMiddleware.guest, usersController.crearPago);
 
 module.exports = router;
 
