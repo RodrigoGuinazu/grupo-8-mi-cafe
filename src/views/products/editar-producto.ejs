@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/stylesheets/navbar.css">
         <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
         <link rel="stylesheet" href="/stylesheets/errores.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
         <title>Editar Producto</title>
     </head>
 
@@ -77,11 +78,13 @@
                 </div>
                 
             </form>
+
             <div>
                 <form class="delete-product" action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
-                    <button class="product-delete-button" type="submit">Eliminar producto</button>
+                    <button type="submit" class="product-delete-button">Eliminar producto</button>
                 </form>
             </div>
+
         </section>
     <%- include('../partials/footer.ejs')%>
     </main>

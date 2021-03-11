@@ -86,4 +86,30 @@ window.addEventListener('load', function() {
             formEdit.submit() // En el caso de que la condicion de arriba sea falsa (que no haya ningun error) permitimos el submit de formEdit
         }
     })
+
+    // ELIMINAR PRODUCTO //
+
+    let deleteProduct = document.querySelector('form.delete-product');
+
+    deleteProduct.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        swal({
+            title: "Eliminar Producto",
+            text: "Está seguro que desea eliminar el producto?",
+            icon: "warning",
+            buttons: ["Cancelar","Sí"],
+            dangerMode: true,
+            closeOnClickOutside: true,
+            closeOnEsc: false,
+        })
+        .then((deleteProduct) => {
+            if (deleteProduct == true) {
+            deleteProduct.submit();
+            swal("El Producto fue eliminado!", {
+            icon: "success",
+            })
+            }
+        })
+    })
+    
 })
