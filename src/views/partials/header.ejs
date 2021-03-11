@@ -22,7 +22,7 @@
     <div class="navbar-inferior">
 
         <% if(locals.user && locals.user.role_id == 1) { %> 
-            <div class="navbar-location"><a style="font-weight: bold; font-size: larger;" class="button-create" href="/productos/crear">Crear Producto</a></div>
+            <div class="navbar-location"><a style="font-weight: bold; font-size: larger;" href="/productos/crear">Crear Producto</a></div>
         <% }else if(locals.user) { %>
             <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4><a href="/usuarios/direcciones">Tus direcciones</a></h4></div>
         <% } else {%>
@@ -30,9 +30,9 @@
         <% } %>
 
         <% if(locals.user && locals.user.role_id == 1) { %> 
-            <div class="navbar-location-desktop"><a style="font-weight: bold; font-size: larger;" class="button-create" href="/productos/crear">Crear Producto</a></div>
+            <div class="navbar-location-desktop"><a style="font-weight: bold; font-size: larger;" href="/productos/crear">Crear Producto</a></div>
         <% }else if(locals.user) { %>
-            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4><a href="/usuarios/direcciones">Tus direcciones</a></h4></div>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4><a  href="/usuarios/direcciones">Tus direcciones</a></h4></div>
         <% } else {%>
             <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis <br> a tu domicilio </h4></div>
         <% } %>
