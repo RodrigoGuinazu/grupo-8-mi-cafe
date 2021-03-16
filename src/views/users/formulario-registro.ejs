@@ -19,14 +19,19 @@
         <%- include('../partials/vistaErroresValidaciones.ejs') %>
 
         <section align="center" class="formulario">
-            <form method="POST" action="/usuarios/register">
+            <form method="POST" action="/usuarios/register" class="register">
                 <div>
-                    <input type="text" name="name" id="name" placeholder="Tu nombre">
-                    <input type="text" name="lastname" id="lastname" placeholder="Tu apellido">
-                    <input type="email" name="email" id="email" placeholder="Tu E-mail">
-                    <input type="password" name="password" id="password" placeholder="Tu contraseña"><i class="fas fa-eye-slash"></i>
+                    <input class= "name" type="text" name="name" id="name" placeholder="Tu nombre">
+                    <div class="errNombre"></div>
+                    <input class= "lastname" type="text" name="lastname" id="lastname" placeholder="Tu apellido">
+                    <div class="errApellido"></div>
+                    <input class= "email" type="email" name="email" id="email" placeholder="Tu E-mail">
+                    <div class="errEmail"></div>
+                    <input class= "password" type="password" name="password" id="password" placeholder="Tu contraseña"><i class="fas fa-eye-slash"></i>
+                    <div class="errPassword"></div>
                     <br>
-                    <input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirmá tu contraseña"><i class="fas fa-eye-slash"></i>
+                    <input class= "confPassword" type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirmá tu contraseña"><i class="fas fa-eye-slash"></i>
+                    <div class="errConfPassword"></div>
                 </div>
                
                 <div class="checkbox">
@@ -49,5 +54,6 @@
         
     </main>
     <script type="text/javascript" src="/js/register.js"></script> <!--MODIFICAR a 'validator.js'-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

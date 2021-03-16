@@ -53,7 +53,7 @@ let usersController = {
         res.render('users/formulario-registro');
     },
     // LOGICA DE REGISTRO
-    processRegister: function(req, res, next) {
+    processRegister: function(req, res) {
         const errors = validationResult(req);
         if(!errors.isEmpty()){
             return res.render('users/formulario-registro', {errors: errors.errors});
@@ -66,8 +66,13 @@ let usersController = {
                 role_id: 2,
                 image: 'avatar_placeholder.png'
             })
+            .then(result => {
+                res.redirect("/usuarios/login");
+            })
+            .catch(error => {
+                res.send(error)
+            })
         }
-        res.redirect("/usuarios/login");
     },
     // VISTA EDITAR
     editar: function(req, res) {
