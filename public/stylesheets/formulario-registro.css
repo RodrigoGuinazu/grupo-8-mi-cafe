@@ -233,7 +233,7 @@ h2 {
     padding: 5px;
 }
 
-.errNombre, .errApellido, .errEmail, .errPassword, .errConfPassword {
+.errNombre, .errApellido, .errEmail, .errPassword, .errConfPassword, .errRegister {
     color: darkorange;
     font-weight: bolder
 }

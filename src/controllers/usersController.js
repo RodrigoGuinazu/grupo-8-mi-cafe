@@ -51,41 +51,29 @@ let usersController = {
     },
     // VISTA REGISTRO
     register: function(req, res) {
-        res.render('users/formulario-registro');
+        res.render('users/formulario-registro', {errors: {}});
     },
     // LOGICA DE REGISTRO
     processRegister: function(req, res) {
         const errors = validationResult(req);
         if(!errors.isEmpty()){
-            return res.render('users/formulario-registro', {errors: errors.errors});
+            console.log(errors.mapped())
+            console.log(typeof errors.lastname)
+            return res.render('users/formulario-registro', {errors: errors.mapped()});
         } else {
-            db.User.create({
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                name: req.body.name,
-                lastname: req.body.lastname,
-                role_id: 2,
-                image: 'avatar_placeholder.png'
-            })
-            .then(result => {
-                    res.redirect("/usuarios/login");
-                })
-            .catch(error => {
-                console.log(error);
-                res.send(error)
-            })
-        }
-        /* :: Resolver la comprobación de email existente en DB ::
-        else {
+            console.log("Se ejecutó")
             db.User.findOne({
                 where: {
                     email: req.body.email
                 }
-            }) /Debería hacer una API para importar con fetch el usuario/
+            })
             .then((result) => {
-                    if (result.email == req.body.email) {
-                        console.log('El e-mail que ingresaste, ya está registrado. Intentá con otro.');
+                console.log(result)
+                    if (result != null) {
+                        let errRegister = 'El e-mail que ingresaste, ya está registrado. Intentá con otro.'
+                        res.render('users/formulario-registro', {errors: {}, errRegister: errRegister});
                     } else {
+                        console.log("Se ejecutó 2")
                         db.User.create({
                             email: req.body.email,
                             password: bcrypt.hashSync(req.body.password, 10),
@@ -94,9 +82,9 @@ let usersController = {
                             role_id: 2,
                             image: 'avatar_placeholder.png'
                         })
-                            .then(result => {
-                                res.redirect("/usuarios/login");
-                            });
+                        .then(result => {
+                            res.redirect("/usuarios/login");
+                        });
                     }
                 })
             .catch(error => {
@@ -104,7 +92,6 @@ let usersController = {
                 res.send(error)
             })
         }
-        */
     },
     // VISTA EDITAR
     editar: function(req, res) {
