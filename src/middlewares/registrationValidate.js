@@ -1,8 +1,6 @@
 const {check, body} = require('express-validator');
-const User = require('../../database/models/User');
 //const path = require('path');
 //const fs = require('fs');
-const db = require('../../database/models')
 const sequelize = require('sequelize')
 
 //let users = fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json'), {encoding: 'utf-8'});
@@ -21,10 +19,11 @@ module.exports = [
             return false;
         })
         .withMessage('Las contraseñas ingresadas deben coincidir. Intentá nuevamente.'),
-    body('email')
+    /*
+        body('email')
         .custom(function(value, {req}) {
         for (let i = 0; i < users.length; i++) {
-            if(campoEmail == value) {
+            if(campoEmail != value) {
                 if (req.session.usuarioALoguearse != undefined) {
                     if (User.id == req.session.usuarioALoguearse.id) {
                         return true;
@@ -37,5 +36,6 @@ module.exports = [
         return true;
     })
     .withMessage('El e-mail que ingresaste, ya está registrado. Intentá con otro.')
+    */
     
   ]

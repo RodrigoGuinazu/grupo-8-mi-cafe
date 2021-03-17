@@ -176,8 +176,9 @@ h2 {
     color: black;
 }
 
-.crear-cuenta:focus {
+.crear-cuenta:hover {
     background-color:#D1B894;
+    font-weight: bolder;
     border: solid #D1B894 1px;
     color: black;
 }
@@ -202,7 +203,7 @@ h2 {
     margin: 5px;
 }
 
-.button-create:focus {
+.crear-cuenta:focus {
     background-color:#049125;
     border: solid #049125 1px;
 }
@@ -232,6 +233,11 @@ h2 {
     padding: 5px;
 }
 
+.errNombre, .errApellido, .errEmail, .errPassword, .errConfPassword {
+    color: darkorange;
+    font-weight: bolder
+}
+
 
 /* DESKTOP - TABLET */
 
@@ -248,6 +254,11 @@ h2 {
         color: black;
         cursor: pointer;
     }
+    .crear-cuenta:focus {
+        background-color:#049125;
+        border: solid #049125 1px;
+    }
+
     .descartar-cambios:hover {
         background-color:rgb(184, 15, 15);
         border: solid rgb(184, 15, 15) 1px;
