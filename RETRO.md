@@ -144,3 +144,25 @@
 - Estancarse en un problema.
 
 =================
+
+Sprint 7
+
+>> Más de:
+- Hablar con personas de otros equipos para tener mas opiniones.
+
+>> Seguir haciendo:
+- Resolver las cosas en equipo y pedirnos ayuda.
+- Dejar asentado en nuevas tarjetas lo que no se llegó a hacer.
+- Contar con el equipo.
+
+>> Empezar a hacer:
+- Completar tarjetas pendientes de Trello.
+- Desagregar aún más las tareas en Trello.
+
+>> Parar de hacer:
+- No dejar muchas cosas para ultimo momento.
+
+>> Menos de:
+- Invertir tiempo en detalles que podremos solucionar más adelante.
+
+=================
