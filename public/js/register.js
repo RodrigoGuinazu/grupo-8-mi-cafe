@@ -1,6 +1,5 @@
 	window.addEventListener("load", function (e) {
 		let formRegister = document.querySelector("form.register");
-		console.log(formRegister)
 		formRegister.addEventListener("submit", function(e) {
 
 			let errores = {
@@ -30,29 +29,20 @@
 			if (!re.test(campoEmail.value)) {
 				errores.email = "Debes ingresar un e-mail válido.";
 			}
-			db.User.findAll({
-				attributes: {includes: [email]},
-				where: {
-					email: req.body.email
-				}
-			}) /*Debería hacer una API para importar con fetch el usuario*/
-			.then(result => {
-				if (campoEmail == req.body.email.value) {
-					errores.email = "El e-mail que ingresaste, ya está registrado. Intentá con otro."
-				}
-			})
 
 			let campoPassword = document.querySelector("input.password");
 			const re2 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 			if (!re2.test(campoPassword.value)) {
-				errores.password = "La contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 número y 1 caracter especial. EJ: 'Hola123!'";
+				errores.password = "La contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 número y 1 caracter especial. Ej: 'Hola123!'";
 			}
 		
 			let campoConfPassword = document.querySelector("input.confPassword");
 			if (campoConfPassword.value != campoPassword.value) {
 				errores.confPassword = "Las contraseñas ingresadas deben coincidir.";
 			}
-		
+			if (campoConfPassword.value == "") {
+				errores.confPassword = "Es necesario que confirmes tu contraseña.";
+			}
 
 			if (errores.nombre != "" || errores.apellido != "" || errores.email != "" || errores.password != "" || campoConfPassword.value != campoPassword.value) {
 				e.preventDefault();
@@ -76,7 +66,7 @@
 
 				//Modal creación de usuario OK
 				let createdUser = document.querySelector(".formulario");
-				createdUse.addEventListener =  ("submit", (e) => {
+				createdUser.addEventListener =  ("submit", (e) => {
 					swal({
 						title: "Felicitaciones!",
 						text: "Creaste tu usuario Mí Café",

@@ -1,7 +1,8 @@
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcrypt');
 const db = require('../../database/models')
-const sequelize = require('sequelize')
+const sequelize = require('sequelize');
+const User = require("../../database/models/User");
 
 let usersController = {
     // VISTA LOGIN
@@ -50,26 +51,44 @@ let usersController = {
     },
     // VISTA REGISTRO
     register: function(req, res) {
-        res.render('users/formulario-registro');
+        res.render('users/formulario-registro', {errors: {}});
     },
     // LOGICA DE REGISTRO
     processRegister: function(req, res) {
         const errors = validationResult(req);
         if(!errors.isEmpty()){
-            return res.render('users/formulario-registro', {errors: errors.errors});
+            console.log(errors.mapped())
+            console.log(typeof errors.lastname)
+            return res.render('users/formulario-registro', {errors: errors.mapped()});
         } else {
-            db.User.create({
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                name: req.body.name,
-                lastname: req.body.lastname,
-                role_id: 2,
-                image: 'avatar_placeholder.png'
+            console.log("Se ejecutó")
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
             })
-            .then(result => {
-                res.redirect("/usuarios/login");
-            })
+            .then((result) => {
+                console.log(result)
+                    if (result != null) {
+                        let errRegister = 'El e-mail que ingresaste, ya está registrado. Intentá con otro.'
+                        res.render('users/formulario-registro', {errors: {}, errRegister: errRegister});
+                    } else {
+                        console.log("Se ejecutó 2")
+                        db.User.create({
+                            email: req.body.email,
+                            password: bcrypt.hashSync(req.body.password, 10),
+                            name: req.body.name,
+                            lastname: req.body.lastname,
+                            role_id: 2,
+                            image: 'avatar_placeholder.png'
+                        })
+                        .then(result => {
+                            res.redirect("/usuarios/login");
+                        });
+                    }
+                })
             .catch(error => {
+                console.log(error);
                 res.send(error)
             })
         }
