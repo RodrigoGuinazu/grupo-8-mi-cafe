@@ -1,4 +1,4 @@
-** :: Sprint 4 (20201218) :: **
+**:: Sprint 4 (20201218) ::**
 
 + Se abordarán las tarjetas 'pendientes' y 'en proceso' del Sprint 3 (Vistas Creación y Edición de productos, ruteo de carpeta 'src'), antes de iniciar las tareas del Sprint 4.
 
@@ -39,7 +39,7 @@ Weekly (20210105)
 
 =======
 
-** :: Sprint 5 (20210108) :: **
+**:: Sprint 5 (20210108) ::**
 
 + Se abordarán las tarjetas 'pendientes' del Sprint 4 (Login y #404), antes de iniciar las tareas del Sprint 5.
 
@@ -112,7 +112,7 @@ Weekly (20210119)
 
 =======
 
-** :: Sprint 6 (20210121) :: **
+**:: Sprint 6 (20210121) ::**
 
 + Se abordarán las tarjetas 'pendientes' del Sprint 5, antes de iniciar las tareas del Sprint 6.
 
@@ -199,7 +199,7 @@ Daily (20210205-20210209)
 
 =======
 
-** :: Sprint 7 (20210225) :: **
+**:: Sprint 7 (20210225) ::**
 
 + Se plasmaron y sortearon las tareas del Sprint 7 en Trello:
   + Login de usuarios - FS
@@ -213,6 +213,76 @@ Daily (20210205-20210209)
 
 =======
 
-Daily (202103XX)
+Daily (20210309)
 
-+ 
++ Seguimiento de tareas:
+  + Login de usuarios - FS: Se logró resolver la impresión de los errores (*validaciones del backend*). [en curso]
+  + Registro de usuarios - AV [en curso]
+  + Modificación de usuarios - RS [en curso]
+  + Creación y Modificación de productos - RG [en curso]
+
++ Se sigue trabajando sobre las tarjetas de la columna 'pendientes', en paralelo con las tareas del Sprint 7.
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210311)
+
++ Seguimiento de tareas:
+  + Login de usuarios - FS [en curso]
+  + Registro de usuarios - AV [en curso]
+  + Modificación de usuarios - RS [en curso]
+  + Creación y Modificación de productos - RG: Se logró implementar *sweetalert*, para confirmar el borrado de un producto, desde la vista editar-producto. [en curso]
+
++ Se sigue trabajando sobre las tarjetas de la columna 'pendientes', en paralelo con las tareas del Sprint 7.
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210314)
+
++ Seguimiento de tareas:
+  + Login de usuarios - FS [completado]
+  + Registro de usuarios - AV: Se corrigieron las validaciones del Front-end, considerando las clases de la vista. [en curso]
+  + Modificación de usuarios - RS [en curso]
+  + Creación y Modificación de productos - RG [completado]
+
++ Se sigue trabajando sobre las tarjetas de la columna 'pendientes', en paralelo con las tareas del Sprint 7.
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210315)
+
++ Seguimiento de tareas:
+  + Login de usuarios - FS [completado]
+  + Registro de usuarios - AV: Se corrigieron las validaciones del back-end, pero no se logra resolver la validación de email existente en DB. [en curso]
+  + Modificación de usuarios - RS [completado]
+  + Creación y Modificación de productos - RG [completado]
+
++ Se sigue trabajando sobre las tarjetas de la columna 'pendientes', en paralelo con las tareas del Sprint 7.
+
++ Se realizará una nueva reunión, para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210316)
+
++ Seguimiento de tareas:
+  + Login de usuarios - FS [completado]
+  + Registro de usuarios - AV: Se logró realizar la validación del back-end, del email existente en DB. [completado]
+  + Modificación de usuarios - RS [completado]
+  + Creación y Modificación de productos - RG [completado]
+
++ Quedaron tarjetas en la columna 'pendientes', que se ponderarán para resolverlas en el Sprint 8.
+
++ Se realizará la Retrospectiva, con las acciones de mejora y mitigación, desarrolladas durante el Sprint 7 [En curso].
+
+
+=======
+
+**:: Sprint 8 (2021xxxx) ::**
+
