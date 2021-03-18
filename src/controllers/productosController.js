@@ -93,7 +93,7 @@ let productosController = {
 
         Promise.all([attributeRequest, categoriesRequest])
         .then(([attributes, categories]) => {
-            return res.render("products/crear-producto", {attributes, categories})
+            return res.render("products/crear-producto", {attributes, categories, errors: {}})
         })
         .catch(function(error){
 			console.log(error);
@@ -139,7 +139,7 @@ let productosController = {
 
         Promise.all([productToEdit, attributeRequest, productAttributeRequest, categoriesRequest])
         .then(([productToEdit, attributes, productAttribute, categories]) => {
-            return res.render('products/editar-producto', {productToEdit, attributes, productAttribute, categories})
+            return res.render('products/editar-producto', {productToEdit, attributes, productAttribute, categories, errors: {}})
         })
         .catch(function(error){
             console.log(error);
