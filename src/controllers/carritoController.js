@@ -5,7 +5,7 @@ let products = fs.readFileSync(path.resolve(__dirname, '../data/productos.json')
 products = JSON.parse(products);
 
 let carritoController = {
-    carritoLleno: function(req, res) {
+    carrito: function(req, res) {
         let recomendacion = []
 
         let randomNum = function() {
@@ -21,10 +21,7 @@ let carritoController = {
             randomNum()
         }
 
-        res.render('products/carrito-lleno', {recomendacion});
-    },
-    carritoVacio: function(req, res) {
-        res.render('products/carrito-vacio');
+        res.render('products/carrito', {recomendacion});
     }
 }
 
