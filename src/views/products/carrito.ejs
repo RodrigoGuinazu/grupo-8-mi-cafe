@@ -79,13 +79,13 @@
                     <% recomendacion.forEach(recomendado =>{ %>
                      <article class="caja-producto">
                          <a href="/productos/<%= recomendado.id %>/detalle">
-                             <img src="/images/products/<%= recomendado.imagen %>" alt="recomendacion">
+                             <img src="/images/products/<%= recomendado.image %>" alt="recomendacion">
                          </a>
                          <div class="producto-info">
                              <i class="fas fa-credit-card"></i>
                              <i class="fas fa-shopping-bag"></i>
-                             <h2 class="precio-producto">$<%= recomendado.precio %> </h2>
-                             <h3><%= recomendado.nombre %> </h3>
+                             <h2 class="precio-producto">$<%= recomendado.price %> </h2>
+                             <h3><%= recomendado.name %> </h3>
                          </div>                
                      </article>
                      <% }) %>
