@@ -46,18 +46,55 @@
     justify-content: flex-start;
 }
 
-.login-credential-user input, .login-credential-remindme {
+.login-credential-remindme {
     padding: 5px;
     margin: 5px;
-    width: 90%;
+    width: 95%;
     border: none;
 }
 
-.login-credential-password input {
+.login-credential-user input{
+    width: 75%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px #ededed;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
     padding: 5px;
-    margin: 5px;
-    width: 83%;
-    border: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-credential-password input {
+    width: 76%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px #ededed;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button#view-pass {
+    height: 30px;
+    border-radius: 6px;
+    background-color: white;
+    border:solid 0.1px white;
+    margin-left: -22px;
+}
+
+button#view-pass:focus {
+    height: 30px;
+    border-radius: 6px;
+    background-color: white;
+    outline: none;
+    margin-left: -22px;
 }
 
 .login-submit {
@@ -65,7 +102,7 @@
     margin: 5px
 }
 
-.login-submit-button {
+button.login-submit-button {
     padding: 15px 20px;
     border-radius: 20px;
     text-align: center;
@@ -74,6 +111,20 @@
     color: white;
     padding: 15px 20px;
     margin: 5px;
+}
+
+button.login-submit-button:hover {
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: solid #ededed 1px;
+    background-color:#D1B894;
+    border: 1px solid #D1B894;
+    color: black;
+    font-weight: bold;
+    padding: 15px 20px;
+    margin: 5px;
+    cursor: pointer;
 }
 
 /*Mensaje Login: incorrecto*/
@@ -126,9 +177,10 @@ a {
 .login-register-button {
     border-radius: 15px;
     text-align: center;
-    border: solid gray 1px;
-    background-color:gray;
+    border: solid rgb(170, 170, 170) 1px;
+    background-color:rgb(170, 170, 170);
     color: black;
+    font-weight: bold;
     padding: 5px;
     margin: 8px;
 }
@@ -149,19 +201,8 @@ a {
         width: 85%;
         border: none;
     }
-    .searchTerm{
-        width: 72%;
-        margin-bottom: 5px;
-    }
 
     .pie-desktop {
      font-size: 12px;
-     }
-}
-/* DESKTOP - TABLET */
-
-@media (min-width: 768px) {
-     .searchTerm {
-        width: 80%;
      }
 }
