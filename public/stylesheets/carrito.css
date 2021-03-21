@@ -1,124 +1,102 @@
-.title {
-    width: 100%;
-    text-align: center;
-    background-color: #D1B894;
-    padding-top: 10px
-}
-.title-products {
-    text-align: left;
-    vertical-align: bottom;
-    background-color: #D1B894;
-    color: rgb(83, 82, 82)
+main {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ededed;
 }
 
-
-/* CARRITO CON PRODUCTOS*/
-
-.contenido-carrito-1 {
+.titulo-carrito {
     padding-top: 15px;
     padding-bottom: 20px;
-    margin-left: 6px;
     background-color: #ededed;
-    border-bottom: 1px solid #b8b8b8
+}
+    
+div.info-producto {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    background-color: white;
 }
 
-.contenido-carrito-2 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-left: 6px;
-    background-color: #ededed;
-    /*padding-bottom: 250px*/
+.info-producto h3 {
+    width: 20%;
 }
 
-.contenido-carrito-left {
-    vertical-align: top;
-    width: 25%;
-    display: inline-block;
+.contenido-carrito {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
 }
 
-.contenido-carrito-right {
-    vertical-align: top;
-    display: inline-block;
+.imagen-carrito {
+    width: 20%;
 }
 
-.contenido-carrito-right-nombre {
-    font-size: 14px;
-    display: inline-block
+.imagen-carrito img {
+    width: 50%;
 }
 
-.contenido-carrito-right-presentacion {
-    font-size: 12px;
-    color:gray
+.titulo-producto {
+    width: 20%;
 }
 
-.contenido-carrito-right-presentacion a {
+.titulo-producto a {
     text-decoration: none;
-    margin-left: 5px
+    color: black;
 }
 
-.contenido-carrito-right-detalle {
-    margin-top: 10px
+.precio-producto-carrito {
+    width: 20%;
 }
 
-.contenido-carrito-right-detalle-precio {
-    display: inline-block;
+.cantidad-producto {
+    width: 20%;
 }
 
-.contenido-carrito-right-detalle-unidades {
-    width: 40px;
-    border-radius: 4px;
-    margin-right: 140px
+.cantidad-producto input {
+    height: 25px;
+    width: 13%;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
-.contenido-carrito-right-delete-brasil {
-    display: inline-block
-}
-
-.contenido-carrito-right-delete-colombia {
-    display: inline-block;
-    margin-left: 18px
-}
-
-.fa-times {
-    display: inline-block;
-    font-size: 12px;
-    margin-left: 55px;
-    vertical-align: top
+.total-producto {
+    width: 20%;
 }
 
 .finalizar-pedido {
+    background-color: #ededed;
     display: flex;
-    align-content: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 180px;
-    padding-bottom: 60px
+    align-items: flex-end;
+    padding-top: 40px;
+    padding-bottom: 40px
 }
 
 .button-finalizar-pedido {
-    width: 50%;
-    color: white;
-    background-color: black;
-    justify-content: center;
-    padding: 4px;
-    border-radius: 4px;
-    cursor: pointer
-}
-
-.finalizar-pedido :hover {
-    width: 50%;
+    width: 18%;
+    height: 43px;
     text-align: center;
-    color: black;
+    color: white;
     padding: 4px;
-    background-color: #D1B894;
-    border: 1px solid #D1B894;
-    border-radius: 4px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.preguntas-frecuentes {
-    padding-top: 10px
+.finalizar-pedido button:hover {
+    width: 18%;
+    height: 43px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 /* RECOMENDACIONES */
@@ -205,56 +183,6 @@
     }
 
 }
-
-/*  */
-
-@media (min-width: 768px) {
-
-    /* HEADER TABLET/DESKTOP */
-/*
-    div.search {
-        width: 60%;
-    }
-    
-    .search {
-        width: 60%;
-        position: relative;
-        display: flex;
-        margin-left: 5%;
-    }
-    
-    .searchTerm {
-        width: 65%;
-        border: 1px solid #D1B894;
-        border-right: none;
-        padding: 5px;
-        height: 23px;
-        border-radius: 4px 0 0 4px;
-        outline: none;
-        color: black;
-      }
-    
-    .searchButton {
-        width: 40px;
-        height: 35px;
-        border: 1px solid #D1B894;
-        border-left: none;
-        background:  #ededed;
-        text-align: center;
-        color: black;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-        font-size: 12px;
-    }
-    
-    .fa-search:before {
-        background-color:  #ededed;
-    }
-
-    .navbar-cart {
-        display: none
-    }
-}*/
 
 @media (min-width: 1050px) {
 
