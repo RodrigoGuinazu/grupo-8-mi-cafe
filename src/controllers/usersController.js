@@ -98,18 +98,19 @@ let usersController = {
     },
     // LOGICA EDICION
     modificacion: (req, res) => {
-        db.User.update({
-            name: req.body.name,
-            lastname: req.body.lastname,
-            birthdate: req.body.birthdate,
-            gender: req.body.gender
-        },
+        db.User.update(
+            req.body, // Aca req.body seria lo mismo que escribir todo el objeto {name: req.body.name, lastname: req.body.lastname, birthdate: req.body.birthdate, gender: req.body.gender,}
         {
             where: {
                 id: res.locals.user.id
             }
         })
         .then( resultado => {
+            req.session.usuarioALoguearse = {
+                ...req.session.usuarioALoguearse, // Spread operator (lo que hago aca es traer toda la info del req.session.usuarioALoguearse y pegarlo dentro del objeto)
+                ...req.body // Aca hago un spread operator del req.body de la linea 102 y modifica los datos del req.session.usuarioALoguearse
+            }
+            console.log(req.session.usuarioALoguearse)
             res.redirect('/usuarios/perfil')
             })
         .catch(error => {
