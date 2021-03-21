@@ -32,6 +32,20 @@ h2 {
     justify-content: center;
 }
 
+.formulario input[type=number] {
+    width: 75%;
+    max-width: 340px;
+    height: 35px;
+    border:solid 1px #ededed;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .formulario input[type=email] {
     width: 75%;
     max-width: 340px;
