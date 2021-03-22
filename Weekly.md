@@ -284,5 +284,12 @@ Daily (20210316)
 
 =======
 
-**:: Sprint 8 (2021xxxx) ::**
+**:: Sprint 8 (20210321) ::**
 
+Daily (20210316)
+
++ Se plasmaron y sortearon las tareas del Sprint 8 en Trello:
+  + API Productos - FS y RS
+  + API Usuarios - AV y RG
+
++ Se realizará una nueva reunión para revisar el avance las tareas mencionadas.
