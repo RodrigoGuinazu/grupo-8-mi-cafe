@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
         campoEmail.addEventListener ("blur", function () {
             if (campoEmail.value == "") {
                 listaErroresEmail.innerHTML = "El campo de E-mail debe estar completo."
-            } else if (regexEmail.test(campoEmail.value) === false) {
+            } else if (regexEmail.test(campoEmail.value) === false) { // probar con match
                 listaErroresEmail.innerHTML = "El campo debe tener formato de E-mail."
             } else {
                 listaErroresEmail.innerHTML = ""
