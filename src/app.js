@@ -10,7 +10,7 @@ let authMiddleware = require('./middlewares/authMiddleware.js');
 let indexRouter = require('./routes/index');
 let productosRouter = require('./routes/productos');
 let carritoRouter = require('./routes/carrito');
-//const apiProducto = require('./routes/api/apiProductos'); // API de productos /api/products
+const apiProducto = require('./routes/api/apiProductos'); // API de productos /api/products
 const apiUsuario = require('./routes/api/apiUsuarios'); // API de usuarios /api/users
 
 
@@ -42,7 +42,7 @@ app.use('/carrito', carritoRouter);
 app.use('/productos', productosRouter);
 app.use('/usuarios', usersRouter);
 app.use('/', indexRouter);
-//app.use('/api/products', apiProducto); // app.use de la API
+app.use('/api/products', apiProducto); // app.use de la API
 app.use('/api/users', apiUsuario); // app.use de la API
 
 // catch 404 and forward to error handler
