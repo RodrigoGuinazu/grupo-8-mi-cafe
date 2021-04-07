@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
         
         const campoEmail = document.querySelector("input.email");
         const listaErroresEmail = document.querySelector(".erroresEmail");
-        const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         /*const emailError = document.querySelector(".erroresEmail")*/
 
         /*DE ESTA MANERA ME EVITO HACER EL PREVENTDEFAULT YA QUE EL ERROR LO TIRA CUANDO SALGO DEL INPUT*/
@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
         campoEmail.addEventListener ("blur", function () {
             if (campoEmail.value == "") {
                 listaErroresEmail.innerHTML = "El campo de E-mail debe estar completo."
-            } else if (regexEmail.test(campoEmail.value) === false) { // probar con match
+            } else if (!regexEmail.test(campoEmail.value)) { // probar con match
                 listaErroresEmail.innerHTML = "El campo debe tener formato de E-mail."
             } else {
                 listaErroresEmail.innerHTML = ""
@@ -29,6 +29,7 @@ window.addEventListener("load", function() {
             if (campoPassword.value == "") {
                 listaErroresPassword.innerHTML = "Debes ingresar una contraseña."
             }
+        })
 
         viewPass.addEventListener("click", function(e) {
             // preventDefault para sacarle la funcion del submit al ojito. CONSULTAR
@@ -40,5 +41,4 @@ window.addEventListener("load", function() {
                 campoPassword.setAttribute("type", "password")
             }
         })
-    })
 })
