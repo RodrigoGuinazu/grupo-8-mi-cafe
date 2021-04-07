@@ -81,6 +81,33 @@ a.boton_usuario {
     color: black;
 }
 
+.datos_usuario {
+    display: flex;
+    padding: 50px;
+}
+
+.contenedor-datos {
+    background-color: white;
+}
+
+.titulo {
+    background-color: white;
+}
+
+.sub-div {
+    margin-left: 230px;
+    background-color: white;
+}
+
+.sub-div h3{
+    background-color: white;
+}
+
+.sub-div a{
+    background-color: white;
+    margin-left: 85px;
+}
+
 @media (max-width: 1023px) {
     .datos_usuario {
         display: none; 
@@ -96,6 +123,7 @@ a.boton_usuario {
 .usuario_contenedor {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .logout-mobile {
