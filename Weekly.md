@@ -286,10 +286,36 @@ Daily (20210316)
 
 **:: Sprint 8 (20210321) ::**
 
-Daily (20210316)
-
 + Se plasmaron y sortearon las tareas del Sprint 8 en Trello:
   + API Productos - FS y RS
   + API Usuarios - AV y RG
+  + Dashboard - se realizará en conjunto con todos los miembros del equipo.
 
 + Se realizará una nueva reunión para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210405)
+
++ Seguimiento de tareas:
+  + API Productos - [en curso].
+  + API Usuarios - [completado]: se terminó de generar la API de usuarios, con los endpoints correspondientes ('api/users/' || 'api/users/:id').
+  + Dashboard [pendiente].
+
++ Se realizará una nueva reunión para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210406)
+
++ Seguimiento de tareas:
+  + API Productos - [completado]: .
+  + API Usuarios - [completado].
+  + Dashboard - [en curso]: se generó el repositorios en GitHub (https://github.com/RodrigoGuinazu/dashboard-mi-cafe).
+
++ Se realizará una nueva reunión para revisar el avance las tareas mencionadas.
+
+=======
+
+Daily (20210407)
+
