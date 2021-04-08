@@ -19,8 +19,6 @@ let usersController = {
             }
         })
         .then(usuarioALoguearse => {
-            //return res.send(usuarioALoguearse)
-            console.log(usuarioALoguearse);
             if(usuarioALoguearse){
                 let comparacion = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
 
@@ -28,9 +26,9 @@ let usersController = {
                     req.session.usuarioALoguearse = usuarioALoguearse;
 
                     if(req.body.remindme){
-                        res.cookie('usuario', req.session.usuarioALoguearse, {maxAge: 1000 * 60 * 60});
-                        res.locals.usuarioALoguearse = req.session.usuarioALoguearse;
+                        res.cookie('recordame', usuarioALoguearse.password, {maxAge: 1000 * 60 * 60 * 24});
                     }
+
                     res.redirect('/');
                 } else{
                     res.render('users/login', {errors: {msg: "Credenciales incorrectas"}})
@@ -45,6 +43,7 @@ let usersController = {
     },
     // LOGICA LOGOUT
     logout: function(req, res){
+        res.cookie('recordame', '', {maxAge: 0});
         req.session.destroy();
         res.redirect('/usuarios/login')
     },
@@ -155,9 +154,10 @@ let usersController = {
             }
         })
         .then( resultado => {
-                 req.session.destroy();
-                 res.redirect('/')
-            })
+            res.cookie('recordame', '', {maxAge: 0});
+            req.session.destroy();
+            res.redirect('/')
+        })
         .catch(error => {
             res.send(error)
         })
