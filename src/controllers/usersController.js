@@ -23,10 +23,10 @@ let usersController = {
                 let comparacion = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
 
                 if(comparacion){
-                    req.session.usuarioALoguearse = usuarioALoguearse;
+                    req.session.usuarioALoguearse = {...usuarioALoguearse["dataValues"], password: ""};
 
                     if(req.body.remindme){
-                        res.cookie('recordame', usuarioALoguearse.password, {maxAge: 1000 * 60 * 60 * 24});
+                        res.cookie('recordame', {...usuarioALoguearse["dataValues"], password: ""}, {maxAge: 1000 * 60 * 60 * 24});
                     }
 
                     res.redirect('/');
