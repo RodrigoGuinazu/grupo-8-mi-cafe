@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const db = require('../../database/models');
+const Sequelize = require('sequelize');
 const Product = require('../../database/models/Product');
 const Attribute = require('../../database/models/Attribute');
 const Product_attribute = require('../../database/models/Product_attribute');
@@ -9,13 +10,16 @@ let productosController = {
     detalleProducto: function(req, res, next) {
         db.Product.findByPk(req.params.id)
             .then(productDetail => {
-                db.Product.findAll({ limit: 4 })
-                    .then((recomendacion) => {
-                        res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
-                    })
-                    .catch(function(error){
-                        console.log(error);
-                    })
+                db.Product.findAll({
+                    limit: 4,
+                    order: Sequelize.literal('rand()') 
+                })
+                .then((recomendacion) => {
+                    res.render('products/detalle-producto', {productDetail: productDetail, recomendacion});
+                })
+                .catch(function(error){
+                    console.log(error);
+                })
             })
             .catch(function(error){
                 console.log(error);
