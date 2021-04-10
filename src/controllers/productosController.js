@@ -26,18 +26,31 @@ let productosController = {
             })
     },
     buscarProducto: function(req, res){
-        let busquedaUsuario = req.query.search;
+        let busquedaProducto = req.query.search;
 
         let resultadoBusqueda = [];
 
-        products.forEach(busqueda => {
-            if((busqueda.nombre).includes(busquedaUsuario)){
+        db.Product.findAll({
+            where: {
+            $or:[
+                    { 'subject': { like: '%' + busquedaProducto + '%' } },
+                    { '$Comment.body$': { like: '%' + busquedaProducto + '%' } }
+                ]
+            }
+        })
+        .then(resultadoBusqueda => {
+            res.render('products/resultadoBusqueda', {resultadoBusqueda: resultadoBusqueda});
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+
+        /*products.forEach(busqueda => {
+            if((busqueda.nombre).includes(busquedaProducto)){
                 resultadoBusqueda.push(busqueda)
             }
         })
-        console.log(resultadoBusqueda)
-        
-        res.render('products/resultadoBusqueda', {resultadoBusqueda});
+        console.log(resultadoBusqueda)*/
     },
 
     listadoProducto: function(req, res) {
