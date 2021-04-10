@@ -1,18 +1,19 @@
 const db = require('../../../database/models');
-const Product = require('../../../database/models/Product')
+const Product = require('../../../database/models/Product');
+const productosController = require('../productosController');
 
-let totalCafes = [];
-let totalCafeteras = [];
-let totalAccesorios = []; /* POR QUE NO PUEDO DECLARARLO EN 0 Y HACER UN FOR ABAJO???!!!?*/
+
 
 let apiProductosController = {
 
     listado: function(req, res){
+        let totalCafes = [];
+        let totalCafeteras = [];
+        let totalAccesorios = []; /* POR QUE NO PUEDO DECLARARLO EN 0 Y HACER UN FOR ABAJO???!!!?*/
         db.Product.findAll({
             include: "category"
         })
-        .then(function(products){
-                
+        .then(function(products){  
             products.forEach(product => {
                 if(product.category_id==1) {
                     totalCafes.push(product)
@@ -40,6 +41,7 @@ let apiProductosController = {
                         id: product.category_id,
                         name: product.category.category
                     },
+                    price: product.price,
                     detail: 'http://localhost:3030/api/products/' + product.id
                 })
             })
@@ -48,11 +50,12 @@ let apiProductosController = {
                 meta: {
                     status: 200,
                     count: products.length,
-                    countByCategory: {
-                            countByCafes: totalCafes.length,
-                            countByCafeteras: totalCafeteras.length,
-                            countByAccesorios: totalAccesorios.length
-                        }
+                    countByCategory: [
+                            {title: "Cafes", count: totalCafes.length},
+                            {title: "Cafeteras", count: totalCafeteras.length},
+                            {title: "Accesorios", count: totalAccesorios.length}
+                        ],
+                    /*countCategories: countByCategory.length*/ /*VER Cantidad de Categorías*/
                     },
                 data: product
             }
@@ -85,6 +88,7 @@ let apiProductosController = {
                     description: product.description,
                     image: 'http://localhost:3030/images/products/' + product.image,
                     category: product.category.category,
+
                 }
             }
 
