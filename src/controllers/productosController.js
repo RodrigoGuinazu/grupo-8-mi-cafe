@@ -28,18 +28,15 @@ let productosController = {
     buscarProducto: function(req, res){
         let busquedaProducto = req.query.search;
 
-        let resultadoBusqueda = [];
-
         db.Product.findAll({
             where: {
             $or:[
-                    { 'subject': { like: '%' + busquedaProducto + '%' } },
-                    { '$Comment.body$': { like: '%' + busquedaProducto + '%' } }
+                    { 'name': { like: '%' + busquedaProducto + '%' } }
                 ]
             }
         })
         .then(resultadoBusqueda => {
-            res.render('products/resultadoBusqueda', {resultadoBusqueda: resultadoBusqueda});
+            res.render('products/resultado', {resultadoBusqueda: resultadoBusqueda});
         })
         .catch(function(error){
             console.log(error);
