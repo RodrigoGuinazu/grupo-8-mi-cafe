@@ -56,8 +56,7 @@ let apiProductosController = {
                             {title: "Cafes", count: totalCafes.length, link: "http://localhost:3030/productos/listado/cafes"},
                             {title: "Cafeteras", count: totalCafeteras.length, link: "http://localhost:3030/productos/listado/cafeteras"},
                             {title: "Accesorios", count: totalAccesorios.length, link: "http://localhost:3030/productos/listado/accesorios"}
-                        ],
-                    /*countCategories: countByCategory.length*/ /*VER Cantidad de Categorías*/
+                        ]
                     },
                 data: product
             }
