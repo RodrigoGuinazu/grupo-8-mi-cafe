@@ -42,7 +42,9 @@ let apiProductosController = {
                         name: product.category.category
                     },
                     price: product.price,
-                    detail: 'http://localhost:3030/api/products/' + product.id
+                    detail: 'http://localhost:3030/api/products/' + product.id,
+                    link: `http://localhost:3030/productos/${product.id}/detalle`,
+                    edit: `http://localhost:3030/productos/${product.id}/editar`
                 })
             })
 
@@ -51,9 +53,9 @@ let apiProductosController = {
                     status: 200,
                     count: products.length,
                     countByCategory: [
-                            {title: "Cafes", count: totalCafes.length},
-                            {title: "Cafeteras", count: totalCafeteras.length},
-                            {title: "Accesorios", count: totalAccesorios.length}
+                            {title: "Cafes", count: totalCafes.length, link: "http://localhost:3030/productos/listado/cafes"},
+                            {title: "Cafeteras", count: totalCafeteras.length, link: "http://localhost:3030/productos/listado/cafeteras"},
+                            {title: "Accesorios", count: totalAccesorios.length, link: "http://localhost:3030/productos/listado/accesorios"}
                         ],
                     /*countCategories: countByCategory.length*/ /*VER Cantidad de Categorías*/
                     },
