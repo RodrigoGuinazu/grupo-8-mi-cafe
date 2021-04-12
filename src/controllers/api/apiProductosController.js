@@ -1,18 +1,19 @@
 const db = require('../../../database/models');
-const Product = require('../../../database/models/Product')
+const Product = require('../../../database/models/Product');
+const productosController = require('../productosController');
 
-let totalCafes = [];
-let totalCafeteras = [];
-let totalAccesorios = []; /* POR QUE NO PUEDO DECLARARLO EN 0 Y HACER UN FOR ABAJO???!!!?*/
+
 
 let apiProductosController = {
 
     listado: function(req, res){
+        let totalCafes = [];
+        let totalCafeteras = [];
+        let totalAccesorios = []; /* POR QUE NO PUEDO DECLARARLO EN 0 Y HACER UN FOR ABAJO???!!!?*/
         db.Product.findAll({
             include: "category"
         })
-        .then(function(products){
-                
+        .then(function(products){  
             products.forEach(product => {
                 if(product.category_id==1) {
                     totalCafes.push(product)
@@ -40,7 +41,10 @@ let apiProductosController = {
                         id: product.category_id,
                         name: product.category.category
                     },
-                    detail: 'http://localhost:3030/api/products/' + product.id
+                    price: product.price,
+                    detail: 'http://localhost:3030/api/products/' + product.id,
+                    link: `http://localhost:3030/productos/${product.id}/detalle`,
+                    edit: `http://localhost:3030/productos/${product.id}/editar`
                 })
             })
 
@@ -48,11 +52,11 @@ let apiProductosController = {
                 meta: {
                     status: 200,
                     count: products.length,
-                    countByCategory: {
-                            countByCafes: totalCafes.length,
-                            countByCafeteras: totalCafeteras.length,
-                            countByAccesorios: totalAccesorios.length
-                        }
+                    countByCategory: [
+                            {title: "Cafes", count: totalCafes.length, link: "http://localhost:3030/productos/listado/cafes"},
+                            {title: "Cafeteras", count: totalCafeteras.length, link: "http://localhost:3030/productos/listado/cafeteras"},
+                            {title: "Accesorios", count: totalAccesorios.length, link: "http://localhost:3030/productos/listado/accesorios"}
+                        ]
                     },
                 data: product
             }
@@ -85,6 +89,7 @@ let apiProductosController = {
                     description: product.description,
                     image: 'http://localhost:3030/images/products/' + product.image,
                     category: product.category.category,
+
                 }
             }
 
