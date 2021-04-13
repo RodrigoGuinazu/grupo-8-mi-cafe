@@ -68,6 +68,35 @@ let apiProductosController = {
         })
     },
 
+    ultimoProducto: function(req, res){
+        db.Product.findOne({
+            order: [["id", "DESC"]]
+        })
+        .then(function(ultProduct){
+            console.log(ultProduct)
+
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    name: ultProduct.name
+                },
+                data: {
+                    id: ultProduct.id,
+                    name: ultProduct.name,
+                    price: ultProduct.price,
+                    description: ultProduct.description,
+                    image: 'http://localhost:3030/images/products/' + ultProduct.image,
+                    detail: `http://localhost:3030/productos/${ultProduct.id}/detalle`
+                }
+            }
+
+            res.json(respuesta)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    },
+
     detalle: function(req, res){
         db.Product.findOne({
             where: {	
