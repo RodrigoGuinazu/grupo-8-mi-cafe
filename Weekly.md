@@ -317,5 +317,26 @@ Daily (20210406)
 
 =======
 
-Daily (20210407)
+Daily (20210410)
++ Seguimiento de tareas:
+  + API Productos - [completado]: .
+  + API Usuarios - [completado].
+  + Dashboard - [en curso]: se comenzó el Dashboard entre todos los integrantes del grupo. Se conecto la API al Dashboard.
 
+=======
+
+Daily (20210411)
++ Seguimiento de tareas:
+  + API Productos - [completado]: .
+  + API Usuarios - [completado].
+  + Dashboard - [en curso]: si siguió trabajando sobre el Dashboard con la complicación de no poder traer el último producto creado.
+
+=======
+
+Daily (20210412)
++ Seguimiento de tareas:
+  + API Productos - [completado]: .
+  + API Usuarios - [completado].
+  + Dashboard - [completado].
+
+=======
