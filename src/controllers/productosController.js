@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const db = require('../../database/models');
 const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 const Product = require('../../database/models/Product');
 const Attribute = require('../../database/models/Attribute');
 const Product_attribute = require('../../database/models/Product_attribute');
@@ -27,16 +28,16 @@ let productosController = {
     },
     buscarProducto: function(req, res){
         let busquedaProducto = req.query.search;
+        console.log(busquedaProducto)
 
         db.Product.findAll({
             where: {
-            $or:[
-                    { 'name': { like: '%' + busquedaProducto + '%' } }
-                ]
+                name: {[Op.like]: '%' + busquedaProducto + '%'}
             }
         })
         .then(resultadoBusqueda => {
-            res.render('products/resultado', {resultadoBusqueda: resultadoBusqueda});
+            /*return res.send(resultadoBusqueda);*/
+            res.render('products/resultado', {resultadoBusqueda});
         })
         .catch(function(error){
             console.log(error);
