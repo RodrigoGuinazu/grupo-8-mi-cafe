@@ -166,3 +166,29 @@ Sprint 7
 - Invertir tiempo en detalles que podremos solucionar más adelante.
 
 =================
+
+Sprint 8
+
+>> Más de:
+- Hablar con personas de otros equipos para tener mas opiniones.
+- Anotar ideas que no están dentro de los Sprints
+
+>> Seguir haciendo:
+- Resolver las cosas en equipo y pedirnos ayuda.
+- Dividir las tareas lo antes posible
+- Contar con el equipo.
+
+>> Empezar a hacer:
+- Completar tarjetas pendientes de Trello.
+
+>> Parar de hacer:
+- No dejar muchas cosas para ultimo momento.
+- Enfocarse en detalles pequeños antes de terminar
+
+>> Menos de:
+- Invertir tiempo en detalles que podremos solucionar más adelante.
+
+=================
+
+Cierre
+
