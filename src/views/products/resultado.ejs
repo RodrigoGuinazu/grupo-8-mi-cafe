@@ -15,8 +15,8 @@
                 <h2 style="margin-top: 50px; margin-bottom: 50px;">Ups! No encontramos el producto que estas buscando</h2>
                 <h2 align="center" style="margin-bottom: 50px; width: 100%;">:(</h2>
                 <% }else{ %>
-                <h3>Resultado de la búsqueda</h3>
-                <div class="categoria cafes">
+                <h2 align="center" style="margin-top: 50px; margin-bottom: 50px; width: 100%;">Resultado de la búsqueda</h2>
+                <div style="width: 100%;" class="categoria cafes">
                     <% resultadoBusqueda.forEach(producto =>{ %>
                     <article class="caja-producto">
                         <a href="/productos/<%= producto.id %>/detalle">
