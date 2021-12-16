@@ -1,0 +1,154 @@
+/*BODY*/
+.login {
+    background-color: #ededed;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 85px;
+    padding-bottom: 50px;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.login-credential-image {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.login-credential-image img {
+    max-width: 80px;
+}
+
+.login-credential-alternative {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.login-credential-alternative-gm, .login-credential-alternative-fb, .login-credential-alternative-tw {
+    max-width: 40px;
+}
+
+.login-credential {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.login-credential-user input, .login-credential-remindme {
+    padding: 5px;
+    margin: 5px;
+    width: 90%;
+    border: none;
+}
+
+.login-credential-password input {
+    padding: 5px;
+    margin: 5px;
+    width: 83%;
+    border: none;
+}
+
+.login-submit {
+    padding: 10px;
+    margin: 5px
+}
+
+.login-submit-button {
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: solid #ededed 1px;
+    background-color:black;
+    color: white;
+    padding: 15px 20px;
+    margin: 5px;
+}
+
+/*Mensaje Login: incorrecto*/
+
+.login-submit-message-wrong-user {
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    margin: 3px;
+}
+
+/*Mensaje Login: crear cuenta*/
+.login-user-not-found.html {
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+.login-recover-links {
+    color: white;
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-recover-links-user, .login-recover-links-password {
+    padding: 5px 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.login-register {
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-register-button {
+    border-radius: 15px;
+    text-align: center;
+    border: solid gray 1px;
+    background-color:gray;
+    color: black;
+    padding: 5px;
+}
+
+/* MOBILE */
+
+/* NAVBAR MOBILE */
+
+@media (max-width: 767px){
+    
+    .login-credential-password input {
+        padding: 5px;
+        margin: 5px;
+        width: 85%;
+        border: none;
+    }
+
+}
+
+/* DESKTOP - TABLET */
+
+@media (min-width: 768px) {
+
+}

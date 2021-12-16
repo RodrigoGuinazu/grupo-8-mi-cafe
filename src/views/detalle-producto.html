@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/detalle-producto.css">
+</head>
+<body>
+    <main>
+
+        <header class="navbar">
+
+            <div class="navbar-superior">
+
+                <div class="navbar-logo"><a href="/index">Mi Cafe</div></a>
+
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Busca tu Producto">
+                    <button type="submit" class="searchButton">
+                      <i class="fa fa-search"></i>
+                   </button>
+                </div>
+
+                   <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+
+                   <div class="navbar-cart"><a href="/carrito-lleno"><i class="fas fa-shopping-cart"></i></div></a>
+                   
+            </div>
+
+            <div class="navbar-inferior">
+
+                <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson - Av. Siempre Viva 742</h4></div>
+
+                <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Homero Simpson <br> Av. Siempre Viva 742</h4></div>
+
+                <div class="navbar-categorias">
+                    <a href="">Cafes</a><span> - </span>
+                    <a href="">Cafeteras</a><span> - </span>
+                    <a href="">Accesorios</a>
+                </div>
+
+                <div class="navbar-usuario">
+                    <a href=""><i class="far fa-user-circle"></i> Homero Simpson </a>
+                </div>
+            </div>
+        </header>
+
+    <section class="articulo-precio-envio-padre">
+        <section class="articulo">
+
+            <article class="imagenes-articulo">
+                    <img class="img-principal" src="https://www.cabrales.com/wp-content/uploads/2016/05/Cabrales_COLOMBIA-768x768-600x600.jpg" alt="imagen-principal">
+                    <article class="imagenes-principales-box">
+                        <img src="https://d26lpennugtm8s.cloudfront.net/stores/001/153/109/products/colombia_x_1k1-4644525705fac0bae415874730650638-640-0.jpg" alt="cafe-2">
+                        <img src="https://www.cabrales.com/wp-content/uploads/2016/07/colombia_molido_500g.jpg" alt="cafe-3">
+                        <img src="https://d26lpennugtm8s.cloudfront.net/stores/001/153/109/products/colombia_x_1k1-4644525705fac0bae415874730650638-640-0.jpg" alt="cafe-4">
+                    </article>
+            </article>
+        </section>
+
+        <section class="precio-envio">
+           
+            <article>
+                <div class="titulo">
+                    <h2>Cafe Cabrales Dorado<span>
+                        <select name="peso" id="">
+                            <option value="250">250gr</option>
+                            <option value="500">500gr</option>
+                            <option value="1000">1kg</option>
+                        </select>
+                    </span></h2>
+                </div>
+                <div class="puntuacion">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <div class="precio">
+                    <div><p class="pesos">$400</p></div>
+                    <div><a href="/carrito-lleno"><button class="boton-carrito" type="button">Agregar al Carrito</button></a></div>
+                </div>
+                <div class="boton-completo"><a href="/carrito-lleno"><button class="boton-carrito" type="button">Comprar Ahora</button></a></div>
+                </div>
+            
+                <div class="pagos">
+                    <div><i class="fas fa-credit-card"></i></div>
+                    <div><p>Paga en 3 Cuotas Sin Interes!</p></div>
+                </div>
+            
+                <div class="envio">
+                    <div><i class="fas fa-truck"></i></div>
+                    <div><p>Calcular Precio de Envio y Demora:</p></div>
+                </div>
+
+                <div class="valor-envio">
+                    <div><label for="">Elegi tu Provincia</label></p></div>
+                    <div>
+                    <select name="provincia" id="">
+                        <option value="BA">Buenos Aires</option>
+                        <option value="CA">Catamarca</option>
+                        <option value="CHA">Chaco</option>
+                        <option value="CHU">Chubut</option>
+                        <option value="CORD">Córdoba</option>
+                        <option value="CORR">Corrientes</option>
+                        <option value="ER">Entre Ríos</option>
+                        <option value="FO">Formosa</option>
+                        <option value="JU">Jujuy</option>
+                        <option value="LP">La Pampa</option>
+                        <option value="LR">La Rioja
+                        </option>
+                        <option value="ME">Mendoza</option>
+                        <option value="MI">Misiones</option>
+                        <option value="NE">Neuquén</option>
+                        <option value="RN">Río Negro</option>
+                        <option value="SA">Salta</option>
+                        <option value="SJ">San Juan</option>
+                        <option value="SC">Santa Cruz
+                        </option>
+                        <option value="SF">Santa Fe
+                        </option>
+                        <option value="SGO">Santiago del Estero
+                        </option>
+                        <option value="TF">Tierra del Fuego
+                        </option>
+                        <option value="TU">Tucumán</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <a href=""><i class="far fa-heart"></i> Agregar a favoritos</a>
+                    <a href=""><i class="fas fa-share-alt"></i> Compartir</a>
+                </div>
+            
+            </article>
+        </section>
+    </section>
+    
+        <section class="descripcion">
+            
+            <article>
+                <h3 align="center">Descripcion del Cafe:</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis hic nemo, aspernatur nulla quos maiores veritatis nam. Soluta obcaecati provident repudiandae vel veritatis voluptates praesentium natus quisquam sunt. Vero temporibus veritatis ullam corrupti praesentium, eos odio id ea mollitia, quia expedita earum quam culpa obcaecati sint provident ipsam ut commodi ipsum nulla! Omnis minus inventore deserunt delectus, dicta iste molestiae, vitae aliquam ut quia magni cum quidem reiciendis distinctio. Nostrum consequatur nesciunt eaque, repellendus id iste accusantium dolor tenetur, distinctio cupiditate minus.</p>
+            </article>
+
+        </section>
+
+        <section class="opiniones">
+            <article>
+                <h3>Opiniones sobre el Producto</h3>
+                <div>
+                    <div class="puntuacion-opiniones">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, doloribus delectus quod illum quisquam accusamus neque dolor? Quas, dolore numquam.</p>
+                    <div class="like-dislike"><i class="far fa-thumbs-up"></i><span><i class="far fa-thumbs-down"></i></span></div>
+                </div>
+
+                <div>
+                    <div class="puntuacion-opiniones">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h4>Lorem, ipsum</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae ea accusamus in distinctio voluptate aspernatur obcaecati voluptatum dolorum rerum, consectetur dolore veritatis tempora eaque explicabo odio possimus, repudiandae ullam similique.</p>
+                    <div class="like-dislike"><i class="far fa-thumbs-up"></i><span><i class="far fa-thumbs-down"></i></span></div>
+                </div>
+
+                <div>
+                    <div class="puntuacion-opiniones">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, deleniti!.</p>
+                    <div class="like-dislike"><i class="far fa-thumbs-up"></i><span><i class="far fa-thumbs-down"></i></span></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="recomendacion">
+
+                <h3>Productos Relacionados</h3>
+                <div class="recomendados">
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-truck"></i>
+                            <h2 class="precio-producto">$420</h2>
+                            <h3>Cafe Cabrales Super</h3>
+                        </div> 
+                    </article>
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-truck"></i>
+                            <h2 class="precio-producto">$450</h2>
+                            <h3>Cafe Cabrales La Planta de Cafe</h3>
+                        </div> 
+                    </article>
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-truck"></i>
+                            <h2 class="precio-producto">$380</h2>
+                            <h3>Cafe Cabrales Prestige</h3>
+                        </div> 
+                    </article>
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://www.cabrales.com/wp-content/uploads/2016/10/Al_Grano_Molido_500.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-truck"></i>
+                            <h2 class="precio-producto">$400</h2>
+                            <h3>Cafe Cabrales Al Grano de Cafe</h3>
+                        </div> 
+                    </article>
+
+                 </div>
+        </section>
+
+        <footer>
+            <h3 class="tipografia-logo">Mi Cafe</h3>
+        <div class="redes">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-square"></i>
+        </div>
+
+        <div class="pie-desktop">
+            <div class="redes-desktop">
+                <ul>
+                    <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://twitter.com/MiCafe16"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/Mi-Cafe-101423781845721"><i class="fab fa-facebook-square"> Facebook</i></a></li>
+                </ul>
+            </div>
+                
+            <div class="pagos-envios">
+                <div class="medios-de-pago">
+                    <h4>Medios de Pago</h4>
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+                </div>
+
+                <div class="formas-de-envio">
+                    <h4>Formas de Envio</h4>
+                    <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+                </div>
+            </div>
+
+            <div class="medios-de-pago-desktop">
+                <h4>Medios de Pago</h4>
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="cards" alt="Visa">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="cards" alt="Mastercard">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="cards" alt="Amex">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="cards" alt="Mercadopago">
+            </div>
+
+            <div class="formas-de-envio-desktop">
+                <h4>Formas de Envio</h4>
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/ar/oca@2x.png" class="cards" alt="Oca">
+            </div>
+
+            <div class="contacto">
+                <h4>Contactanos</h4>
+                <ul>
+                    <li><a href=""><i class="fab fa-whatsapp"> 011-2530-0369</i></a></li>
+                    <li><a href=""><i class="fas fa-map-marker-alt"> Calle Falsa 123</i></a></li>
+                    <li><a href=""><i class="far fa-envelope"> micafegrupo8@outlook.com</i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p class="copyright">Copyright © 2020 <span class="tipografia">Mi Cafe</span> S.R.L.</p>
+    </footer>
+
+    </main>
+</body>
+</html>

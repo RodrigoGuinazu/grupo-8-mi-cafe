@@ -1,0 +1,209 @@
+/*Secciones principales*/
+
+.main-sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us, .coffee-info, .coffee-family, .coffee-profile, .coffee-community {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    border-bottom: 2px solid #D1B894;
+    border-top: 2px solid #D1B894;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-us {
+    background-image: url("https://post.healthline.com/wp-content/uploads/2020/08/safe-to-eat-coffee-beans-1200x628-facebook-1200x628.jpg")
+}
+
+.coffee-info {
+    background-image: url("https://previews.123rf.com/images/foodandmore/foodandmore1202/foodandmore120200277/12640008-fresh-granos-de-caf%C3%A9-tostado-dispuestos-en-la-forma-de-un-mapa-del-mundo-sobre-el-papel-envejecido-de-.jpg");
+}
+
+.coffee-family {
+    background-image: url("https://www.virallay.com/wp-content/uploads/2020/09/Types-of-Coffee-Beans.jpg")
+}
+
+.coffee-profile {
+    background-image: url("https://elegantcoffee.com/wp-content/uploads/2017/01/different-types-of-coffee.jpg")
+}
+
+.coffee-community {
+    background-image: url("https://wallpaperaccess.com/full/1999529.jpg")
+}
+
+.main-sections p {
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.main-sections-button {
+    width: max-content;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border: solid black 1px;
+    background-color:black;
+    outline: none;
+    padding: 15px 20px;
+    margin: 5px;
+}
+
+.main-sections-button:focus {
+    background-color:#D1B894;
+    border: solid #D1B894 1px;
+    color: black;
+}
+
+/* OPINIONES */
+
+.opinions{
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ededed;
+
+}
+
+.opinions-title{
+    width: 100%;
+    color: black;
+    margin: 5px;
+    padding: 15px;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.opinions article{
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    align-self: space-around;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 3px 3px 3px #D1B894;
+}
+
+.fa-quote-left, .fa-quote-right {
+    display: none;
+}
+
+.opinion-cliente{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.nombre-cliente{
+    font-style: italic;
+    font-size: 15px;
+    padding: 10px
+}
+
+/* DESKTOP - TABLET */
+
+@media (min-width: 768px) {
+
+    /*Secciones principales*/
+
+    .about-us, .coffee-info, .coffee-family, .coffee-profile, .coffee-community {
+        width: 100%;
+        height: 75vh;
+    }
+
+    .main-sections p {
+        width: 100%;
+        color: white;
+        font-size: 50px;
+    }
+    
+    .main-sections-button {
+        font-size: 20px;
+    }
+
+    .main-sections-button:hover {
+        background-color:#D1B894;
+        border: solid #D1B894 1px;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* OPINIONES */
+
+    .opinions {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .opinions-title {
+        width: 100%;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .fa-quote-left, .fa-quote-right {
+        display: block;
+        text-align: center;
+    }
+
+    .opinions article {
+        width: 20%;
+        height: 30vh;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .opinion-cliente{
+        width: 100%;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .nombre-cliente{
+        width: 100%;
+        font-style: italic;
+        font-size: 15px;
+        padding: 10px
+    }
+
+}

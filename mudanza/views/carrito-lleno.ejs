@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/carrito-lleno.css">
+        <title>Carrito</title>
+    </head>
+
+<body>
+    <%- include('partials/header.ejs')%>
+        <main>
+            <div class="contenido-carrito-1">
+                <div class="contenido-carrito-left">
+                    <img width="100%"
+                        src="https://http2.mlstatic.com/cafe-de-especialidad-tostado-colombia-guanes-genuino-14-kg-D_NQ_NP_787555-MLA42564298723_072020-F.webp"
+                        alt="">
+                </div>
+
+                <div class="contenido-carrito-right">
+                    <div class="contenido-carrito-right-nombre">
+                        <p>Café premium tostado Colombia...</p>
+                    </div>
+                    <div class="contenido-carrito-right-delete-colombia"><i class="fas fa-times"></i></div>
+                    <div class="contenido-carrito-right-presentacion">Presentación: Molido Espresso <a
+                            href="">Modificar</a></div>
+                    <div class="contenido-carrito-right-detalle">
+                        <select class="contenido-carrito-right-detalle-unidades" name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="Más">Más</option>
+                        </select>
+                        <div class="contenido-carrito-right-detalle-precio">
+                            <p>$1.299,99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenido-carrito-2">
+                <div class="contenido-carrito-left">
+                    <img width="100%"
+                        src="https://http2.mlstatic.com/cafe-premium-tostado-brasil-catuai-1-kg-D_NQ_NP_787296-MLA42540120808_072020-O.webp"
+                        alt="">
+                </div>
+
+                <div class="contenido-carrito-right">
+                    <div class="contenido-carrito-right-nombre">
+                        <p>Café premium tostado Brasil Catuai...</p>
+                    </div>
+                    <div class="contenido-carrito-right-delete-brasil"><i class="fas fa-times"></i></div>
+                    <div class="contenido-carrito-right-presentacion">Presentación: Molido Espresso <a
+                            href="">Modificar</a></div>
+                    <div class="contenido-carrito-right-detalle">
+                        <select class="contenido-carrito-right-detalle-unidades" name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="Más">Más</option>
+                        </select>
+                        <div class="contenido-carrito-right-detalle-precio">
+                            <p>$1.000,00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="finalizar-pedido">
+                <button type="submit" class="button-finalizar-pedido">Finalizar Pedido</button>
+                <div class="preguntas-frecuentes"><a href=""><small>Preguntas Frecuentes</small></a></div>
+                </div>
+            </div>
+
+            <section class="recomendacion">
+
+                <h3>Productos Relacionados</h3>
+                <div class="recomendados">
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_super_cabrales_mol_x_250_2.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <h2 class="precio-producto">$420</h2>
+                            <h3>Cafe Cabrales Super</h3>
+                        </div> 
+                    </article>
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/n/u/nuevo_lpc_molido_x_500g.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <h2 class="precio-producto">$450</h2>
+                            <h3>Cafe Cabrales La Planta de Cafe</h3>
+                        </div> 
+                    </article>
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://tienda.cabrales.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/r/prestige_cabrales_500.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <h2 class="precio-producto">$380</h2>
+                            <h3>Cafe Cabrales Prestige</h3>
+                        </div> 
+                    </article>
+
+                    <article class="caja-producto">
+                        <a href="">
+                            <img src="https://www.cabrales.com/wp-content/uploads/2016/10/Al_Grano_Molido_500.jpg" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <h2 class="precio-producto">$400</h2>
+                            <h3>Cafe Cabrales Al Grano de Cafe</h3>
+                        </div> 
+                    </article>
+
+                 </div>
+        </section>
+
+            <%- include('partials/footer.ejs')%>
+        </main>
+    </body>
