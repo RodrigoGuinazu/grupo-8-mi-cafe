@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.perfil-cafe {
+    background-image: url("../images/backgrounds/coffee-types-background.jpg");
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.perfil-cafe div {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.perfil-cafe h1 {
+    margin-left: 5px;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+.tipo-cafe-listado, .con-leche, .comentarios-cafe, .contanos{
+    margin-bottom: 5px;
+}

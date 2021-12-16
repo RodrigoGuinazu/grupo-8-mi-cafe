@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/index.css">
+        <title>Mi Cafe</title>
+    </head>
+   
+    <body>
+            <%- include('partials/header.ejs')%>
+            <main>
+
+            <section class="main-sections">
+                <div class="about-us">
+                    <p>Hola! Soy Mí Café </p>
+                    <a class="main-sections-button" href="/conoceme">Conoceme</a>
+                </div>
+
+                <div class="coffee-info">
+                    <p>El mundo en un grano de café</p>
+                    <a class="main-sections-button" href="/viaja">Viajá</a>
+                </div>
+
+                <div class="coffee-family">
+                    <p>Familia de productos Mí Café</p>
+                    <a class="main-sections-button" href="/productos/listado">Descubrila</a>
+                </div>
+
+                <div class="coffee-profile">
+                    <p>Tu personalidad es única... tu café también!</p>
+                    <a class="main-sections-button" href="/encontralo">Encontralo</a>
+                </div>
+
+                <div class="coffee-community">
+                    <p>Pertenecer tiene sus beneficios</p>
+                    <a class="main-sections-button" href="/usuarios/register">Unite</a>
+                </div>
+            </section>
+        
+            <section class="opinions">
+                    <div class="opinions-title">
+                        <p>Qué opinan nuestros clientes</p>
+                    </div>
+
+                    <article>
+                        <i class="fas fa-quote-left"></i>
+                        <p class="opinion-cliente">Me encanta el trato personalizado que tienen.</p>
+                        <p class=nombre-cliente>Carlos S.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </article>
+
+                    <article>
+                        <i class="fas fa-quote-left"></i>
+                        <p class="opinion-cliente">Muy buena variedad de café! Los amo!!</p>
+                        <p class=nombre-cliente>Lucía F.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </article>
+
+                    <article>
+                        <i class="fas fa-quote-left"></i>
+                        <p class="opinion-cliente">No tenía idea de las variedades de café. Ahora, tengo mí perfil y disfruto de cada uno.</p>
+                        <p class=nombre-cliente>Lorena B.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </article>
+
+                    <article>
+                        <i class="fas fa-quote-left"></i>
+                        <p class="opinion-cliente">Solía tomar café, pero ahora disfruto de mí nueva pasión!</p>
+                        <p class=nombre-cliente>Rubén O.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </article>
+
+            </section>
+            <button id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+            <%- include('partials/footer.ejs')%>
+
+        </main>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

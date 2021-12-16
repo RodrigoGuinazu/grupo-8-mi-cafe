@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/listado-productos.css">
+        <link rel="stylesheet" href="/stylesheets/index.css">
+        <title>Mi Cafe</title>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <main>
+            <section class="tarjeta-producto">
+                <% if(resultadoBusqueda.length < 1){%>
+                <h2 style="margin-top: 50px; margin-bottom: 50px;">Ups! No encontramos el producto que estas buscando</h2>
+                <h2 align="center" style="margin-bottom: 50px; width: 100%;">:(</h2>
+                <% }else{ %>
+                <h2 align="center" style="margin-top: 50px; margin-bottom: 50px; width: 100%;">Resultado de la búsqueda</h2>
+                <div style="width: 100%;" class="categoria cafes">
+                    <% resultadoBusqueda.forEach(producto =>{ %>
+                    <article class="caja-producto">
+                        <a href="/productos/<%= producto.id %>/detalle">
+                            <img src="/images/products/<%= producto.image %>" alt="recomendacion">
+                        </a>
+                        <div class="producto-info">
+                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <h2 class="precio-producto">$<%= producto.price %> </h2>
+                            <h3><%= producto.name %> </h3>
+                        </div>                
+                    </article>
+                    <% }) %>
+                </div>
+                <% } %>   
+            </section>
+            <button id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+            <%- include('../partials/footer.ejs')%>
+            <script type="text/javascript" src="../../../js/index.js"></script>
+        </main>
+    </body>
+</html>

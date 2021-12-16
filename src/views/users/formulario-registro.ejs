@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
+        <title>Formulario de Registro</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        
+        <section class="titulo">
+            <h2>Completá tus datos</h2>
+        </section>
+        <!--Lista de Errores con Express Validator-->
+        <%- include('../partials/vistaErroresValidaciones.ejs') %>
+
+        <section align="center" class="formulario">
+            <p class="errRegister"> <%= typeof errRegister != "undefined" ? errRegister: "" %> </p>
+            <form method="POST" action="/usuarios/register" class="register">
+                <div>
+                    <input class= "name" type="text" name="name" id="name" placeholder="Tu nombre">
+                    <div class="errNombre">
+                        <p> <%= typeof errors.name != "undefined" ? errors.name.msg: "" %> </p>
+                    </div>
+                    <input class= "lastname" type="text" name="lastname" id="lastname" placeholder="Tu apellido">
+                    <div class="errApellido">
+                        <p> <%= typeof errors.lastname != "undefined" ? errors.lastname.msg : "" %> </p>
+                    </div>
+                    <input class= "email" type="email" name="email" id="email" placeholder="Tu E-mail">
+                    <div class="errEmail">
+                        <p> <%= typeof errors.email != "undefined" ? errors.email.msg: "" %> </p>
+                    </div>
+                    <input class= "password" type="password" name="password" id="password" placeholder="Tu contraseña"><i class="fas fa-eye-slash"></i>
+                    <div class="errPassword">
+                        <p> <%= typeof errors.password != "undefined" ? errors.password.msg: "" %> </p>
+                    </div>
+                    <input class= "confPassword" type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirmá tu contraseña"><i class="fas fa-eye-slash"></i>
+                    <div class="errConfPassword">
+                        <p> <%= typeof errors.confirmarPassword != "undefined" ? errors.confirmarPassword.msg: "" %> </p>
+                    </div>
+                </div>
+               <br>
+                <div class="checkbox">
+                    <p><input type="checkbox" name="terminos-condiciones" value="terminos-condiciones"> Terminos y Condiciones</p><br>
+                    <p><input type="checkbox" name="correo-promocional" value="correo-promocional"> Correo Promocional</p>
+                </div>
+
+                <br>
+
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+
+                <br>
+                
+                <button class="crear-cuenta" type="submit">Creá tu Cuenta</button>
+                <br>
+                <a href="/usuarios/login"><button class="usuario-existente" type="button">¿Ya tenés una cuenta? <br> Clickea aquí para ingresar</button></a>
+            </form>
+        </section>
+    <%- include('../partials/footer.ejs')%>
+        
+    </main>
+    <script type="text/javascript" src="/js/validator.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

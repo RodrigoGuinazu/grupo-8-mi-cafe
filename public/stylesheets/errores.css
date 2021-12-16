@@ -1,0 +1,38 @@
+.lista-errores {
+    background-color: #ededed;
+    border: solid #ededed;
+    color: darkorange;
+    font-weight: bolder;
+    align-content: center;
+};
+
+.lista-errores ul {
+    background-color: #ededed;
+};
+
+.fa-exclamation-circle i {
+    min-width: 30px;
+};
+
+div .lista-errores{
+    background-color: #ededed;
+    border: solid #ededed;
+}
+
+div .erroresEmail {
+    color: darkorange;
+    background-color: #ededed;
+    font-size: 14px;
+}
+
+div .erroresPassword {
+    color: darkorange;
+    background-color: #ededed;
+    font-size: 14px;
+}
+
+.erroresImg, .erroresName, .erroresPrice, .erroresDescription {
+    color: darkorange;
+    background-color: #ededed;
+    padding: 5px;
+}

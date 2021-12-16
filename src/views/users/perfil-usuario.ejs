@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/perfil-usuario.css">
+        <title>Perfil de usuario</title>
+    </head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        <section class="usuario_contenedor">
+            <a class= "logout-desktop" href="/usuarios/logout">Log Out <i class="fas fa-power-off"></i></a>
+            <section class="usuario">
+                <a class= "logout-mobile" href="/usuarios/logout">Log Out <i class="fas fa-power-off"></i></a>
+                <% if(user.image != "") { %> 
+                <div class="foto_usuario">
+                    <img src="/images/users/<%= user.image %>" alt="Foto de perfil">
+                </div>
+                <% } %>
+                <h3 class="nombre_completo"><%= user.name %> <%= user.lastname %></h3>
+                <% if(locals.user && locals.user.role_id == 1) { %> 
+
+                <a class="boton_usuario" href="/productos/crear">Crear Producto</a>
+                <a class="boton_usuario" href="http://localhost:3000/">Ir al Dashboard</a>
+
+                <% } %>
+                <% if(locals.user && locals.user.role_id != 1) { %> 
+               
+                <a id="usuario" class="boton_usuario" href="http://localhost:3030/usuarios/editar">Mi Perfil <i class="far fa-user-circle"></i></a>
+
+                <a id="compras" class="boton_usuario" href="http://localhost:3030/carrito">Compras <i class="fas fa-shopping-bag"></i></a>
+
+                <a id="favoritos" class="boton_usuario">Favoritos <i class="fas fa-heart"></i></a>
+
+                <a id="tarjetas" class="boton_usuario" href="http://localhost:3030/usuarios/pagos">Tarjetas <i class="fas fa-credit-card"></i></a>
+
+                <a id="direcciones" class="boton_usuario" href="http://localhost:3030/usuarios/direcciones">Direcciones <i class="fas fa-map-marker-alt"></i></a>
+
+                <a id="comentarios" class="boton_usuario">Comentarios <i class="far fa-comments"></i></a>
+                <% } %>
+
+                <a id="ajustes" class="boton_usuario">Ajustes <i class="fas fa-cogs"></i></a>
+                <br>
+                <br>
+            </section>
+
+        <!--<section class="datos_usuario">
+            
+        </section>-->
+    </section>
+    <%- include('../partials/footer.ejs')%>
+    </main>
+    <!-- <script type="text/javascript" src="/js/profile.js"></script> -->
+</body>
+</html>

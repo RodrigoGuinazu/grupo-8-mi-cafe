@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+        <title>Editar Producto</title>
+    </head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        <section align="center" class="formulario">
+            <h2>Editando el Producto "<%= productToEdit.name %>"</h2>
+            <%- include('../partials/vistaErroresValidaciones.ejs') %>
+            <form class="edit-product" action="/productos/<%= productToEdit.id %>/detalle?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                <div class="product-name">
+                    <label for="">Titulo:</label>
+                    <input type="text" name="name" class="name" value="<%= productToEdit.name %>" placeholder="Titulo del Producto">
+                    <div id="erroresName" class="lista-errores"></div>
+                </div>
+
+                <div class="product-type">
+                    <label for="">Categoria:</label>
+                    <select name="category"> <!--Tipo de producto, según Categoría-->
+                        <% categories.forEach(category => { %>
+                            <% if(category.id == productToEdit.category_id) { %>
+                                <option value="<%= category.id %>"><%= category.category %></option>
+                            <% } %>
+                        <% }) %> 
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.category %></option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="attribute-check">
+                    <label for="">Peso(gr)/Color:</label>
+                    <select name="attribute" id="attribute">
+                        <% attributes.forEach(attribute => { %>
+                            <% if(attribute.id == productAttribute.attribute_id) { %>
+                                <option value="<%= attribute.id %>"><%= attribute.name %></option>
+                            <% } %>
+                        <% }) %> 
+                        <% attributes.forEach(attribute => { %>
+                            <option value="<%= attribute.id %>"><%= attribute.name %></option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="product-price">
+                    <label for="">Precio:</label>
+                    <input type="number" step=".01" name="price" class="price" value="<%= productToEdit.price %>" placeholder="$00.00">
+                    <div id="erroresPrice" class="lista-errores"></div>
+                </div>
+
+                <div class="product-img">
+                    <label for="">Imagen:</label>
+                    <input type="file" name="product-img" class="product-img">
+                    <div id="erroresImg" class="lista-errores"></div>
+                </div>
+
+                <div class="product-detail">
+                    <p><label>Detalle de producto</label></p>
+                    <textarea name="description" rows="10" class="description" cols="40"><%= productToEdit.description %></textarea> 
+                    <div id="erroresDescription" class="lista-errores"></div>
+               </div>
+
+                <div class="product-create">
+                    <button type="submit" class="product-create-button">Guardar Cambios</button>
+                </div>
+
+                <div class="product-create">
+                    <a class="product-cancel-button" href="/productos/listado">Cancelar</a>
+                </div>
+                
+            </form>
+
+            <div>
+                <form class="delete-product" action="/productos/<%= productToEdit.id %>/editar?_method=DELETE" method="POST">
+                    <button type="submit" class="product-delete-button">Eliminar producto</button>
+                </form>
+            </div>
+
+        </section>
+    <%- include('../partials/footer.ejs')%>
+    </main>
+    <script type="text/javascript" src="/js/edit-product.js"></script>
+</body>
+</html>

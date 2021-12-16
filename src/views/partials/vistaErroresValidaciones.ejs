@@ -1,0 +1,14 @@
+<section align="center">
+    <div class="lista-errores">
+        <% if (errors.length > 0) { %>
+            <i class="fas fa-exclamation-circle"></i>
+            <ul class="lista-errores ul">
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <li class="lista-errores li">
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+</section>

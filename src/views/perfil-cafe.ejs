@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/perfil-cafe.css">
+        <title>Tu perfil de café</title>
+    </head>
+    
+<body>
+    <%- include('partials/header.ejs')%>
+    <main>
+     <div class="perfil-cafe">
+        <h1>Tu perfil de café</h1>
+        
+        <form action="/">
+            <div class="tipo-cafe">
+                <p class="tipo-cafe-listado"><label>¿Qué tipo de café preferís?</label></p>
+                <select name="tipo-cafe">
+                    <option value="tostado">Tostado</option>
+                    <option value="fuerte">Fuerte</option>
+                    <option value="amargo">Amargo</option>
+                </select>
+            </div>
+            <div class="cafe-leche">
+                <p class="con-leche"><label>¿Lo tomás con leche?</label></p>
+                <select name="leche">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                    <option value="indistinto">Indistinto</option>
+                </select>
+            </div>
+            <div class="comentarios-cafe">
+               <p class="contanos"><label>Contanos algo más sobre tu gusto de café</label></p>
+               <textarea name="descripcion" rows="10" cols="40"></textarea>
+            </div>
+           <div class="send-button">
+            <button class="boton-enviar">Enviar</button>
+            </div>
+            <div>
+                <button class="cancel-button"><a href="/">Cancelar</a></button>
+            </div>
+        </form>  
+    
+    </div>
+
+    <%- include('partials/footer.ejs')%>
+
+    </main>
+</body>
+</html>

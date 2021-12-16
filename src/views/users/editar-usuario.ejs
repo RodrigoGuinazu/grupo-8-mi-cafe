@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/formulario-registro.css">  
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+    
+        <title>Formulario de Edición</title>
+    </head>
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        
+        <section class="titulo">
+            <h2>Hola <%= user.name %>! Edita tu Perfil</h2>
+        </section>
+
+        <section align="center" class="formulario">
+        
+            <form method="POST" action="/usuarios/editar?_method=PATCH" class="editar">
+                <div>
+                    <label for="" class="titulo">Nombre</label>
+                    <br>
+                    <input type="text" name="name" id="name" value="<%= user.name %>" class="name">
+                    <br> 
+                    <div class = "erroresNombre">
+                    </div>
+                    <label for="" class="titulo">Apellido</label>
+                    <br>
+                    <input type="text" name="lastname" id="lastname" value="<%= user.lastname %>" class="lastname">
+                    <br>
+                    <div class = "erroresApellido">
+                    </div>
+                    <label class="titulo" for="">Fecha de Nacimiento</label>
+                    <br>
+                    <input type="date" name="birthdate" id="birthdate" value="<%= user.birthdate %>" class="birthdate">
+                    <div class="genero">
+                        <label for="" class="titulo">Género</label>
+                        <br>
+                        <div class = "erroresFecha">
+                        </div>
+                        <select name="gender" id="">
+                        <option value="<%= user.gender %>"><%= user.gender %></option>
+                        <option value="F" name="gender">Femenino</option>
+                        <option value="M" name="gender">Masculino</option>
+                        <option value="I" name="gender">Indistinto</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="confirmar-cambios" type="submit">Confirmar Cambios</button>
+            </form>
+          
+          <div class="descartar">
+            <form method=GET action="/" align=center class="descartar">
+                <a href="/"><button class="descartar-cambios">Descartar Cambios</button></a>
+              </form>
+          </div>
+
+          <div class="eliminar">
+            <form action="/usuarios/eliminar?_method=DELETE" method="POST" align=center id="eliminar">
+                <a href="/"><button class="eliminar-usuario">Eliminar Usuario</button></a>
+            </form>
+          </div>
+        </section>  
+    <%- include('../partials/footer.ejs')%>
+        
+    </main>
+    <script type="text/javascript" src="/js/validator.js"></script>
+</body>
+</html>

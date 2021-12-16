@@ -1,0 +1,54 @@
+<header class="navbar">
+
+    <div class="navbar-superior">
+
+        <div class="navbar-logo"><a href="/">Mí Café</div></a>
+
+        <div class="search">
+            <form class="search" action="/productos/resultado" method="GET">
+                <input type="text" name="search" class="searchTerm" placeholder="Busca tu Producto">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+           <div class="navbar-burger"><i class="fas fa-bars"></i></div>
+
+           <div class="navbar-cart"><a href="/carrito"><i class="fas fa-shopping-cart"></i></div></a>
+           
+    </div>
+
+    <div class="navbar-inferior">
+
+        <% if(locals.user && locals.user.role_id == 1) { %> 
+            <div class="navbar-location"><a style="font-weight: bold; font-size: larger;" href="http://localhost:3000/"><span><i class="fas fa-tachometer-alt"></i></span> Dashboard</a></div>
+        <% }else if(locals.user) { %>
+            <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4><a href="/usuarios/direcciones">Mis Direcciones</a></h4></div>
+        <% } else {%>
+        <div class="navbar-location"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis a tu domicilio </h4></div>
+        <% } %>
+
+        <% if(locals.user && locals.user.role_id == 1) { %> 
+            <div class="navbar-location-desktop"><a style="font-weight: bold; font-size: larger;" href="http://localhost:3000/"><span style="background-color: #D1B894;"><i style="font-size: large; background-color: #D1B894;" class="fas fa-tachometer-alt"></i></span> Dashboard</a></div>
+        <% }else if(locals.user) { %>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4><a  href="/usuarios/direcciones">Mis Direcciones</a></h4></div>
+        <% } else {%>
+            <div class="navbar-location-desktop"><i class="fas fa-map-marker-alt"></i><h4> Envíos gratis <br> a tu domicilio </h4></div>
+        <% } %>
+
+        <div class="navbar-categorias">
+            <a href="/productos/listado/cafes">Cafés</a><span> - </span>
+            <a href="/productos/listado/cafeteras">Cafeteras</a><span> - </span>
+            <a href="/productos/listado/accesorios">Accesorios</a>
+        </div>
+
+        <div class="navbar-usuario">
+            <% if(locals.user) { %>
+            <a href="/usuarios/perfil"><i class="far fa-user-circle"></i> <%= user.name %> <%= user.lastname %> </a>
+            <% } else {%>
+            <a href="/usuarios/login"><i class="far fa-user-circle"></i> Ingresa  </a>
+            <% } %>
+        </div>
+    </div>
+</header>

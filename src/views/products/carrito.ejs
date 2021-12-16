@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/carrito.css">
+        <title>Carrito</title>
+    </head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+        <main>
+
+            <div class="titulo-carrito">
+                <h2 align="center">Carrito de Compra</h2>
+            </div>
+
+            <div class="info-producto">
+                <h3></h3>
+                <h3>Producto</h3>
+                <h3 align="center">Precio</h3>
+                <h3 align="center">Cantidad</h3>
+                <h3 align="center">Total</h3>
+            </div>
+
+            <div class="contenido-carrito">
+                
+                <div class="imagen-carrito">
+                    <img src="/images/products/amalfi_mi_cafe.jpg" alt="producto">
+                </div>
+
+                <div class="titulo-producto">
+                    <a href="http://localhost:3030/productos/1/detalle" style="font-weight: bold; font-size: larger;">Cafe Amalfi</a>
+                    <p style="font-weight: bold;">Presentacion: 250gr</p>
+                    <br>
+                    <a href="" style="color: red;">Quitar del carrito</a>
+                </div>
+                
+                <div align="center" class="precio-producto-carrito">
+                    <h3>$700</h3>
+                </div>
+
+                <div align="center" class="cantidad-producto">
+                    <input type="number" value=1 min=1>
+                </div>
+
+                <div align="center" class="total-producto">
+                    <h3>$700</h3>
+                </div>
+
+            </div>
+
+            <div class="contenido-carrito">
+                
+                <div class="imagen-carrito">
+                    <img src="/images/products/amalfi_mi_cafe.jpg" alt="producto">
+                </div>
+
+                <div class="titulo-producto">
+                    <a href="http://localhost:3030/productos/1/detalle" style="font-weight: bold; font-size: larger;">Cafe Amalfi</a>
+                    <p style="font-weight: bold;">Presentacion: 250gr</p>
+                    <br>
+                    <a href="" style="color: red;">Quitar del carrito</a>
+                </div>
+                
+                <div align="center" class="precio-producto-carrito">
+                    <h3>$700</h3>
+                </div>
+
+                <div align="center" class="cantidad-producto">
+                    <input type="number" value=1 min=1>
+                </div>
+
+                <div align="center" class="total-producto">
+                    <h3>$700</h3>
+                </div>
+
+            </div>
+
+            <div class="contenido-carrito">
+                
+                <div class="imagen-carrito">
+                    <img src="/images/products/amalfi_mi_cafe.jpg" alt="producto">
+                </div>
+
+                <div class="titulo-producto">
+                    <a href="http://localhost:3030/productos/1/detalle" style="font-weight: bold; font-size: larger;">Cafe Amalfi</a>
+                    <p style="font-weight: bold;">Presentacion: 250gr</p>
+                    <br>
+                    <a href="" style="color: red;">Quitar del carrito</a>
+                </div>
+                
+                <div align="center" class="precio-producto-carrito">
+                    <h3>$700</h3>
+                </div>
+
+                <div align="center" class="cantidad-producto">
+                    <input type="number" value=1 min=1>
+                </div>
+
+                <div align="center" class="total-producto">
+                    <h3>$700</h3>
+                </div>
+
+            </div>
+
+            <div class="finalizar-pedido">
+                <h3>Envio: $300</h3>
+                <br>
+                <h3>Total a pagar: $1000</h3>
+                <br>
+                <button type="submit" class="button-finalizar-pedido">Finalizar Compra</button>
+            </div>
+
+            <section class="recomendacion">
+
+                <h3>Productos Relacionados</h3>
+                <div class="recomendados">
+                    <% recomendacion.forEach(recomendado =>{ %>
+                     <article class="caja-producto">
+                         <a href="/productos/<%= recomendado.id %>/detalle">
+                             <img src="/images/products/<%= recomendado.image %>" alt="recomendacion">
+                         </a>
+                         <div class="producto-info">
+                             <i class="fas fa-credit-card"></i>
+                             <i class="fas fa-shopping-bag"></i>
+                             <h2 class="precio-producto">$<%= recomendado.price %> </h2>
+                             <h3><%= recomendado.name %> </h3>
+                         </div>                
+                     </article>
+                     <% }) %>
+ 
+                  </div>
+        </section>
+        </main>
+        <%- include('../partials/footer.ejs')%>
+    </body>

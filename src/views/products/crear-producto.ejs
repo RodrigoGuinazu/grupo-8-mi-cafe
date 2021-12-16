@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/stylesheets/navbar.css">
+        <link rel="stylesheet" href="/stylesheets/crear-editar-producto.css">
+        <link rel="stylesheet" href="/stylesheets/errores.css">
+        <title>Crear nuevo producto</title>
+    </head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+        <section align="center" class="formulario">
+            <h2>Crear un nuevo Producto</h2>
+            <%- include('../partials/vistaErroresValidaciones.ejs') %>
+            <form class="form-create" method="POST" action="/productos/crear" enctype="multipart/form-data">
+
+                <div class="product-name">
+                    <label for="">Titulo:</label>
+                    <input type="text" name="name" class="name" placeholder="Titulo del Producto">
+                    <div id="erroresName" class="lista-errores"></div>
+                </div>
+
+                <div class="product-type">
+                    <label for="">Categoria:</label>
+                    <select name="category"> <!--Tipo de producto, según Categoría-->
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.category %></option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="attribute-check">
+                    <label for="">Peso(gr)/Color:</label>
+                    <select name="attribute" id="attribute">
+                        <% attributes.forEach(attribute => { %>
+                            <option value="<%= attribute.id %>"><%= attribute.name %></option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="product-price">
+                    <label for="">Precio:</label>
+                    <input type="number" step=".01" name="price" class="price" placeholder="$00.00">
+                    <div id="erroresPrice" class="lista-errores"></div>
+                </div>
+
+                <div class="product-img">
+                    <label for="">Imagen:</label>
+                    <input type="file" name="product-img" class="product-img">
+                    <div id="erroresImg" class="lista-errores"></div>
+                </div>
+
+               <div class="product-detail">
+                    <p><label>Detalle de producto</label></p>
+                    <textarea name="description" rows="10" class="description" cols="40"></textarea> 
+                    <div id="erroresDescription" class="lista-errores"></div>
+               </div>
+
+                <div class="product-create">
+                    <button type="submit" class="product-create-button">Publicar</button>
+                </div>
+
+                <div>
+                    <a href="/productos/listado" class="product-cancel-button">Cancelar</a>
+                </div>
+
+            </form>
+        </section>
+    <%- include('../partials/footer.ejs')%>
+    </main>
+    <script type="text/javascript" src="/js/create-product.js"></script>
+</body>
+</html>

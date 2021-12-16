@@ -1,0 +1,462 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header.navbar{
+    background-color: #D1B894;
+    padding: 6px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    background-color: #D1B894;
+}
+
+/* NAVBAR-SUPERIOR */
+
+.navbar-superior {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D1B894;
+}
+
+/* NAVBAR-LOGO */
+
+.navbar-logo {
+    max-width: 30%;
+    background-color: #D1B894;
+}
+
+.navbar-logo a {
+    font-family: 'Yellowtail', cursive;
+    font-size: 30px;
+}
+
+/* NAVBAR-SEARCH */
+
+div.search {
+    width: 60%;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-left: 7.5%;
+}
+
+.searchTerm {
+    width: 65%;
+    border: 1px solid #D1B894;
+    background-color: white;
+    border-right: none;
+    padding: 5px;
+    height: 35px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    color: black;
+  }
+
+.searchButton {
+    width: 40px;
+    height: 35px;
+    border: 1px solid #D1B894;
+    border-left: none;
+    background:  #ededed;
+    text-align: center;
+    color: black;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.fa-search:before {
+    background-color:  #ededed;
+}
+
+form.search {
+    background-color: #D1B894;
+}
+
+/* NAVBAR-MENU-HAMBURGESA */
+
+.navbar-burger {
+    font-size: 25px;
+}
+
+/* NAVBAR-INFERIOR */
+
+.navbar-inferior {
+    border-top: 1px solid black;
+    background-color: #D1B894;
+}
+
+.navbar-location {
+    font-size: 14px;
+    color: black;
+}
+
+.navbar-location i {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.navbar-location h4 {
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.navbar-location-desktop h4 
+/* NAVBAR-COLORES */
+
+div.navbar-logo {
+    background-color: #D1B894;
+}
+
+.navbar-logo a {
+    background-color: #D1B894;
+}
+
+div.search {
+    background-color: #D1B894;
+}
+
+div.navbar-burger {
+    background-color: #D1B894;
+}
+
+div.navbar-burger i {
+    background-color: #D1B894;
+}
+
+div.navbar-location {
+    margin-top: 3px;
+    background-color: #D1B894;
+}
+
+.navbar-location i {
+    background-color: #D1B894;
+}
+
+.navbar-location h4 {
+    background-color: #D1B894;
+}
+
+/* PIE DE PAGINA */
+
+/* PIE DE PAGINA - REDES */
+
+div.redes {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 12px;
+}
+
+.redes i {
+    background-color: white;
+    font-size: 25px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+/* PIE DE PAGINA - CONTACTO */
+
+.contacto i {
+    background-color: white;
+    font-size: 17px;
+    width: 100%;
+}
+
+li {
+    background-color: white;
+    list-style-type: none;
+}
+
+.contacto a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+/* PIE DE PAGINA - MEDIOS DE PAGO */
+
+.medios-de-pago {
+    width: 70%;
+}
+
+.cards {
+    height: 25px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #00000012;
+}
+
+.pagos-envios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* PIE DE PAGINA - ENVIOS */
+
+.formas-de-envio {
+    width: 30%;
+}
+
+
+/* PIE DE PAGINA - OTROS  */
+
+footer {
+    background-color: white;
+    padding: 12px;
+}
+
+footer p {
+    background-color: white;
+}
+
+footer h4 {
+    background-color: white;
+}
+
+footer div {
+    background-color: white;
+}
+
+.tipografia {
+    font-family: 'Yellowtail', cursive;
+    background-color: white;
+}
+
+.tipografia-logo {
+    font-family: 'Yellowtail', cursive;
+    font-size: 35px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    width: 100%;
+}
+
+/* MOBILE */
+
+/* NAVBAR MOBILE */
+
+@media (max-width: 767px){
+
+    .navbar-cart {
+        display: none;
+    }
+    
+    .navbar-location-desktop {
+        display: none;
+    }
+    
+    .navbar-categorias {
+        display: none;
+    }
+    
+    .navbar-usuario {
+        display: none;
+    }
+    
+    /* PIE DE PAGINA MOBILE */
+
+    .redes-desktop {
+        display: none;
+    }
+
+    .medios-de-pago-desktop {
+        display: none;
+    }
+
+    .formas-de-envio-desktop {
+        display: none;
+    }
+
+    div.pagos-envios {
+        margin-top: 12px;
+    }
+
+    div.contacto {
+        margin-top: 12px;
+        background-color: white;
+    }
+
+    div.contacto span {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    p.copyright {
+        margin-top: 12px;
+    }
+}
+
+/* DESKTOP - TABLET */
+
+@media (min-width: 768px) {
+
+    /* NAVBAR TABLET - DESKTOP */
+
+    .navbar-cart {
+        font-size: 25px;
+    }
+
+    .navbar-cart i {
+        background-color: #D1B894;
+    }
+    
+    .navbar-cart a {
+        color: black;
+        background-color: #D1B894;
+    }
+
+    .navbar-burger {
+        display: none;
+    }
+
+    .navbar-inferior {
+        background-color: #D1B894;
+        border-top: 1px solid #D1B894;
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .navbar-location {
+        display: none;
+    }
+
+    div.navbar-location-desktop {
+        width: 25%;
+    }
+
+    .navbar-location-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 2px;
+        background-color: #D1B894;
+    }
+
+    .navbar-location-desktop i {
+        font-size: 30px;
+        background-color: #D1B894;
+    }
+
+    .navbar-location-desktop h4 {
+        width: 150px;
+        background-color: #D1B894;
+        margin-left: 6px;
+    }
+
+    .navbar-categorias {
+        width: 33%;
+        background-color: #D1B894;
+        margin-left: 3%;
+    }
+
+    .navbar-categorias span {
+        background-color: #D1B894;
+    }
+
+    .navbar-categorias a {
+        background-color: #D1B894;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .navbar-usuario {
+        background-color: #D1B894;
+        text-align: center;
+        width: 33%;
+        max-width: 150px;
+    }
+
+    .navbar-usuario i {
+        background-color: #D1B894;
+    }
+
+    /* PIE DE PAGINA TABLET - DESKTOP */
+
+    div.redes {
+        display: none;
+    }
+
+    .redes-desktop a {
+        color: black;
+        text-decoration: none;
+        font-size: 22px;
+        background-color: white;
+    }
+
+    .redes-desktop i {
+        background-color: white;
+    }
+
+    div.pie-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 12px;
+    }
+
+    div.redes-desktop {
+        width: 20%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.redes-desktop span {
+        background-color: white;
+    }
+
+    .pagos-envios {
+        display: none;
+    }
+
+    div.medios-de-pago-desktop {
+        width: 35%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.formas-de-envio-desktop {
+        width: 15%;
+        height: 126px;
+        border-right: 1px solid black;
+    }
+
+    div.contacto {
+        width: 25%;
+        height: 126px;
+        background-color: white;
+    }
+
+    div.contacto span {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    p.copyright {
+        margin-top: 12px;
+    }
+
+}
+

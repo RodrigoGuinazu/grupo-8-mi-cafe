@@ -1,0 +1,28 @@
+a.button-finalizar-pedido {
+    width: 18%;
+    height: 43px;
+    text-align: center;
+    color: white;
+    padding: 4px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+a.button-finalizar-pedido:hover {
+    width: 18%;
+    height: 43px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* BOTONES USUARIO */
+
+section.usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+}
+
+.logout-mobile {
+    align-self: flex-end;
+    font-size: large;
+    font-weight: bold;
+    color:rgb(184, 15, 15);
+    text-decoration: none;
+    margin: 10px;
+}
+
+section.usuario img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 5px rgb(102, 102, 102));
+    margin-top: 12px;
+}
+
+.nombre_completo {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.boton_usuario {
+    display: flex;
+    padding: 8px;
+    width: 50%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    max-width: 380px;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+a.boton_usuario {
+    justify-content: center;
+    text-decoration: none;
+}
+
+.usuario .boton_usuario i {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+}
+
+.boton_usuario:hover {
+    text-align: center;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 10px;
+}
+
+.boton_usuario:hover i {
+    color: black;
+}
+
+.datos_usuario {
+    display: flex;
+    padding: 50px;
+}
+
+.contenedor-datos {
+    background-color: white;
+}
+
+.titulo {
+    background-color: white;
+}
+
+.sub-div {
+    margin-left: 230px;
+    background-color: white;
+}
+
+.sub-div h3{
+    background-color: white;
+}
+
+.sub-div a{
+    background-color: white;
+    margin-left: 85px;
+}
+
+@media (max-width: 1023px) {
+    .datos_usuario {
+        display: none; 
+    }
+
+    .logout-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+
+.usuario_contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logout-mobile {
+    display: none;
+}
+
+.logout-desktop {
+    position: absolute;
+    right: 5px;
+    top: 110px;
+    font-size: large;
+    font-weight: bold;
+    color:rgb(184, 15, 15);
+    text-decoration: none;
+    margin: 10px;
+}
+
+section.usuario img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 5px rgb(102, 102, 102));
+    margin-top: 12px;
+}
+
+.boton_usuario {
+    width: 90%
+}
+
+.usuario {
+    width: 20%;
+}
+
+.datos_usuario {
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 60px;
+    background-color: white;
+}
+
+}

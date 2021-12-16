@@ -1,0 +1,205 @@
+main {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ededed;
+}
+
+.titulo-carrito {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: #ededed;
+}
+    
+div.info-producto {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+}
+
+.info-producto h3 {
+    width: 20%;
+}
+
+.contenido-carrito {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+}
+
+.imagen-carrito {
+    width: 20%;
+}
+
+.imagen-carrito img {
+    width: 50%;
+}
+
+.titulo-producto {
+    width: 20%;
+}
+
+.titulo-producto a {
+    text-decoration: none;
+    color: black;
+}
+
+.precio-producto-carrito {
+    width: 20%;
+}
+
+.cantidad-producto {
+    width: 20%;
+}
+
+.cantidad-producto input {
+    height: 25px;
+    width: 13%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.total-producto {
+    width: 20%;
+}
+
+.finalizar-pedido {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 40px;
+    padding-bottom: 40px
+}
+
+.button-finalizar-pedido {
+    width: 18%;
+    height: 43px;
+    text-align: center;
+    color: white;
+    padding: 4px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.finalizar-pedido button:hover {
+    width: 18%;
+    height: 43px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #D1B894;
+    border: 1px solid #D1B894;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* RECOMENDACIONES */
+
+.recomendacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+.recomendacion article {
+    background-color: white;
+    padding: 10px;
+    border: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    border: 1px solid #ededed;
+}
+
+.producto-info h3 {
+    background-color: white;
+}
+
+.caja-producto a {
+    background-color: white;
+}
+
+.recomendacion img {
+    width: 100%;
+}
+
+.producto-info .fa-shopping-bag {
+    color: black;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: -10px;
+}
+
+.producto-info .fa-credit-card {
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    top: -10px;
+}
+
+.producto-info i {
+    background-color: white;
+}
+
+.producto-info {
+    border-top: 1px solid #b1b1b1;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.producto-info h3 {
+    font-weight: lighter;
+}
+
+.producto-info h2 {
+    background-color: white;
+    padding-top: 12px;
+}
+
+.caja-producto:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+/* BOX PRODUCTOS */
+
+@media (min-width: 768px) {
+    div.recomendados {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+
+    .recomendacion article {
+        width: 40%;
+    }
+
+}
+
+@media (min-width: 1050px) {
+
+    .descripcion article {
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-radius: 0px;
+        max-width: 600px;
+    }
+
+    .opiniones {
+        margin-top: 50px;
+        max-width: 600px;
+    }
+
+    .recomendacion article {
+        width: 20%;
+    }
+}
